@@ -1,6 +1,6 @@
 # Setting Up Cross-Compile Environment for Omega
 
-## Step 1: Setup OpenWRT Buildroot Environment
+### Step 1: Setup OpenWRT Buildroot Environment
 
 Install tools and library sources:
 
@@ -8,14 +8,14 @@ Install tools and library sources:
 $ apt-get install -y subversion build-essential libncurses5-dev zlib1g-dev gawk flex quilt git-core unzip libssl-dev
 ```
 
-## Step 2: Get OpenWRT Source
+### Step 2: Get OpenWRT Source
 
 ```
 $ git clone git://git.openwrt.org/openwrt.git
 $ cd openwrt
 ```
 
-## Step 3: Update Feeds
+### Step 3: Update Feeds
 
 Feeds are repositories of packages that can be added to the OpenWRT system. Feeds are configured in the feeds.conf.default file. Additional feeds can be added by editing this file. For example, to add the Onion packages, append the following line to the file:
 
@@ -39,11 +39,11 @@ $ scripts/feeds install python
 
 This downloads python to our source code tree, but doesn't compile the package by default.
 
-## Step 4: Modify Image
+### Step 4: Modify Image
 
 Files in the ```package/base-file/files``` directory will be overwritten to the compiled image at the end of the compilation process. To add custom files to the compiled image, create a files folder in the buildroot directory. Files in this directory will supersede the files in the ```package/base-file/files``` directory.
 
-## Step 5: Select Packages
+### Step 5: Select Packages
 
 As mentioned, packages installed are not selected by default when compiling the image, and will not appear in the final firmware. To select packages to be compiled into the image:
 
@@ -66,7 +66,7 @@ Selection state can be toggled using ```SPACE```, or ```N``` for unselected, ```
 
 When package selection is finished, exit out of menuconfig by pressing ```ESC``` twice. When prompted whether to save changes, select ```Yes```.
 
-## Step 6a: Compile Image
+### Step 6a: Compile Image
 
 Start the compile process:
 
@@ -92,7 +92,7 @@ Once the compile is complete, binaries are found in the ```bin/ar71xx``` directo
 
 Compiled Opkg packages are found in the ```bin/ar71xx/packages``` directory.
 
-## Step 6b: Compile Individual Packages
+### Step 6b: Compile Individual Packages
 
 Compiling the entire image can take a long time depending on the system. Luckily, individual packages can be compiled without needing to compile the whole image.
 
@@ -127,7 +127,7 @@ $ make package/index
 
 This is typically done automatically by make to keep an updated list of packages installed in the image.
 
-## Step 7: Flash Image
+### Step 7: Flash Image
 
 On the Omega, ```cd``` to ```/tmp```:
 
