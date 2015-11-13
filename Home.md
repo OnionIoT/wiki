@@ -1,3 +1,5 @@
+[[_TOC_]]
+
 ### Navigate this page:
 1. [Setting page titles](#subpages)
 1. [Using subpages](#subpages)
