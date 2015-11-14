@@ -16,7 +16,7 @@ Press `ENTER` to activate the command prompt.
 
 ![Log in through serial terminal](https://i.imgur.com/cGANJefh.jpg "Log in through serial terminal")
 
-## Setting up using Command Line – Windows
+## Windows
 
 **Step 1**: Download and install the Silicon Labs CP2102 driver from [[https://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip]].
 
@@ -36,7 +36,7 @@ Once connected, press `ENTER` to activate the command prompt.
 
 ![Log in through serial terminal](https://i.imgur.com/d6INMZkh.jpg "Log in through serial terminal")
 
-## Setting up using Command Line – Linux
+## Linux
 
 **Step 1**: Download and install the Silicon Labs CP2102 driver source files.
 
