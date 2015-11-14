@@ -1,40 +1,8 @@
-# Get Started with the Onion Omega
+# Connect to the Omega via Serial Terminal
 
 [[_TOC_]]
 
-## Preparing the Hardware
-
-**Step 1**: Unpack the Omega and Dock from the boxes.
-
-![Omega + Dock](https://i.imgur.com/tKs4wRWh.jpg "Omega + Dock")
-
-**Step 2**: Connect the Omega to the Dock.
-
-![Omega plugged into Dock](https://i.imgur.com/rek12Zih.jpg "Omega Plugged into Dock")
-
-**Step 3**: Connect the Omega to your computer through USB.
-
-![Omega plugged into USB](https://i.imgur.com/0FImt9qh.jpg "Omega plugged into USB")
-
-**Step 4**: Turn on the Omega using the switch.
-
-![Turn on the Omega](https://i.imgur.com/gupcwsSh.jpg "Turn on the Omega")
-
-**Step 5**: Wait for the amber LED to stop blinking, indicating that the Omega has booted up.
-
-![Omega is on](https://i.imgur.com/FulDB6zh.jpg "Omega is on")
-
-## Setting up using GUI
-
-**Step 1**: Connect to the Omega’s Access Point.
-
-![Connect to AP](https://i.imgur.com/TIsvi2Bh.jpg "Connect to AP")
-
-**Step 2**: Browse to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. Alternatively, you can also browse to `http://192.168.3.1`. You have now arrived at the Setup Wizard. Login with the following information: username: root password: onioneer Follow the wizard to complete the setup of the Omega.
-
-![Browse to Setup Wizard](https://i.imgur.com/fJsQ77zh.jpg "Browse to Setup Wizard")
-
-## Setting up using Command Line – OSX
+## OSX
 
 **Step 1**: Download and install the Silicon Labs CP2102 driver from [[https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip]].
 
@@ -44,33 +12,29 @@
 
 **Step 3**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using screen.
 
+Press `ENTER` to activate the command prompt.
+
 ![Log in through serial terminal](https://i.imgur.com/cGANJefh.jpg "Log in through serial terminal")
-
-**Step 4**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
-
-![Run wifisetup](https://i.imgur.com/h21sjzRh.jpg "Run wifisetup")
 
 ## Setting up using Command Line – Windows
 
 **Step 1**: Download and install the Silicon Labs CP2102 driver from [[https://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip]].
 
-**Step 2**: Run Computer Management (Start > Run… > Enter “Computer Management” and press `ENTER`), look for Silicon Labs CP210x USB to UART Bridge under Ports (COM & LPT), and take note of the COM number in bracket.
+**Step 2**: Run Computer Management (Start > Run… > Enter “Computer Management” and press ```ENTER```), look for Silicon Labs CP210x USB to UART Bridge under Ports (COM & LPT), and take note of the COM number in bracket.
 
 ![Computer Management](https://i.imgur.com/0fFBiNNh.jpg "Computer Management")
 
 **Step 3**: Download and install Putty from [[http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.65-installer.exe]].
 
-**Step 4**: Open up PuTTY, select Serial for Connection type, enter the COM number noted down in Step 2 as Serial line, and enter `115200` for the speed.
+**Step 4**: Open up PuTTY, select Serial for Connection type, enter the COM number noted down in Step 2 as Serial line, and enter ```115200``` for the speed.
 
 ![Configure PuTTY](https://i.imgur.com/jnREOQth.jpg "Configure PuTTY")
 
 **Step 5**: Click on the Open button to connect to the Omega via the serial terminal.
 
+Once connected, press `ENTER` to activate the command prompt.
+
 ![Log in through serial terminal](https://i.imgur.com/d6INMZkh.jpg "Log in through serial terminal")
-
-**Step 6**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
-
-![Run wifisetup](https://i.imgur.com/u6E5LGSh.jpg "Run wifisetup")
 
 ## Setting up using Command Line – Linux
 
@@ -124,8 +88,6 @@ $ sudo chmod 666 /dev/ttyUSB0
 
 **Step 4**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using screen.
 
+Press `ENTER` to activate the command prompt.
+
 ![Log in through serial terminal](https://i.imgur.com/sENEIX8h.png "Log in through serial terminal")
-
-**Step 5**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
-
-![Run wifisetup](https://i.imgur.com/qou4iAmh.png "Run wifisetup")
