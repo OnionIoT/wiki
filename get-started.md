@@ -89,7 +89,7 @@ Unzip the archive.
 
 Compile the driver with `make`.
 
-```
+```bash
 $ sudo cp cp210x.ko to /lib/modules/<kernel-version>/kernel/drivers/usb/serial/<kernel-version>
 $ sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 $ sudo insmod cp210x.ko
@@ -98,7 +98,7 @@ $ sudo chmod 666 /dev/ttyUSB0
 
 *For RedHat/CentOS*:
 
-```
+```bash
 $ sudo yum update kernel* //need to update the kernel first otherwise your header won't match
 $ sudo yum install kernel-devel kernel-headers //get the devel and header packages
 $ sudo reboot //your build link should be fixed after your system come back
@@ -110,7 +110,7 @@ Unzip the archive.
 
 Compile the driver with `make`.
 
-```
+```bash
 $ sudo cp cp210x.ko to /lib/modules/<kernel-version>/kernel/drivers/usb/serial
 $ sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 $ sudo insmod cp210x.ko
