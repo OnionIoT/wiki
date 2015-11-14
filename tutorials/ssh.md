@@ -12,7 +12,7 @@ Where ABCD is 4 hex characters that are unique to each Omega and can be seen on 
 **Step 1**: Open the Terminal app
 **Step 2**: Run the following command:
 ```
-ssh root@omega-ABCD.local
+$ ssh root@omega-ABCD.local
 ```
 
 When prompted, enter the password
@@ -29,6 +29,7 @@ And you're in
 **Step 3**: Click Open, enter the credentials.
 
 By default, the credentials are:
+
 **Username**: root
 **Password**: onioneer
 
