@@ -22,7 +22,7 @@ The Onion Omega's powerful processor is capable of running the full Linux operat
 
 The Onion Omega can be programmed with high-level programming languages such as Python, Javascript (Node.JS), PHP, Ruby and many others. This means you can start hacking away at your ideas without needing to review your C pointer syntax or worrying about setting up cross-compilation environments.
 
-*[NodeJS Support Still under Development]*
+*[NodeJS Support under development, release date TBD]*
 
 ![Programming Languages](https://i.imgur.com/nMLP7hil.jpg "Programming Languages")
 
@@ -30,7 +30,7 @@ The Onion Omega can be programmed with high-level programming languages such as 
 
 The Onion Omega is fully integrated with the Onion Cloud. This means that the Omega can interact with the myriad of Web services available and can also communicate with other Internet connected devices. In addition, the Onion Cloud allows the Omega to be accessed anywhere in the world quickly and securely through our highly customizable RESTful APIs. Building applications that interacts with the physical world has never been easier. The Onion Cloud is free for non-commercial use.
 
-*[Currently in Private Beta]*
+*[Currently in private beta, public release planned for Ando D2]*
 
 ![Cloud Integration](https://i.imgur.com/4VgJy6Rl.jpg "Cloud Integration")
 
@@ -44,7 +44,7 @@ The Onion Console is a virtual desktop to help you manage connected devices such
 
 We love the simplicity of installing apps on a smartphone, so we created the Onion App Store to make reprogramming the Onion Omega as simple as installing an app. The Omega is always connected, so reprogramming can take place anywhere and at any time. And since the Omega runs a multi-tasking operating system, it can be configured to run multiple programs simultaneously. The Onion App Store is open for everyone to share their creations to the world, and it even takes care of automatic updates and dependency management.
 
-*[Currently in Private Beta]*
+*[Currently in private beta, public release planned for Ando J2]*
 
 ![App Store](http://i.imgur.com/UifkEXXl.jpg "App Store")
 
