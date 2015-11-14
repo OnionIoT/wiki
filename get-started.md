@@ -66,7 +66,7 @@
 
 **Step 5**: Click on the Open button to connect to the Omega via the serial terminal.
 
-![Log in through serial terminal](https://i.imgur.com/d6INMZkl.jpg "Log in through serial terminal")
+![Log in through serial terminal](https://i.imgur.com/d6INMZkh.jpg "Log in through serial terminal")
 
 **Step 6**: Run ```wifisetup``` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
@@ -76,8 +76,8 @@
 
 **Step 1**: Download and install the Silicon Labs CP2102 driver source files.
 
-For Linux kernel 3.x.x and higher: [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
-For Linux kernel 2.6.x: [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
+For Linux kernel **3.x.x and higher**: [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
+For Linux kernel **2.6.x**: [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
 
 **Step 2**: Build and install the driver.
 
@@ -85,9 +85,9 @@ For Linux kernel 2.6.x: [[https://www.silabs.com/Support%20Documents/Software/Li
 
 Unzip the archive.
 
-```cd``` into the unzipped directory.
+`cd` into the unzipped directory.
 
-Compile the driver with ```make```:
+Compile the driver with `make`:
 
 ```
 cp cp210x.ko to /lib/modules/<kernel-version>/kernel/drivers/usb/serial/<kernel-version>
@@ -106,9 +106,9 @@ reboot //your build link should be fixed after your system come back
 
 Unzip the archive.
 
-```cd``` into the unzipped directory.
+`cd` into the unzipped directory.
 
-Compile the driver with ```make```:
+Compile the driver with `make`:
 
 ```
 cp cp210x.ko to /lib/modules/<kernel-version>/kernel/drivers/usb/serial
@@ -116,6 +116,7 @@ insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 insmod cp210x.ko
 sudo chmod 666 /dev/ttyUSB0
 ```
+
 
 **Step 3**: Run ```ls /dev/ttyUSB*``` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to ```/dev/ttyUSB0```.
 
