@@ -81,6 +81,21 @@ Follow the table below to wire the Omega to the Arduino Dock, ensure that you co
 | VCC       | 5V                  | 5V               |
 | GND       | GND                 | GND              |
 
+* Whoa... we need to fix these tables... In the meantime...*
+
+Expansion Dock GPIO 1    -> Arduino Dock Pin 12
+
+Expansion Dock GPIO 6    -> Arduino Dock Pin 13
+
+Expansion Dock GPIO 7    -> Arduino Dock Reset Pin
+
+Expansion Dock GPIO 19   -> Arduino Dock Pin 11
+
+Expansion Dock GPIO 5V   -> Arduino Dock 5V Pin
+
+Expansion Dock GPIO GND  -> Arduino Dock GND Pin
+
+
 ![Programmer Connections](http://i.imgur.com/cWZn7YI.jpg)
 ![Programmer Connections with Power](http://i.imgur.com/qOQCPV2.jpg)
 
@@ -103,6 +118,7 @@ Stil working on this one, stay tuned!
 
 ### Flashing Sketches
 *Ensure you are on Omega firmware b220 or later.*
+
 Now we get to the fun part, flashing sketches to the ATmega chip!
 
 Ensure that all sketches include the Onion Arduino Library and that an Onion object is instantiated in the `setup()` function. If this is not done, the MCU_RESET button on the Omega will have to be pressed before uploading the Sketch.
