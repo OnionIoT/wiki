@@ -102,6 +102,7 @@ Stil working on this one, stay tuned!
 ![Omega + Arduino Dock](http://i.imgur.com/B47pqlW.jpg)
 
 ### Flashing Sketches
+*Ensure you are on Omega firmware b220 or later.*
 Now we get to the fun part, flashing sketches to the ATmega chip!
 
 Ensure that all sketches include the Onion Arduino Library and that an Onion object is instantiated in the `setup()` function. If this is not done, the MCU_RESET button on the Omega will have to be pressed before uploading the Sketch.
