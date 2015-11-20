@@ -65,7 +65,7 @@ Plug the Omega into the Expansion Dock and provide power via Micro USB.
 The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
 Follow the table below to wire the Omega to the Arduino Dock, ensure that you connect the 5V and GND pins last just as a precaution.
 | Function  | Expansion Dock GPIO | Arduino Dock Pin |
-|-----------|---------------------|------------------|
+|-          |-                    |-                 |
 | SPI MISO  | 1                   | 12               |
 | SPI SCK   | 6                   | 13               |
 | SPI RESET | 7                   | Reset            |
@@ -88,8 +88,10 @@ Unless there were errors in the programming sequence, the Arduino Dock should no
 #### Using an Arduino as a Programmer
 Stil working on this one, stay tuned!
 
+
 ## Using the Arduino Dock
 ![Omega + Arduino Dock](http://i.imgur.com/B47pqlW.jpg)
+
 ### Flashing Sketches
 Now we get to the fun part, flashing sketches to the ATmega chip!
 
@@ -100,15 +102,18 @@ Thanks to the setup you did on your computer and the Arduino Dock, you can actua
 
 In the Arduino Tools menu, select "Arduino/Guinuino Uno" for the Board, and your Omega-ABCD hostname as the Port:
 ![Arduino IDE Tools->Port menu](http://i.imgur.com/1xAEBmT.png)
+
 If your Omega does not show up in the Port menu as a network port, restart the Arduino and wait for 30 seconds:
 
 When your sketch is ready, hit the Upload button. Once the sketch is compiled, it will require your Omega password to upload:
 ![Arduino IDE Uploading Sketch](http://i.imgur.com/UDXIDVL.png)
+
 The IDE actually creates an SSH connection with the Omega to transfer the compiled hex file, and the Omega with then flash the ATmega chip via I2C!
 (If your previous sketch did not include the Onion Arduino Library you will have to press the MCU_RESET button on the Arduino Dock right after entering your password in order to flash successfully)
 
 Once the upload completes, the info screen will show something along the lines of:
 ![Arduino IDE Upload Done](http://i.imgur.com/oPOB4Vl.png)
+
 The ATmega chip is now running your sketch, enjoy!
 
 #### Using the Omega
