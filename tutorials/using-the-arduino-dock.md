@@ -1,6 +1,6 @@
 # Using the Arduino Dock
 
-[[TOC]]
+[[_TOC_]]
 
 The Onion Arduino Dock is meant to be an interface between the Omega and the popular ATmega microcontroller, allowing you to bring the flexibility of the Omega into the world of microcontrollers.
 
