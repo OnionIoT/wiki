@@ -73,7 +73,7 @@ Plug the Omega into the Expansion Dock and provide power via Micro USB.
 The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
 Follow the table below to wire the Omega to the Arduino Dock, ensure that you connect the 5V and GND pins last just as a precaution.
 | Function  | Expansion Dock GPIO | Arduino Dock Pin |
-|-          |-                    |-                 |
+|-----------|---------------------|------------------|
 | SPI MISO  | 1                   | 12               |
 | SPI SCK   | 6                   | 13               |
 | SPI RESET | 7                   | Reset            |
