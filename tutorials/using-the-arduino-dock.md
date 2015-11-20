@@ -181,12 +181,13 @@ The sketch has been flashing and is running on the Arduino Dock, enjoy!
 
 (If your previous sketch did not include the Onion Arduino Library you will have to press the MCU_RESET button on the Arduino Dock just before pressing Enter for the arduino-dock command)
 
-### The Onion Arduino Library
+## The Onion Arduino Library
 The library provides some essential functionality for the Arduino Dock
 
-#### Basic Setup in Sketch
+### Basic Setup in Sketch
 To add the Onion library to your Sketch in the IDE, open the Sketch menu, navigate to Include Library -> Onion
 ![Add the Onion Library](https://i.imgur.com/MjYaLTO.png)
+
 Once the library has been added, create a global instance of the Onion object. 
 Add the following line on the global scope:
 ```
@@ -200,13 +201,13 @@ To initialize and activate the library functions, add the following line to the 
 
 Check out our blink2 example to see this in action. The example can be accessed in the Arduino IDE through File -> Examples -> Onion -> blink2
 
-#### Library Functionality
+### Library Functionality
 For now the library setups up the ATmega to join the I2C bus. It then listens on the bus for a command from the Omega to go into Reset so a new Sketch can be flashed.
 
 As described above, if the Onion library is not used in your sketch, the MCU_RESET button on the Arduino Dock will have to be manually pressed right before a new sketch is uploaded.
 
 We're working on more functionality for this library, namely using the Serial Port as a bridge between the Omega and ATmega chip! Stay tuned!
 
-#### Using I2C in a Sketch
+### Using I2C in a Sketch
 Right now the Onion Library joins the I2C bus with an address of 0x08 and listens for a write of 0xde 0xad (get it? 'dead' ha ha ha) when resetting. If you need a Sketch to use I2C, make sure to build this functionality into your I2C handling to comply with the Arduino Dock flashing procedure. 
 
