@@ -71,7 +71,7 @@ The Omega can actually be used to program the bootloader
 Plug the Omega into the Expansion Dock and provide power via Micro USB. 
 
 The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
-Follow the table below to wire the Omega to the Arduino Dock, ensure that you connect the 5V and GND pins last just as a precaution.
+Follow the table below to wire the Omega to the Arduino Dock, ensure that you connect the 5V and GND pins last just as a precaution. Note that it's very important that the Omega and the Arduino Dock share a common ground!
 | Function  | Expansion Dock GPIO | Arduino Dock Pin |
 |-----------|---------------------|------------------|
 | SPI MISO  | 1                   | 12               |
@@ -81,7 +81,7 @@ Follow the table below to wire the Omega to the Arduino Dock, ensure that you co
 | VCC       | 5V                  | 5V               |
 | GND       | GND                 | GND              |
 
-* Whoa... we need to fix these tables... In the meantime...*
+*Whoa... we need to fix these tables... In the meantime...*
 
 Expansion Dock GPIO 1    -> Arduino Dock Pin 12
 
@@ -123,8 +123,8 @@ Now we get to the fun part, flashing sketches to the ATmega chip!
 
 Ensure that all sketches include the Onion Arduino Library and that an Onion object is instantiated in the `setup()` function. If this is not done, the MCU_RESET button on the Omega will have to be pressed before uploading the Sketch.
 
-#### Using the Arduino IDE
-Thanks to the setup you did on your computer and the Arduino Dock, you can actually use the Arduino IDE on your computer to flash Sketches to the Arduino Dock, so long as your computer and the Omega on your Arduino Dock are on the same wifi network.
+#### Using the Arduino IDE wirelessly
+Thanks to the setup you did on your computer and the Arduino Dock, you can actually use the Arduino IDE on your computer to wirelessly flash Sketches to the Arduino Dock, so long as your computer and the Omega on your Arduino Dock are on the same wifi network.
 
 In the Arduino Tools menu, select "Arduino/Guinuino Uno" for the Board, and your Omega-ABCD hostname as the Port:
 ![Arduino IDE Tools->Port menu](http://i.imgur.com/1xAEBmT.png)
