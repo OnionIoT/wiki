@@ -71,7 +71,8 @@ The Omega can actually be used to program the bootloader
 Plug the Omega into the Expansion Dock and provide power via Micro USB. 
 
 The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
-Follow the table below to wire the Omega to the Arduino Dock, ensure that you connect the 5V and GND pins last just as a precaution. Note that it's very important that the Omega and the Arduino Dock share a common ground!
+Follow the table below to wire the Omega to the Arduino Dock, ensure that you connect the 5V and GND pins last just as a precaution. **Note that it's very important that the Omega and the Arduino Dock share a common ground!**
+
 | Function  | Expansion Dock GPIO | Arduino Dock Pin |
 |-----------|---------------------|------------------|
 | SPI MISO  | 1                   | 12               |
