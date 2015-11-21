@@ -127,5 +127,7 @@ As described above, if the Onion library is not used in your sketch, the MCU_RES
 We're working on more functionality for this library, namely using the Serial Port as a bridge between the Omega and ATmega chip! Stay tuned!
 
 ### Using I2C in a Sketch
-Right now the Onion Library joins the I2C bus with an address of 0x08 and listens for a write of 0xde 0xad (get it? 'dead' ha ha ha) when resetting. If you need a Sketch to use I2C, make sure to build this functionality into your I2C handling to comply with the Arduino Dock flashing procedure. 
+Right now the Onion Library joins the I2C bus with an address of 0x08 and listens for a write of `0xde 0xad` (get it? 'dead' ha ha ha) when resetting. If you need a Sketch to use I2C, make sure to build this functionality into your I2C handling to comply with the Arduino Dock flashing procedure. 
 
+## Acknowledgements
+Special thanks to Olaf Rempel for creating the original TWI bootloader and boot tool.
