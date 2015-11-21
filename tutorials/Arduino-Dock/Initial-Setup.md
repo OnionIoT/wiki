@@ -86,6 +86,9 @@ sh /usr/bin/arduino-dock flash bootloader
 ```
 Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and the amber LED next to the DC connector should be flickering.
 
+#### Summary
+Once this is complete, the extra wires and the Expansion Dock are no longer required! 
+Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
 
 
 ### Using an Arduino as a Programmer

@@ -20,6 +20,20 @@ Follow the steps outlined in the [[Initial Setup]] article.
 ## Using the Arduino Dock
 ![Omega + Arduino Dock](http://i.imgur.com/B47pqlW.jpg)
 
+
+### Connectivity
+When the Omega is plugged into the Arduino Dock, the serial terminal is not available. Ensure that the Omega is connected to a local WiFi network to allow communication via SSH or the Console.
+
+### Power
+The Arduino Dock and attached Omega can be powered in the following ways:
+* Micro USB cable plugged into the Micro USB port
+* 5V DC power supply plugged into the DC barrel jack
+* Any 5V source connected via the 5V and GND pins on the Arduino Dock
+* Any 3.3V source connected via the 3V3 and GND pins on the Arduino Dock
+
+The Arduino Dock has a voltage regulator to ensure the Omega is being supplied with the correct voltage.
+
+
 ### Flashing Sketches
 *Ensure you are on Omega firmware b220 or later.*
 
