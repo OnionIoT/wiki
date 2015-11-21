@@ -14,7 +14,7 @@ The Dock also includes an In-Circuit Serial Programming (ICSP) header to break o
 ## Initial Setup
 Before you can get started with the Arduino Dock, there are a few things that need to be done on your computer and then on the Arduino Dock.
 
-Follow the steps outlined in [this wiki article]()
+Follow the steps outlined in [[Initial Setup]]
 
 
 ## Using the Arduino Dock
