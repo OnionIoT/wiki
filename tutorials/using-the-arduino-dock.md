@@ -27,6 +27,7 @@ The regular Arduino Uno has no way of communicating with your computer via WiFi,
 This requires a one line addition to the `boards.txt` file in your Arduino IDE installation.
 
 Open the boards.txt file in any text editor. The following table outlines where the `boards.txt` file can be found:
+
 | Operating System | Location of `boards.txt`                                                  |
 |------------------|---------------------------------------------------------------------------|
 | OS X             | `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/boards.txt` |
@@ -81,21 +82,6 @@ Follow the table below to wire the Omega to the Arduino Dock, ensure that you co
 | SPI MOSI  | 19                  | 11               |
 | VCC       | 5V                  | 5V               |
 | GND       | GND                 | GND              |
-
-*Whoa... we need to fix these tables... In the meantime...*
-
-Expansion Dock GPIO 1    -> Arduino Dock Pin 12
-
-Expansion Dock GPIO 6    -> Arduino Dock Pin 13
-
-Expansion Dock GPIO 7    -> Arduino Dock Reset Pin
-
-Expansion Dock GPIO 19   -> Arduino Dock Pin 11
-
-Expansion Dock GPIO 5V   -> Arduino Dock 5V Pin
-
-Expansion Dock GPIO GND  -> Arduino Dock GND Pin
-
 
 ![Programmer Connections](http://i.imgur.com/cWZn7YI.jpg)
 ![Programmer Connections with Power](http://i.imgur.com/qOQCPV2.jpg)
