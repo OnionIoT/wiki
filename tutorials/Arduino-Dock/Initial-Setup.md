@@ -6,10 +6,12 @@ These steps will only need to be carried out once, and then you'll be set to go.
 ## Computer setup
 These steps ensure the Omega and Arduino Dock will be detected wirelessly and correctly work with your computer.
 
+
 ### Arduino IDE 
 
 ### Installation
 Install the latest Arduino IDE from the good folks over at [Arduino](https://www.arduino.cc/en/Main/Software). We did all of our testing using Version 1.6.6.
+
 
 ### Modification of boards.txt
 The regular Arduino Uno has no way of communicating with your computer via WiFi, but the Omega provides the Arduino Dock with a means of wireless communication, so we'll have to let the Arduino software know! 
@@ -28,8 +30,10 @@ uno.upload.via_ssh=true
 ```
 Doesn't matter where you add it, you can nestle it with the other `uno.` settings if you like.
 
+
 ### Installation of Onion Arduino Library
 The Onion Arduino Library provides the required setup and functions required for the Arduino Dock to operate correctly.
+
 
 #### Installing the library
 * We're working on a way of stream-lining this process, stay tuned!*
@@ -44,8 +48,13 @@ Follow these steps to install the library:
 
 
 
+
+
+
 ## Arduino Dock Setup
 The ATmega chip on the Arduino Dock needs to be burned with a new bootloader to work with the Omega properly. This only has to be done once and your Arduino Dock will be good to go. The new bootloader allows the ATmega to be flashed via the I2C connection with the Omega. There are a few methods to flash the bootloader, they are outlined below.
+
+
 
 
 ### Using the Omega + Expansion Dock as a Programmer
@@ -55,7 +64,7 @@ The Omega can actually be used to program the bootloader
 * An Omega
 * An Expansion Dock
 * The target Arduino dock
-* Six jumper wires (Male-to-male)
+* Six jumper wires (male-to-male)
   * can just be six pieces of wire with the insulation stripped off at the end
 
 #### Wiring
@@ -91,5 +100,61 @@ Once this is complete, the extra wires and the Expansion Dock are no longer requ
 Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
 
 
+### Using the Omega + Mini Dock as a Programmer
+The Mini Dock can be used in place of an Expansion Dock if you do not have access to one. This process is a little more 'hacky' and we recommend using an Expansion Dock if at all possible, proceed with caution and at your own risk!
+
+#### Required Components
+* An Omega
+* A Mini Dock
+* The target Arduino dock
+* Six pieces of wire with insulation stripped off the ends
+  * Stranded wire works best
+
+#### Wiring
+Disconnect the Omega from the Mini Dock. Put a wire into each of the pins shown below:
+
+![Mini Dock Port drawing](https://i.imgur.com/psVEevT.png) ![Mini Dock wire connections](http://i.imgur.com/nrIn5Hm.jpg)
+
+When using stranded wire, you'll need to twist the ends to make it easier to plug in.
+
+With the wires in place, plug the Omega into the Mini Dock, ensuring that the wires are sandwiched between the Omega's pins and the Mini Dock's headers. It will take more pressure to plug the Omega in since the pins need to squish in with the wires, be careful to not break anything! Stranded wires work well since the strands have some mobility and can accomodate the pin.
+
+![Omega + Mini Dock + Wires side view](https://i.imgur.com/6Ze0t3g.jpg) ![Omega + Mini Dock + Wires top view](http://i.imgur.com/FGndg13.jpg)
+
+Now connect the wires to the Arduino Dock ports specified below:
+
+| Function  | Mini Dock Pin       | Arduino Dock Pin |
+|-----------|---------------------|------------------|
+| SPI MISO  | 1                   | 12               |
+| SPI SCK   | 6                   | 13               |
+| SPI RESET | 7                   | Reset            |
+| SPI MOSI  | 19                  | 11               |
+| VCC       | 3.3V                | 3V3              |
+| GND       | GND                 | GND              |
+
+![Omega + Mini Dock + Arduino Dock connections](http://i.imgur.com/dxmr2Cz.jpg)
+
+
+#### Programming
+*Ensure you are on Omega firmware b220 or later.*
+
+Connect to the Omega's terminal and run the following command:
+```
+sh /usr/bin/arduino-dock flash bootloader
+```
+Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and the amber LED next to the DC connector should be flickering.
+
+#### Summary
+Once this is complete, the extra wires and the Mini Dock are no longer required! 
+Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
+
+
+
+
+
+
 ### Using an Arduino as a Programmer
 Stil working on this one, stay tuned!
+
+
+
