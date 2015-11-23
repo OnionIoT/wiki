@@ -1,10 +1,10 @@
 # Using the Arduino Dock
 
-[[_TOC_]]
-
 The Onion Arduino Dock is meant to be an interface between the Omega and the popular ATmega microcontroller, allowing you to bring the flexibility of the Omega into the world of microcontrollers.
 
 ![Onion Arduino Dock](http://i.imgur.com/pqCNKt7.jpg)
+
+[[_TOC_]]
 
 ## The Hardware
 It is essentially our (supercharged) version of an Arduino Uno R3 board, since they share the same microcontroller, the ATmel ATmega328P microcontroller (MCU), and have identical pin layouts. This allows users to use any Arduino shields in conjunction with the Arduino Dock and the Omega.
