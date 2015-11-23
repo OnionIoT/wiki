@@ -3,6 +3,9 @@ Before you can get started with the Arduino Dock, there are a few thigns that ne
 
 These steps will only need to be carried out once, and then you'll be set to go.
 
+[[_TOC_]]
+
+
 ## Computer setup
 These steps ensure the Omega and Arduino Dock will be detected wirelessly and correctly work with your computer.
 
