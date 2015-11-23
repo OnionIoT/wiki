@@ -117,7 +117,7 @@ Disconnect the Omega from the Mini Dock. Put a wire into each of the pins shown 
 
 When using stranded wire, you'll need to twist the ends to make it easier to plug in.
 
-With the wires in place, plug the Omega into the Mini Dock, ensuring that the wires are sandwiched between the Omega's pins and the Mini Dock's headers. It will take more pressure to plug the Omega in since the pins need to squish in with the wires, be careful to not break anything! Stranded wires work well since the strands have some mobility and can accomodate the pin.
+With the wires in place, plug the Omega into the Mini Dock, ensuring that the wires are into the Mini Dock's headers by the Omega's pins. It will take more pressure than usual to plug the Omega in since the pins need to squish in with the wires, be careful to not break anything! Stranded wires work well since the strands have some mobility and can accomodate the pin.
 
 ![Omega + Mini Dock + Wires side view](https://i.imgur.com/6Ze0t3g.jpg) ![Omega + Mini Dock + Wires top view](http://i.imgur.com/FGndg13.jpg)
 
@@ -129,7 +129,7 @@ Now connect the wires to the Arduino Dock ports specified below:
 | SPI SCK   | 6                   | 13               |
 | SPI RESET | 7                   | Reset            |
 | SPI MOSI  | 19                  | 11               |
-| VCC       | 3.3V                | 3V3              |
+| VCC       | 3.3V                | **3V3**          |
 | GND       | GND                 | GND              |
 
 ![Omega + Mini Dock + Arduino Dock connections](http://i.imgur.com/dxmr2Cz.jpg)
