@@ -6,6 +6,9 @@ These steps will only need to be carried out once, and then you'll be set to go.
 [[_TOC_]]
 
 
+
+[//]: # (Computer Setup)
+
 ## Computer setup
 These steps ensure the Omega and Arduino Dock will be detected wirelessly and correctly work with your computer.
 
@@ -39,7 +42,8 @@ The Onion Arduino Library provides the required setup and functions required for
 
 
 #### Installing the library
-* We're working on a way of stream-lining this process, stay tuned!*
+*We're working on a way of stream-lining this process, stay tuned!*
+
 Follow these steps to install the library:
 * Clone the [Onion Arduino Library repo](https://github.com/OnionIoT/Onion-Arduino-Library) to your computer
 * Open the Arduino IDE
@@ -52,13 +56,14 @@ Follow these steps to install the library:
 
 
 
-
+[//]: # (Arduino Dock Setup)
 
 ## Arduino Dock Setup
 The ATmega chip on the Arduino Dock needs to be burned with a new bootloader to work with the Omega properly. This only has to be done once and your Arduino Dock will be good to go. The new bootloader allows the ATmega to be flashed via the I2C connection with the Omega. There are a few methods to flash the bootloader, they are outlined below.
 
 
 
+[//]: # (Omega + Exp Dock)
 
 ### Using the Omega + Expansion Dock as a Programmer
 The Omega can actually be used to program the bootloader
@@ -66,15 +71,14 @@ The Omega can actually be used to program the bootloader
 #### Required Components
 * An Omega
 * An Expansion Dock
-* The target Arduino dock
+* The target Arduino Dock
 * Six jumper wires (male-to-male)
   * can just be six pieces of wire with the insulation stripped off at the end
 
 #### Wiring
-Plug the Omega into the Expansion Dock and provide power via Micro USB. 
+Plug the Omega into the Expansion Dock. The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
 
-The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
-Follow the table below to wire the Omega to the Arduino Dock, ensure that you connect the 5V and GND pins last just as a precaution. **Note that it's very important that the Omega and the Arduino Dock share a common ground!**
+Follow the table below to wire the Omega to the Arduino Dock. **Note that it's very important that the Omega and the Arduino Dock share a common ground!**
 
 | Function  | Expansion Dock GPIO | Arduino Dock Pin |
 |-----------|---------------------|------------------|
@@ -87,6 +91,57 @@ Follow the table below to wire the Omega to the Arduino Dock, ensure that you co
 
 ![Programmer Connections](http://i.imgur.com/cWZn7YI.jpg)
 ![Programmer Connections with Power](http://i.imgur.com/qOQCPV2.jpg)
+
+Provide power to the Omega and Expansion Dock through the micro usb port.
+
+#### Programming
+*Ensure you are on Omega firmware b220 or later.*
+
+Connect to the Omega's terminal and run the following command:
+```
+sh /usr/bin/arduino-dock flash bootloader
+```
+Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and the amber LED next to the DC connector should be flickering.
+
+#### Summary
+Once this is complete, the extra wires and the Expansion Dock are no longer required! 
+Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
+
+
+
+[//]: # (Omega + Exp Dock -> ICSP Headers)
+
+### Using the Omega + Expansion Dock with the Arduino Dock ICSP Header
+If the method described above does not successfully flash the Bootloader, try this slightly modified method. The ICSP Header provides direct SPI communication with the ATmega chip, allowing for programming regardless of how the ATmega pins are setup.
+
+#### Required Components
+* An Omega
+* An Expansion Dock
+* The target Arduino Dock
+* Two male-to-male jumper wires
+* Four male-to-female jumper wires
+
+#### Wiring
+Plug the Omega into the Expansion Dock.
+
+Provide power to the Arduino Dock by connecting the 5V and GND Expansion Dock GPIOs to the Arduino Dock 5V and GND pins with jumper wires.
+
+GPIOs 1, 6, 7, and 19 from the Expansion Dock need to be connected to the ICSP Header on the Arduino Dock using male-to-female jumper wires. Follow the image and table below:
+
+![Arduino Dock ICSP Header Pinout](http://i.imgur.com/s6mq42w.jpg)
+
+| Expansion Dock GPIO | ICSP Pin  |
+|---------------------|-----------|
+| 1                   | MISO      |
+| 6                   | SCK       |
+| 7                   | RESET     |
+| 19                  | MOSI      |
+
+![Arduino Dock ICSP Plugged in](http://i.imgur.com/c2fdbsU.jpg)
+
+Power the Omega and Expansion Dock through the micro usb port.
+
+![Omega + Exp Dock + Arduino Dock + ICSP](http://i.imgur.com/cAQvIXL.jpg)
 
 
 #### Programming
@@ -102,6 +157,9 @@ Unless there were errors in the programming sequence, the Arduino Dock should no
 Once this is complete, the extra wires and the Expansion Dock are no longer required! 
 Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
 
+
+
+[//]: # (Omega + Mini Dock)
 
 ### Using the Omega + Mini Dock as a Programmer
 The Mini Dock can be used in place of an Expansion Dock if you do not have access to one. This process is a little more 'hacky' and we recommend using an Expansion Dock if at all possible, proceed with caution and at your own risk!
@@ -154,7 +212,7 @@ Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for wha
 
 
 
-
+[//]: # (Arduino as Programmer)
 
 ### Using an Arduino as a Programmer
 Stil working on this one, stay tuned!
