@@ -8,7 +8,7 @@ Onion is **The Invention Platform For The Internet of Things**. Our hardware (On
 
 ### Onion Omega
 
-![Onion Omega](https://i.imgur.com/PX5vCMzl.jpg "Onion Omega")
+![Onion Omega](//i.imgur.com/PX5vCMzl.jpg "Onion Omega")
 
 The Onion Omega is a powerful embedded computer with buit-in Wi-Fi. It is a hardware development platform designed specifically for software developers, and it allows makers and inventors to create connected applications extremely quickly. The Omega runs the full Linux operating system, and it allows you to prototype hardware devices using the familiar Linux commandline environment and to program hardware applications using high-level programming languages such as Python, PHP, and Javascript. The Omega is also fully integrated with the Onion Cloud, making it a breeze to connect physical devices to the Web, as well as delegating computationally-intensive tasks to powerful servers on the cloud.
 
@@ -16,7 +16,7 @@ The Onion Omega is a powerful embedded computer with buit-in Wi-Fi. It is a hard
 
 The Onion Omega's powerful processor is capable of running the full Linux operating system. This means you can install OpenCV with a single command to add image recognition capabilities to your drone. You can use git to check out the latest changes your colleagues made to the coffee brewer. You can use pip or npm to incorporate libraries that allow your thermostat to talk to Twitter. The Onion Omega provides you with familiar tools that reduces learning curve and enhances your productivity in hardware development.
 
-![Linux Environment](https://i.imgur.com/h22Kyall.jpg "Linux Environment")
+![Linux Environment](//i.imgur.com/h22Kyall.jpg "Linux Environment")
 
 ### Python, PHP, and Other High-Level Programming Languages
 
@@ -24,7 +24,7 @@ The Onion Omega can be programmed with high-level programming languages such as 
 
 *[NodeJS Support under development, release date TBD]*
 
-![Programming Languages](https://i.imgur.com/nMLP7hil.jpg "Programming Languages")
+![Programming Languages](//i.imgur.com/nMLP7hil.jpg "Programming Languages")
 
 ### Seemless Cloud Integration
 
@@ -32,13 +32,13 @@ The Onion Omega is fully integrated with the Onion Cloud. This means that the Om
 
 *[Currently in private beta, public release planned for Ando D2]*
 
-![Cloud Integration](https://i.imgur.com/4VgJy6Rl.jpg "Cloud Integration")
+![Cloud Integration](//i.imgur.com/4VgJy6Rl.jpg "Cloud Integration")
 
 ### Onion Console
 
 The Onion Console is a virtual desktop to help you manage connected devices such as the Omega. It runs in your browser or as an app on your smartphone, and it provides you with the familiar GUI environment and applications when working with embedded devices. The Onion Console makes the Omega easy to work with even if you don't have any Linux experience.
 
-![Onion Console](https://i.imgur.com/Hl7B6NDl.jpg "Onion Console")
+![Onion Console](//i.imgur.com/Hl7B6NDl.jpg "Onion Console")
 
 ### App Store
 
@@ -46,5 +46,5 @@ We love the simplicity of installing apps on a smartphone, so we created the Oni
 
 *[Currently in private beta, public release planned for Ando J2]*
 
-![App Store](http://i.imgur.com/UifkEXXl.jpg "App Store")
+![App Store](//i.imgur.com/UifkEXXl.jpg "App Store")
 
