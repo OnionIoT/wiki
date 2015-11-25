@@ -90,7 +90,7 @@ Unzip the archive.
 Compile the driver with `make`.
 
 ```bash
-$ sudo cp cp210x.ko to /lib/modules/<kernel-version>/kernel/drivers/usb/serial/<kernel-version>
+$ sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial/
 $ sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 $ sudo insmod cp210x.ko
 $ sudo chmod 666 /dev/ttyUSB0
@@ -111,7 +111,7 @@ Unzip the archive.
 Compile the driver with `make`.
 
 ```bash
-$ sudo cp cp210x.ko to /lib/modules/<kernel-version>/kernel/drivers/usb/serial
+$ sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial
 $ sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 $ sudo insmod cp210x.ko
 $ sudo chmod 666 /dev/ttyUSB0
