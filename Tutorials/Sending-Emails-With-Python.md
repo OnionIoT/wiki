@@ -54,3 +54,10 @@ server.quit()
 
 print "done"
 ```
+
+## Links:
+
+http://www.tutorialspoint.com/python/python_sending_email.htm
+
+**Another example to send email using SSL via python**
+http://stackoverflow.com/questions/24672079/send-email-using-smtp-ssl-port-465
