@@ -33,8 +33,8 @@ opkg install python
 
 import smtplib
 
-sender = ' youruserid@yourhost.com '
-toaddrs = “recipient@gmail.com '
+sender = 'youruserid@yourhost.com'
+toaddrs = 'recipient@gmail.com'
 
 message = """From: Onion Omega Onion@onionomega.com
 To: Recipient < recipient@gmail.com >
