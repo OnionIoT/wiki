@@ -1,6 +1,6 @@
 # De-Brick the Omega with Ethernet Expansion
 
-[[__TOC__]]
+[[_TOC_]]
 
 Sometimes if you flash the wrong firmware onto the Omega or if you accidentally restarted the Omega when it is performing a firmware upgrade, it might go into kernel panic when you try to boot it up. In this case, the Omega is bricked, and since you cannot boot into it to perform a factory reset, you will need to manually re-flash the firmware with an ethernet expansion.
 
