@@ -6,7 +6,7 @@ In order to connect to some Wi-Fi hostspots in certain hotels or restaurants, yo
 
 ## 1. Enable the Access Point (AP) on the Omega
 
-Access Point on the Omega should be enabled by default. If it isn't already enabled, you will need to connect to the Omega via the [[serial terminal|Tutorials/Serial-Terminal]]. Then, to enable the Access Point, you will need to edit `/etc/config/wireless`. Uncomment or add the following lines to the file:
+Access Point on the Omega should be enabled by default. If it isn't already enabled, you will need to connect to the Omega via the [[serial terminal|Tutorials/Connecting-to-Omega-via-Serial-Terminal]]. Then, to enable the Access Point, you will need to edit `/etc/config/wireless`. Uncomment or add the following lines to the file:
 
 ```
 config wifi-iface

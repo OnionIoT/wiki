@@ -1,6 +1,6 @@
 # Connect to the Omega via SSH
 
-The Omega can be accessed with a [[serial terminal]] when it is plugged into your computer.
+The Omega can be accessed with a [[serial terminal|Tutorials/Connecting-to-Omega-via-Serial-Terminal]] when it is plugged into your computer.
 
 You can also use SSH to connect to the Omega as long as it's on and your computer is on the same Wi-Fi network. SSH is cool because it allows you to connect to your Omega wirelessly!
 
