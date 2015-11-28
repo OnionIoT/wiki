@@ -2,7 +2,7 @@
 
 The Onion Arduino Dock is meant to be an interface between the Omega and the popular ATmega microcontroller, allowing you to bring the flexibility of the Omega into the world of microcontrollers.
 
-![Onion Arduino Dock](http://i.imgur.com/pqCNKt7.jpg)
+![Onion Arduino Dock](//i.imgur.com/pqCNKt7.jpg)
 
 [[_TOC_]]
 
@@ -18,7 +18,7 @@ Follow the steps outlined in the [[Initial Setup]] article.
 
 
 ## Using the Arduino Dock
-![Omega + Arduino Dock](http://i.imgur.com/B47pqlW.jpg)
+![Omega + Arduino Dock](//i.imgur.com/B47pqlW.jpg)
 
 
 ### Connectivity
@@ -45,18 +45,18 @@ Ensure that all sketches include the Onion Arduino Library and that an Onion obj
 Thanks to the setup you did on your computer and the Arduino Dock, you can actually use the Arduino IDE on your computer to wirelessly flash Sketches to the Arduino Dock, so long as your computer and the Omega on your Arduino Dock are on the same wifi network.
 
 In the Arduino Tools menu, select "Arduino/Guinuino Uno" for the Board, and your Omega-ABCD hostname as the Port:
-![Arduino IDE Tools->Port menu](http://i.imgur.com/1xAEBmT.png)
+![Arduino IDE Tools->Port menu](//i.imgur.com/1xAEBmT.png)
 
 If your Omega does not show up in the Port menu as a network port, restart the Arduino and wait for 30 seconds:
 
 When your sketch is ready, hit the Upload button. Once the sketch is compiled, it will require your Omega password to upload:
-![Arduino IDE Uploading Sketch](http://i.imgur.com/UDXIDVL.png)
+![Arduino IDE Uploading Sketch](//i.imgur.com/UDXIDVL.png)
 
 The IDE actually creates an SSH connection with the Omega to transfer the compiled hex file, and the Omega with then flash the ATmega chip via I2C!
 (If your previous sketch did not include the Onion Arduino Library you will have to press the MCU_RESET button on the Arduino Dock right after entering your password in order to flash successfully)
 
 Once the upload completes, the info screen will show something along the lines of:
-![Arduino IDE Upload Done](http://i.imgur.com/oPOB4Vl.png)
+![Arduino IDE Upload Done](//i.imgur.com/oPOB4Vl.png)
 
 The ATmega chip is now running your sketch, enjoy!
 
@@ -64,10 +64,10 @@ The ATmega chip is now running your sketch, enjoy!
 The Omega can actually flash the ATmega chip as well. This is handy if the Arduino IDE cannot detect your Omega as a Network Port due to any connection/setup issues.
 
 First, enable verbose output during compilation in the Arduino IDE Preferences:
-![Arduino IDE Preferences](http://i.imgur.com/A6uXT6Y.png)
+![Arduino IDE Preferences](//i.imgur.com/A6uXT6Y.png)
 
 Hit the verify button to compile the sketch, once it's complete you will have to scroll to the right to find the path to the compiled hex file:
-![Arduino IDE Compiled Hex file](http://i.imgur.com/QEiDwu8.png)
+![Arduino IDE Compiled Hex file](//i.imgur.com/QEiDwu8.png)
 
 Copy this path and then transfer the file to your Omega.
 
@@ -104,7 +104,7 @@ The library provides some essential functionality for the Arduino Dock
 
 ### Basic Setup in Sketch
 To add the Onion library to your Sketch in the IDE, open the Sketch menu, navigate to Include Library -> Onion
-![Add the Onion Library](https://i.imgur.com/MjYaLTO.png)
+![Add the Onion Library](//i.imgur.com/MjYaLTO.png)
 
 Once the library has been added, create a global instance of the Onion object. 
 Add the following line on the global scope:

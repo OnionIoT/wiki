@@ -16,7 +16,7 @@ These steps ensure the Omega and Arduino Dock will be detected wirelessly and co
 ### Arduino IDE 
 
 ### Installation
-Install the latest Arduino IDE from the good folks over at [Arduino](https://www.arduino.cc/en/Main/Software). We did all of our testing using Version 1.6.6.
+Install the latest Arduino IDE from the good folks over at [Arduino](//www.arduino.cc/en/Main/Software). We did all of our testing using Version 1.6.6.
 
 
 ### Modification of boards.txt
@@ -45,10 +45,10 @@ The Onion Arduino Library provides the required setup and functions required for
 *We're working on a way of stream-lining this process, stay tuned!*
 
 Follow these steps to install the library:
-* Clone the [Onion Arduino Library repo](https://github.com/OnionIoT/Onion-Arduino-Library) to your computer
+* Clone the [Onion Arduino Library repo](//github.com/OnionIoT/Onion-Arduino-Library) to your computer
 * Open the Arduino IDE
   * Open the Sketch Menu, and then Include Library -> Add .ZIP Library
-  ![Add library](https://i.imgur.com/na7wNcY.png)
+  ![Add library](//i.imgur.com/na7wNcY.png)
   * Navigate to where the Onion Arduino Library repo has been cloned
   * Select Onion-Arduino-Library.zip
 * The library is now installed, it can be included in your sketches by opening the Sketch menu -> Include Library -> Onion
@@ -89,8 +89,8 @@ Follow the table below to wire the Omega to the Arduino Dock. **Note that it's v
 | VCC       | 5V                  | 5V               |
 | GND       | GND                 | GND              |
 
-![Programmer Connections](http://i.imgur.com/cWZn7YI.jpg)
-![Programmer Connections with Power](http://i.imgur.com/qOQCPV2.jpg)
+![Programmer Connections](//i.imgur.com/cWZn7YI.jpg)
+![Programmer Connections with Power](//i.imgur.com/qOQCPV2.jpg)
 
 Provide power to the Omega and Expansion Dock through the micro usb port.
 
@@ -128,7 +128,7 @@ Provide power to the Arduino Dock by connecting the 5V and GND Expansion Dock GP
 
 GPIOs 1, 6, 7, and 19 from the Expansion Dock need to be connected to the ICSP Header on the Arduino Dock using male-to-female jumper wires. Follow the image and table below:
 
-![Arduino Dock ICSP Header Pinout](http://i.imgur.com/s6mq42w.jpg)
+![Arduino Dock ICSP Header Pinout](//i.imgur.com/s6mq42w.jpg)
 
 | Expansion Dock GPIO | ICSP Pin  |
 |---------------------|-----------|
@@ -137,11 +137,11 @@ GPIOs 1, 6, 7, and 19 from the Expansion Dock need to be connected to the ICSP H
 | 7                   | RESET     |
 | 19                  | MOSI      |
 
-![Arduino Dock ICSP Plugged in](http://i.imgur.com/c2fdbsU.jpg)
+![Arduino Dock ICSP Plugged in](//i.imgur.com/c2fdbsU.jpg)
 
 Power the Omega and Expansion Dock through the micro usb port.
 
-![Omega + Exp Dock + Arduino Dock + ICSP](http://i.imgur.com/cAQvIXL.jpg)
+![Omega + Exp Dock + Arduino Dock + ICSP](//i.imgur.com/cAQvIXL.jpg)
 
 
 #### Programming
@@ -174,13 +174,13 @@ The Mini Dock can be used in place of an Expansion Dock if you do not have acces
 #### Wiring
 Disconnect the Omega from the Mini Dock. Put a wire into each of the pins shown below:
 
-![Mini Dock Port drawing](https://i.imgur.com/psVEevT.png) ![Mini Dock wire connections](http://i.imgur.com/nrIn5Hm.jpg)
+![Mini Dock Port drawing](//i.imgur.com/psVEevT.png) ![Mini Dock wire connections](//i.imgur.com/nrIn5Hm.jpg)
 
 When using stranded wire, you'll need to twist the ends to make it easier to plug in.
 
 With the wires in place, plug the Omega into the Mini Dock, ensuring that the wires are into the Mini Dock's headers by the Omega's pins. It will take more pressure than usual to plug the Omega in since the pins need to squish in with the wires, be careful to not break anything! Stranded wires work well since the strands have some mobility and can accomodate the pin.
 
-![Omega + Mini Dock + Wires side view](https://i.imgur.com/6Ze0t3g.jpg) ![Omega + Mini Dock + Wires top view](http://i.imgur.com/FGndg13.jpg)
+![Omega + Mini Dock + Wires side view](//i.imgur.com/6Ze0t3g.jpg) ![Omega + Mini Dock + Wires top view](//i.imgur.com/FGndg13.jpg)
 
 Now connect the wires to the Arduino Dock ports specified below:
 
@@ -193,7 +193,7 @@ Now connect the wires to the Arduino Dock ports specified below:
 | VCC       | 3.3V                | **3V3**          |
 | GND       | GND                 | GND              |
 
-![Omega + Mini Dock + Arduino Dock connections](http://i.imgur.com/dxmr2Cz.jpg)
+![Omega + Mini Dock + Arduino Dock connections](//i.imgur.com/dxmr2Cz.jpg)
 
 
 #### Programming

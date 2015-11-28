@@ -32,4 +32,4 @@ This will set the Red to `0xf2`, the Green to `0x11`, and the Blue to `0x33`.
 
 The LED should now be pink-ish.
 
-Check out [this site](http://www.color-hex.com/color/f21133%20) for more info on hex colours.
+Check out [this site](//www.color-hex.com/color/f21133%20) for more info on hex colours.

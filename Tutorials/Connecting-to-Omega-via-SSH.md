@@ -24,7 +24,7 @@ And you're in
 **Step 1**: Download and install Putty from [[http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.65-installer.exe]].
 **Step 2**: Configure an SSH connection to `omega-ABCD.local` on port `22`:
 
-![SSH into the Omega](http://i.imgur.com/dTrdrq9.png SSH into the Omega)
+![SSH into the Omega](//i.imgur.com/dTrdrq9.png SSH into the Omega)
 
 **Step 3**: Click Open, enter the credentials.
 
