@@ -84,3 +84,93 @@ reboot
 
 And voilà! Your Omega should automatically mount the `/overlay` directory. From this point on, all changes to your filesystem will be made on your USB storage device. Please remember that if you startup your Omega with out plugging in the USB storage device, some settings may be different because all the settings will be saved on your USB device.
 
+
+# exroot with pivot-root
+
+Pivot-root is the extroot implementation that completely replaces the flash storage on the Omega with your USB storage device. Using pivot-root method means that all fugure firmware upgrade (unless it is done by uboot) will be done to your USB storage device.
+
+## Step 1. Prerequisites
+
+Using extroot requires the following packages, all of them should already be installed on the default Omega firmware. But just in case you are using your own firmware, here they are again:
+* `block-mount`
+* `kmod-fs-[filesystem of choice]`, typically `kmod-fs-ext4`
+* `kmod-usb-storage-extras`
+
+Install the packages with `opkg`:
+
+```
+opkg update
+opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
+```
+
+You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above).
+
+## Step 2. Mounting the USB Storage Device
+
+Next, plug in your USB storage device. If your device is detected correctly by the Omega, it will show up at a device under the `/dev` directory, usually `/dev/sda1`.
+
+Then, create a mount point for your device if you don't already have one with the following command:
+
+```
+mkdir /mnt/sda1
+```
+
+Finally, mount the device:
+
+```
+mount /dev/sda1 /mnt/sda1
+```
+
+Your USB storage device should now be accessible at `/mnt/sda1`.
+
+## Step 3. Duplicating your rootfs
+
+Next, we must make a complete copy of the of the root filesystem to the external rootfs device. To do this, we will first create a temporary directory that acts as the mount point for the current `/` directory:
+
+```
+mkdir -p /tmp/cproot
+```
+
+Then, we will create a bind mount of `/` at `/tmp/cproot`:
+
+```
+mount --bind / /tmp/cproot
+```
+
+Now, we will make a complete copy of the rootfs to your USB storage device:
+
+```
+tar -C /tmp/cproot -cvf - . | tar -C /mnt/sda1 -xf -
+```
+
+Finally, we will unmount the bind mount:
+
+```
+umount /tmp/cproot
+```
+
+Great! Now you have created a complete copy of your current rootfs on your USB storage device!
+
+## Step 4. Configure Omega to Automount USB Storage Device on Boot
+
+We will now configure the Omega to automatically mount your USB storage device to `/` on startup. This essentially means that we will be using the firmware on Omega's own flash storage as a "bootloader" that run the filesystem on your USB storage as rootfs. To do this, we will open up `/etc/config/fstab`, and add the following lines to it:
+
+```
+config mount
+    option target        /
+    option device        /dev/sda1
+    option fstype        ext4
+    option options       rw,sync
+    option enabled       1
+    option enabled_fsck  0
+```
+
+Save the file and reboot:
+
+```
+reboot
+```
+
+And voilà! Your Omega should automatically mount your USB storage device as its rootfs. From this point on, all changes to your filesystem, including firmware upgrades, will be made on your USB storage device. If you change your mind and want to revert back to running the firmware off Omega's flash storage, simply unplug the USB storage and reboot the Omega.
+
+Happy hacking!
