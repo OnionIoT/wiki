@@ -67,6 +67,18 @@ block detect > /etc/config/fstab
 Then, we are going to edit the `/etc/config/fstab` file, which we have just created, to enable auto-mounting the `/overlay` directory. Look for the line
 
 ```
+option  target  '/mnt/sda1'
+```
+
+and change it to:
+
+```
+option target '/overlay'
+```
+
+Then, look for the line: 
+
+```
 option  enabled '0'
 ```
 
