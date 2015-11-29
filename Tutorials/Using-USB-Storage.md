@@ -1,5 +1,7 @@
 # Using USB Storage with the Omega
 
+*This tutorial is on how to use the USB storage device as separate storage device. If you want to use the USB storage device as Rootfs (i.e. if you want to install `opkg` packages on the USB storage device), then read [[Tutorials/Using-USB-Storage-as-Rootfs]]*.
+
 The Omega can read and write to USB storage devices, such as USB keys, and USB external harddrives.
 
 ## Supported Filesystems
