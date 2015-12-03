@@ -49,7 +49,7 @@ Following the wizard will connect your Omega to a wifi network of your choice, a
 
 ## Setting up using Command Line – OSX
 
-**Step 1**: Download and install the [Silicon Labs CP2102 driver](https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip).
+**Step 1**: Download and install the [Silicon Labs CP2102 driver for OS X](https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip).
 
 **Step 2**: Run `ls /dev/tty.*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/tty.SLAB_USBtoUART`.
 
@@ -74,7 +74,7 @@ The firmware update will take a few minutes, the process will be complete when t
 
 ## Setting up using Command Line – Windows
 
-**Step 1**: Download and install the [Silicon Labs CP2102 driver](https://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip).
+**Step 1**: Download and install the [Silicon Labs CP2102 driver for Windows](https://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip).
 
 **Step 2**: Run Computer Management (Start > Run… > Enter “Computer Management” and press `ENTER`), look for Silicon Labs CP210x USB to UART Bridge under Ports (COM & LPT), and take note of the COM number in bracket.
 
