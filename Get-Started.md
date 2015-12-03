@@ -68,7 +68,7 @@ Following the wizard will connect your Omega to a wifi network of your choice, a
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 5**: Enjoy!
+**Step 6**: Enjoy!
 
 
 
