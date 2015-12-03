@@ -30,9 +30,22 @@
 
 ![Connect to AP](//i.imgur.com/TIsvi2Bh.jpg "Connect to AP")
 
-**Step 2**: Browse to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. Alternatively, you can also browse to `http://192.168.3.1`. You have now arrived at the Setup Wizard. Login with the following information: username: root password: onioneer Follow the wizard to complete the setup of the Omega.
+**Step 2**: Browse to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. 
+
+Alternatively, you can also browse to `http://192.168.3.1`. 
+
+You have now arrived at the Setup Wizard. 
+Login with the following information: 
+```
+username: root
+password: onioneer 
+```
+Follow the wizard to complete the setup of the Omega.
 
 ![Browse to Setup Wizard](//i.imgur.com/fJsQ77zh.jpg "Browse to Setup Wizard")
+
+Following the wizard will connect your Omega to a wifi network of your choice, and will update to the latest firmware.
+
 
 ## Setting up using Command Line – OSX
 
@@ -49,6 +62,15 @@
 **Step 4**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
 ![Run wifisetup](//i.imgur.com/h21sjzRh.jpg "Run wifisetup")
+
+**Step 5**: Run `oupgrade` in the serial terminal, this will update the Omega to the latest firmware.
+
+The firmware update will take a few minutes, the process will be complete when the Omega reboots.
+**Warning: Do not disconnect the Omega from wifi or power during this process!**
+
+**Step 5**: Enjoy!
+
+
 
 ## Setting up using Command Line – Windows
 
@@ -71,6 +93,15 @@
 **Step 6**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
 ![Run wifisetup](//i.imgur.com/u6E5LGSh.jpg "Run wifisetup")
+
+**Step 7**: Run `oupgrade` in the serial terminal, this will update the Omega to the latest firmware.
+
+The firmware update will take a few minutes, the process will be complete when the Omega reboots.
+**Warning: Do not disconnect the Omega from wifi or power during this process!**
+
+**Step 8**: Enjoy!
+
+
 
 ## Setting up using Command Line – Linux
 
@@ -129,3 +160,10 @@ $ sudo chmod 666 /dev/ttyUSB0
 **Step 5**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
 ![Run wifisetup](//i.imgur.com/qou4iAmh.png "Run wifisetup")
+
+**Step 6**: Run `oupgrade` in the serial terminal, this will update the Omega to the latest firmware.
+
+The firmware update will take a few minutes, the process will be complete when the Omega reboots.
+**Warning: Do not disconnect the Omega from wifi or power during this process!**
+
+**Step 7**: Enjoy!
