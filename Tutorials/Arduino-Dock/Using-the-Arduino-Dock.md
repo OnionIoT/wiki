@@ -2,7 +2,7 @@
 
 The Onion Arduino Dock is meant to be an interface between the Omega and the popular ATmega microcontroller, allowing you to bring the flexibility of the Omega into the world of microcontrollers.
 
-![Onion Arduino Dock](//i.imgur.com/pqCNKt7.jpg)
+![Onion Arduino Dock](http://i.imgur.com/ykPHEiJ.png)
 
 [[_TOC_]]
 
