@@ -36,9 +36,9 @@ relay-exp -h
 
 ### Initialization
 
-After every power-cycle, the chip on the Relay Expansion must be initialized to correctly and safely control the Relay Modules. **The driver application will automatically detect if initialization is required and perform the required sequence.**
+After every power-cycle, the chip on the Relay Expansion must be initialized to correctly and safely control the Relay Modules. **The driver application will automatically detect if initialization is required and perform the required sequence,** so there is no need to run this command.
 
-To manually trigger the initialization, run the following command:
+However, manually triggering the initialization is still available; run the following command:
 
 ```
 relay-exp -i
