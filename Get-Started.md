@@ -105,11 +105,15 @@ The firmware update will take a few minutes, the process will be complete when t
 
 ## Setting up using Command Line – Linux
 
-**Step 1**: Check if the serial drivers are already installed
+**Step 1**: Check if the serial drivers are already installed.
 
-Some modern Linux Distros already have the required serial drivers installed. Runn `modinfo cp210x` on the command line, if it outputs several lines of information, the driver is already installed and you can skip ahead to Step 4. 
+Some modern Linux Distros already have the required serial drivers installed. Run `modinfo cp210x` on the command line, if it outputs several lines of information, the driver is already installed and you can skip ahead to Step 4. 
 
-If the output is something along the lines of `modinfo: ERROR: Module cp210x not found.`, the driver will need to be installed. Continue to Step 2.
+If the output is something along the lines of 
+```
+modinfo: ERROR: Module cp210x not found.
+```
+the driver will need to be installed. Continue to Step 2.
 
 
 **Step 2**: Download and install the Silicon Labs CP2102 driver source files.
