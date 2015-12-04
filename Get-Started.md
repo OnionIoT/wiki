@@ -105,12 +105,19 @@ The firmware update will take a few minutes, the process will be complete when t
 
 ## Setting up using Command Line – Linux
 
-**Step 1**: Download and install the Silicon Labs CP2102 driver source files.
+**Step 1**: Check if the serial drivers are already installed
+
+Some modern Linux Distros already have the required serial drivers installed. Runn `modinfo cp210x` on the command line, if it outputs several lines of information, the driver is already installed and you can skip ahead to Step 4. 
+
+If the output is something along the lines of `modinfo: ERROR: Module cp210x not found.`, the driver will need to be installed. Continue to Step 2.
+
+
+**Step 2**: Download and install the Silicon Labs CP2102 driver source files.
 
 For Linux kernel **3.x.x and higher**: [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
 For Linux kernel **2.6.x**: [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
 
-**Step 2**: Build and install the driver.
+**Step 3**: Build and install the driver.
 
 *For Ubuntu/Debian*:
 
@@ -149,21 +156,21 @@ $ sudo chmod 666 /dev/ttyUSB0
 ```
 
 
-**Step 3**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/ttyUSB0`.
+**Step 4**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/ttyUSB0`.
 
 ![Check if serial device exists](//i.imgur.com/p1OwSE6h.png "Check if serial device exists")
 
-**Step 4**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using screen.
+**Step 5**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using screen.
 
 ![Log in through serial terminal](//i.imgur.com/sENEIX8h.png "Log in through serial terminal")
 
-**Step 5**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
+**Step 6**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
 ![Run wifisetup](//i.imgur.com/qou4iAmh.png "Run wifisetup")
 
-**Step 6**: Run `oupgrade` in the serial terminal, this will update the Omega to the latest firmware.
+**Step 7**: Run `oupgrade` in the serial terminal, this will update the Omega to the latest firmware.
 
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 7**: Enjoy!
+**Step 8**: Enjoy!
