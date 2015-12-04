@@ -3,14 +3,22 @@
 The Relay Expansion allows you to control two relay modules. Relays are basically electronically operated switches, enabling the Omega's low power circuits to control other, potentially high power circuits.
 
 
-## The Dip-Switches
+[//]: # (Hardware)
 
-The dip switches on the Relay Expansion are there to enable users to stack and control up to eight Relay Expansions with one Omega and Expansion dock.
+## The Hardware
+The Relay Expansion has two TE Axicom IMO3 relay modules with a switching maximum voltage of 220 VDC and 250VAC, rated for 2A of current, and switching power of 60W, 62.5VA. The switching typically takes 1ms, with a maximum of 3ms.
+
+### The Dip-Switches
+
+The dip switches on the Relay Expansion control the I2C device address of the Expansion, enabling users to stack and control up to eight Relay Expansions with one Omega and Expansion dock.
 
 The 'off' position for each switch is when the toggle is close to the numbers on the switch, or away from the relay modules.
 
 The 'on' position is when the toggle is away from the numbers on the switch, or closer to the relay modules.
 
+
+
+[//]: # (Using relay-exp)
 
 ## Using the Command Line
 
@@ -28,9 +36,9 @@ relay-exp -h
 
 ### Initialization
 
-After every power-cycle, the chip on the Relay Expansion must be initialized to correctly and safely control the Relay Modules.
+After every power-cycle, the chip on the Relay Expansion must be initialized to correctly and safely control the Relay Modules. **The driver application will automatically detect if initialization is required and perform the required sequence.**
 
-Run the following command:
+To manually trigger the initialization, run the following command:
 
 ```
 relay-exp -i
@@ -106,9 +114,12 @@ Turning both relays OFF:
 relay-exp all off
 ```
 
+
+[//]: # (Switch Explanation)
+
 ## Using Multiple Relay Expansions by Changing the Dip-Switch Settings
 
-The dip-switches specify the I2C address the chip on the Relax Expansion uses. A single Omega and Expansion Dock can control up to eight Relay Expansions if they all have different dip-switch configurations.
+The dip-switches specify the I2C address the chip on the Relax Expansion declares as it's device address. A single Omega and Expansion Dock can control up to eight Relay Expansions if they all have different dip-switch configurations.
 
 The relay-exp tool will need to know if the switch configuration has changed when programming the expansion:
 
@@ -166,3 +177,20 @@ The switches are set to off-off-off, setting both relays to off
 ```
 relay-exp all off
 ```
+
+
+### I2C Address Mapping
+
+If you're curious about how the switches affect the I2C device address of the Relay Expansion, then this table is for you:
+
+| Switch Binary Setting | I2C Device Address |
+|-----------------------|--------------------|
+| 000                   | 0x27               |
+| 001                   | 0x26               |
+| 010                   | 0x25               |
+| 011                   | 0x24               |
+| 100                   | 0x23               |
+| 101                   | 0x22               |
+| 110                   | 0x21               |
+| 111                   | 0x20               |
+
