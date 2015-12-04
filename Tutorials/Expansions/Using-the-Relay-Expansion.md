@@ -3,6 +3,9 @@
 The Relay Expansion allows you to control two relay modules. Relays are basically electronically operated switches, enabling the Omega's low power circuits to control other, potentially high power circuits.
 
 
+[[_TOC_]]
+
+
 [//]: # (Hardware)
 
 ## The Hardware

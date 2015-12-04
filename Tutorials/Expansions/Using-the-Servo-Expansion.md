@@ -2,6 +2,12 @@
 
 The Servo (PWM) Expansion allows you to generate up to 16 different Pulse Width Modulated (PWM) signals to control anything from Servo Motors, DC Motor speed, LED brightness, etc.
 
+
+[[_TOC_]]
+
+
+[//]: # (PWM Signals)
+
 ## PWM Signals
 
 Pulse Width Modulated signals can be described by duty cycle or periods
@@ -23,6 +29,9 @@ The Complete Cycle time corresponds to the overall period of the PWM. Changing t
 $$Frequency = {\frac{1}{Period}}$$
 
 
+
+[//]: # (Using pwm-exp)
+
 ## Using the Command Line
 
 *Make sure that your Omega has the latest firmware!*
@@ -36,6 +45,8 @@ For a print-out of the command's usage, run it with just a -h argument
 ```
 pwm-exp -h
 ```
+
+
 
 ### Initialization
 
@@ -101,6 +112,8 @@ Generating a PWM signal that is high for 1.65ms with an overall period of 5.4ms 
 pwm-exp -p 5 1.65 5.4
 ```
 
+
+
 ### Setting the PWM signal frequency
 
 When setting the signal based on duty cycle, the frequency can also be adjusted in each command by using the -f option.
@@ -125,6 +138,8 @@ Also note that all channels run on the same frequency, it is not possible to gen
 When setting the signal based on period, the frequency is dependent on the total period:
 
 $$Frequency = {\frac{1}{Period}}$$
+
+
 
 ### Selecting a Channel
 
@@ -160,6 +175,8 @@ Setting all of the channels to a 5% duty cycle at 50Hz using the period times
 ```
 pwm-exp -p all 1 20
 ```
+
+
 
 ### Setting a Delay
 
