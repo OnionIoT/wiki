@@ -10,7 +10,11 @@ The Servo (PWM) Expansion allows you to generate up to 16 different Pulse Width 
 
 ## PWM Signals
 
-Pulse Width Modulated signals can be described by duty cycle or periods
+Pulse Width Modulated signals can be described by duty cycle or periods.
+
+![Duty Cycle Graph](http://www.bristolwatch.com/picaxe/images/io43.gif)
+
+
 
 ### Duty Cycle
 
@@ -27,6 +31,20 @@ Similarly, Time Off, or Toff is the time the signal is low.
 The Complete Cycle time corresponds to the overall period of the PWM. Changing the period will also change the frequency of the PWM signal:
 
 $$Frequency = {\frac{1}{Period}}$$
+
+
+[//]: # (Expansion Hardware)
+
+## The Hardware
+
+The Servo Expansion has 16 channels to generate PWM signals. The 16 channels are broken out so that servo-motors can be directly connected to the headers. 
+
+It also comes with an onboard DC barrel jack connector that can be used to supply power to any connected servos. If this connector is not used, the Expansion Dock will provide power to the servos, however, it is not recommended to run more than one or two servos under light load with this method.
+Note that the Omega cannot be powered through this connector, it requires its power own power supply. 
+
+The onboard chip has an oscillator that can generate PWM signals with a frequency in the range of 24 Hz to 1526 Hz. Most servos operate at 50 Hz, that is the default frequency.
+
+![Servo Expansion](http://i.imgur.com/aNoYCZc.png)
 
 
 
@@ -50,15 +68,18 @@ pwm-exp -h
 
 ### Initialization
 
-After every boot, the chip and oscillator on the Servo Expansion have to be initialized in order for the PWM signals to be generated correctly.
+After every boot, the chip and oscillator on the Servo Expansion have to be initialized in order for the PWM signals to be generated correctly. **The driver application will automatically detect if the oscillator is not running and will run the required sequence,** so this command should only be run if you wish to initialize the oscillator but not generate any PWM signals.
 
-Run the following command:
+To perform the initialization, run the following command:
 
 ```
 pwm-exp -i
 ```
 
 This can be run by itself or in conjunction with any commands below.
+
+
+
 
 ### Setting the PWM based on Duty Cycle
 
@@ -89,6 +110,8 @@ pwm-exp -i 2 95
 ```
 
 Note that the duty cycle must be between 0 and 100.
+
+
 
 ### Setting the PWM based on Period
 
@@ -133,7 +156,8 @@ The default frequency is 50 Hz since most Servos operate on this frequency.
 
 If the desired frequency is different from the default, the frequency must be specified in each ```pwm-exp``` command, otherwise the expansion will reset to the default frequency.
 
-Also note that all channels run on the same frequency, it is not possible to generate PWM signals with different frequencies on the same Servo Expansion.
+Also **note that all channels run on the same frequency, it is not possible to generate PWM signals with different frequencies on the same Servo Expansion.**
+
 
 When setting the signal based on period, the frequency is dependent on the total period:
 
@@ -207,3 +231,34 @@ Generating a signal with 33% and a delay of 50% on channel 9:
 ```
 pwm-exp 9 33 50
 ```
+
+
+### Disabling the Oscillator
+
+The oscillator can be put into sleep mode, immediately disabling generation of all PWM signals. This might be useful in any application where you want to disable all connected servos or LEDs but keep the Omega powered on. For instance, we use the sleep mode to rest the servos on Oliver, our robotic arm, after he's been powered on for too long.
+
+To put the oscillator in sleep mode:
+```
+pwm-exp -s
+```
+
+**To enable the oscillator again, there are a few methods:**
+
+Run the initialization sequence to enable the oscillator and generate no pwm signals:
+```
+pwm-exp -i
+```
+
+Generate a PWM signal on one or all channels, the software will detect the oscillator is in sleep mode and will run the initialization sequence:
+```
+pwm-exp <channel> <duty>
+```
+or
+```
+pwm-exp -p <channel> <pulse width> <total period>
+```
+
+
+
+
+
