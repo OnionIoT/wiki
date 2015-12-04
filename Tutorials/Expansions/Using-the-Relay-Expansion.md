@@ -13,7 +13,7 @@ The Relay Expansion has two TE Axicom IMO3 relay modules. The table below outlin
 
 | Parameter                 | Specification             |
 |---------------------------|---------------------------|
-| Maximum Switching Voltage | 220VDC 250VAC             |
+| Maximum Switching Voltage | 220VDC, 250VAC            |
 | Current Rating            | 2A                        |
 | Switching Power           | 60W, 62.5VA               |
 | Switching Time            | Typical: 1ms Maximum: 3ms |
@@ -149,14 +149,14 @@ Follow this table:
 
 | Switch 1 | Switch 2 | Switch 3 | Binary Value |
 |----------|----------|----------|--------------|
-| OFF      | OFF      | OFF      | 000          |
-| OFF      | OFF      | ON       | 001          |
-| OFF      | ON       | OFF      | 010          |
-| OFF      | ON       | ON       | 011          |
-| ON       | OFF      | OFF      | 100          |
-| ON       | OFF      | ON       | 101          |
-| ON       | ON       | OFF      | 110          |
-| ON       | ON       | ON       | 111          |
+| OFF      | OFF      | OFF      | *000*        |
+| OFF      | OFF      | ON       | *001*        |
+| OFF      | ON       | OFF      | *010*        |
+| OFF      | ON       | ON       | *011*        |
+| ON       | OFF      | OFF      | *100*        |
+| ON       | OFF      | ON       | *101*        |
+| ON       | ON       | OFF      | *110*        |
+| ON       | ON       | ON       | *111*        |
 
 If all of the switches are off (000), the switch setting does not need to be specified and the command can be used as normal:
 
@@ -193,7 +193,7 @@ relay-exp all off
 
 ### I2C Address Mapping
 
-If you're curious about how the switches affect the I2C device address of the Relay Expansion, then this table is for you:
+If you're curious about how the dip-switch settings affect the I2C device address of the Relay Expansion, then this table is for you:
 
 | Switch Binary Setting | I2C Device Address |
 |-----------------------|--------------------|
