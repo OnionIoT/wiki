@@ -9,7 +9,16 @@ The Relay Expansion allows you to control two relay modules. Relays are basicall
 [//]: # (Hardware)
 
 ## The Hardware
-The Relay Expansion has two TE Axicom IMO3 relay modules with a switching maximum voltage of 220 VDC and 250VAC, rated for 2A of current, and switching power of 60W, 62.5VA. The switching typically takes 1ms, with a maximum of 3ms.
+The Relay Expansion has two TE Axicom IMO3 relay modules. The table below outlines the specifications:
+
+| Parameter                 | Specification             |
+|---------------------------|---------------------------|
+| Maximum Switching Voltage | 220VDC 250VAC             |
+| Current Rating            | 2A                        |
+| Switching Power           | 60W, 62.5VA               |
+| Switching Time            | Typical: 1ms Maximum: 3ms |
+
+
 
 ### The Dip-Switches
 
