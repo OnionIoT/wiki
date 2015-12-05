@@ -1,4 +1,4 @@
-# Using Servo Expansion
+# Using the Servo Expansion
 
 The Servo (PWM) Expansion allows you to generate up to 16 different Pulse Width Modulated (PWM) signals to control anything from Servo Motors, DC Motor speed, LED brightness, etc.
 
@@ -156,7 +156,7 @@ The default frequency is 50 Hz since most Servos operate on this frequency.
 
 If the desired frequency is different from the default, the frequency must be specified in each ```pwm-exp``` command, otherwise the expansion will reset to the default frequency.
 
-Also **note that all channels run on the same frequency, it is not possible to generate PWM signals with different frequencies on the same Servo Expansion.**
+**Also note that all channels run on the same frequency, it is not possible to generate PWM signals with different frequencies on the same Servo Expansion.**
 
 
 When setting the signal based on period, the frequency is dependent on the total period:
