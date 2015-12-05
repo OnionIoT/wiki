@@ -21,7 +21,7 @@ The OLED Expansion has a 0.96" 128x64 black and white OLED display. When display
 
 *Make sure that your Omega has the latest firmware!*
 
-A tool called 'oled-exp' will be your helper in all things related to the OLED Expansion,
+A tool called 'oled-exp' will be your helper in all things related to the OLED Expansion.
 
 
 
@@ -58,14 +58,14 @@ A single `oled-exp` call can have one or many cascaded commands:
 // single command
 oled-exp write "Hello!"
 
-// multiple cascaded commands (execute in order of )
+// multiple cascaded commands (execute in order from left to right)
 oled-exp write "Onion Omega\nMy favourite" dim on cursor 4,0 write ":)"
 ```
 
 
 #### Command and Option Table
 
-To reconcile all of the above features, refer to the table below:
+To reconcile all of the above features to `oled-exp`, refer to the table below:
 
 | Action                    | Option/Command            |
 |---------------------------|---------------------------|
@@ -144,7 +144,7 @@ oled-exp dim <on|off>
 
 #### Write
 
-Write a string to the display *at the current position of the cursor*
+Write a string to the display *at the current position of the cursor*:
 ```
 oled-exp write <string>
 ```
@@ -160,7 +160,7 @@ A table containing all possible characters is coming soon!
 
 
 
-#### Cursor
+#### Set the Cursor Position
 
 Set the cursor position on the display, any writes after this command will start at the specified row and column.
 
