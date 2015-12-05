@@ -210,7 +210,7 @@ Supported directions:
 
 
 
-##### Draw
+#### Displaying Images
 
 Display an image from an LCD file on the display. 
 
