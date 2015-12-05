@@ -190,7 +190,7 @@ oled-exp cursor 2,10
 
 
 
-### Scrolling
+#### Scrolling
 
 The OLED can scroll whatever is on the screen horizontally or diagonally upwards. The text/image will wrap around the edges.
 ``` 
