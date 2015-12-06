@@ -20,18 +20,20 @@ Each of the read and write functions have been written to be self-contained, so 
 ## Using the Library
 
 **Header File**
+
 To add the Onion I2C Library to your C/C++ program, include the header file in your C code:
-```C
+```c
 #include <onion-i2c.h>
 ```
 
 **Library for Linker**
+
 In your project's makefile, you will need to add the following static libraries to the linker command:
-```C
+```c
 -loniondebug -lonioni2c 
 ```
 
-The static libraries are stored at `/usr/lib` on the Omega.
+The static libraries are stored in `/usr/lib` on the Omega.
 
 
 
@@ -72,7 +74,7 @@ Functions that perform reads from devices on the I2C bus
 The `i2c_readByte` function will read one byte from a register address on a specified device on the I2C bus.
 
 The function is declared as follows:
-```C
+```c
 int i2c_readByte (int devNum, int devAddr, int addr, int *val);
 ```
 
@@ -93,7 +95,7 @@ Finally, the val argument is passed by reference, and after the function runs wi
 **Examples**
 
 To read a byte from the 0x01 register from an I2C device with address of 0x5a (the Servo Expansion):
-```C
+```c
 int 	status, rdByte;
 status 	= i2c_write(0, 0x5a, 0x01, &rdByte);
 ```
@@ -106,7 +108,7 @@ status 	= i2c_write(0, 0x5a, 0x01, &rdByte);
 The `i2c_read` function will read a specified number of bytes from a register address on a device on the I2C bus.
 
 The function is declared as follows:
-```C
+```c
 int i2c_read (int devNum, int devAddr, int addr, uint8_t *buffer, int numBytes);
 ```
 
@@ -131,14 +133,14 @@ Note that when using a pointer for the `buffer` argument, it must be allocated b
 **C Examples**
 
 To read 4 bytes from address 0x00 on a device with an address of 0x48, using a pointer for the buffer:
-```C
+```c
 int 	status;
 uint8_t *buffer = malloc(4 * sizeof *buffer);
 status 			= i2c_read(0, 0x48, 0x00, buffer, 4);
 ```
 
 To read 2 bytes from address 0x10 on a device with an address of 0x48, using an array for the buffer:
-```C
+```c
 int 	status;
 uint8_t	buffer[32];
 status 			= i2c_read(0, 0x48, 0x10, buffer, 2);
@@ -147,7 +149,7 @@ status 			= i2c_read(0, 0x48, 0x10, buffer, 2);
 **C++ Examples**
 
 To read 2 bytes from address 0x00 on a device with an address of 0x48, using a pointer for the buffer:
-```C++
+```c++
 int 	status;
 uint8_t	*buffer = new uint8_t[16];
 status 			= i2c_read(0, 0x48, 0x00, buffer, 2);
@@ -168,7 +170,7 @@ Functions that perform writes to devices on the I2C bus.
 The `i2c_writeBuffer` function will write a specified number of bytes from a previously populated pointer or array to a register address on an I2C device.
 
 The function is declared as follows:
-```C
+```c
 int i2c_writeBuffer	(int devNum, int devAddr, int addr, uint8_t *buffer, int size);
 ```
 
@@ -192,7 +194,7 @@ When using a pointer for the `buffer` argument, it must be allocated and populat
 **Examples**
 
 Write 2 bytes to the 0x02 register address on an I2C device with an address of 0x08, *using an array for the `buffer` argument*:
-```C
+```c
 int 	status;
 uint8_t	buffer[32];
 
@@ -204,7 +206,7 @@ status 		= i2c_writeBuffer(0, 0x08, 0x01, buffer, 2);
 ```
 
 Write 3 bytes to the 0x05 register address on the same device as above using an array for the `buffer` argument:
-```C
+```c
 int 	status;
 uint8_t	buffer[3] = {0xbe, 0xef, 0x80};
 
@@ -212,7 +214,7 @@ status 		= i2c_writeBuffer(0, 0x08, 0x05, buffer, 3);
 ```
 
 Write 4 bytes to the 0x54 register address on an I2C device with an address of 0x30, *using a pointer for the `buffer` argument:
-```C
+```c
 int 	status;
 uint8_t *buffer = malloc(4 * sizeof *buffer);
 
@@ -234,7 +236,7 @@ status 		= i2c_writeBuffer(0, 0x30, 0x54, buffer, 4);
 The `i2c_writeBytes` function will write a specified number of bytes from an integer variable to an address on an I2C device. Sometimes it's a little quicker to pass in an integer rather than create a buffer like the `i2c_writeBuffer` function above requires. Note that the Least Significant Byte (LSB) of the integer will be written first and that the maximum number of bytes is 4 (since an int holds 32 bits on the Omega).
 
 The function is declared as follows:
-```C
+```c
 int i2c_writeBytes 	(int devNum, int devAddr, int addr, int val, int numBytes);
 ```
 
@@ -262,7 +264,7 @@ Note that the bytes of the integer will be written in the following order, assum
 **Examples**
 
 Write a byte to the 0x02 register address on an I2C device with an address of 0x08:
-```C
+```c
 int 	status;
 int		val  	= 0x04;
 
@@ -270,7 +272,7 @@ status 		= i2c_writeBytes(0, 0x08, 0x01, val, 1);
 ```
 
 Write 2 bytes to the 0x05 register address on the same device as above:
-```C
+```c
 int 	status;
 int		val  	= 0x1304;
 
@@ -280,7 +282,7 @@ status 		= i2c_writeBytes(0, 0x08, 0x01, val, 2);
 ```
 
 Write 3 bytes to the 0x54 register address on an I2C device with an address of 0x30:
-```C
+```c
 int 	status;
 int		val  	= 0xfe082324;
 
@@ -289,7 +291,7 @@ status 		= i2c_writeBytes(0, 0x30, 0x54, val, 3);
 ```
 
 Write 4 bytes to the 0x00 register address on an I2C device with an address of 0x30:
-```C
+```c
 int 	status;
 int		val  	= 0x27f8e460;
 
@@ -304,7 +306,6 @@ status 		= i2c_writeBytes(0, 0x30, 0x00, val, 4);
 
 All of the functions follow the same general pattern:
 * Get a file descriptor to the I2C adapter
-  * Ensure a valid descriptor is returned
 * Inform the adapter which device to communicate with
 * Perform the function's main operation (read, write to the I2C adapter)
 * Release the I2C adapter device handle
