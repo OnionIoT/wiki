@@ -244,6 +244,8 @@ Generate a signal on channel 13, change the frequency to 105.45 Hz, and generate
 int status 	= pwmSetupDriver(13, 99, 0);
 status 		= pwmSetFrequency(105.45f);
 status 		= pwmSetupDriver(13, 82, 0);
+```
+
 
 
 [//]: # (Disable Oscillator)
