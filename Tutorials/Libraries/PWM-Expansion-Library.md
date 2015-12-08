@@ -36,7 +36,7 @@ The **duty cycle** indicates what percentage of time a signal is on or high volt
 
 The **frequency** determines the overall period of the pulse.
 
-For a more detailed explanation, see the guide on [using the Servo Expansion.](../Expansions/Using-the-Servo-Expansion)
+For a more detailed explanation, see the guide on [using the Servo Expansion.](../Expansions/Using-the-Servo-Expansion#pwm-signals)
 
 
 
