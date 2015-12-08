@@ -26,7 +26,7 @@ After each power-cycle, the chip that controls the Relay Expansion must be progr
 
 **Header File**
 
-To add the Onion I2C Library to your program, include the header file in your code:
+To add the Onion Relay Expansion Library to your program, include the header file in your code:
 ``` c
 #include <relay-exp.h>
 ```
@@ -156,7 +156,8 @@ int relayCheckInit (int addr, int *bInitialized);
 
 The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
-The `bInitialized` argument follows the table below:
+The `bInitialized` argument is to be passed by reference and once the function executes, it will contain a value that corresponds whether or not the Expansion is currently in the initialized state.
+The value follows the table below:
 
 | Initialization Status | bInitialized |
 |-----------------------|--------------|
