@@ -195,7 +195,7 @@ int relaySetChannel	(int addr, int channel, int state);
 
 The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
-The `channel` argument selects the relay in question. See the [diagram above](#types) for info on which channel corresponds to which relay.
+The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
 
 The `state` argument allows the user to select if the relay will be turned on or off:
 * 0 turn the relay OFF
