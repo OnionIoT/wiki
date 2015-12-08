@@ -231,6 +231,19 @@ The oscillator can generate frequencies between **24 Hz and 1526 Hz,** the defau
 The `freq` argument is a floating point number that specifies the frequency. The function will accept any input but the programmed frequency will be clamped between 24 Hz and 1526 Hz.
 
 
+**Examples**
+
+Change the frequency to 60 Hz and generate a 40% duty cycle signal on channel 14:
+``` c
+int status 	= pwmSetFrequency(60.0f);
+status 		= pwmSetupDriver(14, 40, 0);
+```
+
+Generate a signal on channel 13, change the frequency to 105.45 Hz, and generate a new signal on channel 13:
+``` c
+int status 	= pwmSetupDriver(13, 99, 0);
+status 		= pwmSetFrequency(105.45f);
+status 		= pwmSetupDriver(13, 82, 0);
 
 
 [//]: # (Disable Oscillator)
