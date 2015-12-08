@@ -121,7 +121,7 @@ int relayDriverInit (int addr);
 
 **Arguments**
 
-The `addr` argument is described above in the [I2C Device Address section](##I2C Device Address).
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
 
 **Examples**
@@ -154,7 +154,7 @@ int relayCheckInit (int addr, int *bInitialized);
 
 **Arguments**
 
-The `addr` argument is described above in the [I2C Device Address section](##I2C Device Address).
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
 The `bInitialized` argument follows the table below:
 
@@ -167,7 +167,7 @@ The `bInitialized` argument follows the table below:
 **Example**
 
 Check if a Relay Expansion (with all switches set to On) is initialized:
-``` c
+```c
 int status, bInit;
 status 	= relayCheckInit(0, &bInit);
 
@@ -193,9 +193,9 @@ int relaySetChannel	(int addr, int channel, int state);
 
 **Arguments**
 
-The `addr` argument is described above in the [I2C Device Address section](##I2C Device Address).
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
-The `channel` argument selects the relay in question. See the [diagram above](###Types) for info on which channel corresponds to which relay.
+The `channel` argument selects the relay in question. See the [diagram above](#types) for info on which channel corresponds to which relay.
 
 The `state` argument allows the user to select if the relay will be turned on or off:
 * 0 turn the relay OFF
@@ -218,7 +218,7 @@ This is performed with a single register write so both relays should react at th
 
 **Arguments**
 
-The `addr` argument is described above in the [I2C Device Address section](##I2C Device Address).
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
 The `state` argument allows the user to select if the relays will be turned on or off:
 * 0 turn the relays OFF
