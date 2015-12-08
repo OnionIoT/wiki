@@ -4,7 +4,7 @@ The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a static C library 
 
 ![PWM Expansion Photo](http://i.imgur.com/aNoYCZc.png)
 
-The library can be used in C program for now, C++ support is coming soon.
+The library can be used in C programs for now, C++ support is coming soon.
 
 
 [[_TOC_]]
@@ -36,7 +36,7 @@ The **duty cycle** indicates what percentage of time a signal is on or high volt
 
 The **frequency** determines the overall period of the pulse.
 
-For a more detailed explanation, see the guide on [using the Servo Expansion.](../Expansions/Using-the-Servo-Expansion.md)
+For a more detailed explanation, see the guide on [using the Servo Expansion.](../Expansions/Using-the-Servo-Expansion)
 
 
 
@@ -79,7 +79,7 @@ If the function operation is successful, the return value will be `EXIT_SUCCESS`
 If the function operation is not successful, the function will return `EXIT_FAILURE` which is defined as `1`. 
 
 A few reasons why the function might not be successful:
-* The specified device address cannot be found on the I2C bus
+* The specified device address cannot be found on the I2C bus (the Expansion is not plugged in)
 * The system I2C interface is currently in use elsewhere
 
 An error message will be printed that will give more information on the reason behind the failure.
