@@ -183,31 +183,31 @@ The `delay` argument specifies the percentage delay before the PWM signal goes h
 Set channel 0 to a PWM signal with a 50% duty cycle:
 ``` c
 int status;
-status = pwmSetupDriver(0, 50, 0.0f);
+status = pwmSetupDriver	(0, 50, 0.0f);
 ```
 
 Generate a 3.55% duty cycle PWM signal with a 45% delay on channel 7: 
 ``` c
 int status;
-status = pwmSetupDriver(7, 3.55f, 45);
+status = pwmSetupDriver	(7, 3.55f, 45);
 ```
 
 Set channel 15 to always on:
 ``` c
 int status;
-status = pwmSetupDriver(15, 100, 0);
+status = pwmSetupDriver	(15, 100, 0);
 ```
 
 Set channel 8 to always off:
 ``` c
 int status;
-status = pwmSetupDriver(8, 0, 0);
+status = pwmSetupDriver	(8, 0, 0);
 ```
 
 Set all channels to a 15.65% duty cycle PWM signal:
 ``` c
 int status;
-status = pwmSetupDriver(-1, 15.65f, 0.0f);
+status = pwmSetupDriver	(-1, 15.65f, 0.0f);
 ```
 
 
@@ -235,15 +235,15 @@ The `freq` argument is a floating point number that specifies the frequency. The
 
 Change the frequency to 60 Hz and generate a 40% duty cycle signal on channel 14:
 ``` c
-int status 	= pwmSetFrequency(60.0f);
-status 		= pwmSetupDriver(14, 40, 0);
+int status 	= pwmSetFrequency	(60.0f);
+status 		= pwmSetupDriver	(14, 40, 0);
 ```
 
 Generate a signal on channel 13, change the frequency to 105.45 Hz, and generate a new signal on channel 13:
 ``` c
-int status 	= pwmSetupDriver(13, 99, 0);
-status 		= pwmSetFrequency(105.45f);
-status 		= pwmSetupDriver(13, 82, 0);
+int status 	= pwmSetupDriver	(13, 99, 0);
+status 		= pwmSetFrequency	(105.45f);
+status 		= pwmSetupDriver	(13, 82, 0);
 ```
 
 
