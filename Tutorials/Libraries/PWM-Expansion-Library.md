@@ -183,31 +183,31 @@ The `delay` argument specifies the percentage delay before the PWM signal goes h
 Set channel 0 to a PWM signal with a 50% duty cycle:
 ``` c
 int status;
-status = pwmSetupDriver	(0, 50, 0.0f);
+status = pwmSetupDriver(0, 50, 0.0f);
 ```
 
 Generate a 3.55% duty cycle PWM signal with a 45% delay on channel 7: 
 ``` c
 int status;
-status = pwmSetupDriver	(7, 3.55f, 45);
+status = pwmSetupDriver(7, 3.55f, 45);
 ```
 
 Set channel 15 to always on:
 ``` c
 int status;
-status = pwmSetupDriver	(15, 100, 0);
+status = pwmSetupDriver(15, 100, 0);
 ```
 
 Set channel 8 to always off:
 ``` c
 int status;
-status = pwmSetupDriver	(8, 0, 0);
+status = pwmSetupDriver(8, 0, 0);
 ```
 
 Set all channels to a 15.65% duty cycle PWM signal:
 ``` c
 int status;
-status = pwmSetupDriver	(-1, 15.65f, 0.0f);
+status = pwmSetupDriver(-1, 15.65f, 0.0f);
 ```
 
 
