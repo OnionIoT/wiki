@@ -1,6 +1,6 @@
 # PWM Expansion Library
 
-The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a static C library that provies functions to setup and change the state of the relays on the Relay Expansion. 
+The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a static C library that provies functions to setup the Servo Expansion and generate PWM signals.
 
 ![PWM Expansion Photo](http://i.imgur.com/aNoYCZc.png)
 
