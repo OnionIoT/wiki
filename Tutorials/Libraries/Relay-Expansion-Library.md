@@ -1,6 +1,6 @@
 # Relay Expansion Library
 
-The Onion Relay Expansion library, `libonionrelayexp` is a static C library that provies functions to setup and change the state of the relays on the Relay Expansion. 
+The Onion Relay Expansion library, `libonionrelayexp` is a static C library that provides functions to setup and change the state of the relays on the Relay Expansion. 
 
 [//]: # (LAZAR: Add image of relay-exp here)
 

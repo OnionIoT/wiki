@@ -1,6 +1,6 @@
 # PWM Expansion Library
 
-The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a static C library that provies functions to setup the Servo Expansion and generate PWM signals.
+The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a static C library that provides functions to setup the Servo Expansion and generate PWM signals.
 
 ![PWM Expansion Photo](http://i.imgur.com/aNoYCZc.png)
 
@@ -17,8 +17,7 @@ The library can be used in C programs for now, C++ support is coming soon.
 
 After each power-cycle, the chip that controls the PWM Expansion must be programmed with an initialization sequence to enable the on-board oscillator so that PWM signals can be generated. 
 
-After the initialization, the other functions can be used generate PWM signals on specific channels or
-to change the PWM signal frequency.
+After the initialization, the other functions can be used to generate PWM signals on specific channels or to change the PWM signal frequency.
 
 Additionally, it is possible to disable to the oscillator, disabling the generation of all PWM signals at once. Before generating new PWM signals, the initialization sequence must be run again.
 
