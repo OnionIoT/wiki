@@ -72,7 +72,7 @@ An error message will be printed that will give more information on the reason b
 
 ### Initialization Function
 
-This function programs the initialization sequence on the Servo Expansion, after this step is completed, the other various OLED functions can be used with success:
+This function programs the initialization sequence on the OLED Expansion, after this step is completed, the other various OLED functions can be used with success:
 ``` c
 int	oledDriverInit ();
 ```
@@ -92,7 +92,13 @@ int status 	= oledDriverInit();
 
 ### Functions to Adjust Settings
 
-Listed below are all of the functions that adjust various settings on the OLED Display
+There is a series of functions that adjust various settings on the OLED Display. The adjustable settings are:
+* Screen on/off
+* Colour inversion
+* Setting screen brightness 
+* Setting the memory mode
+* Defining the width of each page
+* Setting the cursor position
 
 
 [//]: # (Screen on/off)
@@ -166,19 +172,19 @@ status = oledSetDisplayMode(0);
 
 [//]: # (Set Brightness)
 
-#### Set the Display Contrast/Brightness
+#### Set the Display Brightness
 
 The brightness of the display can be adjusted in a granularity of 256 steps:
 
 ``` c
-int oledSetContrast (int contrast);
+int oledSetBrightness (int brightness);
 ```
 
 The default brightness after initialization is 207.
 
 **Arguments**
 
-The `contrast` argument is detemines the display brightness with a range of **0 to 255**, with 255 being the brightest setting and 0 being the dimmest.
+The `brightness` argument is detemines the display brightness with a range of **0 to 255**, with 255 being the brightest setting and 0 being the dimmest.
 
 
 **Examples**
@@ -186,17 +192,17 @@ The `contrast` argument is detemines the display brightness with a range of **0 
 Set to maximum brightness:
 ``` c
 int status;
-status = oledSetContrast(255);
+status = oledSetBrightness(255);
 ```
 
 Set to lowest possible brightness:
 ``` c
-status = oledSetContrast(0);
+status = oledSetBrightness(0);
 ```
 
 Set to middle brightness:
 ``` c
-status = oledSetContrast(127);
+status = oledSetBrightness(127);
 ```
 
 
@@ -210,7 +216,7 @@ This function implements a 'dim' and a 'normal' setting for the display:
 int oledSetDim (int dim);
 ```
 
-While the brightness adjustment function described just above implements the same feature, this function simplifies procedure with two very disctinct settings.
+While the brightness adjustment function described just above implements the same feature, this function simplifies the procedure with two very disctinct settings.
 
 
 **Arguments**
@@ -240,7 +246,7 @@ status = oledSetDim(0);
 
 #### Set Memory Mode
 
-Implements the ability to select the displays memory mode:
+Implements the ability to select the display's memory mode:
 
 ``` c
 int oledSetMemoryMode (int mode);
@@ -313,7 +319,7 @@ The `startPixel` argument sets the starting column for each page.
 
 The `endPixel` argument sets the end column for each page.
 
-Both arguments must be between 0 and 127 and startPixel must be less than endPixel.
+Both arguments must be between **0 and 127** and startPixel must be **less than** endPixel.
 
 
 **Examples**
@@ -340,7 +346,7 @@ status = oledSetColumnAddressing(63, 95);
 
 #### Set Cursor Position
 
-This function is used to position the cursor on a specific page and character column. After this call, the next bytes written to the screen will be displayed at the new position of the cursor.
+This function is used to position the cursor on a specific page and character column. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
 
 ``` c
 int oledSetCursor (int row, int column);
@@ -480,6 +486,7 @@ status =  oledWrite("Onion Omega\nInventing the Future\n\nToday");
 ### Drawing Images on the Display
 
 The OLED Screen can also be used to display images.
+
 **More info on this coming soon**
 
 [//]: # (LAZAR: Populate this!)
@@ -529,6 +536,8 @@ The `startPage` argument defines at which page to start scrolling, and `stopPage
 
 
 **Examples**
+
+[//]: # (LAZAR: Add gifs to all examples)
 
 Scroll the entire screen to the left:
 ``` c
@@ -584,60 +593,82 @@ The `scrollRows` argument defines the amount of pixel rows, starting from the to
 
 The `verticalOffset` argument defines the number of vertical rows to scroll by each frame.
 
-The `startPage` argument defines at which page to start scrolling, and `stopPage` defines at which page to start the scroll. The range for both is **0 to 7**, and startPage must be less than stopPage.
+The `startPage` argument defines at which page to start scrolling, and `stopPage` defines at which page to start the scroll. The range for both is **0 to 7**, and startPage must be **less than** stopPage.
 
 
 **Examples**
+
+[//]: # (LAZAR: Add gifs to all examples)
 
 Scroll the entire screen upwards to the left:
 ``` c
 int status;
 status = oledScrollDiagonal (	0, 
-								OLED_EXP_SCROLL_SPEED_4_FRAMES, 
-								0, 
-								OLED_EXP_HEIGHT-1, 
-								1, 
-								0, 
-								OLED_EXP_CHAR_ROWS-1
-							);
+				OLED_EXP_SCROLL_SPEED_4_FRAMES, 
+				0, 
+				OLED_EXP_HEIGHT-1, 
+				1, 
+				0, 
+				OLED_EXP_CHAR_ROWS-1
+			);
 ```
 
 Slowly Scroll the entire screen upwards to the right:
 ``` c
 int status;
 status = oledScrollDiagonal (	1, 
-								OLED_EXP_SCROLL_SPEED_64_FRAMES, 
-								0, 
-								OLED_EXP_HEIGHT-1, 
-								1, 
-								0, 
-								OLED_EXP_CHAR_ROWS-1
-							);
+				OLED_EXP_SCROLL_SPEED_64_FRAMES, 
+				0, 
+				OLED_EXP_HEIGHT-1, 
+				1, 
+				0, 
+				OLED_EXP_CHAR_ROWS-1
+			);
 ```
 
 Scroll the entire screen to the left, but only the bottom half upwards:
 ``` c
 int status;
 status = oledScrollDiagonal (	0, 
-								OLED_EXP_SCROLL_SPEED_3_FRAMES, 
-								OLED_EXP_HEIGHT/2-1, 
-								OLED_EXP_HEIGHT-1, 
-								1, 
-								0, 
-								OLED_EXP_CHAR_ROWS-1
-							);
+				OLED_EXP_SCROLL_SPEED_3_FRAMES, 
+				OLED_EXP_HEIGHT/2-1, 
+				OLED_EXP_HEIGHT-1, 
+				1, 
+				0, 
+				OLED_EXP_CHAR_ROWS-1
+			);
 ```
 
 Scroll pages 3 to 7 to the right, but only pages 4 to 7 upwards:
 ``` c
 int status;
 status = oledScrollDiagonal (	1, 
-								OLED_EXP_SCROLL_SPEED_5_FRAMES, 
-								OLED_EXP_HEIGHT/2-1, 
-								OLED_EXP_HEIGHT-1, 
-								1, 
-								3, 
-								OLED_EXP_CHAR_ROWS-1
-							);
+				OLED_EXP_SCROLL_SPEED_5_FRAMES, 
+				OLED_EXP_HEIGHT/2-1, 
+				OLED_EXP_HEIGHT-1, 
+				1, 
+				3, 
+				OLED_EXP_CHAR_ROWS-1
+			);
 ```
 
+
+
+[//]: # (Stop scrolling)
+
+#### Stop Scrolling
+
+Disables all active scrolling:
+
+``` c
+int oledScrollStop 				();
+```
+
+**Examples**
+
+Scroll the entire screen to the left, then stop it:
+``` c
+int status;
+status = oledScroll (0, OLED_EXP_SCROLL_SPEED_5_FRAMES, 0, OLED_EXP_CHAR_ROWS-1);
+status |= oledScrollStop ();
+```
