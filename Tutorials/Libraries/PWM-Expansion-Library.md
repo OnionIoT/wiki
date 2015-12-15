@@ -6,6 +6,8 @@ The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a static C library 
 
 The library can be used in C programs for now, C++ support is coming soon.
 
+This library is also available as a module for use in Python. The module is called `pwmExp` and is part of the `OmegaExpansion` package.
+
 
 [[_TOC_]]
 
@@ -39,9 +41,9 @@ For a more detailed explanation, see the guide on [using the Servo Expansion.](.
 
 
 
-[//]: # (Using the Library)
+[//]: # (Using the C Library)
 
-## Using the Library
+## Using the C Library
 
 **Header File**
 
@@ -58,6 +60,36 @@ In your project's makefile, you will need to add the following static libraries 
 ```
 
 The static libraries are stored in `/usr/lib` on the Omega.
+
+
+
+
+[//]: # (Using the Python Module)
+
+## Using the Python Module
+
+**Installing the Module**
+
+To install the Python module, run the following commands:
+```
+opkg update
+opkg install python-light pyPwmExp
+```
+
+This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
+
+**Note:** this only has to be done once.
+
+
+**Using the Module**
+
+To add the Onion PEM Expansion Module to your Python program, include the following in your code:
+``` python
+from OmegaExpansion import pwmExp
+```
+
+The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below. 
+
 
 
 
@@ -110,6 +142,23 @@ int status 	= pwmDriverInit();
 ```
 
 
+[//]: # (Python: Init Function)
+
+#### Python Equivalent
+
+In Python, this function performs the same operation and returns the same status. The Python function is:
+``` python
+pwmExp.driverInit()
+```
+
+**Examples**
+
+Initialize the PWM Expansion:
+``` c
+status 	= pwmExp.driverInit();
+```
+
+
 
 [//]: # (Check Init Function)
 
@@ -148,6 +197,30 @@ else {
 	printf("The Servo Expansion is up and running!\n");
 }
 ```
+
+
+[//]: # (Python: Check Init Function)
+
+#### Python Equivalent
+
+In Python, this function performs the same operation, **however, the return value is not the status, it returns the Initialization Status referenced above**
+``` python
+pwmExp.checkInit()
+```
+
+**Example**
+
+Check if the PWM Expansion is initialized:
+``` python
+bInit 	= pwmExp.checkInit()
+
+if (bInit == 0):
+	print 'The Servo Expansion needs to be initialized\n'
+else:
+	print 'The Servo Expansion is up and running!''
+}
+```
+
 
 
 
@@ -210,6 +283,28 @@ status = pwmSetupDriver(-1, 15.65f, 0.0f);
 ```
 
 
+[//]: # (Python: Generate PWM Signal Function)
+
+#### Python Equivalent
+
+In Python, this function takes the same arguments, performs the same operation, and returns the same status indicator
+``` python
+pwmExp.setupDriver(channel, duty, delay)
+```
+
+**Example**
+
+Set channel 7 to 6.55% duty cycle:
+``` python
+status = pwmExp.setupDriver(7, 6.55, 0)
+```
+
+Set all channels to 66.66% duty with a 9% delay:
+``` python
+status = pwmExp.setupDriver(-1, 66.66, 9)
+```
+
+
 
 [//]: # (Set Signal Frequency)
 
@@ -246,6 +341,29 @@ status 		= pwmSetupDriver	(13, 82, 0);
 ```
 
 
+[//]: # (Python: Set Signal Frequency)
+
+#### Python Equivalent
+
+In Python, this function takes the same argument, performs the same operation, and returns the same status indicator
+``` python
+pwmExp.setFrequency(frequency)
+```
+
+**Example**
+
+Change the frequency to 60 Hz:
+``` python
+status = pwmExp.setFrequency(60)
+```
+
+Change the frequency to 92.23 Hz:
+``` python
+status = pwmExp.setFrequency(92.23)
+```
+
+
+
 
 [//]: # (Disable Oscillator)
 
@@ -259,4 +377,23 @@ int pwmDisableChip ();
 
 This might be useful for disabling PWM signal-driven devices while not powering off the Omega.
 **The initialization function will have to be run before new PWM signals can be generated.**
+
+
+[//]: # (Python: Disable Oscillator)
+
+#### Python Equivalent
+
+This function is largely the same in Python:
+``` python
+pwmExp.disableChip(frequency)
+```
+
+**Example**
+
+Disable the oscillator:
+``` python
+status 	= pwmExp.disableChip()
+```
+
+
 

@@ -4,7 +4,9 @@ The Onion Relay Expansion library, `libonionrelayexp` is a static C library that
 
 [//]: # (LAZAR: Add image of relay-exp here)
 
-The library can be used in C programs for now, C++ support is coming soon.
+The library can be used in C programs for now, C++ support is coming soon. 
+
+This library is also available as a module for use in Python. The module is called `relayExp` and is part of the `OmegaExpansion` package.
 
 
 [[_TOC_]]
@@ -20,9 +22,9 @@ After each power-cycle, the chip that controls the Relay Expansion must be progr
 
 
 
-[//]: # (Using the Library)
+[//]: # (Using the C Library)
 
-## Using the Library
+## Using the C Library
 
 **Header File**
 
@@ -39,6 +41,36 @@ In your project's makefile, you will need to add the following static libraries 
 ```
 
 The static libraries are stored in `/usr/lib` on the Omega.
+
+
+
+
+[//]: # (Using the Python Module)
+
+## Using the Python Module
+
+**Installing the Module**
+
+To install the Python module, run the following commands:
+```
+opkg update
+opkg install python-light pyRelayExp
+```
+
+This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
+
+**Note:** this only has to be done once.
+
+
+**Using the Module**
+
+To add the Onion Relay Expansion Module to your Python program, include the following in your code:
+``` python
+from OmegaExpansion import relayExp
+```
+
+The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below.
+
 
 
 
@@ -141,6 +173,27 @@ Initialize with switches set to on-on-off (device address: 0x24):
 int status 	= relayDriverInit(4);
 ```
 
+[//]: # (Python: Init Function)
+
+#### Python Equivalent
+
+In Python, this function performs the same operation, takes the same arguments, and returns the same status. The Python function is:
+``` python
+relayExp.driverInit(addr)
+```
+
+**Examples**
+
+Initialize a Relay Expansion with all switches set to 0, meaning the I2C device address will be 0x27:
+``` c
+status 	= relayExp.driverInit(7);
+```
+
+Initialize with switches set to on-on-off (device address: 0x24):
+``` c
+status 	= relayExp.driverInit(4);
+```
+
 
 [//]: # (Check Init Function)
 
@@ -181,6 +234,28 @@ else {
 ```
 
 
+[//]: # (Python: Check Init Function)
+
+#### Python Equivalent
+
+In Python, this function performs the same operation and takes the same address argument. However, the return value is not the status, it returns the Initialization Status referenced above
+``` python
+relayExp.checkInit(addr)
+```
+
+**Example**
+
+Check if a Relay Expansion (with switches set to Off-On-On) is initialized:
+``` python
+bInit 	= relayExp.checkInit(1)
+
+if (bInit == 0):
+	print 'The Relay Expansion needs to be initialized'
+else:
+	print 'The Relay Expansion is good to go!'
+}
+```
+
 
 [//]: # (Set Relay State Function)
 
@@ -201,6 +276,23 @@ The `channel` argument selects the relay in question. See the [diagram above](#f
 The `state` argument allows the user to select if the relay will be turned on or off:
 * 0 turn the relay OFF
 * 1 turn the relay ON
+
+
+[//]: # (Python: Set Relay State)
+
+#### Python Equivalent
+
+In Python, this function behaves the same as in C:
+``` python
+relayExp.setChannel(addr, channel, state)
+```
+
+**Example**
+
+Set channel 0 to On (all switches are On):
+``` python
+status 	= relayExp.setChannel(0, 0, 1)
+```
 
 
 
@@ -226,5 +318,21 @@ The `state` argument allows the user to select if the relays will be turned on o
 * 1 turn the relays ON
 
 
+
+[//]: # (Python: Set Relay State for Both Relays)
+
+#### Python Equivalent
+
+In Python, this function behaves the same as in C:
+``` python
+relayExp.setAllChannels(addr, state)
+```
+
+**Example**
+
+Set both channels off (all switches are On):
+``` python
+status 	= relayExp.setAllChannels(0, 0)
+```
 
 

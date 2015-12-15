@@ -6,6 +6,7 @@ The Onion OLED Expansion library, `libonionoledexp` is a static C library that p
 
 The library can be used in C programs for now, C++ support is coming soon.
 
+This library is also available as a module for use in Python. The module is called `oledExp` and is part of the `OmegaExpansion` package.
 
 [[_TOC_]]
 
@@ -36,9 +37,12 @@ So writing `0x0f` would produce the top 4 pixels being coloured in, and the bott
 
 The display keeps a cursor pointer in memory that indicates the current page and column being addressed. The cursor will automatically be incremented after each byte is written, the cursor can also be moved by the user through functions discussed below.
 
-[//]: # (Using the Library)
 
-## Using the Library
+
+
+[//]: # (Using the C Library)
+
+## Using the C Library
 
 **Header File**
 
@@ -55,6 +59,37 @@ In your project's makefile, you will need to add the following static libraries 
 ```
 
 The static libraries are stored in `/usr/lib` on the Omega.
+
+
+
+
+[//]: # (Using the Python Module)
+
+## Using the Python Module
+
+**Installing the Module**
+
+To install the Python module, run the following commands:
+```
+opkg update
+opkg install python-light pyOledExp
+```
+
+This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
+
+**Note:** this only has to be done once.
+
+
+**Using the Module**
+
+To add the Onion PEM Expansion Module to your Python program, include the following in your code:
+``` python
+from OmegaExpansion import oledExp
+```
+
+The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below. 
+
+One major drawback is that none of the defines found in C are currently implemented in the Python module.
 
 
 
@@ -98,6 +133,23 @@ int	oledDriverInit ();
 Initialize the OLED Expansion:
 ``` c
 int status 	= oledDriverInit();
+```
+
+
+[//]: # (Python: Init Function)
+
+#### Python Equivalent
+
+In Python, this function performs the same operation and returns the same status. The Python function is:
+``` python
+oledExp.driverInit()
+```
+
+**Examples**
+
+Initialize the OLED Display:
+``` c
+status 	= oledExp.driverInit();
 ```
 
 
@@ -152,6 +204,30 @@ status = oledSetDisplayPower(1);
 ```
 
 
+[//]: # (Python: Screen on/off)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.setDisplayPower(bPowerOn)
+```
+
+**Examples**
+
+Turn the screen off:
+``` python
+status = oledExp.setDisplayPower(0)
+```
+
+Turn the screen on:
+``` python
+status = oledExp.setDisplayPower(1)
+```
+
+
+
+
 [//]: # (Invert Display Colours)
 
 #### Invert Display Colours
@@ -183,6 +259,29 @@ Return the colours to normal:
 ``` c
 status = oledSetDisplayMode(0);
 ```
+
+
+[//]: # (Python: Invert Display Colours)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.setDisplayMode(bInvert)
+```
+
+**Examples**
+
+Invert the colours:
+``` python
+status = oledExp.setDisplayMode(1)
+```
+
+Return the colours to normal:
+``` python
+status = oledExp.setDisplayMode(0)
+```
+
 
 
 [//]: # (Set Brightness)
@@ -221,6 +320,24 @@ status = oledSetBrightness(127);
 ```
 
 
+[//]: # (Python: Set Brightness)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.setBrightness(brightness)
+```
+
+**Examples**
+
+Set to maximum brightness:
+``` python
+status = oledExp.setBrightness(255)
+```
+
+
+
 [//]: # (Dim the display)
 
 #### Dim the display
@@ -255,6 +372,29 @@ Set the display to normal brightness:
 ``` c
 status = oledSetDim(0);
 ```
+
+
+[//]: # (Python: Dim the display)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.setDim(dim)
+```
+
+**Examples**
+
+Dim the display:
+``` python
+status = oledExp.setDim(1);
+```
+
+Set the display to normal brightness:
+``` python
+status = oledExp.setDim(0)
+```
+
 
 
 [//]: # (Set the memory mode)
@@ -312,6 +452,38 @@ status = oledSetMemoryMode(OLED_EXP_MEM_PAGE_ADDR_MODE);
 ```
 
 
+[//]: # (Python: Set the memory mode)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.setMemoryMode(mode)
+```
+
+The C defines do not carry over to Python, follow this table for selecting the correct mode
+
+| Memory Mode                | `mode` Argument    |
+|----------------------------|--------------------|
+| Horizontal Addressing Mode | 0                  |
+| Vertical Addressing Mode   | 1                  |
+| Page Addressing Mode       | 2                  |
+
+
+**Examples**
+
+Set to page addressing mode:
+``` python
+status = oledExp.setMemoryMode(2);
+```
+
+Set to horizontal addressing mode:
+``` python
+status = oledExp.setMemoryMode(0);
+```
+
+
+
 [//]: # (Set Column Addressing)
 
 #### Set Column Addressing
@@ -354,6 +526,36 @@ Set each column to start halfway across and to end three quarters of the way acr
 ``` c
 status = oledSetColumnAddressing(63, 95);
 ```
+
+
+[//]: # (Python: Set Column Addressing)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.setColumnAddressing(startPixel, endPixel)
+```
+
+Again, the C defines do not carry over to Python, regular numbers will have to be used.
+
+**Examples**
+
+Set the column addressing to display text:
+``` python
+status = oledExp.setColumnAddressing(0, 126-1)
+```
+
+Set the column addressing to the full display width
+``` python
+status = oledExp.setColumnAddressing(0, 128-1)
+```
+
+Set each column to start halfway across and to end three quarters of the way across the display:
+``` python
+status = oledExp.setColumnAddressing(63, 95)
+```
+
 
 
 
@@ -404,6 +606,29 @@ status	|= oledWrite("hi there");
 ```
 
 
+[//]: # (Python: Set Cursor Position)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.setCursor(row, column)
+```
+
+**Examples**
+
+Set the cursor to the middle of the 5th row:
+``` python
+status = oledExp.setCursor(4, 10)
+```
+
+Set the cursor to the starting position at the top-right
+``` python
+status = oledExp.setCursor(0, 0)
+```
+
+
+
 
 [//]: # (Clearing Function)
 
@@ -414,6 +639,17 @@ To clear the screen and move the cursor to the starting position at the top-left
 ``` c
 int oledClear ();
 ```
+
+
+[//]: # (Python: Clearing Function)
+
+#### Python Equivalent
+
+In Python, this function performs the same operation and returns the same status. The Python function is:
+``` python
+oledExp.clear()
+```
+
 
 
 
@@ -458,6 +694,25 @@ status |= oledWriteChar(')');
 ```
 
 
+[//]: # (Python: Write Character)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.writeChar(c)
+```
+
+**Examples**
+
+Write an x:
+``` python
+status = oledExp.writeChar('x')
+```
+
+
+
+
 [//]: # (Write String)
 
 #### Write a String
@@ -492,6 +747,24 @@ Write 'Onion Omega', then 'Inventing the Future' on the next line, and then 'Tod
 ``` c
 status =  oledWrite("Onion Omega\nInventing the Future\n\nToday");
 ```
+
+
+[//]: # (Python: Write String)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.write(msg)
+```
+
+**Examples**
+
+Write 'Python rules!':
+``` python
+status = oledExp.write("Python rules!")
+```
+
 
 
 
@@ -571,6 +844,50 @@ Slowly scroll pages 1 to 5:
 int status;
 status = oledScroll (1, OLED_EXP_SCROLL_SPEED_25_FRAMES, 1, 5);
 ```
+
+
+[//]: # (Python: Horizontal Scrolling)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.scroll(direction, scrollSpeed, startPage, stopPage)
+```
+
+While the rest of the arguments are the same as in C, the scrolling speed will need to be adjusted according to the table below:
+
+| Scroll Speed                      | `scrollSpeed` Argument  | 
+|-----------------------------------|-------------------------|	
+| OLED_EXP_SCROLL_SPEED_5_FRAMES	| 0                       |
+| OLED_EXP_SCROLL_SPEED_64_FRAMES	| 1                       |
+| OLED_EXP_SCROLL_SPEED_128_FRAMES	| 2                       |
+| OLED_EXP_SCROLL_SPEED_256_FRAMES	| 3                       |
+| OLED_EXP_SCROLL_SPEED_3_FRAMES	| 4                       |
+| OLED_EXP_SCROLL_SPEED_4_FRAMES	| 5                       |
+| OLED_EXP_SCROLL_SPEED_25_FRAMES	| 6                       |
+| OLED_EXP_SCROLL_SPEED_2_FRAMES	| 7                       |	
+
+
+
+**Examples**
+
+Scroll the entire screen to the left:
+``` python
+status = oledExp.scroll(0, 0, 0, 7)
+```
+
+Quickly scroll the bottom half of the screen to the right:
+``` python
+status = oledExp.scroll(1, 7, 4, 7)
+```
+
+Slowly scroll pages 1 to 5 to the right:
+``` python
+status = oledExp.scroll(1, 6, 1, 5)
+```
+
+
 
 
 [//]: # (Diagonal scrolling)
@@ -668,6 +985,58 @@ status = oledScrollDiagonal (	1,
 ```
 
 
+[//]: # (Python: Diagonal Scrolling)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation, takes the same argument, and returns the same status. The Python function is:
+``` python
+oledExp.scrollDiagonal(direction, scrollSpeed, fixedRows, scrollRows, verticalOffset, startPage, stopPage)
+```
+
+While the rest of the arguments are the same as in C, the scrolling speed will need to be adjusted according to the table below:
+
+| Scroll Speed                      | `scrollSpeed` Argument  | 
+|-----------------------------------|-------------------------|	
+| OLED_EXP_SCROLL_SPEED_5_FRAMES	| 0                       |
+| OLED_EXP_SCROLL_SPEED_64_FRAMES	| 1                       |
+| OLED_EXP_SCROLL_SPEED_128_FRAMES	| 2                       |
+| OLED_EXP_SCROLL_SPEED_256_FRAMES	| 3                       |
+| OLED_EXP_SCROLL_SPEED_3_FRAMES	| 4                       |
+| OLED_EXP_SCROLL_SPEED_4_FRAMES	| 5                       |
+| OLED_EXP_SCROLL_SPEED_25_FRAMES	| 6                       |
+| OLED_EXP_SCROLL_SPEED_2_FRAMES	| 7                       |	
+
+
+
+**Examples**
+
+Scroll the entire screen upwards to the left:
+``` python
+status = oledExp.scrollDiagonal (	0, 
+				5, 
+				0, 
+				128-1, 
+				1, 
+				0, 
+				8-1
+			);
+```
+
+Slowly Scroll the entire screen upwards to the right:
+``` python
+status = oledExp.scrollDiagonal (	1, 
+				1, 
+				0, 
+				128-1, 
+				1, 
+				0, 
+				8-1
+			);
+```
+
+
+
 
 [//]: # (Stop scrolling)
 
@@ -686,4 +1055,22 @@ Scroll the entire screen to the left, then stop it:
 int status;
 status = oledScroll (0, OLED_EXP_SCROLL_SPEED_5_FRAMES, 0, OLED_EXP_CHAR_ROWS-1);
 status |= oledScrollStop ();
+```
+
+
+[//]: # (Python: Stop Scrolling)
+
+##### Python Equivalent
+
+In Python, this function performs the same operation and returns the same status. The Python function is:
+``` python
+oledExp.scrollStop()
+```
+
+**Examples**
+
+Scroll the entire screen to the left, then stop it:
+``` python
+status = oledExp.scroll (0, 0, 0, 7);
+status |= oledExp.scrollStop(0)
 ```
