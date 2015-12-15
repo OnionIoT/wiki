@@ -77,12 +77,12 @@ opkg install python-light pyOledExp
 
 This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
 
-**Note:** this only has to be done once.
+*Note: this only has to be done once.*
 
 
 **Using the Module**
 
-To add the Onion PEM Expansion Module to your Python program, include the following in your code:
+To add the Onion OLED Expansion Module to your Python program, include the following in your code:
 ``` python
 from OmegaExpansion import oledExp
 ```
@@ -461,7 +461,7 @@ In Python, this function performs the same operation, takes the same argument, a
 oledExp.setMemoryMode(mode)
 ```
 
-The C defines do not carry over to Python, follow this table for selecting the correct mode
+The C defines do not carry over to Python, follow this table for selecting the desired mode:
 
 | Memory Mode                | `mode` Argument    |
 |----------------------------|--------------------|
@@ -537,7 +537,7 @@ In Python, this function performs the same operation, takes the same argument, a
 oledExp.setColumnAddressing(startPixel, endPixel)
 ```
 
-Again, the C defines do not carry over to Python, regular numbers will have to be used.
+Again, the C defines do not carry over to Python, regular numbers will have to be used for the start and end pixel arguments.
 
 **Examples**
 

@@ -78,12 +78,12 @@ opkg install python-light pyPwmExp
 
 This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
 
-**Note:** this only has to be done once.
+*Note: this only has to be done once.*
 
 
 **Using the Module**
 
-To add the Onion PEM Expansion Module to your Python program, include the following in your code:
+To add the Onion PWM Expansion Module to your Python program, include the following in your code:
 ``` python
 from OmegaExpansion import pwmExp
 ```

@@ -59,7 +59,7 @@ opkg install python-light pyRelayExp
 
 This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
 
-**Note:** this only has to be done once.
+*Note: this only has to be done once.*
 
 
 **Using the Module**
@@ -186,12 +186,12 @@ relayExp.driverInit(addr)
 
 Initialize a Relay Expansion with all switches set to 0, meaning the I2C device address will be 0x27:
 ``` c
-status 	= relayExp.driverInit(7);
+status 	= relayExp.driverInit(7)
 ```
 
 Initialize with switches set to on-on-off (device address: 0x24):
 ``` c
-status 	= relayExp.driverInit(4);
+status 	= relayExp.driverInit(4)
 ```
 
 
