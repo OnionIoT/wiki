@@ -100,7 +100,7 @@ The sketch has been flashing and is running on the Arduino Dock, enjoy!
 (If your previous sketch did not include the Onion Arduino Library you will have to press the MCU_RESET button on the Arduino Dock just before pressing Enter for the arduino-dock command)
 
 ## The Onion Arduino Library
-The library provides some essential functionality for the Arduino Dock
+The library provides some essential functionality for the Arduino Dock. For info on installing the Onion Arduino Library, check out [this section](Initial-Setup#computer-setup_installation-of-onion-arduino-library) of the Arduino Dock Initial Setup page.
 
 ### Basic Setup in Sketch
 To add the Onion library to your Sketch in the IDE, open the Sketch menu, navigate to Include Library -> Onion

@@ -42,14 +42,13 @@ The Onion Arduino Library provides the required setup and functions required for
 
 
 #### Installing the library
-*We're working on a way of stream-lining this process, stay tuned!*
 
 Follow these steps to install the library:
-* Clone the [Onion Arduino Library repo](//github.com/OnionIoT/Onion-Arduino-Library) to your computer
+* Download the [latest Onion Arduino Library zip](http://downloads.onion.io/Onion-Arduino-Library.zip) to your computer
 * Open the Arduino IDE
   * Open the Sketch Menu, and then Include Library -> Add .ZIP Library
   ![Add library](//i.imgur.com/na7wNcY.png)
-  * Navigate to where the Onion Arduino Library repo has been cloned
+  * Navigate to where the Onion Arduino Library zip was downloaded
   * Select Onion-Arduino-Library.zip
 * The library is now installed, it can be included in your sketches by opening the Sketch menu -> Include Library -> Onion
 
