@@ -6,6 +6,10 @@ The Onion Arduino Dock is meant to be an interface between the Omega and the pop
 
 [[_TOC_]]
 
+
+
+[//]: # (Hardware)
+
 ## The Hardware
 It is essentially our (supercharged) version of an Arduino Uno R3 board, since they share the same microcontroller, the ATmel ATmega328P microcontroller (MCU), and have identical pin layouts. This allows users to use any Arduino shields in conjunction with the Arduino Dock and the Omega.
 
@@ -16,6 +20,9 @@ Before you can get started with the Arduino Dock, there are a few things that ne
 
 Follow the steps outlined in the [[Initial Setup]] article.
 
+
+
+[//]: # (Using the Arduino Dock)
 
 ## Using the Arduino Dock
 ![Omega + Arduino Dock](//i.imgur.com/B47pqlW.jpg)
@@ -34,12 +41,18 @@ The Arduino Dock and attached Omega can be powered in the following ways:
 The Arduino Dock has a voltage regulator to ensure the Omega is being supplied with the correct voltage.
 
 
+
+[//]: # (Flashing Sketches)
+
 ### Flashing Sketches
 *Ensure you are on Omega firmware b220 or later.*
 
 Now we get to the fun part, flashing sketches to the ATmega chip!
 
 Ensure that all sketches include the Onion Arduino Library and that an Onion object is instantiated in the `setup()` function. If this is not done, the MCU_RESET button on the Omega will have to be pressed before uploading the Sketch.
+
+
+[//]: # (Flashing Sketches: Arduino IDE)
 
 #### Using the Arduino IDE wirelessly
 Thanks to the setup you did on your computer and the Arduino Dock, you can actually use the Arduino IDE on your computer to wirelessly flash Sketches to the Arduino Dock, so long as your computer and the Omega on your Arduino Dock are on the same wifi network.
@@ -59,6 +72,9 @@ Once the upload completes, the info screen will show something along the lines o
 ![Arduino IDE Upload Done](//i.imgur.com/oPOB4Vl.png)
 
 The ATmega chip is now running your sketch, enjoy!
+
+
+[//]: # (Flashing Sketches: Using the Omega)
 
 #### Using the Omega
 The Omega can actually flash the ATmega chip as well. This is handy if the Arduino IDE cannot detect your Omega as a Network Port due to any connection/setup issues.
@@ -99,8 +115,15 @@ The sketch has been flashing and is running on the Arduino Dock, enjoy!
 
 (If your previous sketch did not include the Onion Arduino Library you will have to press the MCU_RESET button on the Arduino Dock just before pressing Enter for the arduino-dock command)
 
+
+
+[//]: # (Onion Arduino Library)
+
 ## The Onion Arduino Library
-The library provides some essential functionality for the Arduino Dock. For info on installing the Onion Arduino Library, check out [this section](Initial-Setup#computer-setup_installation-of-onion-arduino-library) of the Arduino Dock Initial Setup page.
+The library provides some essential functionality for the Arduino Dock. For info on installing the Onion Arduino Library, check out [this section](Initial-Setup#computer-setup_installation-of-onion-arduino-library) of the Arduino Dock Initial Setup page.	
+
+
+[//]: # (Onion Arduino Library: Basic Setup)
 
 ### Basic Setup in Sketch
 To add the Onion library to your Sketch in the IDE, open the Sketch menu, navigate to Include Library -> Onion
@@ -119,6 +142,9 @@ To initialize and activate the library functions, add the following line to the 
 
 Check out our blink2 example to see this in action. The example can be accessed in the Arduino IDE through File -> Examples -> Onion -> blink2
 
+
+[//]: # (Onion Arduino Library: Functionality) 
+
 ### Library Functionality
 For now the library setups up the ATmega to join the I2C bus. It then listens on the bus for a command from the Omega to go into Reset so a new Sketch can be flashed.
 
@@ -126,8 +152,16 @@ As described above, if the Onion library is not used in your sketch, the MCU_RES
 
 We're working on more functionality for this library, namely using the Serial Port as a bridge between the Omega and ATmega chip! Stay tuned!
 
+
+[//]: # (Onion Arduino Library: Using I2C)
+
 ### Using I2C in a Sketch
 Right now the Onion Library joins the I2C bus with an address of 0x08 and listens for a write of `0xde 0xad` (get it? 'dead' ha ha ha) when resetting. If you need a Sketch to use I2C, make sure to build this functionality into your I2C handling to comply with the Arduino Dock flashing procedure. 
+
+
+
+
+[//]: # (Acknowledgements) 
 
 ## Acknowledgements
 Special thanks to Olaf Rempel for creating the original TWI bootloader and boot tool.
