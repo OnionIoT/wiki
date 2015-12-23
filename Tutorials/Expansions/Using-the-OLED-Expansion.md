@@ -2,6 +2,8 @@
 
 The OLED Expansion allows you to display images and text on the small black and white OLED Display. It can be used to display project status, sensor info, or other information from the Omega, allowing you to have data from the digital world displayed in the real world!
 
+![Omega+OLED Expansion](http://i.imgur.com/tqcRlgG.jpg)
+
 
 [[_TOC_]]
 
@@ -154,9 +156,8 @@ If the string contains spaces or any special characters (newlines, !?(){}[] etc)
 oled-exp write "This is so exciting!\nIsn't it?!?!\n\n(I love the Omega)"
 ```
 
-A table containing all possible characters is coming soon!
+A list outlining the supported characters can be found in a [section below.](#supported-characters)
 
-[//]: # (LAZAR: Create this table)
 
 
 
@@ -205,8 +206,11 @@ Supported directions:
 * stop
   * To disable scrolling
 
-[//]: # (LAZAR: ADD SOME GIFS HERE)
 
+
+![left scroll](http://i.imgur.com/nytY4Xw.gif)
+
+![diagonal-right scroll](http://i.imgur.com/9JcoKEj.gif)
 
 
 

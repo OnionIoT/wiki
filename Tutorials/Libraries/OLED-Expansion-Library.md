@@ -2,7 +2,7 @@
 
 The Onion OLED Expansion library, `libonionoledexp` is a static C library that provides functions to setup and perform various actions on the OLED display: writing text, displaying images, and adjusting various settings.
 
-[//]: # (LAZAR: Add photo here)
+![Omega+OLED Expansion](http://i.imgur.com/tqcRlgG.jpg)
 
 The library can be used in C programs for now, C++ support is coming soon.
 
@@ -877,6 +877,10 @@ Scroll the entire screen to the left:
 status = oledExp.scroll(0, 0, 0, 7)
 ```
 
+![left scroll](http://i.imgur.com/nytY4Xw.gif)
+
+
+
 Quickly scroll the bottom half of the screen to the right:
 ``` python
 status = oledExp.scroll(1, 7, 4, 7)
@@ -957,6 +961,9 @@ status = oledScrollDiagonal (	1,
 				OLED_EXP_CHAR_ROWS-1
 			);
 ```
+
+![diagonal-right scroll](http://i.imgur.com/9JcoKEj.gif)
+
 
 Scroll the entire screen to the left, but only the bottom half upwards:
 ``` c

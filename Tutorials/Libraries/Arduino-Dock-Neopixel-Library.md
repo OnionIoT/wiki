@@ -2,7 +2,7 @@
 
 The Omega + Arduino Dock can be used to control Neopixels, with the Omega sending the commands and colour codes, and the Arduino Dock acting as a communication channel. 
 
-[//]: # (LAZAR: Add image of Arduino Dock + Neopixels here)
+![Omega+Arduino Dock w/ Neopixel Array](http://i.imgur.com/l5oVLdi.jpg)
 
 The Onion Arduino Dock Neopixel C & C++ library, `libonionneopixel` provides functions to interact with the Neopixels. Also available is a module for use in Python called `neopixel` that is part of the `OmegaArduinoDock` package.
 
