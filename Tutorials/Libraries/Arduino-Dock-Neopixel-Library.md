@@ -345,7 +345,7 @@ status = npixel->ShowPixels();
 
 #### Example Code
 
-Example code that uses the `onionNeopixel` class can be found in the source code for the `neopixel-tool` command line utility. Please take a look at the [neopixel-tool GitHub repo](https://github.com/OnionIoT/neopixel-tool). 
+Example code that uses the `onionNeopixel` class can be found in the source code for [the `neopixel-tool` command line utility](https://wiki.onion.io/Tutorials/Arduino-Dock/Controlling-Neopixels#omega-command-line-tool). Please take a look at the [neopixel-tool GitHub repo](https://github.com/OnionIoT/neopixel-tool). 
 
 The files of interest are:
 * `include/main.h`
@@ -437,7 +437,7 @@ The brightness change will not take effect on the physical Neopixels until the [
 
 **Arguments**
 
-The `input` argument sets the the maximum colour intensity for all colour components. The range is **0 to 255**.
+The `brightness` argument sets the the maximum colour intensity for all colour components. The range is **0 to 255**.
 
 
 **Examples**
@@ -802,7 +802,7 @@ Example code that uses the `OnionNeopixel` Python class can be found for [downlo
 
 This is a Python program that shows a single colour on an entire Neopixel strip or array. It slowly loops between seven different colours, with 25 intermediate steps between the colour changes, creating a smooth transition effect.
 
-[//]: # (LAZAR: ADD A GIF HERE!)
+![slowColourChange Gif](http://i.imgur.com/QFxAq9M.gifv)
 
 
 
