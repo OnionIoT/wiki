@@ -802,7 +802,7 @@ Example code that uses the `OnionNeopixel` Python class can be found for [downlo
 
 This is a Python program that shows a single colour on an entire Neopixel strip or array. It slowly loops between seven different colours, with 25 intermediate steps between the colour changes, creating a smooth transition effect.
 
-![slowColourChange Gif](http://i.imgur.com/QFxAq9M.gifv)
+![slowColourChange Gif](http://i.imgur.com/QFxAq9M.gif)
 
 
 
