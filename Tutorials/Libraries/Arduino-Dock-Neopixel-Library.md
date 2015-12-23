@@ -1,10 +1,10 @@
 # Arduino Dock Neopixel Library
 
-The Omega + Arduino Dock can be used to control Neopixels, with the Omega sending the commands and colour codes, and the Arduino Dock acting as a communication channel. The Onion Arduino Dock Neopixel library, `libonionneopixel` provides functions to interact with the Neopixels.
+The Omega + Arduino Dock can be used to control Neopixels, with the Omega sending the commands and colour codes, and the Arduino Dock acting as a communication channel. 
 
 [//]: # (LAZAR: Add image of Arduino Dock + Neopixels here)
 
-The library can be used in C and C++ programs. It is also available as a module for use in Python called `neopixel` and is part of the `OmegaArduinoDock` package.
+The Onion Arduino Dock Neopixel C & C++ library, `libonionneopixel` provides functions to interact with the Neopixels. Also available is a module for use in Python called `neopixel` that is part of the `OmegaArduinoDock` package.
 
 
 [[_TOC_]]
@@ -43,6 +43,8 @@ opkg update
 opkg install libonionneopixel
 ```
 
+Note that it will automatically be installed when the `neopixel-tool` utility is installed.
+
 
 [//]: # (Return Values)
 
@@ -77,14 +79,14 @@ The C++ library is implemented around an `onionNeopixel` class. It provides publ
 **Header File**
 
 To add the Onion Neopixel Library to your program, include the header file in your code:
-``` c
+``` c++
 #include <neopixel.h>
 ```
 
 **Library for Linker**
 
 In your project's makefile, you will need to add the following static libraries to the linker command:
-``` c
+``` c++
 -lonionneopixel
 ```
 
@@ -298,6 +300,17 @@ status = npixel->ShowPixels();
 ```
 
 
+[//]: # (The C++ Library: Example Code)
+
+#### Example Code
+
+Example code that uses the `onionNeopixel` class can be found in the source code for the `neopixel-tool` command line utility. Please take a look at the [neopixel-tool GitHub repo](https://github.com/OnionIoT/neopixel-tool). 
+
+The files of iterest are:
+* `include/main.h`
+* `src/main.cpp`
+
+
 
 
 [//]: # (SUBHEADING)
@@ -346,7 +359,7 @@ This function will perform the following:
 * Set the total number of Neopixels
 * Run the initalization sequence
 
-``` C
+``` c
 int neopixelInit (int devAddr, int pin, int length);
 ```
 
@@ -359,12 +372,12 @@ The `pin` argument defines the Arduino Dock pin. And the `length` argument defin
 **Examples**
 
 Initialize the Arduino Dock to use pin 9 and control 12 neopixels:
-``` C
+``` c
 status = neopixelInit (NEOPIXEL_I2C_DEVICE_ADDR, 9, 12);
 ```
 
 Initialize the Arduino Dock to use pin 10 and control 128 neopixels:
-``` C
+``` c
 status = neopixelInit (NEOPIXEL_I2C_DEVICE_ADDR, 10, 128);
 ```
 
@@ -374,7 +387,7 @@ status = neopixelInit (NEOPIXEL_I2C_DEVICE_ADDR, 10, 128);
 ##### Set the Colour of a Pixel
 
 This function will queue up a change in the colour intensity of a single pixel:
-``` C
+``` c
 int neopixelSetPixel (int pixelId, int red, int green, int blue);
 ```
 
@@ -387,17 +400,17 @@ The `red`, `green`, and `blue` arguments are the colour intensity values for the
 **Examples**
 
 Set the first pixel to white:
-``` C
+``` c
 status = neopixelSetPixel(0, 0xff, 0xff, 0xff);	
 ```
 
 Set the 18th pixel to purple:
-``` C
+``` c
 status = neopixelSetPixel(18, 0xcc, 0x00, 0x99);	
 ```
 
 Set the 64th pixel to orange:
-``` C
+``` c
 status = neopixelSetPixel(63, 0xff, 0x8c, 0x1a);	
 ```
 
@@ -408,7 +421,7 @@ status = neopixelSetPixel(63, 0xff, 0x8c, 0x1a);
 ##### Set the Colour of many Pixels
 
 This function will queue the change of the colour intensity for many pixels using a buffer of colour components:
-``` C
+``` c
 int neopixelSetBuffer (int *buf, int size);
 ```
 
@@ -437,13 +450,13 @@ The `size` argument represents the number of elements in the `buf` array, so it 
 **Examples**
 
 Set 3 pixels to brown:
-``` C
+``` c
 int colours[9] = {0x99, 0x66, 0x00, 0x99, 0x66, 0x00, 0x99, 0x66, 0x00};
 status = neopixelSetBuffer(colours, 9);	
 ```
 
 Set 12 pixels to lime:
-``` C
+``` c
 int length 		= 12*3;
 int *buffer 	= new int[length];
 
@@ -462,14 +475,14 @@ status = neopixelSetBuffer(buffer, length);
 ##### Show All Queued Colour Changes
 
 This function will send a command to the Arduino Dock to display all queued colour changes on the physical Neopixels:
-``` C
+``` c
 int neopixelShowPixels ();
 ```
 
 **Examples**
 
 Show all queued colour changes:
-``` C
+``` c
 status = neopixelShowPixels();	
 ```
 
@@ -479,14 +492,14 @@ status = neopixelShowPixels();
 ##### Clean-Up
 
 Since the C functions are a wrapper around the C++ class, at the end of your program, it's required to run a function to clean-up any dynamically allocated memory.
-``` C
+``` c
 void neopixelFree ();
 ```
 
 **Examples**
 
 Perform the clean-up:
-``` C
+``` c
 neopixelFree();	
 ```
 
@@ -605,7 +618,7 @@ status = npixel.setPixel(63, 0xff, 0x8c, 0x1a);
 ##### Set the Colour of many Pixels
 
 This function will queue the change of the colour intensity for many pixels using a python list of colour components:
-``` C
+``` c
 setBuffer (pyBuf)
 ```
 
@@ -632,7 +645,7 @@ The `pyBuf` argument is a Python list that should hold colour component triplets
 **Examples**
 
 Set 3 pixels to brown for an `npixel` object:
-``` C
+``` c
 buf = [0x99, 0x66, 0x00, 0x99, 0x66, 0x00, 0x99, 0x66, 0x00]
 status = npixel.setBuffer(buf)	
 ```
