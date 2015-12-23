@@ -195,6 +195,42 @@ status = npixel->Init(5, 32);
 ```
 
 
+[//]: # (The C++ Library Class Functions: Set Brightness)
+
+##### Set the Maximum Pixel Brightness 
+
+This class function will set the maximum brightness of a pixel by defining a maximum for the colour components:
+``` c++
+int SetBrightness (int input);
+```
+
+The brightness change will not take effect on the physical Neopixels until the [`ShowPixels` function](#the-c-c-library_the-c-library_class-functions_show-all-queued-colour-changes) function is called.
+
+
+**Arguments**
+
+The `input` argument sets the the maximum colour intensity for all colour components. The range is **0 to 255**.
+
+
+**Examples**
+
+For an `npixel` object, set the brightness to the maximum:
+``` c++
+status = npixel->SetBrightness(255);	
+```
+
+For an `npixel` object, set the brightness to half the maximum and have it take effect right away:
+``` c++
+status =  npixel->SetBrightness(127);
+status |= npixel->ShowPixels();
+```
+
+For an `npixel` object, set the brightness to a quarter of the maximum:
+``` c++
+status = npixel->SetBrightness(63);
+```
+
+
 [//]: # (The C++ Library Class Functions: Set the Colour of a Pixel)
 
 ##### Set the Colour of a Pixel
@@ -204,7 +240,11 @@ This class function will queue up a change in the colour intensity of a single p
 int SetPixel (int pixelId, int red, int green, int blue);
 ```
 
+The pixels colours changes setup with this function will not be shown on the physical Neopixels until the [`ShowPixels` function](#the-c-c-library_the-c-library_class-functions_show-all-queued-colour-changes) function is called.
+
+
 **Arguments**
+
 The `pixelId` argument defines which pixel in the Neopixel array is to be controlled, with the first pixel in the strip being pixel 0. Note that this pixel id should be less than the total number of pixels.
 
 The `red`, `green`, and `blue` arguments are the colour intensity values for the respective colour. Neopixels are 8-bits per colour component, so the values can range from **0 to 255**. Experiment with a [colour wheel](http://www.w3schools.com/tags/ref_colorpicker.asp) to find the primary colour intensities for your desired colours.
@@ -238,9 +278,10 @@ This class function will queue the change of the colour intensity for many pixel
 int SetBuffer (int *buf, int size);
 ```
 
-The first pixel in the buffer will be displayed on pixel 0 of the physical Neopixels.
+The first pixel in the buffer will be displayed on pixel 0 of the physical Neopixels. The pixels colours setup with this function will not be shown on the physical Neopixels until the [`ShowPixels` function](#the-c-c-library_the-c-library_class-functions_show-all-queued-colour-changes) function is called.
 
 **Arguments**
+
 The `buf` argument is an array that should hold colour component triplets for however many pixels are desired:
 
 | `buf` Element | Pixel | Colour Component |
@@ -287,7 +328,7 @@ status = npixel->SetBuffer(buffer, length);
 
 ##### Show All Queued Colour Changes
 
-This class function will send a command to the Arduino Dock to display all queued colour changes on the physical Neopixels:
+This class function will send a command to the Arduino Dock to display all queued colour and/or brightness changes on the physical Neopixels:
 ``` c++
 int ShowPixels ();
 ```
@@ -382,6 +423,42 @@ status = neopixelInit (NEOPIXEL_I2C_DEVICE_ADDR, 10, 128);
 ```
 
 
+[//]: # (The C Library Class Functions: Set Brightness)
+
+##### Set the Maximum Pixel Brightness 
+
+This function will set the maximum brightness of a pixel by defining a maximum for the colour components:
+``` c
+int neopixelSetBrightness (int brightness);
+```
+
+The brightness change will not take effect on the physical Neopixels until the [`neopixelShowPixels` function](#the-c-c-library_the-c-library_library-functions_show-all-queued-colour-changes) function is called.
+
+
+**Arguments**
+
+The `input` argument sets the the maximum colour intensity for all colour components. The range is **0 to 255**.
+
+
+**Examples**
+
+Set the brightness to the maximum:
+``` c
+status = neopixelSetBrightness(255);	
+```
+
+Set the brightness to half the maximum and have it take effect right away:
+``` c
+status =  neopixelSetBrightness(127);
+status |= neopixelShowPixels();
+```
+
+Set the brightness to a quarter of the maximum:
+``` c
+status = neopixelSetBrightness(63);
+```
+
+
 [//]: # (The C Library Class Functions: Set the Colour of a Pixel)
 
 ##### Set the Colour of a Pixel
@@ -391,7 +468,11 @@ This function will queue up a change in the colour intensity of a single pixel:
 int neopixelSetPixel (int pixelId, int red, int green, int blue);
 ```
 
+The changes to the pixel will not show up on the physical Neopixels until the [`neopixelShowPixels` function](#the-c-c-library_the-c-library_library-functions_show-all-queued-colour-changes) function is called.
+
+
 **Arguments**
+
 The `pixelId` argument defines which pixel in the Neopixel array is to be controlled, with the first pixel in the strip being pixel 0. Note that this pixel id should be less than the total number of pixels.
 
 The `red`, `green`, and `blue` arguments are the colour intensity values for the respective colour. Neopixels are 8-bits per colour component, so the values can range from **0 to 255**. Experiment with a [colour wheel](http://www.w3schools.com/tags/ref_colorpicker.asp) to find the primary colour intensities for your desired colours.
@@ -426,8 +507,11 @@ int neopixelSetBuffer (int *buf, int size);
 ```
 
 The first pixel in the buffer will be displayed on pixel 0 of the physical Neopixels.
+The changes to the pixels will not show up on the physical Neopixels until the [`neopixelShowPixels` function](#the-c-c-library_the-c-library_library-functions_show-all-queued-colour-changes) function is called.
+
 
 **Arguments**
+
 The `buf` argument is an array that should hold colour component triplets for however many pixels are desired:
 
 | `buf` Element | Pixel | Colour Component |
@@ -579,6 +663,42 @@ npixel 	= neopixel.OnionNeopixel(6, 64, 0x09)
 ```
 
 
+[//]: # (The Python Class Functions: Set Brightness)
+
+#### Set the Maximum Pixel Brightness 
+
+This function will set the maximum brightness of a pixel by defining a maximum for the colour components:
+``` python
+setBrightness (int brightness);
+```
+
+The brightness change will not take effect on the physical Neopixels until the [`showPixels()` function](#the-python-module_the-python-class_show-all-queued-colour-changes) function is called.
+
+
+**Arguments**
+
+The `brightness` argument sets the the maximum colour intensity for all colour components. The range is **0 to 255**.
+
+
+**Examples**
+
+For an `npixel` object, set the brightness to the maximum:
+``` python 
+status = npixel.setBrightness(255);	
+```
+
+For an `npixel` object, set the brightness to half the maximum and have it take effect right away:
+``` python 
+status = npixel.setBrightness(127); 
+status = npixel.showPixels();
+```
+
+For an `npixel` object, set the brightness to a quarter of the maximum:
+``` python 
+status = npixel.setBrightness(63);
+```
+
+
 [//]: # (The Python Class Functions: Set the Colour of a Pixel)
 
 #### Set the Colour of a Pixel
@@ -588,7 +708,10 @@ This function will queue up a change in the colour intensity of a single pixel:
 setPixel (pixelId, red, green, blue)
 ```
 
+Note the changes will not take effect on the physical Neopixels until the [`showPixels()` function](#the-python-module_the-python-class_show-all-queued-colour-changes) is called.
+
 **Arguments**
+
 The `pixelId` argument defines which pixel in the Neopixel array is to be controlled, with the first pixel in the strip being pixel 0. Note that this pixel id should be less than the total number of pixels.
 
 The `red`, `green`, and `blue` arguments are the colour intensity values for the respective colour. Neopixels are 8-bits per colour component, so the values can range from **0 to 255**. Experiment with a [colour wheel](http://www.w3schools.com/tags/ref_colorpicker.asp) to find the primary colour intensities for your desired colours.
@@ -623,8 +746,10 @@ setBuffer (pyBuf)
 ```
 
 The first pixel in the buffer will be displayed on pixel 0 of the physical Neopixels.
+Note the changes will not take effect on the physical Neopixels until the [`showPixels()` function](#the-python-module_the-python-class_show-all-queued-colour-changes) is called.
 
 **Arguments**
+
 The `pyBuf` argument is a Python list that should hold colour component triplets for however many pixels are desired:
 
 | `buf` Element | Pixel | Colour Component |
@@ -671,7 +796,7 @@ status = npixel.showPixels();
 
 [//]: # (The Python Module: Example Code)
 
-#### Example Code
+### Example Code
 
 Example code that uses the `OnionNeopixel` Python class can be found for [download here.](https://downloads.onion.io/arduino-dock/slowColourChange.py)
 

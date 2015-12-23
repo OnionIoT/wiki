@@ -2,6 +2,8 @@
 
 The Omega + Arduino Dock can be used to control Neopixels, with the Omega sending the commands and colour codes, and the Arduino Dock acting as a communication channel.
 
+[//]: # (LAZAR: Add image of Arduino Dock + Neopixels here)
+
 [[_TOC_]]
 
 
@@ -158,6 +160,45 @@ neopixel-tool buffer ff000000ff000000ff
 Set the first five pixels to: yellow, pink, light blue, purple, and lime
 ```
 neopixel-tool buffer ffff00ff66ff3399ffcc00ccbfff80
+```
+
+
+
+[//]: # (Omega Command Line Tool Usage: Setting the Brightness)
+
+#### Set the Maximum Pixel Brightness
+
+Neopixels can be programmed with to maximum brightness:
+```
+neopixel-tool -b <brightness>
+```
+
+
+Note that the above command will queue up the brightness change, to immediately show the colour change:
+```
+neopixel-tool -sb <brightness>
+```
+
+**Arguments**
+
+The **brightness** argument specifies the maximum colour intensity for all colour components. The range is **0 to 255**
+
+
+**Examples**
+
+Set the maximum brightness:
+```
+neopixel-tool -b 255
+```
+
+Set to half brightness:
+```
+neopixel-tool -b 127
+```
+
+Set to quarter brightness, taking effect right away:
+```
+neopixel-tool -sb 63
 ```
 
 
