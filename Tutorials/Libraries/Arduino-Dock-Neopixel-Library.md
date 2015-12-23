@@ -306,7 +306,7 @@ status = npixel->ShowPixels();
 
 Example code that uses the `onionNeopixel` class can be found in the source code for the `neopixel-tool` command line utility. Please take a look at the [neopixel-tool GitHub repo](https://github.com/OnionIoT/neopixel-tool). 
 
-The files of iterest are:
+The files of interest are:
 * `include/main.h`
 * `src/main.cpp`
 
@@ -581,7 +581,7 @@ npixel 	= neopixel.OnionNeopixel(6, 64, 0x09)
 
 [//]: # (The Python Class Functions: Set the Colour of a Pixel)
 
-##### Set the Colour of a Pixel
+#### Set the Colour of a Pixel
 
 This function will queue up a change in the colour intensity of a single pixel:
 ``` python
@@ -615,7 +615,7 @@ status = npixel.setPixel(63, 0xff, 0x8c, 0x1a);
 
 [//]: # (The Python Class Functions: Set the Colour of Many Pixels)
 
-##### Set the Colour of many Pixels
+#### Set the Colour of many Pixels
 
 This function will queue the change of the colour intensity for many pixels using a python list of colour components:
 ``` c
@@ -654,7 +654,7 @@ status = npixel.setBuffer(buf)
 
 [//]: # (The Python Class Functions: Show Queued Colour Changes)
 
-##### Show All Queued Colour Changes
+#### Show All Queued Colour Changes
 
 This function will send a command to the Arduino Dock to display all queued colour changes on the physical Neopixels:
 ``` python 
@@ -667,5 +667,17 @@ Show all queued colour changes for an `npixel` object:
 ``` python
 status = npixel.showPixels();	
 ```
+
+
+[//]: # (The Python Module: Example Code)
+
+#### Example Code
+
+Example code that uses the `OnionNeopixel` Python class can be found for [download here.](https://downloads.onion.io/arduino-dock/slowColourChange.py)
+
+This is a Python program that shows a single colour on an entire Neopixel strip or array. It slowly loops between seven different colours, with 25 intermediate steps between the colour changes, creating a smooth transition effect.
+
+[//]: # (LAZAR: ADD A GIF HERE!)
+
 
 
