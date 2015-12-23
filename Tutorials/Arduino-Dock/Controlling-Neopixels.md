@@ -179,7 +179,7 @@ neopixel-tool -s
 ## Using the Libraries
 
 The C and C++ Libraries and Python module can be used in your own programs to control Neopixels.
-For more information, see [this guide](../Libraries/Arduino-Dock-Neopixel-Library.md).
+For more information, see [this guide](../Libraries/Arduino-Dock-Neopixel-Library).
 
 
 
