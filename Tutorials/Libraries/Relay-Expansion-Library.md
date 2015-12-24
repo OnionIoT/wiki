@@ -21,67 +21,6 @@ After each power-cycle, the chip that controls the Relay Expansion must be progr
 
 
 
-
-[//]: # (Using the C Library)
-
-## Using the C Library
-
-**Header File**
-
-To add the Onion Relay Expansion Library to your program, include the header file in your code:
-``` c
-#include <relay-exp.h>
-```
-
-**Library for Linker**
-
-In your project's makefile, you will need to add the following static libraries to the linker command:
-``` c
--loniondebug -lonioni2c -lonionmcp23008 -lonionrelayexp
-```
-
-The static libraries are stored in `/usr/lib` on the Omega.
-
-
-[//]: # (Using the C Library: Example Code)
-
-### Example Code
-
-The Onion Relay Expansion C library is used in the implementation of [the `relay-exp` command line tool.](../Expansions/Using-the-Relay-Expansion#using-the-command-line).
-
-The source code can be found [here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/src/main-relay-exp.c), on the `i2c-exp-driver` Onion GitHub Repo.
-
-
-
-[//]: # (Using the Python Module)
-
-## Using the Python Module
-
-**Installing the Module**
-
-To install the Python module, run the following commands:
-```
-opkg update
-opkg install python-light pyRelayExp
-```
-
-This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
-
-*Note: this only has to be done once.*
-
-
-**Using the Module**
-
-To add the Onion Relay Expansion Module to your Python program, include the following in your code:
-``` python
-from OmegaExpansion import relayExp
-```
-
-The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below.
-
-
-
-
 [//]: # (I2C Device Address)
 
 ## I2C Device Address
@@ -110,13 +49,44 @@ The table below defines the relationship:
 
 
 
-[//]: # (Functions)
+[//]: # (MAJOR HEADING)
+[//]: # (The C Library)
 
-## Functions
+## The C Library
 
-Each of the main functions implemented in this library are described below.
+The `libonionrelayexp` C library is a series of functions that perform all of the actions specified in the [Programming Flow section](#Programming-Flow). 
+
+[//]: # (Using the C Library)
+
+### Using the C Library
+
+**Header File**
+
+To add the Onion Relay Expansion Library to your program, include the header file in your code:
+``` c
+#include <relay-exp.h>
+```
+
+**Library for Linker**
+
+In your project's makefile, you will need to add the following static libraries to the linker command:
+``` c
+-loniondebug -lonioni2c -lonionmcp23008 -lonionrelayexp
+```
+
+The static libraries are stored in `/usr/lib` on the Omega.
 
 
+[//]: # (Using the C Library: Example Code)
+
+### Example Code
+
+The Onion Relay Expansion C library is used in the implementation of [the `relay-exp` command line tool.](../Expansions/Using-the-Relay-Expansion#using-the-command-line).
+
+The source code can be found [here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/src/main-relay-exp.c), on the `i2c-exp-driver` Onion GitHub Repo.
+
+
+[//]: # (Return Values)
 
 ### Return Values
 
@@ -132,6 +102,8 @@ A few reasons why the function might not be successful:
 
 An error message will be printed that will give more information on the reason behind the failure.
 
+
+[//]: # (Types)
 
 ### Types
 
@@ -150,9 +122,16 @@ typedef enum e_RelayDriverChannels {
 
 
 
+[//]: # (Functions)
+
+### Functions
+
+Each of the main functions implemented in this library are described below.
+
+
 [//]: # (Init Function)
 
-### Initialization Function
+#### Initialization Function
 
 This function programs the initialization sequence on the Relay Expansion, after this step is completed, the functions to set the relay states can be used with success:
 ``` c
@@ -181,31 +160,12 @@ Initialize with switches set to on-on-off (device address: 0x24):
 int status 	= relayDriverInit(4);
 ```
 
-[//]: # (Python: Init Function)
 
-#### Python Equivalent
-
-In Python, this function performs the same operation, takes the same arguments, and returns the same status. The Python function is:
-``` python
-relayExp.driverInit(addr)
-```
-
-**Examples**
-
-Initialize a Relay Expansion with all switches set to 0, meaning the I2C device address will be 0x27:
-``` c
-status 	= relayExp.driverInit(7)
-```
-
-Initialize with switches set to on-on-off (device address: 0x24):
-``` c
-status 	= relayExp.driverInit(4)
-```
 
 
 [//]: # (Check Init Function)
 
-### Check for Initialization 
+#### Check for Initialization 
 
 This function performs several reads to determine if the Relay Expansion requires the initialization sequence to be programmed before the relay states can be changed.
 
@@ -242,32 +202,9 @@ else {
 ```
 
 
-[//]: # (Python: Check Init Function)
-
-#### Python Equivalent
-
-In Python, this function performs the same operation and takes the same address argument. However, the return value is not the status, it returns the Initialization Status referenced above
-``` python
-relayExp.checkInit(addr)
-```
-
-**Example**
-
-Check if a Relay Expansion (with switches set to Off-On-On) is initialized:
-``` python
-bInit 	= relayExp.checkInit(1)
-
-if (bInit == 0):
-	print 'The Relay Expansion needs to be initialized'
-else:
-	print 'The Relay Expansion is good to go!'
-}
-```
-
-
 [//]: # (Set Relay State Function)
 
-### Set Relay State
+#### Set Relay State
 
 Finally the fun stuff! Use this function to change the state of the relay:
 
@@ -286,27 +223,9 @@ The `state` argument allows the user to select if the relay will be turned on or
 * 1 turn the relay ON
 
 
-[//]: # (Python: Set Relay State)
-
-#### Python Equivalent
-
-In Python, this function behaves the same as in C:
-``` python
-relayExp.setChannel(addr, channel, state)
-```
-
-**Example**
-
-Set channel 0 to On (all switches are On):
-``` python
-status 	= relayExp.setChannel(0, 0, 1)
-```
-
-
-
 [//]: # (Set State for Both Relays Function)
 
-### Set State for both Relays
+#### Set State for both Relays
 
 In the event that both relays need to be turned on or off at the same time:
 
@@ -327,14 +246,173 @@ The `state` argument allows the user to select if the relays will be turned on o
 
 
 
+
+
+
+[//]: # (MAJOR HEADING)
+[//]: # (The Python Module)
+
+## The Python Module
+
+The `relayExp` Python Module in the `OmegaExpansion` package provides a wrapper around the C library functions. The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below. 
+
+
+
+[//]: # (Using the Python Module)
+
+### Using the Python Module
+
+**Installing the Module**
+
+To install the Python module, run the following commands:
+```
+opkg update
+opkg install python-light pyRelayExp
+```
+
+This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
+
+*Note: this only has to be done once.*
+
+
+**Using the Module**
+
+To add the Onion Relay Expansion Module to your Python program, include the following in your code:
+``` python
+from OmegaExpansion import relayExp
+```
+
+The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below.
+
+
+
+[//]: # (Python: Return Values)
+
+### Return Values
+
+All functions follow the same pattern with return values:
+
+If the function operation is successful, the return value will be `0`.
+
+If the function operation is not successful, the function will return `1`.
+
+
+[//]: # (Functions)
+
+### Functions
+
+Each of the main functions implemented in this module are described below.
+
+
+[//]: # (Python: Init Function)
+
+#### Initialization Function
+
+To perform the initialization sequence on the Relay Expansion:
+``` python
+relayExp.driverInit(addr)
+```
+
+After this step is completed, the functions to set the relay states can be used with success.
+
+**Arguments**
+
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
+
+**Examples**
+
+Initialize a Relay Expansion with all switches set to 0, meaning the I2C device address will be 0x27:
+``` c
+status 	= relayExp.driverInit(7)
+```
+
+Initialize with switches set to on-on-off (device address: 0x24):
+``` c
+status 	= relayExp.driverInit(4)
+```
+
+
+[//]: # (Python: Check Init Function)
+
+#### Check for Initialization
+
+Performs several reads to determine if the Relay Expansion requires the initialization sequence to be programmed before the relay states can be changed:
+``` python
+relayExp.checkInit(addr)
+```
+
+The **return value** of the function indicates the Initialization Status:
+| Return Value | Initialization Status |
+|--------------|-----------------------|
+| 0            | Not Initialized       | 
+| 1            | Initialized           | 
+
+**Arguments**
+
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
+
+
+**Example**
+
+Check if a Relay Expansion (with switches set to Off-On-On) is initialized:
+``` python
+bInit 	= relayExp.checkInit(1)
+
+if (bInit == 0):
+	print 'The Relay Expansion needs to be initialized'
+else:
+	print 'The Relay Expansion is good to go!'
+}
+```
+
+
+[//]: # (Python: Set Relay State)
+
+#### Set Relay State
+
+Use this function to change the state of the relay:
+``` python
+relayExp.setChannel(addr, channel, state)
+```
+
+**Arguments**
+
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
+
+The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
+
+The `state` argument allows the user to select if the relay will be turned on or off:
+* 0 turn the relay OFF
+* 1 turn the relay ON
+
+**Example**
+
+Set channel 0 to On (all switches are On):
+``` python
+status 	= relayExp.setChannel(0, 0, 1)
+```
+
+
 [//]: # (Python: Set Relay State for Both Relays)
 
-#### Python Equivalent
+#### Set State for both Relays
 
-In Python, this function behaves the same as in C:
+In the event that both relays need to be turned on or off at the same time:
 ``` python
 relayExp.setAllChannels(addr, state)
 ```
+
+This is performed with a single register write so both relays should react at the same time.
+
+
+**Arguments**
+
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
+
+The `state` argument allows the user to select if the relays will be turned on or off:
+* 0 turn the relays OFF
+* 1 turn the relays ON
+
 
 **Example**
 
@@ -342,5 +420,4 @@ Set both channels off (all switches are On):
 ``` python
 status 	= relayExp.setAllChannels(0, 0)
 ```
-
 
