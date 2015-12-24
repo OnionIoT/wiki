@@ -222,6 +222,14 @@ The `state` argument allows the user to select if the relay will be turned on or
 * 0 turn the relay OFF
 * 1 turn the relay ON
 
+**Example**
+
+Turn Relay0 **on** and Relay1 **off** (all switches are Off)
+``` c
+status 	=  relaySetChannel (7, 0, 1);
+status 	|= relaySetChannel (7, 1, 0);
+```
+
 
 [//]: # (Set State for Both Relays Function)
 
@@ -244,7 +252,14 @@ The `state` argument allows the user to select if the relays will be turned on o
 * 0 turn the relays OFF
 * 1 turn the relays ON
 
+**Example**
 
+All switches are in Off position, turn both relays on, then turn Relay0 off, then send a command to turn both off:
+``` c
+status 	=  relaySetAllChannels (7, 1);
+status 	|= relaySetChannel (7, 0, 0);
+status 	|= relaySetAllChannels (7, 0);
+```
 
 
 
@@ -417,8 +432,12 @@ The `state` argument allows the user to select if the relays will be turned on o
 
 **Example**
 
-Set both channels off (all switches are On):
+Turn both channels off (all switches are On):
 ``` python
 status 	= relayExp.setAllChannels(0, 0)
 ```
 
+Turn both channels on (all switches are On):
+``` python
+status 	= relayExp.setAllChannels(0, 1)
+```
