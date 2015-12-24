@@ -23,7 +23,7 @@ The OLED Expansion has a 0.96" 128x64 black and white OLED display. When display
 
 *Make sure that your Omega has the latest firmware!*
 
-A tool called `oled-exp` will be your helper in all things related to the OLED Expansion.
+On the command line, a tool called `oled-exp` will be your helper in all things related to the OLED Expansion.
 
 Also available are a C library and Python module that will allow you to create your own programs that use the OLED Expansion.
 

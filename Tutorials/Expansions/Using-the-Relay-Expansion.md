@@ -34,9 +34,12 @@ The 'on' position is when the toggle is away from the numbers on the switch, or 
 
 ## Using the Command Line
 
-Make sure that your Omega has the latest firmware!
+*Make sure that your Omega has the latest firmware!*
 
-A tool we've developed called relay-exp will make controlling your relay expansion easy as pie
+A tool we've developed called `relay-exp` will make controlling your relay expansion easy as pie.
+
+Also available are a C library and a Python module that allow you to develop your own programs to control the Relay Expansion.
+
 
 ### Command Usage
 
@@ -191,6 +194,8 @@ relay-exp all off
 ```
 
 
+[//]: # (I2C Address Mapping)
+
 ### I2C Address Mapping
 
 If you're curious about how the dip-switch settings affect the I2C device address of the Relay Expansion, then this table is for you:
@@ -205,4 +210,16 @@ If you're curious about how the dip-switch settings affect the I2C device addres
 | 101                   | 0x22               |
 | 110                   | 0x21               |
 | 111                   | 0x20               |
+
+
+
+[//]: # (Using the Libraries)
+
+## Using the Libraries
+
+The C library and Python module will allow you to control the Relay Expansion with your own programs.
+
+For more information, see [this guide](../Libraries/Relay-Expansion-Library).
+
+
 
