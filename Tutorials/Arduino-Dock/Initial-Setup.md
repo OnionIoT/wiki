@@ -45,6 +45,7 @@ The Onion Arduino Library provides the required setup and functions required for
 
 Follow these steps to install the library:
 * Download the [latest Onion Arduino Library zip](http://downloads.onion.io/Onion-Arduino-Library.zip) to your computer
+* Download and install the Adafruit Neopixel Library using [these instructions](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library)
 * Open the Arduino IDE
   * Open the Sketch Menu, and then Include Library -> Add .ZIP Library
   ![Add library](//i.imgur.com/na7wNcY.png)
