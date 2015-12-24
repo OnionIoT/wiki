@@ -62,6 +62,15 @@ The static libraries are stored in `/usr/lib` on the Omega.
 
 
 
+[//]: # (Using the C Library: Example Code)
+
+### Example Code
+
+The Onion OLED Expansion C library is used in the implementation of [the `oled-exp` command line tool.](../Expansions/Using-the-OLED-Expansion#using-the-oled-expansion).
+
+The source code can be found [here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/src/main-oled-exp.c), on the `i2c-exp-driver` Onion GitHub Repo.
+
+
 
 [//]: # (Using the Python Module)
 

@@ -23,8 +23,9 @@ The OLED Expansion has a 0.96" 128x64 black and white OLED display. When display
 
 *Make sure that your Omega has the latest firmware!*
 
-A tool called 'oled-exp' will be your helper in all things related to the OLED Expansion.
+A tool called `oled-exp` will be your helper in all things related to the OLED Expansion.
 
+Also available are a C library and Python module that will allow you to create your own programs that use the OLED Expansion.
 
 
 ### Command Usage
@@ -324,3 +325,15 @@ The OLED Display supports the following characters:
 * |
 * }
 * ~
+
+
+
+[//]: # (Using the Libraries)
+
+## Using the Libraries
+
+The C library and Python module will give you the flexibility to use the OLED Expansion however you want in your own programs.
+
+For more information, see [this guide](../Libraries/OLED-Expansion-Library).
+
+
