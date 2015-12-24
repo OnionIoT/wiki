@@ -348,8 +348,8 @@ status = npixel->ShowPixels();
 Example code that uses the `onionNeopixel` class can be found in the source code for [the `neopixel-tool` command line utility](../Arduino-Dock/Controlling-Neopixels#omega-command-line-tool). Please take a look at the [neopixel-tool GitHub repo](https://github.com/OnionIoT/neopixel-tool). 
 
 The files of interest are:
-* `include/main.h`
-* `src/main.cpp`
+* [`include/main.h`](https://github.com/OnionIoT/neopixel-tool/blob/master/include/main.h)
+* [`src/main.cpp`](https://github.com/OnionIoT/neopixel-tool/blob/master/src/main.cpp)
 
 
 
