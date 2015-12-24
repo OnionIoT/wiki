@@ -342,6 +342,7 @@ relayExp.checkInit(addr)
 ```
 
 The **return value** of the function indicates the Initialization Status:
+
 | Return Value | Initialization Status |
 |--------------|-----------------------|
 | 0            | Not Initialized       | 
