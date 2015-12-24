@@ -56,6 +56,8 @@ The onboard chip has an oscillator that can generate PWM signals with a frequenc
 
 We've developed a tool called `pwm-exp` that should make generating PWM signals a breeze.
 
+Also available are a C library and a Python module that allow you to develop your own programs to control the Servo Expansion.
+
 ### Command Usage
 
 For a print-out of the command's usage, run it with just a -h argument
@@ -259,6 +261,14 @@ pwm-exp -p <channel> <pulse width> <total period>
 ```
 
 
+
+[//]: # (Using the Libraries)
+
+## Using the Libraries
+
+The C library and Python module will allow you to develop your own programs that can control the Servo Expansion.
+
+For more information, see [this guide](../Libraries/PWM-Expansion-Library).
 
 
 
