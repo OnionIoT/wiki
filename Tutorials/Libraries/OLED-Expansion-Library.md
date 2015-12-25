@@ -253,8 +253,8 @@ The `dim` argument is detemines whether to enable the dim setting
 
 | Value   | Meaning                         |
 |---------|---------------------------------|
-| 0       | Normal brightness: 207 contrast |
-| 1       | Dimmed screen: 0 contrast       |
+| 0       | Normal brightness: 207          |
+| 1       | Dimmed screen: 0                |
 
 **Examples**
 
@@ -904,8 +904,8 @@ The `dim` argument is detemines whether to enable the dim setting
 
 | Value   | Meaning                         |
 |---------|---------------------------------|
-| 0       | Normal brightness: 207 contrast |
-| 1       | Dimmed screen: 0 contrast       |
+| 0       | Normal brightness: 207          |
+| 1       | Dimmed screen: 0                |
 
 **Examples**
 
