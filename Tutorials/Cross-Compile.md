@@ -11,7 +11,7 @@ $ apt-get install -y subversion build-essential libncurses5-dev zlib1g-dev gawk 
 ### Step 2: Get OpenWRT Source
 
 ```
-$ git clone git://git.openwrt.org/openwrt.git
+$ git clone git://git.openwrt.org/15.05/openwrt.git
 $ cd openwrt
 ```
 
