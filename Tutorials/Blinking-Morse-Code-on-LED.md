@@ -1,3 +1,5 @@
+# How to Blink Morse Code On the Omega LED
+
 Here's a little fun one!  You can use the LED on the Omega to send messages in Morse code.
 
 To start, you'll need to install the `mod-ledtrig-morse` package:
@@ -56,3 +58,7 @@ echo default-on > /sys/class/leds/onion\:amber\:system/trigger
 Feel free to try some of the other options as well!  Remember that you can view the available options by using `cat` as mentioned above.  (The `heartbeat` option is fun too.)
 
 There are many more settings status files available for other devices in `/sys` and it can be a great way to learn about working with hardware under Linux.
+
+## Credit
+
+Thanks to [Fader](blog.ronaldmccollam.com) for writing this awesome tutorial!
