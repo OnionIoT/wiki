@@ -371,7 +371,7 @@ bInit 	= pwmExp.checkInit()
 if (bInit == 0):
 	print 'The Servo Expansion needs to be initialized\n'
 else:
-	print 'The Servo Expansion is up and running!''
+	print 'The Servo Expansion is up and running!'
 }
 ```
 
@@ -406,8 +406,7 @@ status = pwmExp.setupDriver(7, 6.55, 0)
 
 Set channel 14 to always on:
 ``` python
-
-status = pwmExp.setupDriver(14, 100, 0);
+status = pwmExp.setupDriver(14, 100, 0)
 ```
 
 Set all channels to 66.66% duty with a 9% delay:
@@ -453,7 +452,7 @@ status = pwmExp.setFrequency(92.23)
 
 The oscillator can also be disabled, automatically stopping all PWM signal generation:
 ``` python
-pwmExp.disableChip(frequency)
+pwmExp.disableChip()
 ```
 
 This might be useful for disabling PWM signal-driven devices while not powering off the Omega.

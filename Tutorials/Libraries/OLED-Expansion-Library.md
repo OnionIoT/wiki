@@ -872,17 +872,17 @@ The `brightness` argument is detemines the display brightness with a range of **
 
 Set to maximum brightness:
 ``` python
-status = oledExp.setBrightness(255);
+status = oledExp.setBrightness(255)
 ```
 
 Set to lowest possible brightness:
 ``` python
-status = oledExp.setBrightness(0);
+status = oledExp.setBrightness(0)
 ```
 
 Set to middle brightness:
 ``` python
-status = oledExp.setBrightness(127);
+status = oledExp.setBrightness(127)
 ```
 
 
@@ -911,7 +911,7 @@ The `dim` argument is detemines whether to enable the dim setting
 
 Dim the display:
 ``` python
-status = oledExp.setDim(1);
+status = oledExp.setDim(1)
 ```
 
 Set the display to normal brightness:
@@ -969,12 +969,12 @@ The `mode` argument detemines which memory mode is active. Unfortunately, the C 
 
 Set to page addressing mode:
 ``` python
-status = oledExp.setMemoryMode(2);
+status = oledExp.setMemoryMode(2)
 ```
 
 Set to horizontal addressing mode:
 ``` python
-status = oledExp.setMemoryMode(0);
+status = oledExp.setMemoryMode(0)
 ```
 
 
@@ -1106,13 +1106,12 @@ Make sure to check the `asciiTable` static array found in `oled-exp.h`, it defin
 **Examples**
 
 Write an 'O'
-``` c
-int status;
+``` python
 status = oledExp.writeChar('O')
 ```
 
 Write an open bracket, an x, then a close bracket:
-``` c
+``` python
 status =  oledExp.writeChar('(')
 status |= oledExp.writeChar('x')
 status |= oledExp.writeChar(')')
@@ -1221,19 +1220,19 @@ The `startPage` argument defines at which page to start scrolling, and `stopPage
 
 Scroll the entire screen to the left:
 ``` python
-status = oledExp.scroll (0, 0, 0, 8-1);
+status = oledExp.scroll (0, 0, 0, 8-1)
 ```
 
 ![left scroll](http://i.imgur.com/nytY4Xw.gif)
 
 Quickly scroll the bottom half of the screen to the right:
 ``` python
-status = oledExp.scroll (1, 7, 4, 8-1);
+status = oledExp.scroll (1, 7, 4, 8-1)
 ```
 
 Slowly scroll pages 1 to 5:
 ``` python
-status = oledExp.scroll (1, 6, 1, 5);
+status = oledExp.scroll (1, 6, 1, 5)
 ```
 
 
@@ -1289,7 +1288,7 @@ status = oledExp.scrollDiagonal (	0,
 				1, 
 				0, 
 				8-1
-			);
+			)
 ```
 
 Slowly Scroll the entire screen upwards to the right:
@@ -1301,7 +1300,7 @@ status = oledExp.scrollDiagonal (	1,
 				1, 
 				0, 
 				8-1
-			);
+			)
 ```
 
 ![diagonal-right scroll](http://i.imgur.com/9JcoKEj.gif)
@@ -1321,7 +1320,7 @@ oledExp.scrollStop()
 
 Scroll the entire screen to the left, then stop it:
 ``` python
-status = oledExp.scroll (0, 0, 0, 7);
+status = oledExp.scroll (0, 0, 0, 7)
 status |= oledExp.scrollStop(0)
 ```
 
