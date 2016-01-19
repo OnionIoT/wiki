@@ -86,7 +86,7 @@ $ sudo chmod 666 /dev/ttyUSB0
 
 ![Check if serial device exists](//i.imgur.com/p1OwSE6h.png "Check if serial device exists")
 
-**Step 4**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using screen.
+**Step 4**: Run `screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen.
 
 Press `ENTER` to activate the command prompt.
 
