@@ -62,6 +62,14 @@ Initial firmware sent to be flashed at the factory
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+## b267
+*Jan 20, 2016*
+
+Added one-wire kernel modules:
+* kmod-w1
+* kmod-w1-gpio-custom
+* kmod-w1-master-gpio
+
 ## b266
 Added gpio-test package to Onion Package Repo
 
@@ -90,7 +98,7 @@ Firmware Update:
 Added support for GPIO Edge irq
 
 ## b260
-Added usb audio card drivers
+Added usb audio card kernel modules (`kmod-usb-audio` and `kmod-sound-core`)
 
 ## b259
 oupgrade update:
