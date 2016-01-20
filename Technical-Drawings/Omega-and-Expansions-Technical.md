@@ -4,7 +4,7 @@
 
 ## Omega Technical Drawing
 
-![Omega Technical Drawing](OMEGA_DRAWING.pdf)
+Click to download the [PDF Omega Technical Drawing](OMEGA_DRAWING.pdf)
 
 ## Expansion Dock Drawing
 
