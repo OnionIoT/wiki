@@ -1,6 +1,7 @@
 # Omega Firmware Changelog
 Logging all changes to the Onion Omega OpenWRT Firmware
 
+[[_TOC_]]
 
 # Versions
 ## 0.0.6
