@@ -1,23 +1,52 @@
 # Omega Firmware Changelog
-Logging all changes to the Onion Omega OpenWRT Firmware
+Log of all changes made to the Onion Omega OpenWRT Firmware
 
 [[_TOC_]]
 
+# Version Syntax
+
+The Omega Firmware will be in the following format:
+```
+A.B.C bXYZ
+```
+
+The individual parts correspond to the following:
+* A is the ULTRA version
+* B is the Major version
+* C is the Minor version
+* XYZ is the build number
+
+For example:
+```
+0.0.6 b264
+```
+
+The build number will continuously increment over the course of development.
+
 # Versions
+Definining the differences in each version change
+
 ## 0.0.6
 **Ando J1 Console Release.**
+
 Added Resistor Calculator app.
+
 Implemented universal notification system.
+
 Added error notification to I2C app to indicate Expansion cannot be found.
+
 Settings app update: added loading icon to wifi setup (sta and ap), added download progress bar to firmware upgrade, added Omega LED blinking before Factory Reset
 
 ## 0.0.5
 **Ando N2 Console Release.**
+
 Added apps for the PWM, Relay, and OLED Expansions, expanded the GPIO Control App.
+
 Added taskbar for apps.
 
 ## 0.0.4
 Early November release of the Console. This series of releases is code-named Ando.
+
 Contains bug fixes, extends functionality of existing apps, added GPIO control app.
 
 ## 0.0.3
@@ -30,19 +59,24 @@ Post production firmware
 Initial firmware sent to be flashed at the factory
 
 
-# Release Notes
+# Build Notes
+Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
+
 ## b266
 Added gpio-test package to Onion Package Repo
 
 ## b265
 Enabled GPIO Edge irq patch
+
 Kernel Modules added:
 * kmod-bluetooth 
 * kmod-gpio-irq - enable interrupts from gpio
 
 ## b264
 **Ando J1 Console Release**
+
 Upgrading to version 0.0.6
+
 Console Updates:
 * Added Resistor Calculator App
 * Implemented universal notification system
