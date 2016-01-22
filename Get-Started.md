@@ -30,7 +30,7 @@
 
 ![Connect to AP](//i.imgur.com/TIsvi2Bh.jpg "Connect to AP")
 
-**Step 2**: Browse to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. 
+**Step 2**: Use Chrome or Opera and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. *Some users have experienced issues using Firefox and Safari.*
 
 Alternatively, you can also browse to `http://192.168.3.1`. 
 
