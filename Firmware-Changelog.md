@@ -62,13 +62,33 @@ Initial firmware sent to be flashed at the factory
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+## b272
+*Jan 27, 2016*
+
+Added `whois` command to Busybox
+
+## b271
+*Jan 25, 2016*
+
+Updates to firmware database access scripts
+
+## b270
+*Jan 25, 2016*
+
+Added `kmod-w1-slave-therm` kernel package for One-Wire temperature sensor family. Updated PATH variable to match new OpenWRT default.
+
+## b269
+*Jan 21, 2016*
+
+Added `kmod-dma-buf` package to resolve build issue
+
 ## b267
 *Jan 20, 2016*
 
 Added one-wire kernel modules:
-* kmod-w1
-* kmod-w1-gpio-custom
-* kmod-w1-master-gpio
+* `kmod-w1`
+* `kmod-w1-gpio-custom`
+* `kmod-w1-master-gpio`
 
 ## b266
 Added gpio-test package to Onion Package Repo
