@@ -153,6 +153,24 @@ As described above, if the Onion library is not used in your sketch, the MCU_RES
 We're working on more functionality for this library, namely using the Serial Port as a bridge between the Omega and ATmega chip! Stay tuned!
 
 
+[//]: # (Onion Arduino Library: Not including the Library)
+
+#### If the Library is Not Includeed
+If the library is not included in your sketch, you will likely see a message like the following in the Arduino IDE the next time you try to upload a sketch:
+```
+Sketch uses 1,030 bytes (3%) of program storage space. Maximum is 32,256 bytes.
+Global variables use 9 bytes (0%) of dynamic memory, leaving 2,039 bytes for local variables. Maximum is 2,048 bytes.
+ash: merge-sketch-with-bootloader.lua: not found
+Flashing application '/tmp/sketch.hex' ...
+Error: Write failed
+Done
+Flash complete!
+failed to switch to bootloader (invalid address?): No such device or address
+```
+
+To remedy this, press the MCU_RESET button on the Arduino Dock right before loading the sketch. While Arduino Dock LED is flickering super quickly, the sketch upload will work.
+
+
 [//]: # (Onion Arduino Library: Using I2C)
 
 ### Using I2C in a Sketch
