@@ -743,7 +743,15 @@ The functions are largely the same as their C counterparts, including the argume
 One major drawback is that none of the defines found in C are currently implemented in the Python module.
 
 
-[//]: # (Return Values)
+[//]: # (Python: Example Code)
+
+### Example Code
+
+Example code that uses the `oledExp` module can be [found here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/examples/oled-exp.py), in the `i2c-exp-driver` Onion GitHub Repo.
+
+
+
+[//]: # (Python: Return Values)
 
 ### Return Values
 

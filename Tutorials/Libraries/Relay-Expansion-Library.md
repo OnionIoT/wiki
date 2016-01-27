@@ -300,6 +300,13 @@ from OmegaExpansion import relayExp
 The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below.
 
 
+[//]: # (Python: Example Code)
+
+### Example Code
+
+Example code that uses the `relayExp` module can be [found here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/examples/relay-exp.py), in the `i2c-exp-driver` Onion GitHub Repo.
+
+
 
 [//]: # (Python: Return Values)
 

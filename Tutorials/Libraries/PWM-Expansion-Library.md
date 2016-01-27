@@ -311,7 +311,15 @@ from OmegaExpansion import pwmExp
 ```
 
 
-[//]: # (Return Values)
+[//]: # (Python: Example Code)
+
+### Example Code
+
+Example code that uses the `pwmExp` module can be [found here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/examples/pwm-exp.py), in the `i2c-exp-driver` Onion GitHub Repo.
+
+
+
+[//]: # (Python: Return Values)
 
 ### Return Values
 
