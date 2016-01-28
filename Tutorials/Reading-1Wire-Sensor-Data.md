@@ -16,7 +16,7 @@ Read your sensors data sheet to identify the appropriate pins!
 
 Connect the sensors:
 
-[Sensor Connection](http://i.imgur.com/SIlLkpN.png)
+![Sensor Wiring Diagram](http://i.imgur.com/SIlLkpN.png)
 
 |Sensor        |Onion Omega|Resistor 4.7 kOhm|
 |--------------|-----------|-----------------|
