@@ -1,8 +1,11 @@
 # Reading 1-Wire Sensor Data with the Omega
 
+*Tutorial written by Onion Community member [Omega303](https://community.onion.io/user/omega303)*
+
 *This tutorial is on how to set up the 1-Wire interface, connect sensors to GPIO pins and read sensor data with the Omega.*
 
 The Omega can read sensor data via 1-Wire bus system connected to GPIO pins.
+
 
 ## Connecting Hardware
 
