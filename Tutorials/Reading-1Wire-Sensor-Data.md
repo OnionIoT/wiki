@@ -16,6 +16,8 @@ Read your sensors data sheet to identify the appropriate pins!
 
 Connect the sensors:
 
+[Sensor Connection](http://i.imgur.com/SIlLkpN.png)
+
 |Sensor        |Onion Omega|Resistor 4.7 kOhm|
 |--------------|-----------|-----------------|
 |GND           |GND        |                 |
@@ -34,8 +36,7 @@ Connect the sensors:
 
 Steps to setup 1-Wire bus system:
 
-1. Update the firmware `oupgrade -l -f`
-    * This should provide version **[b270]** or higher
+1. Ensure you are on Omega firmware `b270` or higher
 2. Configure the GPIO pin connected to the data line of the sensor
 	* `echo "w1-gpio-custom bus0=0,19,0" > /etc/modules.d/55-w1-gpio-custom`
 	  * *replace 19 with the GPIO pin # you want to use*
@@ -49,9 +50,9 @@ Steps to setup 1-Wire bus system:
  1. Read raw sensor data
     * `cat  /sys/devices/w1_bus_master1/28-000123456789/w1_slave`
     * prints something similar for a temperature sensor [DS18B20]
- ```
+```
 	63 01 4b 46 7f ff 0c 10 d1 : crc=d1 YES
-    63 01 4b 46 7f ff 0c 10 d1 t=22187
+  63 01 4b 46 7f ff 0c 10 d1 t=22187
 ```
  2. Trimmed and formatted (for DS18B20)
     * `awk -F= '/t=/ {printf "%.03f\n", $2/1000}' /sys/devices/w1_bus_master1/28-000123456789/w1_slave`
