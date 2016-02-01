@@ -76,7 +76,7 @@ The Omega can actually be used to program the bootloader
   * can just be six pieces of wire with the insulation stripped off at the end
 
 #### Wiring
-Plug the Omega into the Expansion Dock. The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
+Plug the Omega into the Expansion Dock and allow it to boot. The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
 
 Follow the table below to wire the Omega to the Arduino Dock. **Note that it's very important that the Omega and the Arduino Dock share a common ground!**
 
@@ -122,7 +122,7 @@ If the method described above does not successfully flash the Bootloader, try th
 * Four male-to-female jumper wires
 
 #### Wiring
-Plug the Omega into the Expansion Dock.
+Plug the Omega into the Expansion Dock and allow it to boot.
 
 Provide power to the Arduino Dock by connecting the 5V and GND Expansion Dock GPIOs to the Arduino Dock 5V and GND pins with jumper wires.
 
@@ -178,7 +178,7 @@ Disconnect the Omega from the Mini Dock. Put a wire into each of the pins shown 
 
 When using stranded wire, you'll need to twist the ends to make it easier to plug in.
 
-With the wires in place, plug the Omega into the Mini Dock, ensuring that the wires are into the Mini Dock's headers by the Omega's pins. It will take more pressure than usual to plug the Omega in since the pins need to squish in with the wires, be careful to not break anything! Stranded wires work well since the strands have some mobility and can accomodate the pin.
+With the wires in place, plug the Omega into the Mini Dock, ensuring that the wires are into the Mini Dock's headers by the Omega's pins. It will take more pressure than usual to plug the Omega in since the pins need to squish in with the wires, be careful to not break anything! Stranded wires work well since the strands have some mobility and can accomodate the pin. Allow the Omega to boot.
 
 ![Omega + Mini Dock + Wires side view](//i.imgur.com/6Ze0t3g.jpg) ![Omega + Mini Dock + Wires top view](//i.imgur.com/FGndg13.jpg)
 
