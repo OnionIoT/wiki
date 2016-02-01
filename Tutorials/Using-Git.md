@@ -29,7 +29,7 @@ opkg install git git-http
 
 ### Using Git
 
-If you are completely new to git and GitHub, check out this (bootcamp)[https://help.github.com/categories/bootcamp/].
+If you are completely new to git and GitHub, check out this short [bootcamp series](https://help.github.com/categories/bootcamp/).
 
 There are a variety of [tutorials](http://git-scm.com/docs/gittutorial) available online for more info.
 
