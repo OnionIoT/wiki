@@ -72,7 +72,7 @@ We will also need to tell Apache where to send all the CGI requests. To do this,
 </Directory>
 ```
 
-Find the line `ScriptAlias /cgi-bin/ "/usr/share/cgi-bin"` and add `ScriptAlias /php/ "/usr/bin"` after it:
+Find the line `ScriptAlias /cgi-bin/ "/usr/share/cgi-bin"` and add `ScriptAlias /php/ "/usr/bin/"` after it:
 
 ```
 ScriptAlias /cgi-bin/ "/usr/share/cgi-bin"
