@@ -76,7 +76,7 @@ Find the line `ScriptAlias /cgi-bin/ "/usr/share/cgi-bin"` and add `ScriptAlias 
 
 ```
 ScriptAlias /cgi-bin/ "/usr/share/cgi-bin"
-ScriptAlias /php/ "/usr/bin"
+ScriptAlias /php/ "/usr/bin/"
 ```
 
 Find `<IfModule mime_module>` section and add the following:
