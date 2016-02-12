@@ -11,4 +11,4 @@ Click to download the [PDF Expansion Dock Technical Drawing](EXPANSION_DOCK_DRAW
 
 ## Mini Dock Drawing
 
-Click to download the [PDF Expansion Dock Technical Drawing](MINI_DOCK_DRAWING.pdf)
+Click to download the [PDF Mini Dock Technical Drawing](MINI_DOCK_DRAWING.pdf)
