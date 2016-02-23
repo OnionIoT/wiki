@@ -1306,8 +1306,8 @@ Draw the following pattern:
 status =  oledExp.writeByte(0x01)		# 0x01 = 0b 0000 0001
 status |= oledExp.writeByte(0x03)		# 0x03 = 0b 0000 0011
 status |= oledExp.writeByte(0x07)		# 0x07 = 0b 0000 0111
-status |= oledExp.writeByte(0x0f)		# 0x0f = 0b 0000 1111
-status |= oledExp.writeByte(0x3f)		# 0x3f = 0b 0011 1111
+status |= oledExp.writeByte(0x0f)			# 0x0f = 0b 0000 1111
+status |= oledExp.writeByte(0x3f)			# 0x3f = 0b 0011 1111
 ```
 
 
