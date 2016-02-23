@@ -369,6 +369,35 @@ status = oledSetColumnAddressing(63, 95);
 ```
 
 
+[//]: # (Set Column Addressing: Text Columns)
+
+##### Set Columns for Text
+
+A function exists to define the column addressing specifically for text:
+
+``` c
+int oledSetTextColumns ();
+```
+
+It sets the start pixel to 0 and the end pixel to 125. This allows for 21 text characters per line. This function should be run before setting the cursor for writing text.
+
+
+[//]: # (Set Column Addressing: Image Columns)
+
+##### Set Columns for Images
+
+Also, a function exists to define the column addressing to cover the entire screen:
+
+``` c
+int oledSetImageColumns ();
+```
+
+It sets the start pixel to 0 and the end pixel to 127. This enables the use of the entire screen real estate.
+
+
+
+
+
 [//]: # (Set Cursor Position)
 
 #### Set Cursor Position
@@ -379,7 +408,7 @@ This function is used to position the cursor on a specific page and character co
 int oledSetCursor (int row, int column);
 ```
 
-Note: since the column cursor is not preserved after a column addressing change, the column addressing will be set to 0-125 to properly display text before the cursor position is programmed.
+Note: since the column cursor is not preserved after a column addressing change, the column addressing **needs be set to 0-125 using the `oledSetTextColumns()` function to properly display text before the cursor position is programmed.**
 
 
 **Arguments**
@@ -402,7 +431,7 @@ Set the cursor to the middle of the 4th row:
 status = oledSetCursor(3, 10);
 ```
 
-Set the cursor to the starting position at the top-right
+Set the cursor to the starting position at the top-left
 ``` c
 status = oledSetCursor(0, 0);
 ```
@@ -412,6 +441,52 @@ Write 'hello' at the top left of the screen, and then write 'hi there' on the mi
 status 	= oledSetCursor(0, 0);
 status	|= oledWrite("hello");
 status 	|= oledSetCursor(6, 10);
+status	|= oledWrite("hi there");
+```
+
+[//]: # (Set Cursor Position by Pixel)
+
+##### Set Cursor Position by Pixel
+
+This function is used to position the cursor on a specific page and pixel row. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
+
+``` c
+int oledSetCursorByPixel (int row, int pixel);
+```
+
+It allows for cursor positions that are not aligned with the 21 possible character columns.
+
+
+**Arguments**
+
+The `row` argument sets the page for the cursor, so the range is **0 to 7**
+
+The `pixel` argument sets the horizontal pixel position of the cursor, the range is **0 to 127**
+
+
+**Examples**
+
+Set the cursor to the start of the last page:
+``` c
+int status;
+status = oledSetCursorByPixel(7, 0);
+```
+
+Set the cursor to the middle of the 4th row:
+``` c
+status = oledSetCursorByPixel(3, 63);
+```
+
+Set the cursor to the bottom-left
+``` c
+status = oledSetCursorByPixel(7, 0);
+```
+
+Write 'hello' at the top left of the screen, and then write 'hi there' on the middle of the 7th row:
+``` c
+status 	= oledSetCursorByPixel(0, 0);
+status	|= oledWrite("hello");
+status 	|= oledSetCursorByPixel(6, 63);
 status	|= oledWrite("hi there");
 ```
 
@@ -432,8 +507,42 @@ int oledClear ();
 
 ### Writing Text to the Display
 
-Listed below are the functions that write characters, strings, or images to the display.
+Listed below are the functions that write bytes, characters, strings, or images to the display.
 
+
+[//]: # (Write Byte)
+
+#### Write a Single Byte
+
+Write a single byte to the current position of the cursor:
+
+``` c
+int oledWriteByte (int byte);
+```
+
+**Arguments**
+
+The `byte` argument holds the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the page column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the page column.
+
+![Page detail](http://i.imgur.com/8DIiN2n.png)
+
+After the byte is set, the cursor will automatically move to the next page column.
+
+
+**Examples**
+
+Draw the following pattern:
+
+![Page detail](http://i.imgur.com/lxs1q8J.png)
+
+``` c
+int status;
+status =  oledWriteByte(0x01);		// 0x01 = 0b 0000 0001
+status |= oledWriteByte(0x03);		// 0x03 = 0b 0000 0011
+status |= oledWriteByte(0x07);		// 0x07 = 0b 0000 0111
+status |= oledWriteByte(0x0f);		// 0x0f = 0b 0000 1111
+status |= oledWriteByte(0x3f);		// 0x3f = 0b 0011 1111
+```
 
 [//]: # (Write Character)
 
@@ -1029,6 +1138,33 @@ status = oledExp.setColumnAddressing(63, 95)
 ```
 
 
+[//]: # (Python: Set Column Addressing: Text Columns)
+
+##### Set Columns for Text
+
+This function defines the column addressing specifically for text:
+``` python
+oledExp.setImageColumns()
+```
+
+It sets the start pixel to 0 and the end pixel to 125. This allows for 21 text characters per line. This function should be run before setting the cursor for writing text.
+
+
+[//]: # (Python: Set Column Addressing: Image Columns)
+
+##### Set Columns for Images
+
+Alternatively, this function defines the column addressing to cover the entire screen:
+``` python
+oledExp.oledSetImageColumns()
+```
+
+It sets the start pixel to 0 and the end pixel to 127. This enables the use of the entire screen real estate.
+
+
+
+
+
 
 [//]: # (Python: Set Cursor Position)
 
@@ -1039,7 +1175,7 @@ This function is used to position the cursor on a specific page and character co
 oledExp.setCursor(row, column)
 ```
 
-Note: since the column cursor is not preserved after a column addressing change, the column addressing will be set to 0-125 to properly display text before the cursor position is programmed.
+Note: since the column cursor is not preserved after a column addressing change, the column addressing **needs be set to 0-125 to using the `oledExp.setTextColumns()` function to properly display text before the cursor position is programmed.**
 
 
 **Arguments**
@@ -1075,6 +1211,52 @@ status	|= oledExp.write("hi there")
 ```
 
 
+[//]: # (Python: Set Cursor Position by Pixel)
+
+##### Set Cursor Position by Pixel
+
+This function is used to position the cursor on a specific page and pixel row. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
+``` python
+oledExp.setCursorByPixel(row, pixel)
+```
+
+It allows for cursor positions that are not aligned with the 21 possible character columns.
+
+**Arguments**
+
+The `row` argument sets the page for the cursor, so the range is **0 to 7**
+
+The `pixel` argument sets the horizontal pixel position of the cursor, the range is **0 to 127**
+
+
+**Examples**
+
+Set the cursor to the start of the last page:
+``` python
+status = oledExp.setCursorByPixel(7, 0)
+```
+
+Set the cursor to the middle of the 4th row:
+``` python
+status = oledExp.setCursorByPixel(3, 63)
+```
+
+Set the cursor to the bottom-left
+``` python
+status = oledExp.setCursorByPixel(7, 0)
+```
+
+Write 'hello' at the top left of the screen, and then write 'hi there' on the middle of the 7th row:
+``` python
+oledExp.setCursorByPixel(0, 0)
+oledExp.write("hello")
+oledExp.setCursorByPixel(6, 63)
+oledExp.write("hi there")
+```
+
+
+
+
 
 [//]: # (Clearing Function)
 
@@ -1092,7 +1274,40 @@ oledExp.clear()
 
 ### Writing Text to the Display
 
-Listed below are the functions that write characters, strings, or images to the display.
+Listed below are the functions that write bytes, characters, strings, or images to the display.
+
+
+[//]: # (Python: Write Byte)
+
+#### Write a Single Byte
+
+Write a single byte to the current position of the cursor:
+``` python
+oledExp.writeByte(byte)
+```
+
+**Arguments**
+
+The `byte` argument is the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the page column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the page column.
+
+![Page detail](http://i.imgur.com/8DIiN2n.png)
+
+After the byte is set, the cursor will automatically move to the next page column.
+
+
+**Examples**
+
+Draw the following pattern:
+
+![Page detail](http://i.imgur.com/lxs1q8J.png)
+
+``` python
+status =  oledExp.writeByte(0x01)		# 0x01 = 0b 0000 0001
+status |= oledExp.writeByte(0x03)		# 0x03 = 0b 0000 0011
+status |= oledExp.writeByte(0x07)		# 0x07 = 0b 0000 0111
+status |= oledExp.writeByte(0x0f)		# 0x0f = 0b 0000 1111
+status |= oledExp.writeByte(0x3f)		# 0x3f = 0b 0011 1111
+```
 
 
 [//]: # (Python: Write Character)
@@ -1127,7 +1342,7 @@ status |= oledExp.writeChar(')')
 
 
 
-[//]: # (Write String)
+[//]: # (Python: Write String)
 
 #### Write a String
 
