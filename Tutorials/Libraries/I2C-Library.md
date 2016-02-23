@@ -353,7 +353,7 @@ The `onionI2C` Python module in the `OmegaExpansion` package provides a Python o
 
 ### Programming Flow
 
-Once the I2C object is initialized, the read and write functions can be called freely on the object. 
+Once the I2C object is initialized, the read and write functions can be called freely using the object. 
 
 
 [//]: # (Using the Python Module)
@@ -377,7 +377,7 @@ This will install the module to `/usr/lib/python2.7/OmegaExpansion/`
 
 To add the Onion I2C Module to your Python program, include the following in your code:
 ``` python
-from OmegaExpansion import pyOnionI2C
+from OmegaExpansion import onionI2C
 ```
 
 [//]: # (Example Code)
@@ -423,13 +423,10 @@ If your use case requires a different adapter, add an integer argument to the co
 
 ##### Reading Bytes
 
-This function reads a specified number of bytes from a specific device on the I2C bus:
-The object needs to be initialized before it can be used for reading and writing:
+This function reads a specified number of bytes from a specific device on the I2C bus, and returns them in a list:
 ``` python
 valList	= i2c.readBytes(devAddr, addr, size)
 ```
-
-The bytes are returned in a list.
 
 **Arguments**
 
@@ -442,12 +439,12 @@ The number of bytes to be read should be placed in the `size` argument.
 
 **Examples**
 
-Read 4 bytes from address 0x00 on a device with an address of 0x48:
+Read 4 bytes from address `0x00` on a device with an address of `0x48`:
 ``` python
 rdBytes 	= i2c.readBytes(0x48, 0x00, 4)
 ```
 
-Read a byte from address 0x24 on a device with an address of 0x27:
+Read a byte from address `0x24` on a device with an address of `0x27`:
 ``` python
 byteList 	= i2c.readBytes(0x27, 0x24, 1)
 ```
@@ -482,12 +479,12 @@ The `value` argument is the single byte to be written.
 
 **Examples**
 
-Write 0xef to address 0xf1 on a device with an address of 0x11:
+Write `0xef` to address `0xf1` on a device with an address of `0x11`:
 ``` python
 status 	= i2c.writeByte(0x11, 0xf1, 0xef)
 ```
 
-Write 0xbe to address 0xaa on a device with an address of 0x33:
+Write `0xbe` to address `0xaa` on a device with an address of` 0x33`:
 ``` python
 status 	= i2c.writeByte(0x33, 0xaa, 0xbe)
 ```
@@ -513,18 +510,18 @@ The `values` argument is the list of bytes to be written.
 
 **Examples**
 
-Write 0xde, 0xad, 0xbe, 0xef to address 0x1a on a device with an address of 0x66:
+Write `0xde, 0xad, 0xbe, 0xef` to address `0x1a` on a device with an address of `0x66`:
 ``` python
 bytes 	= [0xde, 0xad, 0xbe, 0xef]
 status 	= i2c.writeBytes(0x66, 0x1a, bytes)
 ```
 
-Write 0xbe to address 0xaa on a device with an address of 0x33:
+Write `0xbe` to address `0xaa` on a device with an address of `0x33`:
 ``` python
 status 	= i2c.writeBytes(0x33, 0xaa, [0xbe])
 ```
 
-Write 0x01, 0x03, 0x05 to address 0x55 on a device with an address of 0x24:
+Write `0x01, 0x03, 0x05` to address `0x55` on a device with an address of `0x24`:
 ``` python
 status 	= i2c.writeBytes(0x24, 0x55, [0x01, 0x03, 0x05])
 ```
@@ -550,20 +547,20 @@ The `values` argument is the list of bytes to be written.
 
 **Examples**
 
-Write 0xde, 0xad, 0xbe, 0xef to a device with an address of 0x67:
+Write `0xde, 0xad, 0xbe, 0xef` to a device with an address of `0x67`:
 ``` python
 bytes 	= [0xde, 0xad, 0xbe, 0xef]
 status 	= i2c.write(0x67, bytes)
 ```
 
-Write 0xaa, 0xbe to a device with an address of 0x34:
+Write `0xaa, 0xbe` to a device with an address of `0x34`:
 ``` python
-status 	= i2c.write(0x34, [0xaa, 0xbe])
+status  = i2c.write(0x34, [0xaa, 0xbe])
 ```
 
-Write 0x01, 0x03, 0x05, 0x02, 0x04, 0x06, 0xaa to a device with an address of 0x13:
+Write `0x01, 0x03, 0x05, 0x02, 0x04, 0x06, 0xaa` to a device with an address of `0x13`:
 ``` python
-bytes 	= [0x01, 0x03, 0x05, 0x02, 0x04, 0x06, 0xaa]
-status 	= i2c.write(0x13, bytes)
+bytes   = [0x01, 0x03, 0x05, 0x02, 0x04, 0x06, 0xaa]
+status  = i2c.write(0x13, bytes)
 ```
 
