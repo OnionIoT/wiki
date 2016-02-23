@@ -425,7 +425,7 @@ If your use case requires a different adapter, add an integer argument to the co
 
 This function reads a specified number of bytes from a specific device on the I2C bus, and returns them in a list:
 ``` python
-valList	= i2c.readBytes(devAddr, addr, size)
+valList = i2c.readBytes(devAddr, addr, size)
 ```
 
 **Arguments**
@@ -441,12 +441,12 @@ The number of bytes to be read should be placed in the `size` argument.
 
 Read 4 bytes from address `0x00` on a device with an address of `0x48`:
 ``` python
-rdBytes 	= i2c.readBytes(0x48, 0x00, 4)
+rdBytes   = i2c.readBytes(0x48, 0x00, 4)
 ```
 
 Read a byte from address `0x24` on a device with an address of `0x27`:
 ``` python
-byteList 	= i2c.readBytes(0x27, 0x24, 1)
+byteList  = i2c.readBytes(0x27, 0x24, 1)
 ```
 Note that even though only a single byte is being read, the variable `byteList` will be in the form of a list.
 
@@ -481,12 +481,12 @@ The `value` argument is the single byte to be written.
 
 Write `0xef` to address `0xf1` on a device with an address of `0x11`:
 ``` python
-status 	= i2c.writeByte(0x11, 0xf1, 0xef)
+status  = i2c.writeByte(0x11, 0xf1, 0xef)
 ```
 
 Write `0xbe` to address `0xaa` on a device with an address of` 0x33`:
 ``` python
-status 	= i2c.writeByte(0x33, 0xaa, 0xbe)
+status  = i2c.writeByte(0x33, 0xaa, 0xbe)
 ```
 
 
@@ -496,7 +496,7 @@ status 	= i2c.writeByte(0x33, 0xaa, 0xbe)
 
 This function will write a list of bytes to an address on a specific device on the I2C bus:
 ``` python
-status 	= i2c.writeBytes(devAddr, addr, values)
+status  = i2c.writeBytes(devAddr, addr, values)
 ```
 
 **Arguments**
@@ -512,18 +512,18 @@ The `values` argument is the list of bytes to be written.
 
 Write `0xde, 0xad, 0xbe, 0xef` to address `0x1a` on a device with an address of `0x66`:
 ``` python
-bytes 	= [0xde, 0xad, 0xbe, 0xef]
-status 	= i2c.writeBytes(0x66, 0x1a, bytes)
+bytes   = [0xde, 0xad, 0xbe, 0xef]
+status  = i2c.writeBytes(0x66, 0x1a, bytes)
 ```
 
 Write `0xbe` to address `0xaa` on a device with an address of `0x33`:
 ``` python
-status 	= i2c.writeBytes(0x33, 0xaa, [0xbe])
+status  = i2c.writeBytes(0x33, 0xaa, [0xbe])
 ```
 
 Write `0x01, 0x03, 0x05` to address `0x55` on a device with an address of `0x24`:
 ``` python
-status 	= i2c.writeBytes(0x24, 0x55, [0x01, 0x03, 0x05])
+status  = i2c.writeBytes(0x24, 0x55, [0x01, 0x03, 0x05])
 ```
 
 
@@ -533,7 +533,7 @@ status 	= i2c.writeBytes(0x24, 0x55, [0x01, 0x03, 0x05])
 
 This function will write a list of bytes to a specific device on the I2C bus:
 ``` python
-status 	= i2c.write(devAddr, values)
+status  = i2c.write(devAddr, values)
 ```
 
 It can be used when no specific on address on the device needs to be specified.
@@ -549,8 +549,8 @@ The `values` argument is the list of bytes to be written.
 
 Write `0xde, 0xad, 0xbe, 0xef` to a device with an address of `0x67`:
 ``` python
-bytes 	= [0xde, 0xad, 0xbe, 0xef]
-status 	= i2c.write(0x67, bytes)
+bytes   = [0xde, 0xad, 0xbe, 0xef]
+status  = i2c.write(0x67, bytes)
 ```
 
 Write `0xaa, 0xbe` to a device with an address of `0x34`:
