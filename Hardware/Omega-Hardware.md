@@ -67,7 +67,7 @@ The [AR9331 Datasheet](ar9331_datasheet.pdf) has all of the technical specificat
 
 # The Hardware
 
-
+The Omega Docks are powered through the **Micro-USB** connector. Use a micro-USB cable (same cable used to charge Andriod phones) to connect your Omega to a computer or a wall charger.
 
 
 [//]: # (Hardware: Reset Button)
