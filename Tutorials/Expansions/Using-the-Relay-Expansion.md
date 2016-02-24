@@ -8,7 +8,7 @@ The Relay Expansion allows you to control two relay modules. Relays are basicall
 
 [//]: # (Hardware)
 
-## The Hardware
+# The Hardware
 The Relay Expansion has two TE Axicom IMO3 relay modules. The table below outlines the specifications:
 
 | Parameter                 | Specification             |
@@ -20,7 +20,7 @@ The Relay Expansion has two TE Axicom IMO3 relay modules. The table below outlin
 
 
 
-### The Dip-Switches
+## The Dip-Switches
 
 The dip switches on the Relay Expansion control the I2C device address of the Expansion, enabling users to stack and control up to eight Relay Expansions with one Omega and Expansion dock.
 
@@ -32,7 +32,7 @@ The 'on' position is when the toggle is away from the numbers on the switch, or 
 
 [//]: # (Using relay-exp)
 
-## Using the Command Line
+# Using the Command Line
 
 *Make sure that your Omega has the latest firmware!*
 
@@ -41,7 +41,7 @@ A tool we've developed called `relay-exp` will make controlling your relay expan
 Also available are a C library and a Python module that allow you to develop your own programs to control the Relay Expansion.
 
 
-### Command Usage
+## Command Usage
 
 For a print out of the command's usage, run it with just a `-h` argument:
 
@@ -49,7 +49,7 @@ For a print out of the command's usage, run it with just a `-h` argument:
 relay-exp -h
 ```
 
-### Initialization
+## Initialization
 
 After every power-cycle, the chip on the Relay Expansion must be initialized to correctly and safely control the Relay Modules. **The driver application will automatically detect if initialization is required and perform the required sequence,** so there is no need to run this command.
 
@@ -63,7 +63,7 @@ This can be run on it's own or in conjunction with any commands below.
 
 By default, the relays will be OFF.
 
-### Relay Channels
+## Relay Channels
 
 The Expansion has two modules, this guide will refer to the relays as RELAY0 and RELAY1 or as a channel.
 
@@ -71,7 +71,7 @@ Refer to the following image to identify which channel refers to which relay:
 
 ![Relay Expansion](//i.imgur.com/Wk6Z9lW.png)
 
-### Setting a Relay's State
+## Setting a Relay's State
 
 The tool allows you to program the relay's states like so:
 
@@ -105,7 +105,7 @@ To turn on relay 0:
 relay-exp 0 on
 ```
 
-### Controlling both Relays Simultaneously
+## Controlling both Relays Simultaneously
 
 You are also able to control both relays in a single command:
 
@@ -132,7 +132,7 @@ relay-exp all off
 
 [//]: # (Switch Explanation)
 
-## Using Multiple Relay Expansions by Changing the Dip-Switch Settings
+# Using Multiple Relay Expansions by Changing the Dip-Switch Settings
 
 The dip-switches specify the I2C address the chip on the Relax Expansion declares as it's device address. A single Omega and Expansion Dock can control up to eight Relay Expansions if they all have different dip-switch configurations.
 
@@ -196,7 +196,7 @@ relay-exp all off
 
 [//]: # (I2C Address Mapping)
 
-### I2C Address Mapping
+## I2C Address Mapping
 
 If you're curious about how the dip-switch settings affect the I2C device address of the Relay Expansion, then this table is for you:
 
@@ -215,7 +215,7 @@ If you're curious about how the dip-switch settings affect the I2C device addres
 
 [//]: # (Using the Libraries)
 
-## Using the Libraries
+# Using the Libraries
 
 The C library and Python module will allow you to control the Relay Expansion with your own programs.
 

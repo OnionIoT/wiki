@@ -10,7 +10,7 @@ The OLED Expansion allows you to display images and text on the small black and 
 
 [//]: # (Hardware)
 
-## The Hardware
+# The Hardware
 The OLED Expansion has a 0.96" 128x64 black and white OLED display. When displaying text, there are 8 rows, with 21 possible characters in each row.
 
 [//]: # (LAZAR: EXPAND ON THIS WITH AN IMAGE)
@@ -19,7 +19,7 @@ The OLED Expansion has a 0.96" 128x64 black and white OLED display. When display
 
 [//]: # (Using oled-exp)
 
-## Using the OLED Expansion
+# Using the OLED Expansion
 
 *Make sure that your Omega has the latest firmware!*
 
@@ -28,7 +28,7 @@ On the command line, a tool called `oled-exp` will be your helper in all things 
 Also available are a C library and Python module that will allow you to create your own programs that use the OLED Expansion.
 
 
-### Command Usage
+## Command Usage
 
 For a print-out of the command's usage, run it with just a -h argument
 
@@ -42,7 +42,7 @@ oled-exp [OPTIONS] COMMAND PARAMETER
 ```
 
 
-### Programming Flow
+## Programming Flow
 
 When it is first powered on, the OLED Expansion must first be programmed with an **initialization sequence** in order to accept further commands. 
 
@@ -66,7 +66,7 @@ oled-exp write "Onion Omega\nMy favourite" dim on cursor 4,0 write ":)"
 ```
 
 
-#### Command and Option Table
+### Command and Option Table
 
 To reconcile all of the above features to `oled-exp`, refer to the table below:
 
@@ -84,12 +84,12 @@ To reconcile all of the above features to `oled-exp`, refer to the table below:
 
 
 
-### Options
+## Options
 
 The option arguments can be run by themselves or in conjunction with any other command. They will always be executed first.
 
 
-#### Initialization
+### Initialization
 
 To initialize the display to accept further commands:
 ```
@@ -101,7 +101,7 @@ oled-exp -i write "Freshly initialized"
 ```
 
 
-#### Clear the Screen
+### Clear the Screen
 
 To clear the screen and set the cursor to the top left:
 ```
@@ -115,11 +115,11 @@ oled-exp -c draw /root/onion.lcd
 
 
 
-### Commands
+## Commands
 The commands are more complex and each requires one argument.
 
 
-#### Power
+### Power
 
 Turn the display on or off. Can be used to toggle the display after it has been initialized.
 ```
@@ -129,7 +129,7 @@ oled-exp power <on|off>
 Note that any text or images on the screen will be preserved.
 
 
-#### Invert
+### Invert
 
 Invert black and white on the display. Setting to `on` will enable the invert, setting to `off` will disable the inversion.
 ```
@@ -137,7 +137,7 @@ oled-exp invert <on|off>
 ```
 
 
-#### Dim
+### Dim
 
 Enable dimming the display. Setting to `on` will dim the display, setting to `off` will restore the default brightness.
 ```
@@ -145,7 +145,7 @@ oled-exp dim <on|off>
 ```
 
 
-#### Write
+### Write
 
 Write a string to the display *at the current position of the cursor*:
 ```
@@ -162,7 +162,7 @@ A list outlining the supported characters can be found in a [section below.](#su
 
 
 
-#### Set the Cursor Position
+### Set the Cursor Position
 
 Set the cursor position on the display, any writes after this command will start at the specified row and column.
 
@@ -192,7 +192,7 @@ oled-exp cursor 2,10
 
 
 
-#### Scrolling
+### Scrolling
 
 The OLED can scroll whatever is on the screen horizontally or diagonally upwards. The text/image will wrap around the edges.
 ``` 
@@ -215,7 +215,7 @@ Supported directions:
 
 
 
-#### Displaying Images
+### Displaying Images
 
 Display an image from an LCD file on the display. 
 
@@ -226,7 +226,7 @@ Display an image from an LCD file on the display.
 
 [//]: # (SUPPORTED CHARACTER LIST)
 
-## Supported Characters
+# Supported Characters
 
 The OLED Display supports the following characters:
 
@@ -330,7 +330,7 @@ The OLED Display supports the following characters:
 
 [//]: # (Using the Libraries)
 
-## Using the Libraries
+# Using the Libraries
 
 The C library and Python module will give you the flexibility to use the OLED Expansion however you want in your own programs.
 
