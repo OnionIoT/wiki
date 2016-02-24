@@ -459,7 +459,9 @@ status	|= oledWrite("hi there");
 
 #### Set Cursor Position by Pixel
 
-This function is used to position the cursor on a specific page and pixel row. This gives more fine grain control than setting by character column. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
+This function is used to position the cursor on a specific page and pixel row. This gives more fine grain control than setting by character column. 
+
+After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
 
 ``` c
 int oledSetCursorByPixel (int row, int pixel);
@@ -525,7 +527,7 @@ Listed below are the functions that write bytes, characters, strings, or images 
 
 ### Write a Single Byte
 
-Write a single byte to the current position of the cursor:
+Write a single byte, eight vertical pixels, to the current position of the cursor:
 
 ``` c
 int oledWriteByte (int byte);
@@ -533,7 +535,7 @@ int oledWriteByte (int byte);
 
 **Arguments**
 
-The `byte` argument holds the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the page column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the page column.
+The `byte` argument holds the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the column.
 
 ![Page detail](http://i.imgur.com/8DIiN2n.png)
 
@@ -1305,14 +1307,15 @@ Listed below are the functions that write bytes, characters, strings, or images 
 
 ### Write a Single Byte
 
-Write a single byte to the current position of the cursor:
+Write a single byte, eight vertical pixels, to the current position of the cursor:
+
 ``` python
 oledExp.writeByte(byte)
 ```
 
 **Arguments**
 
-The `byte` argument is the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the page column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the page column.
+The `byte` argument is the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the column.
 
 ![Page detail](http://i.imgur.com/8DIiN2n.png)
 

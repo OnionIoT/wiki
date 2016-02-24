@@ -170,7 +170,16 @@ Write a single byte of data (eight vertical pixels) to the display *at the curre
 oled-exp writeByte <byte>
 ```
 
+The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the column.
+
 The cursor will be incremented to the next pixel column after this command.
+
+For example, the following command:
+```
+oled-exp writeByte 0x0f
+```
+
+Will fill in the top four pixels and will leave the bottom four pixels in a column blank.
 
 
 
@@ -205,11 +214,11 @@ oled-exp cursor 2,10
 
 ### Set the Cursor Position by Pixel Column
 
-Set the cursor position on the display, any writes after this command will start at the specified row and pixel.
+Set the cursor position on the display, any writes after this command will start at the specified row and **pixel**.
 
 The `row` parameter represents each character row (8 pixel rows) on the display, so the range is **0 to 7**
 
-The `pixel` parameter represents each character column, the range is **0 to 20**
+The `pixel` parameter represents each pixel column, the range is **0 to 127**
 ```
 oled-exp cursorPixel <row>,<pixel>
 ```
@@ -260,6 +269,7 @@ Supported directions:
 Display an image from an LCD file on the display. 
 
 **For now use the OLED App on the Console!**
+
 *More details on this coming soon, stay tuned!*
 
 
