@@ -70,17 +70,19 @@ oled-exp write "Onion Omega\nMy favourite" dim on cursor 4,0 write ":)"
 
 To reconcile all of the above features to `oled-exp`, refer to the table below:
 
-| Action                    | Option/Command            |
-|---------------------------|---------------------------|
-| initialization            | `-i`                      |
-| clear the display         | `-c`                      |
-| toggle display on or off  | `power <on|off>`          |
-| invert colours            | `invert <on|off>`         |
-| dim the screen            | `dim <on|off>`            |
-| set the cursor            | `cursor <row>,<column>`   |
-| write text                | `write <string>`          |
-| enable scrolling          | `scroll <direction>`      |
-| display an image          | `draw <lcd file>`         |
+| Action                    | Option/Command               |
+|---------------------------|------------------------------|
+| initialization            | `-i`                         |
+| clear the display         | `-c`                         |
+| toggle display on or off  | `power <on|off>`             |
+| invert colours            | `invert <on|off>`            |
+| dim the screen            | `dim <on|off>`               |
+| set the cursor            | `cursor <row>,<column>`      |
+| set the cursor by pixel   | `cursorPixel <row>,<pixel>`  |
+| write text                | `write <string>`             |
+| write a single byte       | `writeByte <byte>`           |
+| enable scrolling          | `scroll <direction>`         |
+| display an image          | `draw <lcd file>`            |
 
 
 
@@ -161,6 +163,16 @@ A list outlining the supported characters can be found in a [section below.](#su
 
 
 
+### Write a Single Byte
+
+Write a single byte of data (eight vertical pixels) to the display *at the current position of the cursor*:
+```
+oled-exp writeByte <byte>
+```
+
+The cursor will be incremented to the next pixel column after this command.
+
+
 
 ### Set the Cursor Position
 
@@ -190,6 +202,34 @@ Set the cursor to the middle of the 2nd row:
 oled-exp cursor 2,10
 ```
 
+
+### Set the Cursor Position by Pixel Column
+
+Set the cursor position on the display, any writes after this command will start at the specified row and pixel.
+
+The `row` parameter represents each character row (8 pixel rows) on the display, so the range is **0 to 7**
+
+The `pixel` parameter represents each character column, the range is **0 to 20**
+```
+oled-exp cursorPixel <row>,<pixel>
+```
+
+**Examples**
+
+To write `Hello` a quarter of the way through the first line, and then `How are you?` in the middle of the 4th row:
+```
+oled-exp cursorPixel 0,31 write Hello cursorPixel 3,63 write "How are you?"
+```
+
+Set the cursor to the start of the last character row:
+```
+oled-exp cursorPixel 7,0
+```
+
+Set the cursor to the middle of the 2nd row:
+```
+oled-exp cursorPixel 2,63
+```
 
 
 ### Scrolling
