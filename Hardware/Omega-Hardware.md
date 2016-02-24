@@ -4,7 +4,7 @@ The Onion Omega is a hardware development platform with built-in WiFi and a full
 
 ![Omega in Hand](http://i.imgur.com/PX5vCMz.jpg)
 
-The Omega has 18 digital GPIOs, support for I2C, SPI, and USB2.0.
+The Omega has 18 digital GPIOs, support for I2C, SPI, and USB2.0, among other things.
 
 [[_TOC_]]
 
@@ -25,7 +25,7 @@ With the SoC and on-board components, the Omega has the following:
 * 16MB of on-board flash storage
 * Support for USB 2.0
 * Support for Ethernet at 100 Mbps
-* 802.11b/g/ WiFi at 150 150 Mbps
+* 802.11b/g/ WiFi at 150 Mbps
 
 [//]: # (Tech Specs: Connectivity)
 
@@ -74,7 +74,7 @@ The [AR9331 Datasheet](ar9331_datasheet.pdf) has all of the technical specificat
 
 ## Reset Button
 
-A Reset Button can be found on the Expansion Dock and Mini Dock
+A Reset Button can be found on the Expansion Dock and Mini Dock:
 
 ![Mini Dock + Exp Dock Reset Button Location](http://i.imgur.com/5ZN4y2d.png)
 
@@ -83,7 +83,7 @@ For reference, the Reset Button is connected to Omega's GPIO11.
 
 ### Reboot
 
-Momentarily pressing the reset button and letting go will initiate a reboot of the Omega
+Momentarily pressing the reset button and letting go will initiate a reboot of the Omega OS.
 
 ### Factory Restore
 
@@ -108,9 +108,9 @@ The LED is connected to Omega's GPIO27, however, fine-grain control of the LED i
 
 **Check Available Modes**
 
-To read the available modes, in the command line run the following:
+To read the available modes, run the following in the command line:
 ```
-> cat /sys/class/leds/onion\:amber\:system/trigger
+root@Omega-0100:~#  cat /sys/class/leds/onion\:amber\:system/trigger
 none timer [default-on] netdev transient gpio heartbeat morse oneshot usbdev
 ```
 
