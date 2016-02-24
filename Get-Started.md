@@ -164,7 +164,7 @@ $ sudo chmod 666 /dev/ttyUSB0
 
 ![Check if serial device exists](//i.imgur.com/p1OwSE6h.png "Check if serial device exists")
 
-**Step 5**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using screen.
+**Step 5**: Run `screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen.
 
 ![Log in through serial terminal](//i.imgur.com/sENEIX8h.png "Log in through serial terminal")
 
