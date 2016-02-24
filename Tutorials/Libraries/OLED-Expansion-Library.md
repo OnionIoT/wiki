@@ -402,6 +402,17 @@ It sets the start pixel to 0 and the end pixel to 127. This enables the use of t
 
 ### Set Cursor Position
 
+Any data written to the screen gets written to the current position of the cursor. This position can be adjusted. 
+
+Two methods exist:
+* Specifying the page row and character column
+* Specifying the page row and pixel column
+
+
+[//]: # (Set Cursor Position: By Character Column)
+
+#### Set Cursor Position by Character Column
+
 This function is used to position the cursor on a specific page and character column. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
 
 ``` c
@@ -444,11 +455,11 @@ status 	|= oledSetCursor(6, 10);
 status	|= oledWrite("hi there");
 ```
 
-[//]: # (Set Cursor Position by Pixel)
+[//]: # (Set Cursor Position: By Pixel)
 
 #### Set Cursor Position by Pixel
 
-This function is used to position the cursor on a specific page and pixel row. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
+This function is used to position the cursor on a specific page and pixel row. This gives more fine grain control than setting by character column. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
 
 ``` c
 int oledSetCursorByPixel (int row, int pixel);
@@ -1171,6 +1182,17 @@ It sets the start pixel to 0 and the end pixel to 127. This enables the use of t
 
 ### Set Cursor Position
 
+Any data written to the screen gets written to the current position of the cursor. This position can be adjusted. 
+
+Two methods exist:
+* Specifying the page row and character column
+* Specifying the page row and pixel column
+
+
+[//]: # (Python: Set Cursor Position: By Character Column)
+
+#### Set Cursor Position by Character Column
+
 This function is used to position the cursor on a specific page and character column. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
 ``` python
 oledExp.setCursor(row, column)
@@ -1216,7 +1238,8 @@ status	|= oledExp.write("hi there")
 
 #### Set Cursor Position by Pixel
 
-This function is used to position the cursor on a specific page and pixel row. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
+This function is used to position the cursor on a specific page and pixel row. This gives more fine grain control than setting by character column. After this call, the next bytes written to the screen will be displayed at the new position of the cursor:
+
 ``` python
 oledExp.setCursorByPixel(row, pixel)
 ```
