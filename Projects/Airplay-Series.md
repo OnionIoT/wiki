@@ -30,7 +30,7 @@ start up
 
 If you would like to get some more detailed information, you can enable verbose mode by typing `-v`, `-vv`, or `-vvv` upon how detailed information you need.
 
-!(verbose mode)(http://i.imgur.com/mC6KgRo.png)
+![verbose mode](http://i.imgur.com/mC6KgRo.png)
 
 [//]:# (Configuration File)
 ## Configuration File
