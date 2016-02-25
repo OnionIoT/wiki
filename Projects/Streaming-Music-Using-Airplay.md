@@ -14,10 +14,10 @@ This tutorial shows how to enable Omega with Airplay function so that users coul
 ## Basic Setup
 
 To setup Omega with Airplay, we need the following:
-.. a USB cable (not showing up on the picture)
-.. an Omega, an Omega dock (mini dock or expansion dock)
-.. a USB audio sound card
-.. and a standard music output device (i.e. speakers, earphones).
+⋅⋅* a USB cable (not showing up on the picture)
+⋅⋅* an Omega, an Omega dock (mini dock or expansion dock)
+⋅⋅* a USB audio sound card
+⋅⋅* and a standard music output device (i.e. speakers, earphones).
 
 ![components](http://i.imgur.com/6XVbL82.jpg?1)
 
