@@ -76,15 +76,15 @@ Due to Airplay is developed by Apple Inc, it is really convenient for iPhone use
 
 Step 1. Make sure there is any of the Airplay devices under the same wifi connection, or make sure you are running shairport-sync on Omega.
 
-[Shairport-Sync](//i.imgur.com/xvzfcCy.png)
+![Shairport-Sync](//i.imgur.com/xvzfcCy.png)
 
 Step 2. Open the control center on your iPhone. Tap on Airplay button and choose the device that you want to play music on. (If there is no Airplay button, that means there is no Airplay device available.)
 
-[Control Center](//i.imgur.com/GrILOWK.png)
+![Control Center](//i.imgur.com/GrILOWK.png)
 
-[Airplay](//i.imgur.com/H5c8vAA.png)
+![Airplay](//i.imgur.com/H5c8vAA.png)
 
-[Omega Terminal](//imgur.com/mC6KgRo.jpg)
+![Omega Terminal](//imgur.com/mC6KgRo.jpg)
 
 ### Android Users
 
@@ -92,12 +92,12 @@ For Android users, it is not complicated to use Airplay at all. All you need to 
 
 Step 1. Download "AllConnect" from Google Play. It is a free software, so you do not need to worry about paying any extra. Make sure there is any of the Airplay devices under the same wifi connection, or make sure you are running shairport-sync on Omega.
 
-[AllConnect](//i.imgur.com/h7QeVhb.png)
+![AllConnect](//i.imgur.com/h7QeVhb.png)
 
-[Shairport-Sync](//i.imgur.com/xvzfcCy.png)
+![Shairport-Sync](//i.imgur.com/xvzfcCy.png)
 
 Step 2. Open "AllConnect". Tap on the little TV token on the top, and choose the device that you want to play music on.
 
-[All-Airplay](//i.imgur.com/Joy8YwV.png)
+![All-Airplay](//i.imgur.com/Joy8YwV.png)
 
-[Omega Terminal2](//i.imgur.com/LmQcA0j.png)
+![Omega Terminal2](//i.imgur.com/LmQcA0j.png)
