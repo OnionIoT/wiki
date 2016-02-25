@@ -1,4 +1,4 @@
-# Enabling Airplay
+# Streaming Music with Airplay
 
 [[_TOC_]]
 
@@ -8,6 +8,21 @@
 [Airplay](https://en.wikipedia.org/wiki/AirPlay) is a wireless streaming protocol used by Apple Inc that allows users to stream mainly audio and video between different devices. 
 
 This tutorial shows how to enable Omega with Airplay function so that users could stream audio from other devices (e.g. phones, tablets) and output from Omega.
+
+[//]: # (Basic Setup)
+
+## Basic Setup
+
+To setup Omega with Airplay, we need several devices: a USB cable (not showing up on the picture), an Omega, an Omega dock (mini dock or expansion dock), a music adapter, and a standard music output device (i.e. speakers, earphones).
+
+![components](http://i.imgur.com/6XVbL82.jpg?1)
+
+Connect all the components as following:
+
+![connection](http://i.imgur.com/FBVPnCS.jpg?1)
+
+Now, after installing Shairport-Sync, we are able to listen music from the earphone!
+
 
 [//]: # (Installing Shairport-Sync onto Omega)
 
@@ -20,28 +35,26 @@ To enable Airplay, we are basically installing an opensorce software Shairport-S
 To install Shairport-Sync, we need to install `avahi-dbus-daemon` first, but there is already `avahi-nodbus-daemon` on Omega, so we need to uninstall it.
 
 ```
-$ opkg update
 $ opkg remove avahi-nodbus-daemon --force-depends
 ```
 
 ### Step 2: Download `avahi-dbus-daemon` from openWRT and Install
 
-We can get `avahi-dbus-daemon` from [openWRT download page](https://downloads.openwrt.org/), openWRT is an open source platform, and there are a lot of packages avaliable.
+We can get `avahi-dbus-daemon` from [openWRT download page](https://downloads.openwrt.org/), openWRT is an open source platform, and there are a lot of packages avaliable.Or we can use opkg method, but whichever method we are using, we need to update the package first.
 
 ```
-$ wget https://downloads.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/packages/avahi-dbus-daemon_0.6.31-12_ar71xx.ipk
-$ opkg install avahi-dbus-daemon_0.6.31-12_ar71xx.ipk --force-overwrite
+$opkg update
+$ opkg install avahi-dbus-daemon
 ```
 
-### Step 3: Download Shairport-Sync and install
+### Step 3: Download Shairport-Sync and Install
 
 If you would like to install the newest version of [Shairport-Sync](https://github.com/mikebrady/shairport-sync) (it keeps updating) and you know how to build binary package, you can download it from the above website. Else, we can download an already made binary package from a contributor on github (version 2.6.0) or from openWRT download page (version 2.1.15).
 
 openWRT package:
 
 ``` 
-$ wget https://downloads.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/packages/shairport-sync_2.1.15-1_ar71xx.ipk
-$ opkg install shairport-sync_2.1.15-1_ar71xx.ipk
+$ opkg install shairport-sync
 ```
 
 probonopd (github) package:
@@ -62,7 +75,33 @@ start up
 
 ```
 
-(If you want learn more features or advanced functions about Shairport-Sync, please visit Airplay series)
+For version 2.1.15, it seems when we are trying to run it, it outputs an error message:
+
+```
+$ shairport-sync
+start up
+could not bind any listen sockets!
+```
+
+However, it does not really matter. Even though you are not running it, as long as the Omega is started up, the Airplay option is showing on the phone and you can stream music now!
+
+(If you want learn more features or advanced functions about Shairport-Sync, please visit Airplay series.)
+
+[//]: # (Basic Configuration)
+
+## Basic Configuration
+
+The configuration file for version 2.1.15 is quite different from vesion 2.6. For this tutorial, I am just going to show the very basic of the version 2.1.15 configuration file. If you would like to learn more about version 2.6 or later configuration file, please visit Airplay series.
+
+The configuration file for version 2.1.15 is under the following path: /etc/config/shairport-sync. For 2.6 is under : /etc/shairport-sync.conf 
+
+![configuration](http://i.imgur.com/YqXFSyA.png)
+
+Now you can custom your shairport-sync as you want. For example, if you want to change your Airplay name showing on the devices, you can uncomment it first and change it.
+
+![Onion Audio Player](http://i.imgur.com/GpWEXmn.png)
+
+![Onion Audio Player on phone](http://i.imgur.com/cUUID9a.png?1)
 
 [//]: # (How To Use Airplay)
 
@@ -100,4 +139,6 @@ Step 2. Open "AllConnect". Tap on the little TV token on the top, and choose the
 
 ![All-Airplay](//i.imgur.com/Joy8YwV.png)
 
-![Omega Terminal2](//i.imgur.com/LmQcA0j.png)
+![Omega Terminal for Android](//i.imgur.com/LmQcA0j.png)
+
+(If the music drops off, you can try turn off "wifi optimization" option under Settings -> Wlan -> Advanced wi-fi)
