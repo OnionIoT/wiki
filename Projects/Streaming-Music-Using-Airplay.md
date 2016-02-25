@@ -94,7 +94,7 @@ The configuration file for version 2.1.15 is under the following path: /etc/conf
 
 Now you can custom your shairport-sync as you want. For example, if you want to change your Airplay name showing on the devices, you can uncomment it first and change it.
 
-(!! Caution: There is a bug for the display of Airplay on iPhone, when you changed the device name and reboot, the previous name might show up on your device, just ignore it)
+(!! <b>Caution: There is a bug for the display of Airplay on iPhone, when you changed the device name and reboot, the previous name might show up on your device, just ignore it.</b>)
 
 ![Onion Audio Player](http://i.imgur.com/GpWEXmn.png)
 

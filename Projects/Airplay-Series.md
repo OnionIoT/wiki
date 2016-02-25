@@ -48,7 +48,7 @@ Now, you can custom your Airplay by changing the conent:
 
 ### Setting Password
 
-(!! Caution: After testing, it seems Android devices are not capable for password and the following features, only IOS devices could perfectly run it)
+(!! <b>Caution: After testing, it seems Android devices are not capable for password and the following features, only IOS devices could perfectly run it. </b>)
 
 You can easily find there is a password option in the configuration file, if you would like to protect your device, just uncomment it and set it to whatever you like!
 
