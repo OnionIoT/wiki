@@ -47,13 +47,13 @@ $ opkg remove avahi-nodbus-daemon --force-depends
 We can get `avahi-dbus-daemon` from [openWRT download page](https://downloads.openwrt.org/), openWRT is an open source platform, and there are a lot of packages avaliable.Or we can use opkg method, but whichever method we are using, we need to update the package first.
 
 ```
-$opkg update
-$ opkg install avahi-dbus-daemon
+$ opkg update
+$ opkg install avahi-dbus-daemon --force-overwrite
 ```
 
 ### Step 3: Download Shairport-Sync and Install
 
-If you would like to install the newest version of [Shairport-Sync](https://github.com/mikebrady/shairport-sync) (it keeps updating) and you know how to build binary package, you can download it from the above website. Else, we can download an already made binary package from openWRT download page (version 2.1.15) or from a contributor on github (version 2.6.0) (Please visit Airplay series for more information about later version).
+If you would like to install the newest version of [Shairport-Sync](https://github.com/mikebrady/shairport-sync) (it keeps updating) and you know how to build binary package, you can download it from the above website. Else, we can download an already made binary package from openWRT download page (version 2.1.15) or from a contributor on github (version 2.6.0) (Please visit [Airplay Series](https://wiki.onion.io/Projects/Airplay-Series) for more information about later version). For Shairport-Sync (version 2.4.0) or later, it enables users to set password for Airplay, to remote control from Omega, to track the audio, and more fantastic features!
 
 openWRT package:
 
@@ -78,13 +78,15 @@ could not bind any listen sockets!
 
 However, it does not really matter. Even though you are not running it, as long as the Omega is started up, the Airplay option is showing on the phone and you can stream music now!
 
-(If you want learn more features or advanced functions about Shairport-Sync, please visit Airplay series.)
+![Airplay](https://i.imgur.com/7oI9yb6.png?1)
+
+(If you want learn more features or advanced functions about Shairport-Sync, please visit [Airplay Series](https://wiki.onion.io/Projects/Airplay-Series).)
 
 [//]: # (Basic Configuration)
 
 ## Basic Configuration
 
-The configuration file for version 2.1.15 is quite different from vesion 2.6. For this tutorial, I am just going to show the very basic of the version 2.1.15 configuration file. If you would like to learn more about version 2.6 or later configuration file, please visit Airplay series.
+The configuration file for version 2.1.15 is quite different from vesion 2.6. For this tutorial, I am just going to show the very basic of the version 2.1.15 configuration file. If you would like to learn more about version 2.6 or later configuration file, please visit [Airplay Series](https://wiki.onion.io/Projects/Airplay-Series).
 
 The configuration file for version 2.1.15 is under the following path: /etc/config/shairport-sync.
 
@@ -92,9 +94,11 @@ The configuration file for version 2.1.15 is under the following path: /etc/conf
 
 Now you can custom your shairport-sync as you want. For example, if you want to change your Airplay name showing on the devices, you can uncomment it first and change it.
 
+(!! Caution: There is a bug for the display of Airplay on iPhone, when you changed the device name and reboot, the previous name might show up on your device, just ignore it)
+
 ![Onion Audio Player](http://i.imgur.com/GpWEXmn.png)
 
-![Onion Audio Player on phone](http://i.imgur.com/cUUID9a.png?1)
+![Onion Audio Player on phone](https://i.imgur.com/NJsXL4Y.png?1)
 
 [//]: # (How To Use Airplay)
 
