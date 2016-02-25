@@ -17,7 +17,7 @@ To enable Airplay, we are basically installing an opensorce software Shairport-S
 
 ### Step 1: Uninstalling `avahi-nodbus-daemon`
 
-To install Shairport-Sync, we need to install `avahi-dbus-daemon` first, but there is already `avahi-noubus-daemon` on Omega, so we need to uninstall it.
+To install Shairport-Sync, we need to install `avahi-dbus-daemon` first, but there is already `avahi-nodbus-daemon` on Omega, so we need to uninstall it.
 
 ```
 $ opkg update
