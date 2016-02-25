@@ -1,4 +1,4 @@
-# Airplay Seires
+# Airplay Series
 
 [[_TOC_]]
 
