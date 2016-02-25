@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-[//]: (Shairport-Sync Update)
+[//]:# (Shairport-Sync Update)
 
 ## Shairport-Sync Update
 
@@ -32,7 +32,7 @@ If you would like to get some more detailed information, you can enable verbose 
 
 !(verbose mode)(http://i.imgur.com/mC6KgRo.png)
 
-[//]: (Configuration File)
+[//]:# (Configuration File)
 ## Configuration File
 
 For Shairport-Sync 2.6, the configuration file is quite different from version 2.1.15. If you would like to custom it, you can find the configuration file by typing the following command:
