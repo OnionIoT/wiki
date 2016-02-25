@@ -1158,7 +1158,7 @@ status = oledExp.setColumnAddressing(63, 95)
 
 This function defines the column addressing specifically for text:
 ``` python
-oledExp.setImageColumns()
+oledExp.setTextColumns()
 ```
 
 It sets the start pixel to 0 and the end pixel to 125. This allows for 21 text characters per line. This function should be run before setting the cursor for writing text.
@@ -1170,7 +1170,7 @@ It sets the start pixel to 0 and the end pixel to 125. This allows for 21 text c
 
 Alternatively, this function defines the column addressing to cover the entire screen:
 ``` python
-oledExp.oledSetImageColumns()
+oledExp.setImageColumns()
 ```
 
 It sets the start pixel to 0 and the end pixel to 127. This enables the use of the entire screen real estate.
