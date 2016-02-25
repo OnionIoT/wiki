@@ -78,7 +78,7 @@ A Reset Button can be found on the Expansion Dock and Mini Dock:
 
 ![Mini Dock + Exp Dock Reset Button Location](http://i.imgur.com/5ZN4y2d.png)
 
-For reference, the Reset Button is connected to Omega's GPIO11.
+For reference, the Reset Button is connected to Omega's GPIO11. GPIO11 is the Omega's Active-High Soft Reset input.
 
 
 ### Reboot
