@@ -1,5 +1,7 @@
 # Using the omega to remotely lock your door
 
+[[TOC]]
+
 ## Why would you want to do this?
  - Looking for your key on a keychain is annoying.
  - Having an app to unlock your door is more convenient.
