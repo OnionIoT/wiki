@@ -53,7 +53,7 @@ $ opkg install avahi-dbus-daemon --force-overwrite
 
 ### Step 3: Download Shairport-Sync and Install
 
-If you would like to install the newest version of [Shairport-Sync](https://github.com/mikebrady/shairport-sync) (it keeps updating) and you know how to build binary package, you can download it from the above website. Else, we can download an already made binary package from openWRT download page (version 2.1.15) or from a contributor on github (version 2.6.0) (Please visit [Airplay Series](https://wiki.onion.io/Projects/Airplay-Series) for more information about later version). For Shairport-Sync (version 2.4.0) or later, it enables users to set password for Airplay, to remote control from Omega, to track the audio, and more fantastic features!
+If you would like to install the newest version of [Shairport-Sync](https://github.com/mikebrady/shairport-sync) (it keeps updating) and you know how to build binary package, you can download it from the above website. Else, we can download an already made binary package from openWRT download page (version 2.1.15) or from a contributor on github (version 2.6.0) (Please visit [Advanced Settings](https://wiki.onion.io/Projects/Airplay-Series) for more information about later version). For Shairport-Sync (version 2.4.0) or later, it enables users to set password for Airplay, to remote control from Omega, to track the audio, and more fantastic features!
 
 openWRT package:
 
@@ -80,13 +80,13 @@ However, it does not really matter. Even though you are not running it, as long 
 
 ![Airplay](https://i.imgur.com/7oI9yb6.png?1)
 
-(If you want learn more features or advanced functions about Shairport-Sync, please visit [Airplay Series](https://wiki.onion.io/Projects/Airplay-Series).)
+(If you want learn more features or advanced functions about Shairport-Sync, please visit [Advanced Settings](https://wiki.onion.io/Projects/Airplay-Series).)
 
 [//]: # (Basic Configuration)
 
 ## Basic Configuration
 
-The configuration file for version 2.1.15 is quite different from vesion 2.6. For this tutorial, I am just going to show the very basic of the version 2.1.15 configuration file. If you would like to learn more about version 2.6 or later configuration file, please visit [Airplay Series](https://wiki.onion.io/Projects/Airplay-Series).
+The configuration file for version 2.1.15 is quite different from vesion 2.6. For this tutorial, I am just going to show the very basic of the version 2.1.15 configuration file. If you would like to learn more about version 2.6 or later configuration file, please visit [Advanced Settings](https://wiki.onion.io/Projects/Airplay-Series).
 
 The configuration file for version 2.1.15 is under the following path: /etc/config/shairport-sync.
 

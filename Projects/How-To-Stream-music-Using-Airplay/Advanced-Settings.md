@@ -1,4 +1,4 @@
-# Airplay Series
+# Advanced Settings
 
 [[_TOC_]]
 
