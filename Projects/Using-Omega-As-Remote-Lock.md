@@ -34,7 +34,7 @@ These [motors] turn using PWM signals. Our [servo expansion] has a pwm-exp funct
 
 ## Step 2: The Motor Casing
 
-You will need a way to attach your motor to your door and turn the lock. You can make a casing for the motor that can attach to your door and hold the motor in place. A small piece of plastic in the shape of the lock's bar should be attached to the motor. An easy way to obtain these is to 3D print them. [These] are the designs we are using.
+You will need a way to attach your motor to your door and turn the lock. You can make a casing for the motor that can attach to your door and hold the motor in place. A small piece of plastic in the shape of the lock's bar should be attached to the motor. An easy way to obtain these is to 3D print them. [These] are the models we are using.
 
 [//]: # (Storing lock state using UCI)
 
@@ -97,4 +97,4 @@ You are now finished. Attach your motor to your door and test it. Don't forget t
    [files]: <https://github.com/OnionIoT/Onion-Console/tree/master/www/apps>
    [Here]: <https://github.com/OnionIoT/smart-lock/blob/master/tutorial/rpcd/onion-lock>
    [example code]: <https://github.com/OnionIoT/smart-lock/blob/master/tutorial/onion-lock>
-   [These]: <>
+   [These]: <https://github.com/OnionIoT/smart-lock/tree/master/tutorial/models>
