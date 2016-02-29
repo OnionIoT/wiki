@@ -56,7 +56,8 @@ Type _login_ into the command line and press enter. You will be prompted to ente
 
 
 
-![login screen](http://imgur.com/hxuce5C "Login Screen")
+
+![Login_Screen](http://i.imgur.com/hxuce5c.png)
 
 
 
@@ -80,7 +81,8 @@ Date Screen:
 
 
 
-![date screen](http://imgur.com/qSmPt1Q "Date Screen")
+
+![Date_Screen](http://i.imgur.com/qSmPt1Q.png)
 
 
 
@@ -99,7 +101,7 @@ For the programmers, this is analogous to a print function. For example, typing 
 
 
 
-![echo screen](http://imgur.com/dtD91g3 "Echo Screen")
+![Echo_Screen](http://i.imgur.com/dtD91g3.png)
 
 
 
