@@ -30,7 +30,7 @@ We will now explore some basic linux commands. Go ahead and connect your the Ome
 
 
 
-[Opening_Screen](http://i.imgur.com/tRPQy5O.png)
+![Opening_Screen](http://i.imgur.com/tRPQy5O.png)
 
 
 
