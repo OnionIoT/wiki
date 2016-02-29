@@ -26,7 +26,11 @@ We will now explore some basic linux commands. Go ahead and connect your the Ome
 
 
 
-![](http://imgur.com/tRPQy5O "Opening Screen")
+
+
+
+
+![opening screen](http://imgur.com/tRPQy5O "Opening Screen")
 
 
 
@@ -52,11 +56,11 @@ Type _login_ into the command line and press enter. You will be prompted to ente
 
 
 
-![](http://imgur.com/hxuce5C "Login Screen")
+![login screen](http://imgur.com/hxuce5C "Login Screen")
 
 
 
-Congratulaions! You have just executed your first command, you are now logged in as root.
+Congratulations! You have just executed your first command, you are now logged in as root.
 
 
 
@@ -75,7 +79,8 @@ Type _date_ on the terminal and press enter. You should see something like this.
 Date Screen: 
 
 
-![](http://imgur.com/qSmPt1Q "Date Screen")
+
+![date screen](http://imgur.com/qSmPt1Q "Date Screen")
 
 
 
@@ -94,7 +99,7 @@ For the programmers, this is analogous to a print function. For example, typing 
 
 
 
-![](http://imgur.com/dtD91g3 "Echo Screen")
+![echo screen](http://imgur.com/dtD91g3 "Echo Screen")
 
 
 
