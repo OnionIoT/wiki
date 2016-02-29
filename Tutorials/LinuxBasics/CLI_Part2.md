@@ -24,9 +24,9 @@ We will now explore some basic linux commands. Go ahead and connect your the Ome
 
 
 
-Opening Screen: 
 
-![First Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Opening_Screen "Opening Screen")
+
+![](http://imgur.com/tRPQy5O "Opening Screen")
 
 
 
@@ -50,9 +50,9 @@ Type _login_ into the command line and press enter. You will be prompted to ente
 
 
 
-Login Screen: 
 
-![Login Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Login_Screen "Login Screen")
+
+![](http://imgur.com/hxuce5C "Login Screen")
 
 
 
@@ -74,7 +74,8 @@ Type _date_ on the terminal and press enter. You should see something like this.
 
 Date Screen: 
 
-![Date Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Date_Screen "Date Screen")
+
+![](http://imgur.com/qSmPt1Q "Date Screen")
 
 
 
@@ -90,13 +91,14 @@ For the programmers, this is analogous to a print function. For example, typing 
 
 
 
-Echo Screen: 
-
-![Echo Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Echo_Screen "Echo Screen")
 
 
 
-_echo_ can also be used to pass an input into another command but we'll elaborate on that more in the redirection/piping [article](link to article).
+![](http://imgur.com/dtD91g3 "Echo Screen")
+
+
+
+_echo_ can also be used to pass an input into another command but we'll elaborate on that more in the redirection/piping [article](https://wiki.onion.io/Tutorials/LinuxBasics/Redirection_Part4).
 
 
 
