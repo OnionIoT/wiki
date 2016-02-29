@@ -34,9 +34,9 @@ Follow the example below.
 
 
 
- RedirOut Screen: 
+ 
 
-![RedirIn Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\RedirOut_Screen "RedirOut Screen")
+![RedirOut_Screen](http://i.imgur.com/EWQ0SvZ.png)
 
 
 
@@ -48,9 +48,9 @@ Say we wanted to append the date and time to this file we created in the previou
 
 
 
- RedirApend Screen: 
+ 
 
-![RedirAppend Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\RedirApend_Screen "RedirApend Screen")
+![RedirApend_Screen](http://i.imgur.com/uiJEIn5.png)
 
 
 
@@ -78,9 +78,9 @@ This will display the letters of the file in alphabetical order.
 
 
 
- RedirIn Screen: 
+ 
 
-![RedirIn Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\RedirIn_Screen "RedirIn Screen")
+![RedirIn_Screen](http://i.imgur.com/TIkn320.png)
 
 
 
@@ -92,9 +92,9 @@ Now let's put both types of redirection in a practical example. In the next scre
 
 
 
- RedirInOut Screen: 
+ 
 
-![RedirIn Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\RedirInOut_Screen "RedirInOut Screen")
+![RedirInOut_Screen](http://i.imgur.com/gi6NDdA.png)
 
 
 
@@ -130,9 +130,9 @@ The output of cat is passed as input to the input of the _grep_ command which se
 
 
 
- Pipe Screen: 
+ 
 
-![Pipe Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Pipe_Screen "Pipe Screen")
+![Pipe_Screen](http://i.imgur.com/wZbo9Hk.png)
 
 
 

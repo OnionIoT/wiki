@@ -2,11 +2,12 @@
 
 
 
-In all linux systems there is a hierarchy of users, with the root, also known as super user, sitting at the top. Each of the users have an ownership over their _own_ files and have the right to read, write and execute them as they please. Users do not have the same permissions to other users files. The exception to this is the super user or root. On the Omega, we will not concern ourselves the user system since we always logged in as root. 
+
+In all linux systems there is a hierarchy of users, with the root, also known as super user, sitting at the top. Each of the users have an ownership over their _own_ files and have the right to read, write and execute them as they please. Users do not have the same permissions to other users files. The exception to this is the super user or root. On the Omega, we will not concern ourselves with the user system since we are always logged in as root. 
 
 
 
-To further explain the concept, let's revisit the last [tutorial](Hyperlink To Shell Scripting Tutorial Here) on scripting. 
+To further explain the concept, let's revisit the last [tutorial](https://github.com/OnionIoT/wiki/blob/master/Tutorials/LinuxBasics/ShellScript_Part5.md) on scripting. 
 
 
 
@@ -46,9 +47,10 @@ You should see something like this...
 
 
 
- LsPerm Screen: 
+ 
 
-[LsPerm Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\LsPerm_Screen "LsPerm Screen")
+
+![LsPerm_Screen](http://i.imgur.com/toiOOTm.png)
 
 
 
@@ -100,9 +102,9 @@ You should see something like this below.
 
 
 
-LsPermChanged Screen: 
 
-![LsPermChanged Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\LsPermChanged_Screen"LsPermChanged Screen "LsPermChanged Screen")
+
+![LsPermChanged_Screen](http://i.imgur.com/DvQMeeP.png)
 
 
 
@@ -116,6 +118,6 @@ So let's try to to run the LogGen.sh file without sh.
 
 
 
-PermGranted Screen: 
+ 
 
-![PermGranted Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\PermGranted_Screen "PermGranted Screen")
+![PermGranted_Screen](http://i.imgur.com/7ud9EHX.png)

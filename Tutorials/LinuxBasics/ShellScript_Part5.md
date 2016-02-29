@@ -86,9 +86,9 @@ It should look something like this.
 
 
 
- Shell Screen: 
+ 
 
-![Shell Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Shell_Screen "Shell Screen")
+![Shell_Screen](http://i.imgur.com/9Q9mRWm.png)
 
 
 

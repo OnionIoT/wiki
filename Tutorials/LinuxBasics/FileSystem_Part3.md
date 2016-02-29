@@ -42,9 +42,10 @@ You should see ...
 
 
 
-Pwd Screen: 
+ 
 
-![Pwd Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Pwd_Screen "Pwd Screen")
+
+![Pwd_Screen](http://i.imgur.com/oisFW07.png)
 
 
 
@@ -64,9 +65,9 @@ The ls command list the contents of the directories. This may include, files, ot
 
 
 
-Ls Screen: 
+ 
 
-![Ls Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Ls_Screen "Ls Screen")
+![Ls_Screen](http://i.imgur.com/vmAsoz8.png)
 
 
 
@@ -98,7 +99,7 @@ As you can see, the command displayed the contents in our "home" folder.  You ma
 
 
 
-If your still interested in the color coding, it might be worth giving [this](http://askubuntu.com/questions/17299/what-do-the-different-colors-mean-in-the-terminal) a read. Additionally, you can use the _ls_ command with the -l option for a more detailed list of the directory, we will use this in the Owners/Permissions [Section](HYPERLINK HERE).
+If your still interested in the color coding, it might be worth giving [this](http://askubuntu.com/questions/17299/what-do-the-different-colors-mean-in-the-terminal) a read. Additionally, you can use the _ls_ command with the -l option for a more detailed list of the directory, we will use this in the Owners/Permissions [Section](https://github.com/OnionIoT/wiki/blob/master/Tutorials/LinuxBasics/Permissions_Part6.md).
 
 
 
@@ -124,9 +125,9 @@ To change to a particular directory all we have to do is type _cd_ into the term
 
  
 
- Cd Path Screen: 
+ 
 
-![Cd Path Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\CdPath_Screen "Cd Path Screen")
+![CdPath_Screen](http://i.imgur.com/trJwXA3.png)
 
 
 
@@ -140,7 +141,7 @@ The table below shows some of the different options you can use with the _cd_ co
 
 | _command_ [option]   |      Descripton      |  
 
-|----------|:-------------:|
+|----------|-------------|
 
 | _cd_  |    Using _cd_ by itself will take you to the root directory.       | 
 
@@ -174,7 +175,7 @@ Let's create a new directory called "NewDirectory".
 
  Mkdir Screen: 
 
-![MkDir Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\MkDir_Screen "MkDir Screen")
+![MkDir_Screen](http://i.imgur.com/p31a1Y4.png)
 
 
 
@@ -202,9 +203,9 @@ We can also use _mkdir_ to create a directory in a directory other than the one 
 
 
 
- Mkdir Path Screen: 
+ 
 
-![MkDir Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\MkDir_PathDir_Screen "MkDir Path Screen")
+![MkDir_PathDir_Screen](http://i.imgur.com/TD1KOuy.png)
 
 
 
@@ -248,9 +249,9 @@ or
 
 
 
- Rmdir Screen: 
+ 
 
-![RmDir Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\RmDir_Screen "Rmdir Screen")
+![RmDir_Screen](http://i.imgur.com/QPo4AWQ.png)
 
 
 
@@ -284,9 +285,9 @@ Refer to the screenshot below for an example of its usage.
 
 
 
- Touch Screen: 
 
-![Touch Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Touch_Screen "Touch Screen")
+
+![Touch_Screen](http://i.imgur.com/dSfGlfz.png)
 
 
 
@@ -346,13 +347,13 @@ In the example below we will create a file named HelloWorld.txt in a directory o
 
 
 
- Cat Screen: 
+ 
 
-![Cat Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Cat_Screen "Cat Screen")
+![Cat_Screen](http://i.imgur.com/QI145Tn.png)
 
 
 
-For users who would like to explore file editting in more detail, click [here](hyperlink to some file editiing article.). 
+For users who would like to explore file editting in more detail, click [here](http://www.howtogeek.com/102468/a-beginners-guide-to-editing-text-files-with-vi/). 
 
 
 
@@ -384,9 +385,10 @@ As our example we will delete the HelloWorld.txt we created above.
 
 
 
- Rm Screen: 
+ 
 
-![Cat Screen](C:\Users\Rajiv\Desktop\onion\LinuxTutorialScreenShots\Rm_Screen "Rm Screen")
+
+![Rm_Screen](http://i.imgur.com/IABPbx4.png)
 
 
 
