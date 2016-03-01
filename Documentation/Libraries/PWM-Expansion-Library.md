@@ -77,7 +77,7 @@ The static libraries are stored in `/usr/lib` on the Omega.
 
 ## Example Code
 
-The `libonionpwmexp` library is used in the implementation of [the `pwm-exp` command line tool.](../Tutorials/Expansions/Using-the-Servo-Expansion#using-the-command-line).
+The `libonionpwmexp` library is used in the implementation of [the `pwm-exp` command line tool.](../../Tutorials/Expansions/Using-the-Servo-Expansion#using-the-command-line).
 
 The source code can be found [here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/src/main-pwm-exp.c), on the `i2c-exp-driver` Onion GitHub Repo.
 
