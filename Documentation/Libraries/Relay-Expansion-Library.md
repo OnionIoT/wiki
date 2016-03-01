@@ -81,7 +81,7 @@ The static libraries are stored in `/usr/lib` on the Omega.
 
 ## Example Code
 
-The Onion Relay Expansion C library is used in the implementation of [the `relay-exp` command line tool.](../Expansions/Using-the-Relay-Expansion#using-the-command-line).
+The Onion Relay Expansion C library is used in the implementation of [the `relay-exp` command line tool.](../../Tutorials/Expansions/Using-the-Relay-Expansion#using-the-command-line).
 
 The source code can be found [here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/src/main-relay-exp.c), on the `i2c-exp-driver` Onion GitHub Repo.
 

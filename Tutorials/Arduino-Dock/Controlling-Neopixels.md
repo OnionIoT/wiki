@@ -223,7 +223,7 @@ The C and C++ Libraries and Python module can be used in your own programs to co
 
 ![slowColourChange Gif](http://i.imgur.com/QFxAq9M.gif)
 
-For more information, see [this guide](../Libraries/Arduino-Dock-Neopixel-Library).
+For more information, see [this guide](../../Documentation/Libraries/Arduino-Dock-Neopixel-Library).
 
 
 
