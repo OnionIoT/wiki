@@ -384,6 +384,6 @@ The OLED Display supports the following characters:
 
 The C library and Python module will give you the flexibility to use the OLED Expansion however you want in your own programs.
 
-For more information, see [this guide](../Libraries/OLED-Expansion-Library).
+For more information, see [this guide](../../Documentation/Libraries/OLED-Expansion-Library).
 
 
