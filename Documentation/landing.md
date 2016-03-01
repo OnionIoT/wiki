@@ -9,7 +9,7 @@ The Documentation portion of the Onion Wiki contains information released by Oni
 # Firmware Change-log
 
 A detailed rundown of changes in each firmware version:
-* [Firmware Change-log](./Firmware-Changelog.md)
+* [Firmware Change-log](./Firmware-Changelog)
 
 
 
@@ -18,17 +18,17 @@ A detailed rundown of changes in each firmware version:
 # Hardware Documentation
 
 A run-down of the Omega's technical specs and features, as well as an introduction to the Reset Button, the GPIOs, and connectivity interfaces
-* [Omega Hardware](./Hardware/Omega-Hardware.md)
+* [Omega Hardware](./Hardware/Omega-Hardware)
 
 
 Pin-out Diagrams for the Omega and Expansion Dock:
-* [Pin-Outs](./Hardware/Pinout-Diagram.md)
+* [Pin-Outs](./Hardware/Pinout-Diagram)
 
 
 ## Technical Drawings
 
 Engineering drawings outlining the dimensions of the Omega and Expansions:
-* Technical Drawings(./Hardware/Technical-Drawings/Omega-and-Expansions-Technical.md)
+* Technical Drawings(./Hardware/Technical-Drawings/Omega-and-Expansions-Technical)
 
 
 
@@ -39,12 +39,12 @@ Engineering drawings outlining the dimensions of the Omega and Expansions:
 Documentation of the use of any Libraries written by the Onion team:
 
 * Communication Protocol Libraries
-  * [I2C C Library and Python Module](./Libraries/I2C-Library.md)
+  * [I2C C Library and Python Module](./Libraries/I2C-Library)
 * Libraries for Omega Expansions
-  * [PWM Expansion C Library and Python Module](./Libraries/PWM-  Expansion-Library.md)
-  * [Relay Expansion C Library and Python Module](./Libraries/Relay-  Expansions-Library.md)
-  * [OLED Expansion C Library and Python Module](./Libraries/OLED-Expansion-Library.md)
+  * [PWM Expansion C Library and Python Module](./Libraries/PWM-  Expansion-Library)
+  * [Relay Expansion C Library and Python Module](./Libraries/Relay-  Expansions-Library)
+  * [OLED Expansion C Library and Python Module](./Libraries/OLED-Expansion-Library)
 * Arduino Dock Libraries
-  * [Controlling Neopixels: C Library and Python Module](./Libraries/Arduino-Dock-Neopixel-Library.md)
+  * [Controlling Neopixels: C Library and Python Module](./Libraries/Arduino-Dock-Neopixel-Library)
 
 
