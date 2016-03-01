@@ -1,4 +1,4 @@
-# Documentation
+# Documentation Wiki
 
 The Documentation portion of the Onion Wiki contains information released by Onion on anything technical related to the Omega. This can include anything from information about the latest firmware, to basic information regarding the hardware, to libraries created for Omega expansions.
 
