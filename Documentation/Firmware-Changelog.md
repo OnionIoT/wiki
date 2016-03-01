@@ -62,7 +62,24 @@ Initial firmware sent to be flashed at the factory
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
-## b272
+## b278
+*Feb 23, 2016*
+
+* Now building onion I2C python library as an optional module (in onion repo)
+* Added Onion spi library, command line spi tool, and python module as modules in repo
+
+## b277
+*Feb 22, 2016*
+
+I2C Expansions Software Updates
+* Extended oled library functionality
+  * functions for: text/image column addressing, writing a single byte to the screen, setting cursor by row and pixel
+* Implemented Python object for the i2c library
+* Updated all c-python modules with better error checking:
+  * checks for correct arguments
+  * checks for successful C function calls
+
+## b275
 *Jan 27, 2016*
 
 Added `whois` command to Busybox
