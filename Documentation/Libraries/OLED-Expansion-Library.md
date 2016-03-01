@@ -1,4 +1,4 @@
- OLED Expansion Library
+# OLED Expansion Library
 
 The Onion OLED Expansion library, `libonionoledexp` is a static C library that provides functions to setup and perform various actions on the OLED display: writing text, displaying images, and adjusting various settings.
 
@@ -9,6 +9,7 @@ The library can be used in C programs for now, C++ support is coming soon.
 This library is also available as a module for use in Python. The module is called `oledExp` and is part of the `OmegaExpansion` package.
 
 [[_TOC_]]
+
 
 
 
