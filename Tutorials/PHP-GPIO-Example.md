@@ -109,7 +109,7 @@ First we need git, so we run the command:
 
 ```
 opkg update
-opkg install git
+opkg install git git-http
 ```
 
 And now swapp directories and download the files:
