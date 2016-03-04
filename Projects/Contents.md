@@ -8,7 +8,7 @@ Each guide includes step-by-step instructions on putting together any required h
 
 
 
-[//]: # (Firmware Change-log)
+[//]: # (The Projects)
 
 # The Projects
 
