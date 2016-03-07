@@ -303,8 +303,6 @@ It will setup the following SPI parameters:
 * The number of bits per word
 * Additional mode information, see [section on additional mode information above](#the-c-library_parameter-structure_spi-mode-bits)
 
-[//]: # (Lazar: add this link)
-
 
 
 [//]: # (SUB-HEADING)
@@ -380,8 +378,6 @@ During the SPI transfer, the SPI Master (the Omega) will send the contents of th
 In this case, the `size` variable refers to the number of bytes to be read from the SPI device.
 
 Before this function will work, the SPI device adapter needs to be registered, check out [the section above](#the-c-library_setup-functions_register-spi-device-spiregisterdevice). 
-
-[//]: # (LAZAR: add link to section above)
 
 Some devices require specific bit-wise operations on the address to indicate a read operation. Most common are:
 * A bitwise shift to the left
@@ -840,8 +836,7 @@ return  = spi.setupDevice()
 It will setup the following SPI parameters:
 * The maximum speed of the link
 * The number of bits per word
-* Additional mode information, see [section on additional mode information above](#the-c-library_parameter-structure_spi-mode-bits)
-[//]: # (Lazar: add this link)
+* Additional mode information, see [section on additional mode information above](#the-python-module_object-member-variables)
 
 
 [//]: # (Python: Setup SPI Device)
@@ -877,8 +872,6 @@ Read a byte from address 0x33:
 rdVal = spi.readBytes(0x33, 1)
 # rdVal[0] now contains the byte that was read
 ```
-
-[//]: # (LAZAR: double check this syntax^^)
 
 
 Read three byres from address 0x00:
