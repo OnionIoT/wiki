@@ -18,3 +18,4 @@ A listing of the available project guides:
 * Streaming Music using Airplay
   * [Basic Setup](./How-To-Stream-music-Using-Airplay/1.Installing-ShairportSync)
   * [More Advanced Setup](./How-To-Stream-music-Using-Airplay/2.Advanced-Settings)
+  * [Put Airplay into Practice](./How-To-Stream-music-Using-Airplay/3.Put-Airplay-into-Practice)
