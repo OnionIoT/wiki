@@ -1,6 +1,6 @@
 # Using the GPIOs for SPI Communication
 
-The Omega supports running the SPI protocol through the GPIOs, making it handy to communicate with an SPI-enabled peripherals. To implement SPI communication, the Omega has a C library, a Python module, and a command-line tool. This article will focus on the command line tool, `spi-tool`
+The Omega supports running the SPI protocol through the GPIOs, making it handy to communicate with an SPI-enabled peripherals. To implement SPI communication, the Omega has a C library, a Python module, and a command-line tool. This article will focus on the command line program, `spi-tool`
 
 
 
@@ -34,7 +34,7 @@ For more details on SPI, check out the [Wikipedia article](https://en.wikipedia.
 
 # The Command Line Tool
 
-The `spi-tool` command line utility allows the user to read and write single bytes from an SPI device. In order for an SPI device to be used, it must first be registered with the system. The `spi-tool` utility can perform that action as well; giving the SPI device a bus number and device ID. This bus number and device ID must then be used again when transferring data with the SPI device.
+The `spi-tool` command line utility allows the user to read and write single bytes from an SPI device. In order for an SPI device to be used, it must first be registered with the system. The utility can perform that action as well; giving the SPI device a bus number and device ID. This bus number and device ID must then be used again when transferring data with the SPI device.
 
 
 
@@ -49,6 +49,7 @@ opkg update
 opkg install spi-tool
 ```
 
+Try running `spi-tool -h` for a print-out of the tool's usage, or continue reading down below.
 
 
 [//]: # (The Command Line Tool: Setup an SPI Device)
