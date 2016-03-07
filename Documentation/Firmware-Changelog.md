@@ -26,6 +26,14 @@ The build number will continuously increment over the course of development.
 # Versions
 Definining the differences in each version change
 
+## 0.0.7
+**Modern Node Release.**
+
+Added kernel changes to support NodeJs v4.3.1
+
+Updates to Onion Drivers
+
+
 ## 0.0.6
 **Ando J1 Console Release.**
 
@@ -61,6 +69,21 @@ Initial firmware sent to be flashed at the factory
 
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
+
+## b282
+*Mar 7, 2016*
+
+Updates to the Onion SPI library
+* better handling of device registration
+* usage printout is nicer
+
+## b281
+*Mar 5, 2016*
+
+* Added NodeJS v4.3.1 as a package
+  * Along with associated kernel changes
+* Updates to Onion SPI library 
+* arduino-dock, avrdude, and tmux packages are no longer included in the build
 
 ## b278
 *Feb 23, 2016*
