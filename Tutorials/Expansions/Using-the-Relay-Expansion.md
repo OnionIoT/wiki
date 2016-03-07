@@ -37,6 +37,8 @@ When we turn the relay on, it acts as a closed switch, allowing current to flow 
 ![Omega + Relay Exp + LED circuit on](http://i.imgur.com/hGa4uts.jpg)
 
 
+The Relay Expansion has two modules, so it is possible to control two different circuits with a single Relay Expansion.
+
 
 
 [//]: # (Hardware)
