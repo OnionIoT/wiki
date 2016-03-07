@@ -136,6 +136,7 @@ PHP:
 
 The Omega can be used with a variety of different communication protocols. I2C is supported out of the box, for others, additional work is required:
 
+* [Using SPI to communicate with peripherals](./Using-SPI)
 * [Using 1Wire to read sensor data](./Reading-1Wire-Sensor-Data)
 
 
