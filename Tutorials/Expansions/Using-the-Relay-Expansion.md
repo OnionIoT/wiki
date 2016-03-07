@@ -6,9 +6,43 @@ The Relay Expansion allows you to control two relay modules. Relays are basicall
 [[_TOC_]]
 
 
+
+[//]: # (Using Relays)
+
+# Using Relays
+
+Since relays are essentially switches, they can be used as switches in other circuits. 
+
+Consider this LED circuit:
+
+![LED Circuit Diagram](http://i.imgur.com/XjWmfh8.png)
+
+We can build this circuit without the switch:
+
+![LED Circuit](http://i.imgur.com/a0aH2lf.jpg)
+
+
+Next, we will add the Omega and Relay Expansion to act as the switch:
+
+![Omega + Relay Exp + LED circuit](http://i.imgur.com/i3VvWGu.jpg)
+
+The positive lead of the batter is connected to the port labelled `IN` on the Expansion. A jumper wire is connected from the `OUT` port back to the circuit. Since the Relay is OFF, the switch is off and no current is passing through the LED:
+
+
+![Relay Exp connection close-up](http://i.imgur.com/iPswHOC.jpg)
+
+
+When we turn the relay on, it acts as a closed switch, allowing current to flow through the LED:
+
+![Omega + Relay Exp + LED circuit on](http://i.imgur.com/hGa4uts.jpg)
+
+
+
+
 [//]: # (Hardware)
 
 # The Hardware
+
 The Relay Expansion has two TE Axicom IMO3 relay modules. The table below outlines the specifications:
 
 | Parameter                 | Specification             |
