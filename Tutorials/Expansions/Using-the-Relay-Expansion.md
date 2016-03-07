@@ -26,7 +26,7 @@ Next, we will add the Omega and Relay Expansion to act as the switch:
 
 ![Omega + Relay Exp + LED circuit](http://i.imgur.com/i3VvWGu.jpg)
 
-The positive lead of the batter is connected to the port labelled `IN` on the Expansion. A jumper wire is connected from the `OUT` port back to the circuit. Since the Relay is OFF, the switch is off and no current is passing through the LED:
+The positive lead of the battery pack is connected to the port labelled `IN` on the Expansion. A jumper wire is connected from the `OUT` port back to the circuit. Since the Relay is OFF, the switch is off and no current is passing through the LED:
 
 
 ![Relay Exp connection close-up](http://i.imgur.com/iPswHOC.jpg)
