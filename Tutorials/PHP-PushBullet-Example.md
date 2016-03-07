@@ -50,6 +50,7 @@ nano pushbullet.php
 Then paste in the code below, changing your auth token you got from step 1:
 
 ```
+<?php
 $authToken = "your auth token here!!!";
 
 $curl = curl_init('https://api.pushbullet.com/v2/pushes');
