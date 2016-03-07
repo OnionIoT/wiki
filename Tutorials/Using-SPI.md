@@ -38,6 +38,19 @@ The `spi-tool` command line utility allows the user to read and write single byt
 
 
 
+
+[//]: # (The Command Line Tool: Installing the Tool)
+
+## Installing the Tool
+
+The utility is not included by default in the Omega's firmware, to install it:
+```
+opkg update
+opkg install spi-tool
+```
+
+
+
 [//]: # (The Command Line Tool: Setup an SPI Device)
 
 ## Setup an SPI Device
