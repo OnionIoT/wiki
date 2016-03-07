@@ -37,10 +37,7 @@ We will now explore some basic linux commands. Go ahead and connect your the Ome
 ####_Some Basic Commands_
 
 
-
 Let's go ahead try some basic commands:
-
-
 
 <pre><code>login</code></pre>       
 
@@ -63,7 +60,25 @@ Type _login_ into the command line and press enter. You will be prompted to ente
 
 Congratulations! You have just executed your first command, you are now logged in as root.
 
+**Information:**
 
+If you are not used to work with the terminal, you might be happy to get some additional information what you can do within this "**Black-Box**".
+
+To get more info about what commands you can use, just type:
+
+<pre><code>busybox --help</code></pre>
+
+and you will get a overview of what busy-box is and all commands available over it.
+
+<pre><code>busybox --list</code></pre>
+
+if you prefer a list of all this commands.
+
+If you need more explanation about a certain command just use:
+
+<pre><code>busybox ifconfig --help</code></pre>
+
+Let's see the next command:
 
 <pre><code>date</code></pre> 
 
