@@ -301,7 +301,8 @@ int spiSetupDevice (struct spiParams *params);
 It will setup the following SPI parameters:
 * The maximum speed of the link
 * The number of bits per word
-* Additional mode information, see [section on additional mode information above]()
+* Additional mode information, see [section on additional mode information above](#the-c-library_parameter-structure_spi-mode-bits)
+
 [//]: # (Lazar: add this link)
 
 
@@ -378,7 +379,7 @@ During the SPI transfer, the SPI Master (the Omega) will send the contents of th
 
 In this case, the `size` variable refers to the number of bytes to be read from the SPI device.
 
-Before this function will work, the SPI device adapter needs to be registered, check out the section above. 
+Before this function will work, the SPI device adapter needs to be registered, check out [the section above](#the-c-library_setup-functions_register-spi-device-spiregisterdevice). 
 
 [//]: # (LAZAR: add link to section above)
 
@@ -839,7 +840,7 @@ return  = spi.setupDevice()
 It will setup the following SPI parameters:
 * The maximum speed of the link
 * The number of bits per word
-* Additional mode information, see [section on additional mode information above]()
+* Additional mode information, see [section on additional mode information above](#the-c-library_parameter-structure_spi-mode-bits)
 [//]: # (Lazar: add this link)
 
 
