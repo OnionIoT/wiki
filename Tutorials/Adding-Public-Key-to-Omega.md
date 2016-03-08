@@ -4,7 +4,7 @@
 
 ## What is a Public Key
 
-A public key is one part of a cryptographic algorithm that is used to secure digital communications. On the Omega specifically, a public key can be setup so that you don't have to type your password for everytime you use SSH or an SSH-based service (rsync, scp, sftp, etc). For more, information on public and private keys, check out the [Wikipedia article on this subject](https://en.wikipedia.org/wiki/Public-key_cryptography), it goes into a lot of detail
+A public key is one part of a cryptographic algorithm that is used to secure digital communications. **On the Omega specifically, a public key can be setup so that you don't have to type your password for everytime you use SSH or an SSH-based service (rsync, scp, sftp, etc)**. For more, information on public and private keys, check out the [Wikipedia article on this subject](https://en.wikipedia.org/wiki/Public-key_cryptography), it goes into a lot of detail
 
 
 ## Setup Steps
