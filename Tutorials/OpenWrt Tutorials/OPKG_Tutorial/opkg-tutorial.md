@@ -7,7 +7,7 @@ We highly recommend glancing over this tutorial as it will likely help resolving
 _opkg_ is the packge installer and manager used by OpenWRT. Its purpose is akin to the windows installer wizard, the apt-get installer on Ubuntu. Opkg comes connected to a few repositories including our own so that packages can be easily downloaded and installed to your Omega. 
 
 To see which repositories are connected enter the following into the command line. 
-<pre><code>cat /etc/opkg/distfeeds.conf.new</code></pre>
+<pre><code>cat /etc/opkg/distfeeds.conf</code></pre>
 
 
 ####_**OPKG Basics**_
