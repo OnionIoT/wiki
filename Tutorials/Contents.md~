@@ -30,7 +30,16 @@ This series of tutorials is meant to get you comfortable with using a Linux envi
 * [Shell Scripting](./LinuxBasics/ShellScript_Part5)
 * [Ownership and Permissions](./LinuxBasics/Permissions_Part6)
 
+[//]: # (Introduction to OpenWRT)
 
+# Introduction to OpenWRT
+
+This mini-series is meant to introduce users to OpenWRT. 
+
+* [OPKG Basics](./OpenWRT Tutorials/OPKG_Tutorial/opkg-tutorial)
+* [UBUS Basics Part 1](./OpenWRT Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)
+* [UBUS Basics Part 2](./OpenWRT Tutorials/UBUS_Tutorial/Part2_RPCD)
+* [UBUS Basics Part 3](./OpenWRT Tutorials/UBUS_Tutorial/Part3_RPCD)
 
 
 [//]: # (Updating the Omega)

@@ -40,7 +40,7 @@ This mini-series is meant to introduce users to OpenWRT.
 * [UBUS Basics Part 1](./OpenWRT Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)
 * [UBUS Basics Part 2](./OpenWRT Tutorials/UBUS_Tutorial/Part2_RPCD)
 * [UBUS Basics Part 3](./OpenWRT Tutorials/UBUS_Tutorial/Part3_RPCD)
-
+* [UCI Basics](./OpenWRT Tutorials/UCI_Tutorial/uci_introduction)
 
 [//]: # (Updating the Omega)
 
