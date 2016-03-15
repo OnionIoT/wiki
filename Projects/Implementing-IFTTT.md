@@ -103,6 +103,8 @@ Or look like this:
 
 ![DO recipe](http://i.imgur.com/W0YJmWs.png?1)
 
+Remember to replace asterisk(*) with your  public server's public ip address.
+
 Then, after the recipe is created, you should be able to trigger you IF statement!
 
 ![IFTTT trigger](http://i.imgur.com/tWmNdpU.png)
