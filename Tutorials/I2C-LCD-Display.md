@@ -31,7 +31,7 @@ Make the following connections:
 | 20        | SCL             |
 | 21        | SDA             |
 
-![Omega->LCD Connection](http://davidstein.cz/wp-content/uploads/1450851881456-image-1010x1024.png =300x300)
+![Omega->LCD Connection](http://davidstein.cz/wp-content/uploads/1450851881456-image-1010x1024.png)
 
 ## Running the LCD Library Code
 
@@ -48,7 +48,7 @@ python lcd.py
 
 Now you should see sample text on your LCD. You can edit `lcd.py` to change the displayed text. 
 
-![Sample Output](http://davidstein.cz/wp-content/uploads/IMG_20160313_133731.jpg =300x300)
+![Sample Output](http://davidstein.cz/wp-content/uploads/IMG_20160313_133731.jpg)
 
 You can also import the whole library into your own python project!
 
