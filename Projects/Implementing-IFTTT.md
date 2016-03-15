@@ -110,4 +110,4 @@ Then, after the recipe is created, you should be able to trigger you IF statemen
 
 ## Conclusion and Better Suggestions
 
-This is how we implement IFTTT into Omega. Now, we are able to lock or unlock our door by simply pressing a button on your phone! Right now, it seems it is a little bit complex to do it, however, Onion is planning to create a channel for their own, at that time, it is going to be much easier to do it!
+This is how we implement IFTTT into Omega. Now, we are able to lock or unlock our door by simply pressing a button on your phone! Onion is planning to create a channel for their own, at that time, it is going to be even easier to do it!
