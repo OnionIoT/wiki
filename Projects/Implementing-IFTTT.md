@@ -6,7 +6,7 @@
 
 ## What is IFTTT
 
-[IFTTT](https://en.wikipedia.org/wiki/IFTTT) stands for "if this, then that", which is a web service that allows users to create some methods, which are called "recipies", that can set up user's own conditional statement (e.g. if I receive a new email on my gmail account, then forward it to another account). The conditional statement could be as simple as if a button is pressed, or as complex as you want. There is a "do" app in APPstore or Google Play store, which makes users able to trigger a event by pressing a button. Ff you are interested in this project, I strongly recommend you to download it on your phone after you have viewed Theory && Introduction part. 
+[IFTTT](https://en.wikipedia.org/wiki/IFTTT) stands for "if this, then that", which is a web service that allows users to create some methods, which are called "recipes", that can set up user's own conditional statement (e.g. if I receive a new email on my gmail account, then forward it to another account). The conditional statement could be as simple as if a button is pressed, or as complex as you want. There is a "do" app in APPstore or Google Play store, which makes users able to trigger a event by pressing a button. Ff you are interested in this project, I strongly recommend you to download it on your phone after you have viewed Theory && Introduction part. 
 
 ![IFTTT](http://marketingland.com/wp-content/ml-loads/2012/09/ifttt-logo.jpg)
 
@@ -16,7 +16,7 @@
 
 The theory of using IFTTT to control our Omega is, when one event is triggered, it sends a web request to Onion device server, which is interacting with device client (that is what we are going to install on Omega), and then it is going to trigger a ubus function, and the ubus function determines what you are going to do on the Omega. There are three ubus tutorials avaliable on Onion Wiki, click [here](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro) to create your own ubus function!
 
-The recipies are created through "channels", which are different web services, for example, Gmail. Unfortunately, we haven't created our own channel yet (but it will be up very soon), so we are using IFTTT through a DIY channel, "Maker". Maker channel allows users to make a web request, however, there is no header option. Unfortunately again, to run a program on Omega, we have to send a API format web request to device server, that means, we need to create a local server to translate the request to another with headers. That would be perfect if you can write your own server, if not, don't worry, I created a test server for you! However, you still need a public server to run this local server on.
+The recipes are created through "channels", which are different web services, for example, Gmail. Unfortunately, we haven't created our own channel yet (but it will be up very soon), so we are using IFTTT through a DIY channel, "Maker". Maker channel allows users to make a web request, however, there is no header option. Unfortunately again, to run a program on Omega, we have to send a API format web request to device server, that means, we need to create a local server to translate the request to another with headers. That would be perfect if you can write your own server, if not, don't worry, I created a test server for you! However, you still need a public server to run this local server on.
 
 [//]: # (Start Up)
 
@@ -64,7 +64,7 @@ $ubus call onion-lock lock
 
 it works!
 
-### Runing a Local Server
+### Running a Local Server
 
 Now, we are going to create the local server. First, we need a public server. If you don't have one, you can apply for one if you want. Then connect to the public server, and install nodejs. Then, we are trying to create a local server, here is the test server for you guys, click [here](https://github.com/xyorever/local_server). Or you can visit [this](http://blog.modulus.io/build-your-first-http-server-in-nodejs) and [this](http://blog.modulus.io/node.js-tutorial-how-to-use-request-module) websites to create your own.
 
@@ -95,17 +95,21 @@ Cool! It works all fine.
 ### Create Recipes
 Now, we have something to do with IFTTT.
 
-A IFTTT recipie should look like this:
+A IFTTT recipe should look like this:
 
-![IFTTT recipie](http://i.imgur.com/Em0UMPO.png)
+![IFTTT recipe](http://i.imgur.com/Em0UMPO.png)
 
 Or look like this:
 
-![DO recipie](http://i.imgur.com/W0YJmWs.png?1)
+![DO recipe](http://i.imgur.com/W0YJmWs.png?1)
 
-Then, after the recipie is created, you should be able to trigger you IF statement!
+Then, after the recipe is created, you should be able to trigger you IF statement!
 
 ![IFTTT trigger](http://i.imgur.com/tWmNdpU.png)
 ![DO trigger](http://i.imgur.com/CT5xTSu.png?1)
 
+[//]: # (Colclusion and Better Suggestions)
 
+## Conclusion and Better Suggestions
+
+This is how we implement IFTTT into Omega. Now, we are able to lock or unlock our door by simply pressing a button on your phone! Right now, it seems it is a little bit complex to do it, however, Onion is planning to create a channel for their own, at that time, it is going to be much easier to do it!
