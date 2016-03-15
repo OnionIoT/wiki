@@ -21,3 +21,4 @@ A listing of the available project guides:
   * [Put Airplay into Practice](./How-To-Stream-music-Using-Airplay/3.Put-Airplay-into-Practice)
 
 * [Homemade Stock Ticker Using OLED Exp](./Homemade_Stock_Ticker)
+* [Implementing-IFTTT](./Implementing-IFTTT)
