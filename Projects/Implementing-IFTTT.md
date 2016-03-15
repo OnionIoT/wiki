@@ -38,31 +38,27 @@ Now we need to link Omega with the server. Navigate to `/etc/config`, run `vi on
 
 ```
 config onion 'identity'
-		option deviceId '*'
-		option key '*'
+        option deviceId '*'
+        option key '*'
 ```
 Replace the asterisk (*) with your device id and api key you have just created, now your configuration should look like the following picture:
 
-![device client configuration](http://i.imgur.com/v2xGWM6.png)
+![device client configuration](http://i.imgur.com/55jYJgj.png)
 
-Then reboot your device, and run `device-client -vv` to see if your device-client is running properly. Then, let's move on.
+Then reboot your device, and run device-client. Then, let's move on.
 
 ### Ubus Function
 
-This step, we are going to create our own ubus function on Omega. In the tutorial, we are using the [onion-lock](https://wiki.onion.io/Projects/Using-Omega-As-Remote-Lock) project as a sample. Click [here](https://github.com/OnionIoT/smart-lock/blob/master/tutorial/rpcd/onion-lock) to view onion-lock ubus function. You can create your own [ubus](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro) function if you wish!
+This step, we are going to create our own ubus function on Omega. In the tutorial, we are using the default expansion led as a sample. You can create your own [ubus](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro) function if you wish!
 
 After you created your own function, we are going to check if the function really works. First, run `ubus call` command, to check if your ubus service is on the list. If not, check whether you make your ubus service excutable or not (`chmod +x your-ubus-service`).
 
-![ubus list list](http://i.imgur.com/iQzXogt.png)
-
-It seems our ubus service is on the list. Now, we are trying to call it and see if it works or not:
+The expled is set as default, so it works anyway, or if you want o check what is going on, you can run the following command to turn off the led:
 
 ```
-$ubus call onion-lock lock
+$ubus call expled '{"red":0, "green":0, "blue":0}'
 ```
-![onion-lock lock](http://i.imgur.com/UjXMooO.png)
-
-it works!
+Now, you should be able to observe that the led on expansion dock is turned off!
 
 ### Running a Local Server
 
@@ -84,11 +80,11 @@ Server listening on: http://localhost:8080
 ```
 Then, we are sending a test request to the server:
 ```
-$curl -X POST localhost:8080/lock
-/lock
+$curl -X POST localhost:8080/expled
+/expled
 Got Post Data
 responding: 
-200 '{"status":"already locked"}'
+200 '{"status":"success"}'
 ```
 Cool! It works all fine.
 
