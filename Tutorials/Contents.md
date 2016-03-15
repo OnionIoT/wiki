@@ -127,8 +127,12 @@ It is also possible to run the Omega's OS from USB storage:
 Since the Omega runs a full Linux distribution, it is very flexible in the software that it can run. The following guides illustrate how to install and use different software:
 
 * [Using Git](./Using-Git)
-* [Installing Pyton](./Installing-Python)
+
+Python:
+* [Installing Python](./Installing-Python)
 * [Sending Emails with Python](./Sending-Emails-With-Python)
+* [A Python GPIO Example](./Python-GPIO-LED-Example)
+* [Controlling an I2C-based LCD Display with Pyton](./Python-I2C-LCD-Display)
 
 LAMP Stack:
 * [Instaling the LAMP Stack on the Omega](./How-To-Install-LAMP-Stack-on-the-Omega)

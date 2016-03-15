@@ -56,7 +56,7 @@ You can also import the whole library into your own python project!
 
 # More
 More and latest info at : [http://davidstein.cz/2016/03/13/onion-io-i2c-lcd-16x220x4-backpack-library/
-](http://davidstein.cz/2016/03/13/onion-io-i2c-lcd-16x220x4-backpack-library/)**
+](http://davidstein.cz/2016/03/13/onion-io-i2c-lcd-16x220x4-backpack-library/)
 
 
 ## To Do
