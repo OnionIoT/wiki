@@ -132,7 +132,7 @@ Python:
 * [Installing Python](./Installing-Python)
 * [Sending Emails with Python](./Sending-Emails-With-Python)
 * [A Python GPIO Example](./Python-GPIO-LED-Example)
-* [Controlling an I2C-based LCD Display with Pyton](./Python-I2C-LCD-Display)
+* [Controlling an I2C-based LCD Display with Python](./Python-I2C-LCD-Display)
 
 LAMP Stack:
 * [Instaling the LAMP Stack on the Omega](./How-To-Install-LAMP-Stack-on-the-Omega)
