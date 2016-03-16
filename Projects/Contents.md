@@ -15,11 +15,15 @@ Each guide includes step-by-step instructions on putting together any required h
 A listing of the available project guides:
 
 * [Using the Omega as an Internet Connected Lock](./Using-Omega-As-Remote-Lock)
-* Streaming Music using Airplay
+
+## Using Airplay
+
+Streaming Music using Airplay:
   * [Basic Setup](./How-To-Stream-music-Using-Airplay/1.Installing-ShairportSync)
   * [More Advanced Setup](./How-To-Stream-music-Using-Airplay/2.Advanced-Settings)
   * [Put Airplay into Practice](./How-To-Stream-music-Using-Airplay/3.Put-Airplay-into-Practice)
 
+## The OLED Expansion
 * [Homemade Stock Ticker using the OLED Expansion](./Homemade_Stock_Ticker)
-
+* [Displaying QR Codes on the OLED Expansion](./OLED-QR-Code-Generator)
 

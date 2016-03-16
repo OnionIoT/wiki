@@ -39,12 +39,12 @@ Useful Experience:
 
 As mentioned earlier, QR codes (Quick Response Code) are essentially two-dimensional (or matrix) barcodes. They're an evolution of the ordinary barcode in every sense of the word: the data storage capacity is much larger, they can be processed and read by almost any imaging device, and error correction is built-in so even partial codes can be scanned.
 
-The QR code data encoding algorithm defines a number of 'versions' that increase in size and store increasing amounts of data. The size (version) of a generated QR code depends on the amount of data to be encoded. Increasing the error correction capability will decrease the storage capacity due to redundancy pixels being added.
+The QR code data encoding algorithm defines a number of 'versions' that increase in size and store increasing amounts of data. The version (size) of a generated QR code depends on the amount of data to be encoded. Increasing the error correction level will decrease the storage capacity due to redundancy pixels being added.
 
 ![QR Code Versions](http://i.imgur.com/mPR6X8i.png)
 
 QR Codes can be used in the same way as traditional barcodes, but with the advantages they have over barcodes, there's a variety of clever ways they can be used:
-* Holding URLs that will take you to the site when scanned
+* Linking to websites
 * Contact information
 * Advertising
 * Payment systems 
