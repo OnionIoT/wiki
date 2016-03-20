@@ -43,7 +43,7 @@ Documentation of the use of any Libraries written by the Onion team:
 * Communication Protocol Libraries
   * [I2C C Library and Python Module](./Libraries/I2C-Library)
   * [SPI C Library and Python Module](./Libraries/SPI-Library)
-  * [GPIO Control Python Module](./Libraries/GPIO-Library)
+  * [GPIO Python Module](./Libraries/GPIO-Library)
 * Libraries for Omega Expansions
   * [PWM Expansion C Library and Python Module](./Libraries/PWM-Expansion-Library)
   * [Relay Expansion C Library and Python Module](./Libraries/Relay-Expansion-Library)
