@@ -1,6 +1,6 @@
 # Onion GPIO Python Module
 
-The `onionGpio` Python module provides a Python object, `OnionGpio` that allows programs using the object to control the Omega's GPIOs. The module uses the sysfs GPIO interface that is part of the Linux operating system.
+The `onionGpio` Python module provides a Python object, `OnionGpio` that allows programs to control the Omega's GPIOs. The module uses the sysfs GPIO interface that is part of the Linux operating system.
 
 
 [[_TOC_]]
@@ -22,8 +22,6 @@ Once the `OnionGpio` object is initialized, the class methods can be used to:
 # Using the Python Module
 
 **Installing the Module**
-
-[//]: # (Lazar: fix this section)
 
 To install the Python module, run the following commands:
 ```
@@ -88,7 +86,7 @@ gpio14 		= onionGpio.OnionGpio(14)
 
 ## GPIO Direction
 
-The GPIOs on the Omega can be set to the input or output direction. When in the input direction, other signals can be connected to the GPIO and the digital value can be read. When in the output direction, the digital value the GPIO is driving can be programmed.
+The GPIOs on the Omega can be set to the input or output direction. When in the input direction, external signals can be connected to the GPIO and the digital value can be read. When in the output direction, the digital value the GPIO is driving can be programmed.
 
 [//]: # (Functions: GPIO Direction: Read the Direction)
 
@@ -129,7 +127,7 @@ The function will return the following:
 
 **Arguments**
 
-The `setOutputDirection` function has an **optional** integer argument that, when defined, will set the initial value of the GPIO to ensure glitch-free operation. 
+The `setOutputDirection()` function has an **optional** integer argument that, when defined, will set the initial value of the GPIO to ensure glitch-free operation. 
 
 If the optional argument is not set, the GPIO will just be set to output and the initial value will most likely be LOW. However, glitch-free operation cannot be guaranteed.
 
@@ -175,7 +173,8 @@ value 	= gpioObject.getValue()
 
 Note that the value of the GPIO can be read in both **Input** and **Output** mode. 
 
-The difference is that in input mode, the GPIO can be driven high or low based on external signals, and that is the value that will be read. In output mode, the value that is read is the value that the GPIO is currently programmed to.
+The difference is that in input mode, the GPIO can be driven high or low based on external signals, and that is the value that will be read. In output mode, the value that will be read is what the GPIO is currently outputting.
+
 
 **Return Value**
 
@@ -204,7 +203,7 @@ while loop == 1:
 	time.sleep(1)
 ```	
 
-*This code can be found in the `onion-gpio-sysfs` repo examples, it's called [`read-input-loop.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/read-input-loop.py)*
+*This code can be found in the [`onion-gpio-sysfs` repo example directory](https://github.com/OnionIoT/onion-gpio-sysfs/tree/master/python/examples), it's named [`read-input-loop.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/read-input-loop.py)*
 
 
 Set the GPIO to output, read the initial value:
@@ -223,14 +222,14 @@ value 	= gpioObj.getValue()
 print ' initial value: %d'%(int(value))
 ```
 
-*This code can be found in the `onion-gpio-sysfs` repo examples, it's called [`read-output.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/read-output.py)*
+*This code can be found in the [`onion-gpio-sysfs` repo example directory](https://github.com/OnionIoT/onion-gpio-sysfs/tree/master/python/examples), it's called [`read-output.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/read-output.py)*
 
 
 [//]: # (Functions: GPIO Value: Setting)
 
 ### Setting the Value
 
-And what we've all be waiting for, setting the value of a GPIO:
+And what we've all been waiting for, setting the value of a GPIO:
 ``` python
 status 	= gpioObject.setValue(value)
 ```
@@ -280,7 +279,7 @@ while loop == 1:
 	time.sleep(5)
 ```	
 
-*This code can be found in the `onion-gpio-sysfs` repo examples, it's called [`set-high-low.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/set-high-low-loop.py)*
+*This code can be found in the [`onion-gpio-sysfs` repo example directory](https://github.com/OnionIoT/onion-gpio-sysfs/tree/master/python/examples), it's called [`set-high-low.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/set-high-low-loop.py)*
 
 
 
