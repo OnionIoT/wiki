@@ -44,7 +44,7 @@ import onionGpio
 
 [//]: # (Example Code)
 
-# Example
+# Example Code
 
 Several examples of how the `OnionGpio` object is used can be found in the [examples in the `onion-gpio-sysfs` repo.](https://github.com/OnionIoT/onion-gpio-sysfs/tree/master/python/examples) This directory contains all of the code seen below as well as some additional examples.
 
@@ -279,7 +279,7 @@ while loop == 1:
 	time.sleep(5)
 ```	
 
-*This code can be found in the [`onion-gpio-sysfs` repo example directory](https://github.com/OnionIoT/onion-gpio-sysfs/tree/master/python/examples), it's called [`set-high-low.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/set-high-low-loop.py)*
+*This code can be found in the [`onion-gpio-sysfs` repo example directory](https://github.com/OnionIoT/onion-gpio-sysfs/tree/master/python/examples), it's called [`set-high-low-loop.py`](https://github.com/OnionIoT/onion-gpio-sysfs/blob/master/python/examples/set-high-low-loop.py)*
 
 
 
