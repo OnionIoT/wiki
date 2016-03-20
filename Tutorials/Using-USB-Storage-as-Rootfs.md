@@ -28,7 +28,7 @@ opkg update
 opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
 ```
 
-You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above).
+You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in "[How to format a USB drive to ext4][How to format a USB drive to ext4]"
 
 ### Step 2. Mounting the USB Storage Device
 
@@ -186,3 +186,24 @@ reboot
 And voilà! Your Omega should automatically mount your USB storage device as its rootfs. From this point on, all changes to your filesystem, including firmware upgrades, will be made on your USB storage device. If you change your mind and want to revert back to running the firmware off Omega's flash storage, simply unplug the USB storage and reboot the Omega.
 
 Happy hacking!
+
+# How to format a USB drive to ext4
+
+In this short additional tutorial you'll learn how to format a USB drive to ext4 so it can be used as rootfs or additional storage. This is handly as USB drives typically arrive pre-formatted with fat32!
+
+Open a commandline either through SSH, the in built terminal in the Omega console or via a serial connection and run these commands:
+
+```
+opkg update
+opkg install kmod-usb-storage-extras e2fsprogs kmod-fs-ext4
+```
+
+This installs the required tools, next plug in your USB drive.
+
+Next we need to format the USB drive with ext4, typically the drive is mounded as "sda1" (change the value if required):
+
+```
+mkfs.ext4 /dev/sda1
+```
+
+Now you can mount the USB drive and use it for either general storage, [extroot with pivot-overlay][extroot with pivot-overlay] or [exroot with pivot-root][exroot with pivot-root].
