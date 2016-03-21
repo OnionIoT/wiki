@@ -18,6 +18,9 @@ Luckily, with extroot, you can mount your USB storage device to the rootfs. Ther
 
 Pivot-overlay is the recommended extroot implementation because it is easier to set up and future firmware upgrade will still be written to Omega's flash (instead of your USB storage device).
 
+
+[//]: # (extroot with pivot-overlay: step 1)
+
 ## Step 1. Prerequisites
 
 Using extroot requires the following packages, all of them should already be installed on the default Omega firmware. But just in case you are using your own firmware, here they are again:
@@ -32,9 +35,10 @@ opkg update
 opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
 ```
 
-You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in "[How to format a USB drive to ext4](How to format a USB drive to ext4)"
+You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in "[How to format a USB drive to ext4](#addendum-procedures_how-to-format-a-usb-drive-to-ext4)"
 
-[//]: # (LAZAR: fix this link)
+
+[//]: # (extroot with pivot-overlay: step 2)
 
 ## Step 2. Mounting the USB Storage Device
 
@@ -55,6 +59,7 @@ mount /dev/sda1 /mnt/sda1
 Your USB storage device should now be accessible at `/mnt/sda1`.
 
 
+[//]: # (extroot with pivot-overlay: step 3)
 
 ## Step 3. Duplicating the `/overlay` Directory
 
@@ -64,6 +69,7 @@ Now, we are ready to move the `/overlay` directory into the USB storage device.
 mount /dev/sda1 /mnt ; tar -C /overlay -cvf - . | tar -C /mnt -xf - ; umount /mnt
 ```
 
+[//]: # (extroot with pivot-overlay: step 4)
 
 ## Step 4. Setting up the `/overlay` Directory to Automount on Startup
 
@@ -114,6 +120,9 @@ And voilà! Your Omega should automatically mount the `/overlay` directory. From
 
 Pivot-root is the extroot implementation that completely replaces the flash storage on the Omega with your USB storage device. Using pivot-root method means that all fugure firmware upgrade (unless it is done by uboot) will be done to your USB storage device.
 
+
+[//]: # (exroot with pivot-root: step 1)
+
 ## Step 1. Prerequisites
 
 Using extroot requires the following packages, all of them should already be installed on the default Omega firmware. But just in case you are using your own firmware, here they are again:
@@ -131,6 +140,7 @@ opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
 You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above).
 
 
+[//]: # (exroot with pivot-root: step 2)
 
 ## Step 2. Mounting the USB Storage Device
 
@@ -151,7 +161,7 @@ mount /dev/sda1 /mnt/sda1
 Your USB storage device should now be accessible at `/mnt/sda1`.
 
 
-
+[//]: # (exroot with pivot-root: step 3)
 
 ## Step 3. Duplicating your rootfs
 
@@ -182,7 +192,7 @@ umount /tmp/cproot
 Great! Now you have created a complete copy of your current rootfs on your USB storage device!
 
 
-
+[//]: # (exroot with pivot-root: step 4)
 
 ## Step 4. Configure Omega to Automount USB Storage Device on Boot
 
@@ -234,4 +244,4 @@ Next we need to format the USB drive with ext4, typically the drive is mounded a
 mkfs.ext4 /dev/sda1
 ```
 
-Now you can mount the USB drive and use it for either general storage, [extroot with pivot-overlay][extroot with pivot-overlay] or [exroot with pivot-root][exroot with pivot-root].
+Now you can mount the USB drive and use it for either [general storage](./Using-USB-Storage), [extroot with pivot-overlay](#extroot-with-pivot-overlay) or [exroot with pivot-root](#extroot-with-pivot-overlay).
