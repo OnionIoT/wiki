@@ -35,7 +35,7 @@ opkg update
 opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
 ```
 
-You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in "[How to format a USB drive to ext4](#addendum-procedures_how-to-format-a-usb-drive-to-ext4)"
+You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in the [How to format a USB drive to ext4](#addendum-procedures_how-to-format-a-usb-drive-to-ext4) addendum section below.
 
 
 [//]: # (extroot with pivot-overlay: step 2)
@@ -229,8 +229,7 @@ Happy hacking!
 
 In this short additional tutorial you'll learn how to format a USB drive to ext4 so it can be used as rootfs or additional storage. This is handly as USB drives typically arrive pre-formatted with fat32!
 
-Open a commandline either through SSH, the in built terminal in the Omega console or via a serial connection and run these commands:
-
+Run these commands on the Omega's terminal:
 ```
 opkg update
 opkg install kmod-usb-storage-extras e2fsprogs kmod-fs-ext4
