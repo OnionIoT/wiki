@@ -32,7 +32,7 @@ opkg update
 opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
 ```
 
-You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in "[How to format a USB drive to ext4][How to format a USB drive to ext4]"
+You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in "[How to format a USB drive to ext4](How to format a USB drive to ext4)"
 
 [//]: # (LAZAR: fix this link)
 
