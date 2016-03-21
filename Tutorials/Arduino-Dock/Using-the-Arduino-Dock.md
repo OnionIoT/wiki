@@ -95,7 +95,14 @@ As an example:
 ```
 rsync -va /var/folders/55/7v7wrbcs57jflv83zgz8v67m0000gn/T/builddf059f74b6cb24ac573e131020699c2d.tmp/blink2.ino.hex root@omega-1302.local:/root/blink2.hex
 ```
-Once the hex file is on your Omega, you can flash it to the ATmega chip from the Omega's terminal:
+
+On the Omega, you will need to install the Onion Arduino Dock software package:
+```
+opkg update
+opkg install arduino-dock
+```
+
+Now that the hex file is on your Omega, you can flash it to the ATmega chip from the Omega's terminal:
 ```
 sh /usr/bin/arduino-dock flash <hex file>
 ```

@@ -9,17 +9,17 @@ These steps will only need to be carried out once, and then you'll be set to go.
 
 [//]: # (Computer Setup)
 
-## Computer setup
+# Computer setup
 These steps ensure the Omega and Arduino Dock will be detected wirelessly and correctly work with your computer.
 
 
-### Arduino IDE 
+## Arduino IDE 
 
-### Installation
+## Installation
 Install the latest Arduino IDE from the good folks over at [Arduino](//www.arduino.cc/en/Main/Software). We did all of our testing using Version 1.6.6.
 
 
-### Modification of boards.txt
+## Modification of boards.txt
 The regular Arduino Uno has no way of communicating with your computer via WiFi, but the Omega provides the Arduino Dock with a means of wireless communication, so we'll have to let the Arduino software know! 
 This requires a one line addition to the `boards.txt` file in your Arduino IDE installation.
 
@@ -37,11 +37,11 @@ uno.upload.via_ssh=true
 Doesn't matter where you add it, you can nestle it with the other `uno.` settings if you like.
 
 
-### Installation of Onion Arduino Library
+## Installation of Onion Arduino Library
 The Onion Arduino Library provides the required setup and functions required for the Arduino Dock to operate correctly.
 
 
-#### Installing the library
+### Installing the library
 
 Follow these steps to install the library:
 * Download and install the Adafruit Neopixel Library using [these instructions](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library)
@@ -58,24 +58,24 @@ Follow these steps to install the library:
 
 [//]: # (Arduino Dock Setup)
 
-## Arduino Dock Setup
+# Arduino Dock Setup
 The ATmega chip on the Arduino Dock needs to be burned with a new bootloader to work with the Omega properly. This only has to be done once and your Arduino Dock will be good to go. The new bootloader allows the ATmega to be flashed via the I2C connection with the Omega. There are a few methods to flash the bootloader, they are outlined below.
 
 
 
 [//]: # (Omega + Exp Dock)
 
-### Using the Omega + Expansion Dock as a Programmer
+## Using the Omega + Expansion Dock as a Programmer
 The Omega can actually be used to program the bootloader
 
-#### Required Components
+### Required Components
 * An Omega
 * An Expansion Dock
 * The target Arduino Dock
 * Six jumper wires (male-to-male)
-  * can just be six pieces of wire with the insulation stripped off at the end
+  * Can just be six pieces of wire with the insulation stripped off at the end
 
-#### Wiring
+### Wiring
 Plug the Omega into the Expansion Dock and allow it to boot. The Expansion Dock ports need to be connected to specific Arduino Dock ports for the programming to work.
 
 Follow the table below to wire the Omega to the Arduino Dock. **Note that it's very important that the Omega and the Arduino Dock share a common ground!**
@@ -94,16 +94,22 @@ Follow the table below to wire the Omega to the Arduino Dock. **Note that it's v
 
 Provide power to the Omega and Expansion Dock through the micro usb port.
 
-#### Programming
-*Ensure you are on Omega firmware b220 or later.*
+### Programming
 
-Connect to the Omega's terminal and run the following command:
+First install the Onion Arduino Dock software package:
+```
+opkg update
+opkg install arduino-dock
+```
+
+On the Omega's terminal and run the following command:
 ```
 sh /usr/bin/arduino-dock flash bootloader
 ```
+
 Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and the amber LED next to the DC connector should be flickering.
 
-#### Summary
+### Summary
 Once this is complete, the extra wires and the Expansion Dock are no longer required! 
 Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
 
@@ -111,17 +117,17 @@ Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for wha
 
 [//]: # (Omega + Exp Dock -> ICSP Headers)
 
-### Using the Omega + Expansion Dock with the Arduino Dock ICSP Header
+## Using the Omega + Expansion Dock with the Arduino Dock ICSP Header
 If the method described above does not successfully flash the Bootloader, try this slightly modified method. The ICSP Header provides direct SPI communication with the ATmega chip, allowing for programming regardless of how the ATmega pins are setup.
 
-#### Required Components
+### Required Components
 * An Omega
 * An Expansion Dock
 * The target Arduino Dock
 * Two male-to-male jumper wires
 * Four male-to-female jumper wires
 
-#### Wiring
+### Wiring
 Plug the Omega into the Expansion Dock and allow it to boot.
 
 Provide power to the Arduino Dock by connecting the 5V and GND Expansion Dock GPIOs to the Arduino Dock 5V and GND pins with jumper wires.
@@ -144,8 +150,13 @@ Power the Omega and Expansion Dock through the micro usb port.
 ![Omega + Exp Dock + Arduino Dock + ICSP](//i.imgur.com/cAQvIXL.jpg)
 
 
-#### Programming
-*Ensure you are on Omega firmware b220 or later.*
+### Programming
+
+First install the Onion Arduino Dock software package:
+```
+opkg update
+opkg install arduino-dock
+```
 
 Connect to the Omega's terminal and run the following command:
 ```
@@ -153,7 +164,7 @@ sh /usr/bin/arduino-dock flash bootloader
 ```
 Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and the amber LED next to the DC connector should be flickering.
 
-#### Summary
+### Summary
 Once this is complete, the extra wires and the Expansion Dock are no longer required! 
 Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
 
@@ -161,17 +172,17 @@ Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for wha
 
 [//]: # (Omega + Mini Dock)
 
-### Using the Omega + Mini Dock as a Programmer
+## Using the Omega + Mini Dock as a Programmer
 The Mini Dock can be used in place of an Expansion Dock if you do not have access to one. This process is a little more 'hacky' and we recommend using an Expansion Dock if at all possible, proceed with caution and at your own risk!
 
-#### Required Components
+### Required Components
 * An Omega
 * A Mini Dock
 * The target Arduino dock
 * Six pieces of wire with insulation stripped off the ends
   * Stranded wire works best
 
-#### Wiring
+### Wiring
 Disconnect the Omega from the Mini Dock. Put a wire into each of the pins shown below:
 
 ![Mini Dock Port drawing](//i.imgur.com/psVEevT.png) ![Mini Dock wire connections](//i.imgur.com/nrIn5Hm.jpg)
@@ -196,8 +207,13 @@ Now connect the wires to the Arduino Dock ports specified below:
 ![Omega + Mini Dock + Arduino Dock connections](//i.imgur.com/dxmr2Cz.jpg)
 
 
-#### Programming
-*Ensure you are on Omega firmware b220 or later.*
+### Programming
+
+First install the Onion Arduino Dock software package:
+```
+opkg update
+opkg install arduino-dock
+```
 
 Connect to the Omega's terminal and run the following command:
 ```
@@ -205,7 +221,7 @@ sh /usr/bin/arduino-dock flash bootloader
 ```
 Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and the amber LED next to the DC connector should be flickering.
 
-#### Summary
+### Summary
 Once this is complete, the extra wires and the Mini Dock are no longer required! 
 Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
 
@@ -214,7 +230,7 @@ Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for wha
 
 [//]: # (Arduino as Programmer)
 
-### Using an Arduino as a Programmer
+## Using an Arduino as a Programmer
 Stil working on this one, stay tuned!
 
 
