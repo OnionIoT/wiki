@@ -12,3 +12,11 @@ Click to download the [PDF Expansion Dock Technical Drawing](EXPANSION_DOCK_DRAW
 ## Mini Dock Drawing
 
 Click to download the [PDF Mini Dock Technical Drawing](MINI_DOCK_DRAWING.pdf)
+
+## Arduino Dock
+
+Click to download the [PDF Arduino Dock Technical Drawing](ARDUINO_DOCK_DRAWING.pdf)
+
+## Relay Expansion Dock
+
+Click to download the [PDF Relay Expansion Technical Drawing](RELAY_EXPANSION_DRAWING.pdf)
