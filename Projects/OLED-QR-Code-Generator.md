@@ -1,4 +1,4 @@
-# Generating QR Codes to Display on the OLED Expansions
+# Generating QR Codes to Display on the OLED Expansion
 
 QR Codes are essentially two dimensional barcodes that can easily be scanned with any camera and a little bit of processing power. The average smartphone will make short work of any QR code it comes across.
 
@@ -67,7 +67,7 @@ All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/ol
 
 [//]: # (The Fun Part: Required Packages)
 
-## Installing Required Packages
+## Step 1: Installing Required Packages
 
 We will need to have support for git, Python, and the [Onion OLED Expansion Python Module](https://wiki.onion.io/Documentation/Libraries/OLED-Expansion-Library):
 ```
@@ -78,7 +78,7 @@ opkg install git git-http python-light python-codecs pyOledExp
 
 [//]: # (The Fun Part: Repo Code)
 
-## Downloading the Code
+## Step 2: Downloading the Code
 
 Now we need to download the Python code that actually does all the work:
 ```
@@ -89,7 +89,7 @@ git clone https://github.com/OnionIoT/oledQrCodeGenerator.git
 
 [//]: # (The Fun Part: Running the Code)
 
-## Running the Code
+## Step 3: Running the Code
 
 Finally, we get to make some QR codes! 
 Navigate into the repo directory:
@@ -135,7 +135,7 @@ The default generated QR code will be a Version 3 code with the Low error correc
 
 [//]: # (The Fun Part: Using the code as a Python Module)
 
-## Using the code as a Python Module
+## Step 4: Using the code as a Python Module (Optional)
 
 The `oledQrCodeGenerator` code can also be imported as a module into your own Python projects! 
 
