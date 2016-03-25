@@ -30,7 +30,7 @@ Pin-out Diagrams for the Omega and Expansion Dock:
 ## Technical Drawings
 
 Engineering drawings outlining the dimensions of the Omega and Expansions:
-* [Omega](./Hardware/Technical-Drawings/OMEGA_DRAWING)
+* [Omega](./Hardware/Technical-Drawings/OMEGA_DRAWING.pdf)
 * [Expansion Dock](./Hardware/Technical-Drawings/EXPANSION_DOCK_DRAWING.pdf)
 * [Mini Dock](./Hardware/Technical-Drawings/MINI_DOCK_DRAWING.pdf)
 * [Arduino Dock](./Hardware/Technical-Drawings/ARDUINO_DOCK_DRAWING.PDF)
