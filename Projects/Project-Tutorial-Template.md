@@ -4,6 +4,7 @@ Intro on the topic of the project.
 So a small blurb on what the main goal and why it would be useful.
 
 Include a relevant image:
+
 ![Onion QR Code](http://i.imgur.com/0Ef3def.png)
 
 
@@ -14,7 +15,7 @@ A brief sentence describing exactly what this tutorial will walk the user throug
 
 For example:
 
-In this tutorial, we'll go through how you can use <Python> to <encode text into a QR Code> and <display it on your OLED Expansion.>
+In this tutorial, we'll go through how you can use *Python* to *encode text into a QR Code* and *display it on your OLED Expansion.*
 
 
 [[_TOC_]]
@@ -45,22 +46,13 @@ Useful Experience:
 
 
 
-# What are QR Codes?
+# Background Info
 
-As mentioned earlier, QR codes (Quick Response Code) are essentially two-dimensional (or matrix) barcodes. They're an evolution of the ordinary barcode in every sense of the word: the data storage capacity is much larger, they can be processed and read by almost any imaging device, and error correction is built-in so even partial codes can be scanned.
+Give an explanation and background info on the main topic of the project.
 
-The QR code data encoding algorithm defines a number of 'versions' that increase in size and store increasing amounts of data. The version (size) of a generated QR code depends on the amount of data to be encoded. Increasing the error correction level will decrease the storage capacity due to redundancy pixels being added.
+So if your project is about QR codes, explain what they are, how they work, and why they are useful.
 
-![QR Code Versions](http://i.imgur.com/mPR6X8i.png)
-
-QR Codes can be used in the same way as traditional barcodes, but with the advantages they have over barcodes, there's a variety of clever ways they can be used:
-* Linking to websites
-* Contact information
-* Advertising
-* Payment systems 
-* Authentication and identification
-
-To learn more about QR codes, visit the [Wikipedia article](https://en.wikipedia.org/wiki/QR_code), it's jam-packed with all sorts of information.
+Include a link to a Wikipedia article or some other article that goes into more detail.
 
 
 
@@ -81,38 +73,38 @@ All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/ol
 
 [//]: # (The Steps)
 
-## Step 1: <Step Title>
+## Step 1: *Step Title*
 
-Each step should accomplish a small milestone in the overall process.
+Each step should accomplish a small milestone in the overall process. And each step should be numbered.
 
 The first step will usually be using opkg to install some packages.
 
 
 [//]: # (Step 2)
 
-## Step 2: <Step Title>
+## Step 2: *Step Title*
 
 Next step... 
 
-### <Sub-step Title>
+### *Sub-step Title*
 
 If it makes sense to break down a step into sub-steps (or provide additional details on a particular action), go for it. 
 
 
 [//]: # (Step 3)
 
-## Step 3: <Step Title>
+## Step 3: *Step Title*
 
 As many steps as it takes to explain the tutorial.
 
-### <Sub-step Title>
+### *Sub-step Title*
 
 If the tutorial uses some custom code written by you, make sure you do a run-down of the structure of the code. Point-form is probably the best way to get your message across.
 
 
 [//]: # (Step N)
 
-## Step N: <Step Title>
+## Step N: *Step Title*
 
 On the last step, make sure to give an example:
 * if the project is code-based, run it on an Omega and paste the output (including the command used to run it!)
@@ -123,7 +115,7 @@ On the last step, make sure to give an example:
 
 [//]: # (Using the Project)
 
-# <Using the Project>
+# *Using the Project*
 
 After the steps to setup and get the project running are done, write a short blurb on how it is meant to be used:
 
@@ -134,12 +126,16 @@ After the steps to setup and get the project running are done, write a short blu
 This is also a good place to include images, gifs, and/or videos.
 
 
-## <Going Further>
+## *Going Further*
 
 A small outline of what could be done next and maybe a pointer on how to do it (ex: writing more code, installing certain software, adding to the hardware, etc)
 
 If the project can be re-used or implemented as a part of a larger project, make sure to mention it. For example, your project is software-based, maybe explain how the code can be used by other programs (including a Python module, using a C library, that kinda thing).
 
+
+## *Related Tutorials*
+
+Include links to any related tutorials or projects.
 
 
 
