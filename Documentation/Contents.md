@@ -36,6 +36,7 @@ Engineering drawings outlining the dimensions of the Omega and Expansions:
 * [Arduino Dock](./Hardware/Technical-Drawings/ARDUINO_DOCK_DRAWING.PDF)
 * [Relay Expansion](./Hardware/Technical-Drawings/RELAY_EXPANSION_DRAWING.PDF)
 * [Servo Expansion](./Hardware/Technical-Drawings/SERVO_EXPANSION_DRAWING.PDF)
+* [Ethernet Expansion](./Hardware/Technical-Drawings/ETHERNET_EXPANSION_DRAWING.PDF)
 
 
 
@@ -55,5 +56,3 @@ Documentation of the use of any Libraries written by the Onion team:
   * [OLED Expansion C Library and Python Module](./Libraries/OLED-Expansion-Library)
 * Arduino Dock Libraries
   * [Controlling Neopixels: C Library and Python Module](./Libraries/Arduino-Dock-Neopixel-Library)
-
-
