@@ -24,3 +24,7 @@ Click to download the [PDF Relay Expansion Technical Drawing](RELAY_EXPANSION_DR
 ## Servo Expansion
 
 Click to download the [PDF Servo Expansion Technical Drawing](SERVO_EXPANSION_DRAWING.pdf)
+
+## Ethernet Expansion
+
+Click to download the [PDF Ethernet Expansion Technical Drawing](ETHERNET_EXPANSION_DRAWING.pdf)
