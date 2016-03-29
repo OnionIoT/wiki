@@ -57,7 +57,7 @@ opkg list|grep zoneinfo
 
 You'll receive a list of packages similar to the ones below, back in the first example change the "zoneinfo" line to your desired zone:
 
-``` python
+``` 
 zoneinfo-africa - 2015d-1 - Zone Information (Africa)
 zoneinfo-asia - 2015d-1 - Zone Information (Asia)
 zoneinfo-atlantic - 2015d-1 - Zone Information (Atlantic)
