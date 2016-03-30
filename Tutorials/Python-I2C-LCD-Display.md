@@ -1,4 +1,4 @@
-# LCD I2C Libary  
+# LCD I2C Library  
 
 This tutorial shows you how to control an I2C-based LCD Display with a custom library. Let's get started!
 
