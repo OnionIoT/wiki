@@ -29,6 +29,12 @@ opkg install php5 php5-cgi nano
 
 This installs the required PHP files and also nano, which is a text editor and alot easier to use than vim.
 
+Optionally you can also install the CLI version of PHP using the command below. This allows you to run PHP scripts from the commandline using "php-cli scriptname.php"
+
+```
+opkg install php5-cli
+```
+
 Next we need to edit the uhttpd file, you can do this by using this command:
 
 ```
