@@ -318,7 +318,7 @@ ONow let's see how Apple is doing.
 
 
 
-Parts of this project can are encouraged to be used in other projects.
+Parts of this project can and are encouraged to be used in other projects.
 
 
 
