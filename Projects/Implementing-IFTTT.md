@@ -21,9 +21,11 @@ Required Materials:
 Useful Experience:
 * Using nodejs
 
+## Background Info
+
 [//]: # (What is IFTTT)
 
-## What is IFTTT
+### What is IFTTT
 
 [IFTTT](https://en.wikipedia.org/wiki/IFTTT) stands for "if this, then that", which is a web service that allows users to create some methods, which are called "recipes", that can set up user's own conditional statement (e.g. if I receive a new email on my gmail account, then forward it to another account). The conditional statement could be as simple as if a button is pressed, or as complex as you want. There is a "do" app in APPstore or Google Play store, which makes users able to trigger a event by pressing a button. Ff you are interested in this project, I strongly recommend you to download it on your phone after you have viewed Theory && Introduction part. 
 
@@ -31,7 +33,7 @@ Useful Experience:
 
 [//]: # (Theory && Introduction)
 
-## Theory && Introduction
+### Theory && Introduction
 
 The theory of using IFTTT to control our Omega is, when one event is triggered, it sends a web request to Onion device server, which is interacting with device client (that is what we are going to install on Omega), and then it is going to trigger a ubus function, and the ubus function determines what you are going to do on the Omega. There are three ubus tutorials avaliable on Onion Wiki, click [here](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro) to create your own ubus function!
 
