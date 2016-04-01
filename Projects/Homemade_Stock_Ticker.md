@@ -66,6 +66,9 @@ Useful Experience:
 
 * Using Shell Scripts
 
+* Scheduling with Cron
+
+
 
 
 
@@ -90,6 +93,8 @@ Pre-requisite: If you haven't already follow the get started [guide](https://oni
 
 
 
+<<<<<<< HEAD
+=======
 
 
 All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/oledQrCodeGenerator
@@ -98,6 +103,7 @@ All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/ol
 
 
 
+>>>>>>> 3e6e7f57bacd69ffc84327133658f6b77ba94984
 
 
 [//]: # (The Steps)
@@ -192,7 +198,7 @@ echo $1 > /usr/bin/ticker.txt
 
 
 
-VAR=$(./stock_script.py)
+VAR=$(python ./stock_script.py)
 
 
 
@@ -292,7 +298,7 @@ Make both files we just created executable by entering this:
 
 
 
-ONow let's see how Apple is doing.
+Now let's see how Apple is doing.
 
 
 
@@ -323,10 +329,22 @@ Parts of this project can and are encouraged to be used in other projects.
 ## Going Further
 
 
+To take the project one step further, let's create a stream by having the Omega run the same script once every minute. To do this we will use the _cron_ tool. _cron_ allows us to schedule jobs(commands/programs/script) for execution at a fixed time. First lets schedule our sript to run every minute. To do this, enter the command:
 
-Feel free to use the project as a template to make any custom streaming feeds on the OLED display. Maybe a weather tracker or to display News Headlines. 
+```
+crontab -e
+```
+
+You will be taken to the vi-editor of the scheduling file which can be found in /etc/crontabs/root. Add the following line to your file and make sure to end the file with an empty line or #.
+
+```
+*/1 * * * * /stock.sh AAPL
+```
+
+You can save and quit the editor by entering ZZ. 
 
 
+Using this project as a template, we can go even further with webscraping projects. Maybe build a new headline streamer or an upto date weather tracker. 
 
 
 
