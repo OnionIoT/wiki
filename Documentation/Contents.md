@@ -37,6 +37,7 @@ Engineering drawings outlining the dimensions of the Omega and Expansions:
 * [Relay Expansion](./Hardware/Technical-Drawings/RELAY_EXPANSION_DRAWING.PDF)
 * [Servo Expansion](./Hardware/Technical-Drawings/SERVO_EXPANSION_DRAWING.PDF)
 * [Ethernet Expansion](./Hardware/Technical-Drawings/ETHERNET_EXPANSION_DRAWING.PDF)
+* [OLED Expansion](./Hardware/Technical-Drawings/OLED_EXPANSION_DRAWING.PDF)
 
 
 
