@@ -95,7 +95,6 @@ Pre-requisite: If you haven't already follow the get started [guide](https://oni
 
 
 
-All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/oledQrCodeGenerator
 
 
 
