@@ -90,8 +90,6 @@ Pre-requisite: If you haven't already follow the get started [guide](https://oni
 
 
 
-**Make sure to mention any repos**
-
 
 
 All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/oledQrCodeGenerator
@@ -106,7 +104,7 @@ All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/ol
 
 
 
-## Step 1: *Connect your OLED display+Omega+Expansion Dock*
+## Step 1: Connect your Omega, Expansion Dock, and OLED Expansion
 
 
 
@@ -126,7 +124,7 @@ Firstly, connect your OMEGA and your OLED Expansion to your Expansion Dock. Refe
 
 
 
-## Step 2: *Setup Wifi*
+## Step 2: Setup Wifi
 
 
 
@@ -146,7 +144,7 @@ Follow the instructions and give the Omega access to your wifi network.
 
 
 
-## Step 3: *Update and Install Python*
+## Step 3: Update and Install Python
 
 
 
@@ -166,7 +164,7 @@ You may or may not need to clear some space on your Omega for the installation. 
 
 
 
-## Step 4: *Create our python and shell scripts*
+## Step 4: Create our Python and Shell scripts
 
 
 
@@ -272,7 +270,7 @@ To start we added python to our environment so that it is executable from the co
 
 
 
-## Step 5: *Change Permissions*
+## Step 5: Change Permissions
 
 
 
@@ -290,7 +288,7 @@ Make both files we just created executable by entering this:
 
 
 
-## Step 6: *Execute Script*
+## Step 6: Execute Script
 
 
 
@@ -314,7 +312,7 @@ ONow let's see how Apple is doing.
 
 
 
-# *Using the Project*
+# Using the Project
 
 
 
@@ -322,7 +320,7 @@ Parts of this project can and are encouraged to be used in other projects.
 
 
 
-## *Going Further*
+## Going Further
 
 
 
@@ -332,7 +330,7 @@ Feel free to use the project as a template to make any custom streaming feeds on
 
 
 
-## *Related Tutorials*
+## Related Tutorials
 
 
 
@@ -340,13 +338,4 @@ If you enjoyed this project, you should check this out [OLED-QR-Code-Generator](
 
 
 
-
-
-
-
-[//]: # (Acknowledgements)
-
-
-
-# Acknowledgements
 

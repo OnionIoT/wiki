@@ -18,6 +18,9 @@ For example:
 In this tutorial, we'll go through how you can use *Python* to *encode text into a QR Code* and *display it on your OLED Expansion.*
 
 
+**Note, any text that's in italics, replace it with your own text and remove the italics!!**
+
+
 [[_TOC_]]
 
 
