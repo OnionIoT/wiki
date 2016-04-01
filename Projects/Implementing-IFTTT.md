@@ -2,6 +2,25 @@
 
 [[_TOC_]]
 
+[//]: # (Overview)
+
+## Overview 
+
+Tutorial Difficulty:
+
+Beginner
+
+Time Required:
+
+**10 minutes**
+
+Required Materials:
+* The Omega
+* The Expansion Dock
+
+Useful Experience:
+* Using nodejs
+
 [//]: # (What is IFTTT)
 
 ## What is IFTTT
@@ -18,9 +37,9 @@ The theory of using IFTTT to control our Omega is, when one event is triggered, 
 
 The recipes are created through "channels", which are different web services, for example, Gmail. Unfortunately, we haven't created our own channel yet (but it will be up very soon), so we are using IFTTT through a DIY channel, "Maker". Maker channel allows users to make a web request, however, there is no header option. Unfortunately again, to run a program on Omega, we have to send a API format web request to device server, that means, we need to create a local server to translate the request to another with headers. That would be perfect if you can write your own server, if not, don't worry, I created a test server for you! However, you still need a public server to run this local server on.
 
-[//]: # (Start Up)
+[//]: # (The Steps)
 
-## Start Up
+## Step 1: Start Up
 
 ### Create Onion Account and Device-id
 
@@ -47,7 +66,9 @@ Replace the asterisk (*) with your device id and api key you have just created, 
 
 Then reboot your device, and run device-client. Then, let's move on.
 
-### Ubus Function
+[//]: # (Step 2)
+
+## Step 2: Ubus Function
 
 This step, we are going to create our own ubus function on Omega. In the tutorial, we are using the default expansion led as a sample. You can create your own [ubus](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro) function if you wish!
 
@@ -60,7 +81,9 @@ $ubus call expled '{"red":0, "green":0, "blue":0}'
 ```
 Now, you should be able to observe that the led on expansion dock is turned off!
 
-### Running a Local Server
+[//]: # (Step 3)
+
+## Step 3: Running a Local Server
 
 Now, we are going to create the local server. First, we need a public server. If you don't have one, you can apply for one if you want. Then connect to the public server, and install nodejs. Then, we are trying to create a local server, here is the test server for you guys, click [here](https://github.com/xyorever/local_server). Or you can visit [this](http://blog.modulus.io/build-your-first-http-server-in-nodejs) and [this](http://blog.modulus.io/node.js-tutorial-how-to-use-request-module) websites to create your own.
 
@@ -88,7 +111,9 @@ responding:
 ```
 Cool! It works all fine.
 
-### Create Recipes
+[//]: # (Step 4)
+
+## Step 4: Create Recipes
 Now, we have something to do with IFTTT.
 
 A IFTTT recipe should look like this:
@@ -106,8 +131,20 @@ Then, after the recipe is created, you should be able to trigger you IF statemen
 ![IFTTT trigger](http://i.imgur.com/tWmNdpU.png)
 ![DO trigger](http://i.imgur.com/CT5xTSu.png?1)
 
-[//]: # (Colclusion and Better Suggestions)
+[//]: # (Using the Project)
 
-## Conclusion and Better Suggestions
+# Using the Project
 
-This is how we implement IFTTT into Omega. Now, we are able to lock or unlock our door by simply pressing a button on your phone! Onion is planning to create a channel for their own, at that time, it is going to be even easier to do it!
+Using this project, you can use Onion Cloud to control stuff very easily. You can toggle the expansion LED light as taught in tutorial, and you can also control your own lock!
+
+## Related Tutorials
+
+*[ubus tutorial](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)
+*[lock tutorial](https://wiki.onion.io/Projects/Using-Omega-As-Remote-Lock)
+
+//]: # (Acknowledgements)
+
+# Acknowledgements
+
+*[local server](https://github.com/xyorever/local_server)
+*[create local server tutorial](http://blog.modulus.io/node.js-tutorial-how-to-use-request-module)
