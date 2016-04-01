@@ -1,5 +1,11 @@
 # Implementing IFTTT
 
+
+
+![IFTTT](http://marketingland.com/wp-content/ml-loads/2012/09/ifttt-logo.jpg)
+
+In this tutorial, I am going to show how you can control your Omega remotely through another web application IFTTT.
+
 [[_TOC_]]
 
 [//]: # (Overview)
@@ -16,7 +22,7 @@ Time Required:
 
 Required Materials:
 * The Omega
-* The Expansion Dock
+* The Expansion Dock (not necessary)
 
 Useful Experience:
 * Using nodejs
