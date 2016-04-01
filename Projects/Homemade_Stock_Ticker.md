@@ -93,8 +93,6 @@ Pre-requisite: If you haven't already follow the get started [guide](https://oni
 
 
 
-<<<<<<< HEAD
-=======
 
 
 All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/oledQrCodeGenerator
@@ -103,7 +101,6 @@ All of the code can be found on this GitHub Repo: https://github.com/OnionIoT/ol
 
 
 
->>>>>>> 3e6e7f57bacd69ffc84327133658f6b77ba94984
 
 
 [//]: # (The Steps)
