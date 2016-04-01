@@ -139,12 +139,12 @@ Using this project, you can use Onion Cloud to control stuff very easily. You ca
 
 ## Related Tutorials
 
-*[ubus tutorial](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)
-*[lock tutorial](https://wiki.onion.io/Projects/Using-Omega-As-Remote-Lock)
+* [ubus tutorial](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)
+* [lock tutorial](https://wiki.onion.io/Projects/Using-Omega-As-Remote-Lock)
 
-//]: # (Acknowledgements)
+[//]: # (Acknowledgements)
 
 # Acknowledgements
 
-*[local server](https://github.com/xyorever/local_server)
-*[create local server tutorial](http://blog.modulus.io/node.js-tutorial-how-to-use-request-module)
+* [local server](https://github.com/xyorever/local_server)
+* [create local server tutorial](http://blog.modulus.io/node.js-tutorial-how-to-use-request-module)
