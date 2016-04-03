@@ -31,4 +31,4 @@ Streaming Music using Airplay:
 
 Streaming Music Using Bluetooth
 
-*[Bluetooth Audio on Omega](./bluetooth-audio-project)
+* [Bluetooth Audio on Omega](../Tutorials/Bluetooth-Streaming-Audio)

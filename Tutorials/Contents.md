@@ -94,6 +94,14 @@ The Arduino Dock has an ATmega microcontroller and can be used just like an Ardu
   * [Controlling Neopixels](./Arduino-Dock/Controlling-Neopixels)
 
 
+## The Bluetooth Low Energy Expansion
+
+The BLE Expansion can be used to add Bluetooth connectivity to the Omega:
+
+* [Streaming Bluetooth Audio on the Omega](./Tutorials/Bluetooth-Streaming-Audio)
+
+
+
 
 [//]: # (The Omega and Connectivity)
 
