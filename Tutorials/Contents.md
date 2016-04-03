@@ -98,7 +98,7 @@ The Arduino Dock has an ATmega microcontroller and can be used just like an Ardu
 
 The BLE Expansion can be used to add Bluetooth connectivity to the Omega:
 
-* [Streaming Bluetooth Audio on the Omega](./Tutorials/Bluetooth-Streaming-Audio)
+* [Streaming Bluetooth Audio on the Omega](./Bluetooth-Streaming-Audio)
 
 
 
