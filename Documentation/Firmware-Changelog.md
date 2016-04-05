@@ -83,6 +83,17 @@ Initial firmware sent to be flashed at the factory
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
+## b298
+*April 4, 2016*
+
+* New wdb40 version: fixed issue with connecting to SSIDs with spaces
+
+## b297
+*April 4, 2016*
+
+* Added `tmux` back into the firmware
+* New device-client version for repo: fixed device ID and secret location
+
 ## b296
 *April 2, 2016*
 
