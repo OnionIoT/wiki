@@ -9,7 +9,7 @@ Fatal error: date(): Timezone database is corrupt - this should never happen! in
 
 The good news is that it's very simple to resolve, what your Omega is missing is the timezone packages!
 
-## How to add "zoneinfo" to you Onion Omega
+## How to add `zoneinfo` to your Onion Omega
 
 For this example I am assuming you wish to use a European timezone (London or Rome etc...) to find the others is easy and this is covered in the section below.
 
@@ -44,6 +44,7 @@ echo date("d-M-Y");
 
 No error messages = happy days! = happy hacking :)
 
+
 ## Finding the available timezones
 
 For the example above we set up the Omega to for "Europe/London", however you may not want that due to your location, so instead you'll need to install the zoneinfo for your desired location.
@@ -73,6 +74,7 @@ zoneinfo-southamerica - 2015d-1 - Zone Information (SouthAmerica)
 ```
 
 Change the zone as desired and if you're still not sure which one you need, the "[List of Supported Timezones](http://php.net/manual/en/timezones.php)" from the PHP manual will help.
+
 
 ### Special Thanks
 

@@ -149,6 +149,7 @@ PHP:
 * [Using PHP on the Omega](./PHP-GPIO-Example)
 * [Using PHP with PushBullet](./PHP-PushBullet-Example)
 * [Using PHP with the DHT11/22 Sensors](./PHP-DHT11-DHT22-Sensor-Examples)
+* [Fixing and Using the PHP Date & Time Functions](./Tutorials/PHP-Date-Time-Functions)
 
 
 
