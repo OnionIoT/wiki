@@ -141,7 +141,9 @@ Obviously shields are needed for the relay, but the RGB LED works fine with the 
 
 You can edit the php.ini file by running this command:
 
-```vi /etc/php.ini```
+```
+vi /etc/php.ini
+```
 
 There is another PHP helper you can use here [https://github.com/ringmaster/GPIOHelperPHP](https://github.com/ringmaster/GPIOHelperPHP)
 
@@ -154,8 +156,9 @@ Onion Community member [Chris McCaslin](https://community.onion.io/user/chris-mc
 
 ## Let's Download the Library
 
-First download the library with wget from the gist https://gist.github.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e 
-``` wget https://gist.githubusercontent.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e/raw/df8e70665523c2a06b503954d10943560d5c189f/OmegaPHP.php ```
+First download the library with wget from a [GitHub Gist](https://gist.github.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e)
+``` 
+wget https://gist.githubusercontent.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e/raw/df8e70665523c2a06b503954d10943560d5c189f/OmegaPHP.php ```
 
 
 ## Using the Library
