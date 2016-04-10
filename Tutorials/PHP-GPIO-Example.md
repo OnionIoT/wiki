@@ -158,7 +158,8 @@ Onion Community member [Chris McCaslin](https://community.onion.io/user/chris-mc
 
 First download the library with wget from a [GitHub Gist](https://gist.github.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e)
 ``` 
-wget https://gist.githubusercontent.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e/raw/df8e70665523c2a06b503954d10943560d5c189f/OmegaPHP.php ```
+wget https://gist.githubusercontent.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e/raw/df8e70665523c2a06b503954d10943560d5c189f/OmegaPHP.php
+```
 
 
 ## Using the Library
