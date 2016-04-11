@@ -80,7 +80,7 @@ The firmware update will take a few minutes, the process will be complete when t
 
 ![Computer Management](//i.imgur.com/0fFBiNNh.jpg "Computer Management")
 
-**Step 3**: Download and install Putty from [[http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.65-installer.exe]].
+**Step 3**: Download and install [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 **Step 4**: Open up PuTTY, select Serial for Connection type, enter the COM number noted down in Step 2 as Serial line, and enter `115200` for the speed.
 
