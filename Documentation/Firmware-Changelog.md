@@ -26,6 +26,19 @@ The build number will continuously increment over the course of development.
 # Versions
 Definining the differences in each version change
 
+## 0.0.8
+**Ando A1 Release.**
+
+Added the following features to the firmware:
+* Bluetooth audio support using Onion customized packages
+* Network Manager that will automatically try to connect to recognized networks
+* Fix for Node.JS and NPM where HTML requests were erroneously resolving to IPv6
+
+Console Updates:
+* Added Programming Calculator app
+* Added Webcam App
+* Overhauled WiFi settings apps 
+
 ## 0.0.7
 **Modern Node Release.**
 
@@ -69,6 +82,66 @@ Initial firmware sent to be flashed at the factory
 
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
+
+## b298
+*April 4, 2016*
+
+* New wdb40 version: fixed issue with connecting to SSIDs with spaces
+
+## b297
+*April 4, 2016*
+
+* Added `tmux` back into the firmware
+* New device-client version for repo: fixed device ID and secret location
+
+## b296
+*April 2, 2016*
+
+**Version 0.0.8 Firmware**
+
+Updated to latest version of Console and WDB40
+
+Console:
+* Added Calculator and Webcam Apps
+* Overhauled the WiFi Settings Apps
+
+WDB40:
+* Updated usage instructions
+
+## b295
+*April 2, 2016*
+
+* Removed deprecated ubus-intf package (functionality replaced by onion-ubus gpio method, saving space)
+* Replaced wifisetup and wifisaint packages with wdb40 network manager
+* Updated onion-ubus with new wdb40 install paths
+
+## b294
+*April 2, 2016*
+
+* Added Onion customized bluez and pulseaudio packages to Onion Repo
+* Modified deployment script to correctly upload images and packages
+
+## b293
+*Mar 31, 2016*
+
+Added kmod-input-uinput package into the build.
+
+## b290, b289
+*Mar 30, 2016*
+
+* Kernel config update now done by appending to config file from script (instead of overwriting), increased build stability
+* Added uClibc toolchain patch that makes web requests default to IPv4 (Required for NodeJS to properly get HTML)
+* Updated onion-ubus: modified and fixed gpio method
+
+## b288
+*Mar 19, 2016*
+
+Added Onion GPIO Python module package to Onion Repo
+
+## b283
+*Mar 9, 2016*
+
+Fix for failing build (caused by having some new options missing in the kernel config)
 
 ## b282
 *Mar 7, 2016*

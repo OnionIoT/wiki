@@ -95,6 +95,14 @@ The Arduino Dock has an ATmega microcontroller and can be used just like an Ardu
   * [Controlling Neopixels](./Arduino-Dock/Controlling-Neopixels)
 
 
+## The Bluetooth Low Energy Expansion
+
+The BLE Expansion can be used to add Bluetooth connectivity to the Omega:
+
+* [Streaming Bluetooth Audio on the Omega](./Bluetooth-Streaming-Audio)
+
+
+
 
 [//]: # (The Omega and Connectivity)
 
@@ -142,6 +150,7 @@ PHP:
 * [Using PHP on the Omega](./PHP-GPIO-Example)
 * [Using PHP with PushBullet](./PHP-PushBullet-Example)
 * [Using PHP with the DHT11/22 Sensors](./PHP-DHT11-DHT22-Sensor-Examples)
+* [Fixing and Using the PHP Date & Time Functions](./PHP-Date-Time-Functions)
 
 
 

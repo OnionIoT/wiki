@@ -8,7 +8,7 @@ Hidden away in the forums fello onioneers have already worked on setting up basi
 
 **All you need is a little imagination on how you can use & abuse this with you Onion Omega.**
 
-Here is some ideas to get your brain noodling:
+Here are some ideas to get your brain noodling:
 
 1. You could post updates to Thingspeak.com
 2. And push updates to PushBullet, so events appear across multiple devices such as a web browser, your iphone, ipad and/or droid
@@ -24,10 +24,10 @@ First we need to install the required packages, to do this you can use the termi
 
 ```
 opkg update
-opkg install php5 php5-cgi nano
+opkg install php5 php5-cgi
 ```
 
-This installs the required PHP files and also nano, which is a text editor and alot easier to use than vim.
+This installs the required PHP packages.
 
 Optionally you can also install the CLI version of PHP using the command below. This allows you to run PHP scripts from the commandline using "php-cli scriptname.php"
 
@@ -38,7 +38,7 @@ opkg install php5-cli
 Next we need to edit the uhttpd file, you can do this by using this command:
 
 ```
-nano /etc/config/uhttpd
+vi /etc/config/uhttpd
 ```
 
 Where you see the 'main' section of text like this:
@@ -68,9 +68,10 @@ Add this to the last line of that block of text (there is another block of text 
 
 ```
 list interpreter ".php=/usr/bin/php-cgi"
+option index_page 'index.php'
 ```
 
-Press 'Ctrl + X' on keyboard, and then 'y' & 'Enter' to save changes.
+Press 'ESC' on keyboard, and then ':wq' & 'Enter' to save changes.
 
 Now we need to restart the web server, we do this by running this command:
 
@@ -87,7 +88,7 @@ Create a test file & directory by executing the following command:
 ```
 mkdir /www/php
 cd /www/php
-nano index.php
+vi index.php
 ```
 
 And paste this code into the file & save:
@@ -95,11 +96,12 @@ And paste this code into the file & save:
 ```
 <?php 
   echo "hello world, I'm PHP running on my Onion Omega!";
+?>
 ```
 
-Press 'Ctrl + X' on keyboard, and then 'y' & 'Enter' to save changes.
+Press 'ESC' on keyboard, and then ':wq' & 'Enter' to save changes.
 
-Now open your web browser and go to http://omega-ABCD.local/php/index.php
+Now open your web browser and go to http://omega-ABCD.local/php/
 
 **Note:** If you receive a directory or file permissions issue, run the following command and try again.
 
@@ -139,8 +141,46 @@ Obviously shields are needed for the relay, but the RGB LED works fine with the 
 
 You can edit the php.ini file by running this command:
 
-```nano /etc/php.ini```
+```
+vi /etc/php.ini
+```
 
 There is another PHP helper you can use here [https://github.com/ringmaster/GPIOHelperPHP](https://github.com/ringmaster/GPIOHelperPHP)
 
 You can read more about this in this community thread: [https://community.onion.io/topic/39/simple-php-web-gpio-example-switching-leds/10](https://community.onion.io/topic/39/simple-php-web-gpio-example-switching-leds/10)
+
+
+# Using fast-gpio with PHP
+
+Onion Community member [Chris McCaslin](https://community.onion.io/user/chris-mccaslin) developed a PHP wrapper for the `fast-gpio` package.
+
+## Let's Download the Library
+
+First download the library with wget from a [GitHub Gist](https://gist.github.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e)
+``` 
+wget https://gist.githubusercontent.com/Immortal-/a18f58ac5c21ba27921b7626b5a8b06e/raw/df8e70665523c2a06b503954d10943560d5c189f/OmegaPHP.php
+```
+
+
+## Using the Library
+
+The following code shows how the library can be used:
+
+```
+<?php
+  require 'OmegaPHP.php'; //Require the library from the step above
+  
+  $gpio = new OmegaPHP();
+  //Turns pin 0 to On or HIGH or 1
+  $pin = (int)0; //This is just for my testing purposes You do not have to cast to an int.
+  
+  $gpio->SetPIN($pin,HIGH);// Set's the pin to 1 or HIGH
+  $returned = $gpio->ReadPin($pin);
+  
+  print_r($returned);
+  
+  // Prints to screen:
+  // 1
+?>
+```
+
