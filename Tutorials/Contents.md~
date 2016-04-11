@@ -40,7 +40,7 @@ This mini-series is meant to introduce users to OpenWRT.
 * [UBUS Basics Part 1](./OpenWRT Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)
 * [UBUS Basics Part 2](./OpenWRT Tutorials/UBUS_Tutorial/Part2_RPCD)
 * [UBUS Basics Part 3](./OpenWRT Tutorials/UBUS_Tutorial/Part3_RPCD)
-
+* [UCI Basics](./OpenWRT Tutorials/UCI_Tutorial/uci_introduction)
 
 [//]: # (Updating the Omega)
 
@@ -82,6 +82,7 @@ The Expansions provide additional functionality and features to the Omega:
 * [How to use the Relay Expansion](./Expansions/Using-the-Relay-Expansion)
 * [How to use the Servo Expansion](./Expansions/Using-the-Servo-Expansion)
 * [How to use the OLED Expansion](./Expansions/Using-the-OLED-Expansion)
+* [How to use the GPS Expansion](./Expansions/Using-the-GPS-Expansion)
 
 
 
@@ -127,8 +128,12 @@ It is also possible to run the Omega's OS from USB storage:
 Since the Omega runs a full Linux distribution, it is very flexible in the software that it can run. The following guides illustrate how to install and use different software:
 
 * [Using Git](./Using-Git)
-* [Installing Pyton](./Installing-Python)
+
+Python:
+* [Installing Python](./Installing-Python)
 * [Sending Emails with Python](./Sending-Emails-With-Python)
+* [A Python GPIO Example](./Python-GPIO-LED-Example)
+* [Controlling an I2C-based LCD Display with Python](./Python-I2C-LCD-Display)
 
 LAMP Stack:
 * [Instaling the LAMP Stack on the Omega](./How-To-Install-LAMP-Stack-on-the-Omega)
@@ -136,6 +141,7 @@ LAMP Stack:
 PHP:
 * [Using PHP on the Omega](./PHP-GPIO-Example)
 * [Using PHP with PushBullet](./PHP-PushBullet-Example)
+* [Using PHP with the DHT11/22 Sensors](./PHP-DHT11-DHT22-Sensor-Examples)
 
 
 
