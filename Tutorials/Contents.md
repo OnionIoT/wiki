@@ -82,6 +82,7 @@ The Expansions provide additional functionality and features to the Omega:
 * [How to use the Relay Expansion](./Expansions/Using-the-Relay-Expansion)
 * [How to use the Servo Expansion](./Expansions/Using-the-Servo-Expansion)
 * [How to use the OLED Expansion](./Expansions/Using-the-OLED-Expansion)
+* [How to use the GPS Expansion](./Expansions/Using-the-GPS-Expansion)
 
 
 
