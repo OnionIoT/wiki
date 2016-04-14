@@ -41,11 +41,13 @@ Now lets try to get the omega to blink the LED on the Omega using the heartbeat 
 
 To do this we have to use the _call_ option provided by ubus to access the onion service. We then select the function we want and pass the additional parameters using a json format. To re-iterate:
 
-<pre><code>ubus call &lt;service&gt; &lt;function&gt; {parameters}</code></pre>
+```
+ubus call <service> <function> '{<JSON parameters>}'
+```
 
 Specifically, enter this into the command line.
 
-<pre><code>ubus call onion "omega-led" '{"set_trigger"="heartbeat"}'</code></pre>
+<pre><code>ubus call onion omega-led '{"set_trigger":"heartbeat"}'</code></pre>
 
 ![ubusOnionHeartbeat](http://i.imgur.com/JnjCute.png)
 
