@@ -1,6 +1,6 @@
 # PWM Expansion Library
 
-The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a static C library that provides functions to setup the Servo Expansion and generate PWM signals.
+The Onion Servo (PWM) Expansion library, `libonionpwmexp` is a dynamic C library that provides functions to setup the Servo Expansion and generate PWM signals.
 
 ![PWM Expansion Photo](http://i.imgur.com/aNoYCZc.png)
 
@@ -65,12 +65,12 @@ To add the Onion PWM Expansion Library to your program, include the header file 
 
 **Library for Linker**
 
-In your project's makefile, you will need to add the following static libraries to the linker command:
+In your project's makefile, you will need to add the following dynamic libraries to the linker command:
 ``` c
 -loniondebug -lonioni2c -lonionpwmexp
 ```
 
-The static libraries are stored in `/usr/lib` on the Omega.
+The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 
 [//]: # (The C Library: Example Code)

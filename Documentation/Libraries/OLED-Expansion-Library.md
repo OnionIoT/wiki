@@ -1,6 +1,6 @@
 # OLED Expansion Library
 
-The Onion OLED Expansion library, `libonionoledexp` is a static C library that provides functions to setup and perform various actions on the OLED display: writing text, displaying images, and adjusting various settings.
+The Onion OLED Expansion library, `libonionoledexp` is a dynamic C library that provides functions to setup and perform various actions on the OLED display: writing text, displaying images, and adjusting various settings.
 
 ![Omega+OLED Expansion](http://i.imgur.com/tqcRlgG.jpg)
 
@@ -60,12 +60,12 @@ To add the Onion OLED Expansion Library to your program, include the header file
 
 **Library for Linker**
 
-In your project's makefile, you will need to add the following static libraries to the linker command:
+In your project's makefile, you will need to add the following dynamic libraries to the linker command:
 ``` c
 -loniondebug -lonioni2c -lonionoledexp
 ```
 
-The static libraries are stored in `/usr/lib` on the Omega.
+The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 
 
@@ -573,7 +573,7 @@ int oledWriteChar (char c);
 
 The `c` argument is the character that is to be written to the screen.
 
-Make sure to check the `asciiTable` static array found in `oled-exp.h`, it defines the bitmap pattern of each allowed character. Any characters not found in the table will be ignored.
+Make sure to check the `asciiTable` dynamic array found in `oled-exp.h`, it defines the bitmap pattern of each allowed character. Any characters not found in the table will be ignored.
 
 
 **Examples**
@@ -1351,7 +1351,7 @@ oledExp.writeChar(c)
 
 The `c` argument is the character that is to be written to the screen.
 
-Make sure to check the `asciiTable` static array found in `oled-exp.h`, it defines the bitmap pattern of each allowed character. Any characters not found in the table will be ignored.
+Make sure to check the `asciiTable` dynamic array found in `oled-exp.h`, it defines the bitmap pattern of each allowed character. Any characters not found in the table will be ignored.
 
 
 **Examples**

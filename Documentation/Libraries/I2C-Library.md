@@ -1,6 +1,6 @@
 # I2C Library
 
-The Onion I2C Library, `libonioni2c` is a static C library that provides functions to easily read from and write to devices communicating with the Omega via I2C. The library can be used in C and C++ programs.
+The Onion I2C Library, `libonioni2c` is a dynamic C library that provides functions to easily read from and write to devices communicating with the Omega via I2C. The library can be used in C and C++ programs.
 
 Also available is a Python module that implements an I2C object using functions from the C library. The module is called `onionI2C` and is part of the `OmegaExpansion` package.
 
@@ -47,12 +47,12 @@ To add the Onion I2C Library to your C/C++ program, include the header file in y
 
 **Library for Linker**
 
-In your project's makefile, you will need to add the following static libraries to the linker command:
+In your project's makefile, you will need to add the following dynamic libraries to the linker command:
 ``` c
 -loniondebug -lonioni2c 
 ```
 
-The static libraries are stored in `/usr/lib` on the Omega.
+The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 
 

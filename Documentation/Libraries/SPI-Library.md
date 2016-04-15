@@ -1,6 +1,6 @@
 # SPI Library
 
-The Onion SPI Library, `libonionspi` is a static C library that provides functions to easily read from and write to devices communicating with the Omega over the GPIOs via the SPI protocol. The library can be used in C and C++ programs.
+The Onion SPI Library, `libonionspi` is a dynamic C library that provides functions to easily read from and write to devices communicating with the Omega over the GPIOs via the SPI protocol. The library can be used in C and C++ programs.
 
 Also available is a Python module, called `onionSpi`, that implements an SPI object using functions from the C Library.
 
@@ -74,12 +74,12 @@ To add the Onion SPI Library to your C/C++ program, include the header file in y
 
 **Library for Linker**
 
-In your project's makefile, you will need to add the following static libraries to the linker command:
+In your project's makefile, you will need to add the following dynamic libraries to the linker command:
 ``` c
 -loniondebug -lonionspi 
 ```
 
-The static libraries are stored in `/usr/lib` on the Omega.
+The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 
 

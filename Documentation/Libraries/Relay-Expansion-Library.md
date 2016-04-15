@@ -1,6 +1,6 @@
 # Relay Expansion Library
 
-The Onion Relay Expansion library, `libonionrelayexp` is a static C library that provides functions to setup and change the state of the relays on the Relay Expansion. 
+The Onion Relay Expansion library, `libonionrelayexp` is a dynamic C library that provides functions to setup and change the state of the relays on the Relay Expansion. 
 
 [//]: # (LAZAR: Add image of relay-exp here)
 
@@ -69,12 +69,12 @@ To add the Onion Relay Expansion Library to your program, include the header fil
 
 **Library for Linker**
 
-In your project's makefile, you will need to add the following static libraries to the linker command:
+In your project's makefile, you will need to add the following dynamic libraries to the linker command:
 ``` c
 -loniondebug -lonioni2c -lonionmcp23008 -lonionrelayexp
 ```
 
-The static libraries are stored in `/usr/lib` on the Omega.
+The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 
 [//]: # (Using the C Library: Example Code)

@@ -30,7 +30,7 @@ After each power-cycle, the chip that controls the Relay Expansion must be progr
 
 # The C & C++ Library
 
-The static C & C++ library, `libonionneopixel` provides a C++ class and C functions that wrap around this class.
+The dynamic C & C++ library, `libonionneopixel` provides a C++ class and C functions that wrap around this class.
 
 
 [//]: # (Installing the Library)
@@ -85,12 +85,12 @@ To add the Onion Neopixel Library to your program, include the header file in yo
 
 **Library for Linker**
 
-In your project's makefile, you will need to add the following static libraries to the linker command:
+In your project's makefile, you will need to add the following dynamic libraries to the linker command:
 ``` c++
 -lonionneopixel
 ```
 
-The static libraries are stored in `/usr/lib` on the Omega.
+The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 
 
@@ -375,12 +375,12 @@ To add the Onion Neopixel Library to your program, include the header file in yo
 
 **Library for Linker**
 
-In your project's makefile, you will need to add the following static libraries to the linker command:
+In your project's makefile, you will need to add the following dynamic libraries to the linker command:
 ``` c
 -lonionneopixel
 ```
 
-The static libraries are stored in `/usr/lib` on the Omega.
+The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 
 
