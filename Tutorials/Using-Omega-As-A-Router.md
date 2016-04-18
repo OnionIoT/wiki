@@ -6,7 +6,7 @@ Those of you familiar with OpenWRT will probably know that it was originally des
 * 1x Expansion Dock
 * 1x Ethernet Expansion
 
-## 1. Setup the Hardware
+## Step 1: Setup the Hardware
 
 First, connect the Omega to the Expansion Dock, and plug the Ethernet Expansion into the Expansion Dock. Then, connect the ethernet cable coming from your modem to the Ethernet Expansion, and connect the power to the Omega, as shown below:
 
@@ -15,7 +15,9 @@ First, connect the Omega to the Expansion Dock, and plug the Ethernet Expansion 
 After you have connected everything, power on the Omega.
 
 
-## 2. Disable `wifisaint` on the Omega
+## Step 2: Disable `wifisaint` on the Omega
+
+**Note that wifisaint was removed in Firmware v0.0.8, so this step is only required on firmwares prior to v0.0.8**
 
 `wifisaint` is a program that monitors the network settings on the Omega and tells it to connect to WiFi networks automatically. However, when you are using the Omega as a router, it doesn't need to be connected to any WiFi network because you will be connecting the Omega to your modem through an ethernet cable. So, we should disable `wifisaint` to prevent the Omega from continuously trying to connect to WiFi networks.
 
@@ -35,7 +37,7 @@ and replace with
 
 Your Access Point should be turned on at this point.
 
-## 3. Enable `eth0`
+## Step 3: Enable `eth0`
 
 The Omega is primarily designed as a development board to prototype WiFi-enabled devices, so by default, we have turned off the ethernet interface `eth0` in the firmware. In order to use the Omega as a router, you will need to re-enable this. To do this, you will need to open up the `/etc/config/network` file, and add the following line at the end of the file:
 
@@ -55,7 +57,7 @@ Once you have saved and closed the file, run the following command to restart th
 ```
 
 
-## 4. Configuring the WiFi Settings
+## Step 4: Configuring the WiFi Settings
 
 Next, you will need to open up the `/etc/config/wireless` file and configure two things.
 
@@ -92,7 +94,7 @@ Once you have finished customizing the WiFi network, simply save and close the f
 wifi
 ```
 
-## 5. Enabling Packet Routing
+## Step 5: Enabling Packet Routing
 
 Next, you will need to configure the Omega to route packets from the ethernet interface (`eth0`) to your WiFi interface (`wlan0`). To do this, you will be editing the `/etc/config/firewall` file:
 
@@ -139,7 +141,7 @@ Once you have saved and closed the file, run the following command to restart th
 /etc/init.d/firewall restart
 ```
 
-## 6. Using the Omega Router
+## Step 6: Using the Omega Router
 
 And we are done! To use the Omega Router, you simply need to connect your computer or your smartphone/tablet to the WiFi network that you configured in Step 4, and your devices should be able to access the Internet via the Omega :)
 
