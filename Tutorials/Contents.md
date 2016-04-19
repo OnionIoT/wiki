@@ -113,6 +113,7 @@ The Omega is very versatile when it comes to WiFi networks, the following guides
 * [Connecting to a WiFi Hotspot that requires a login](./Connecting-Omega-to-Wifi-Hotspot-that-Requres-Login)
 * [Using the Omega as a Router](./Using-Omega-As-A-Router)
 * [Using the Omega as a WiFi Range Extender](./Using-Omega-As-Wifi-Range-Extender)
+* [Connect Omega To a Lan Swtich](./Connect-Omega-To-a-Lan-Swtich)
 
 
 
