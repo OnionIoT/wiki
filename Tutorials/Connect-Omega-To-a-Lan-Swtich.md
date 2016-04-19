@@ -115,9 +115,9 @@ if you have a device that only can be connected via ethernect while only wifi is
 
 ## Related Tutorials
 
-*[Get started](https://wiki.onion.io/Get-Started)
-*[Using Ethernet Expansion](https://wiki.onion.io/Tutorials/Expansions/Using-the-Ethernet-Expansion)
-*[Using Omega as a Router](https://wiki.onion.io/Tutorials/Using-Omega-As-A-Router)
+* [Get started](https://wiki.onion.io/Get-Started)
+* [Using Ethernet Expansion](https://wiki.onion.io/Tutorials/Expansions/Using-the-Ethernet-Expansion)
+* [Using Omega as a Router](https://wiki.onion.io/Tutorials/Using-Omega-As-A-Router)
 
 [//]: # (Acknowledgements)
 
@@ -126,5 +126,5 @@ if you have a device that only can be connected via ethernect while only wifi is
 you can grab more information in the [Onion community](https://community.onion.io/topic/694/wireless-setup), people are willing to answer you questions.
 
 Or you can visit the following website to learn more:
-*[Openwrt network configuration page](https://wiki.openwrt.org/doc/uci/network)
-*[Openwrt Firewall configuration page](https://wiki.openwrt.org/doc/uci/firewall)
+* [Openwrt network configuration page](https://wiki.openwrt.org/doc/uci/network)
+* [Openwrt Firewall configuration page](https://wiki.openwrt.org/doc/uci/firewall)
