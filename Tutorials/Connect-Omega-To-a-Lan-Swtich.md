@@ -105,6 +105,8 @@ Now we need to restart the service, by doing `/etc/init.d/firewall restart` and 
 
 Since we configured all the things, and restarted the service, now we should be able to connect with other devices via ehternet. Unfortunately, Onion does not provide an tutorial about how to connect my laptop to Omega.
 
+Make sure that your conection is set to `Obtain IP address and DNS anddress Automatically`. It should be set so by default.
+
 ![pic](http://i.imgur.com/w8eakGG.png?1)
 
 [//]: # (Using the Project)
