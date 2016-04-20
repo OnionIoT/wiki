@@ -9,8 +9,8 @@ When you brick your Omega, you will need to reflash your Omega through the `uboo
 * A working Omega and Expansion Dock
   * Technically any device with exposed Ethernet pins will work, for the purposes for this tutorial, we will be using an Omega
 * The bricked Omega in an Expansion Dock
-* **8** 100Ω* resistors
-* **5** 0.1µF* capacitors
+* 8x 100Ω* resistors 
+* 5x 0.1µF* capacitors
  
 *Note: There is no exact requirement for the capacitors and resistors values, however the capacitors shouldn't be too big. (for example: 0.1µF and 100Ω should work)*
 

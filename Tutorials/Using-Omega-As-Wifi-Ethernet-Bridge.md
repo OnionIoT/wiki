@@ -1,6 +1,6 @@
-# Connect Omega To a Lan Switch
+# Using the Omega as a WiFi Ethernet Bridge
 
-In this tutorial, we are going through how we can enable other deivices connected to Omega via ethenet.
+In this tutorial, we are going to go through how we can enable other devices to use the Omega's Ethernet Expansion to connect to an existing WiFi network.
 
 ![Lan switch diagram](https://community.onion.io/uploads/files/1460835842818-asus_omega_sw_wireless.png)
 
@@ -38,20 +38,20 @@ Useful Experience:
 
 # The Actual Process
 
-What we are trying to do is to enable the ethernet connection in Omega first, and then try to connect the wireless internet connection with ethernet connection. There are several ways to do so, one of the ways is to modify the firewall configuration, which is what we are trying to do now.
+What we are going to do is to first enable the Omega's ethernet connection, and then try to bridge the wireless internet connection with ethernet connection. There are several ways to do so, one of the ways is to modify the firewall configuration.
 
 
 [//]: # (The Steps)
 
 ## Step 1: Connect Omega with WiFi
 
-This step is fairly easy, and there are a lot of tutorials tell us how to do so in different ways. Click [here](https://wiki.onion.io/Get-Started) to view how to make it work.
+This step is fairly easy, and there are a lot of tutorials tell us how to do so in different ways. Click [here](../Get-Started) to view how to make it work.
 
 [//]: # (Step 2)
 
 ## Step 2: Enable the Ethernet Connection in Omega
 
-There is also tutorial to do so, click [here](https://wiki.onion.io/Tutorials/Expansions/Using-the-Ethernet-Expansion) to learn more (I am just combining all tutorials together to make it work).  
+There is an existing tutorial for this as well, click [here](./Expansions/Using-the-Ethernet-Expansion) to learn more.
 
 Basically what we need to do is to uncomment the following part licated at `/etc/config/network`:
 
@@ -109,17 +109,21 @@ Make sure that your conection is set to `Obtain IP address and DNS anddress Auto
 
 ![pic](http://i.imgur.com/w8eakGG.png?1)
 
+
 [//]: # (Using the Project)
 
-# Using the Project
+# Using this Setup
 
-if you have a device that only can be connected via ethernect while only wifi is avaliable, you could apply this tutorial to make it work!
+If you have a device that only can be connected via Ethernet and you only have WiFi avaliable, you could apply this tutorial to make it work!
+
+Or, you can extend 
 
 ## Related Tutorials
 
-* [Get started](https://wiki.onion.io/Get-Started)
-* [Using Ethernet Expansion](https://wiki.onion.io/Tutorials/Expansions/Using-the-Ethernet-Expansion)
-* [Using Omega as a Router](https://wiki.onion.io/Tutorials/Using-Omega-As-A-Router)
+* [Get started](../Get-Started)
+* [Using Ethernet Expansion](./Expansions/Using-the-Ethernet-Expansion)
+* [Using Omega as a Router](./Using-Omega-As-A-Router)
+
 
 [//]: # (Acknowledgements)
 
