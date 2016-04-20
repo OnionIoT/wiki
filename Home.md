@@ -18,21 +18,20 @@ The Onion Omega is a tiny WiFi enabled computer that can be your personal invent
 
 ### Using the Wiki
 
-Anxious to do more with your Omega? **The [Tutorials section](./Tutorials/Contents) is for you!** The tutorials cover everything you can do with the Omega: different methods of connecting to the Omega, explanations of how to use the Operating System, using the different Expansions, and installing and using new software.
-
 [![Tutorials Image](http://i.imgur.com/hBaJAkO.png)](./Tutorials/Contents)
 
+Anxious to do more with your Omega? **The [Tutorials section](./Tutorials/Contents) is for you!** The tutorials cover everything you can do with the Omega: different methods of connecting to the Omega, explanations of how to use the Operating System, using the different Expansions, and installing and using new software.
 
-
-For inspiration on projects to make with the Omega, **check out the [Project guide page](./Documentation/Contents).** 
 
 [![Project guide image](http://i.imgur.com/NuuzpPe.png)](./Documentation/Contents)
 
+For inspiration on projects to make with the Omega, **check out the [Project guide page](./Documentation/Contents).** 
 
 
-Take a peek at the **[Documentation section](./Documentation/Contents) for technical data and files** released by the Onion team. This includes everything from mechanical drawings of the Omega and Expansions to documentation on software libraries to change-logs of the Omega firmware.
 
 [![Documentation Image](http://i.imgur.com/Ro1V4ig.png)](./Documentation/Contents)
+
+Take a peek at the **[Documentation section](./Documentation/Contents) for technical data and files** released by the Onion team. This includes everything from mechanical drawings of the Omega and Expansions to documentation on software libraries to change-logs of the Omega firmware.
 
 
 
