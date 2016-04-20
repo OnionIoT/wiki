@@ -7,12 +7,12 @@ When you brick your Omega, you will need to reflash your Omega through the `uboo
 # Required Materials
 
 * A working Omega and Expansion Dock
-  * Technically any device with exposed Ethernet pins will work but we used an Omega 
+  * Technically any device with exposed Ethernet pins will work, for the purposes for this tutorial, we will be using an Omega
 * The bricked Omega in an Expansion Dock
-* ( **8** )  100Ω* *resistors* 
-* ( **5** ) 0.1µF* *capacitors* 
+* **8** 100Ω* resistors
+* **5** 0.1µF* capacitors
  
- *Note: There is no exact requirement for the capacitors and resistors values, however capacitor shouldn't be too big. (for example: 0.1µF and 100Ω should work)
+*Note: There is no exact requirement for the capacitors and resistors values, however the capacitors shouldn't be too big. (for example: 0.1µF and 100Ω should work)*
 
 # The schematic
 
@@ -53,13 +53,11 @@ Here are the necessary steps after wiring the network connection:
 9. Use omega-good to create an SSH tunnel from the Linux PC to omega-bricked. Run `ssh -L 8080:192.168.1.1:80` on omega-good, note that the SSH connection to omega-good is via WiFi).
  
 10. Open `http://localhost:8080/` in a browser on the Linux PC. The SSH Tunnel redirects this to the httpd of omega-bricked you see the uboot httpd upgrade page in your browser.
-
 ![uboot Firmware Update page](https://i.imgur.com/hS2fHtL.png)
 
 11. Download the latest version of the Omega firmware from http://repo.onion.io/omega/images. Newest firmware has the highest build number.
 
 12. Click on the **Choose File** button and select the binary you downloaded in the previous step and click on the **Update!** button to start the flashing process. Once the firmware has been uploaded, you will see the following confirmation page:
-
 ![uboot Firmware confirmation page](https://i.imgur.com/bJ3HEBZ.png)
 
 13. Enjoy your de-bricked Omega!
@@ -69,6 +67,6 @@ Here are the necessary steps after wiring the network connection:
 
 # Acknowledgements
 
-Credits to [Zheng Han](https://community.onion.io/user/zheng-han) for the Schematic and [Johannes Zellner](https://community.onion.io/user/johannes-zellner) for the images and content!
+Credits to [Zheng Han](https://community.onion.io/user/zheng-han) and [Johannes Zellner](https://community.onion.io/user/johannes-zellner) the images and content!
 
 Thank you to [Chris McCaslin](https://community.onion.io/user/chris-mccaslin) for making the nice wiki post and [Lazar Demin](https://community.onion.io/user/lazar-demin) for the edits :)
