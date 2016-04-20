@@ -2,6 +2,11 @@
 
 [[_TOC_]]
 
+
+
+
+[//]: # (Prepare the Hardware)
+
 ## Preparing the Hardware
 
 **Step 1**: Unpack the Omega and Dock from the boxes.
@@ -23,6 +28,10 @@
 **Step 5**: Wait for the amber LED to stop blinking, indicating that the Omega has booted up.
 
 ![Omega is on](//i.imgur.com/FulDB6zh.jpg "Omega is on")
+
+
+
+[//]: # (GUI SETUP)
 
 ## Setting up using GUI
 
@@ -46,6 +55,11 @@ Follow the wizard to complete the setup of the Omega.
 
 Following the wizard will connect your Omega to a wifi network of your choice, and will update to the latest firmware.
 
+**Step 3**: Start using your fresh Omega, check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
+
+
+
+[//]: # (OSX SETUP)
 
 ## Setting up using Command Line – OSX
 
@@ -68,9 +82,11 @@ Following the wizard will connect your Omega to a wifi network of your choice, a
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 6**: Enjoy!
+**Step 6**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
 
+
+[//]: # (WINDOWS SETUP)
 
 ## Setting up using Command Line – Windows
 
@@ -99,9 +115,11 @@ The firmware update will take a few minutes, the process will be complete when t
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 8**: Enjoy!
+**Step 8**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
 
+
+[//]: # (LINUX SETUP)
 
 ## Setting up using Command Line – Linux
 
@@ -177,4 +195,6 @@ $ sudo chmod 666 /dev/ttyUSB0
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 8**: Enjoy!
+**Step 8**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
+
+
