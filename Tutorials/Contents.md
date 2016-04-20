@@ -51,6 +51,7 @@ Follow this guide to update the Omega's firmware:
 
 In case your Omega's firmware gets corrupted during installation, it is possible to reflash a fresh firmware:
 * [Reflash Firmware using an Ethernet Expansion](./Reflash-The-Firmware-With-Ethernet-Expansion)
+* [Reflash Firmware by Improvising an Ethernet Connection](./Reflash-the-Firmware-with-Improvised-Ethernet)
 
 
 
