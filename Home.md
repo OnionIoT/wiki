@@ -5,22 +5,24 @@
 The Onion Omega is a tiny WiFi enabled computer that can be your personal invention platform. If you're looking for more information on the Omega and Onion, you've come to the right place!
 
 
-### Getting Started with the Omega
+#### New to the Omega? Check out the Get Started guide:
 
 [![Get Started Guide](http://i.imgur.com/vG9e4yX.jpg)](./Get-Started)
+
+
+#### Curious about the Omega's hardware?
 [![Omega Hardware](http://i.imgur.com/rZgiCQB.png)](./Documentation/Hardware/Omega-Hardware)
 
-New to the Omega? Check out the [Get Started guide](./Get-Started) and [run-down of the Omega's hardware](./Documentation/Hardware/Omega-Hardware)
 
 
 
 ### Using the Wiki
 
-Anxious to do more with your Omega? The [Tutorials section](./Tutorials/Contents) is for you!
+Anxious to do more with your Omega? **The [Tutorials section](./Tutorials/Contents) is for you!** The tutorials cover everything you can do with the Omega: different methods of connecting to the Omega, explanations of how to use the Operating System, using the different Expansions, and installing and using new software.
 
-For inspiration on projects to make with the Omega, check out the [Projects section](./Documentation/Contents).
+For inspiration on projects to make with the Omega, **check out the [Project guide page](./Documentation/Contents).** 
 
-Take a peek at the [Documentation section](./Documentation/Contents) for technical data and files released by the Onion team. This includes everything from mechanical drawings of the Omega and Expansions to documentation on software libraries to change-logs of the Omega firmware.
+Take a peek at the **[Documentation section](./Documentation/Contents) for technical data and files** released by the Onion team. This includes everything from mechanical drawings of the Omega and Expansions to documentation on software libraries to change-logs of the Omega firmware.
 
 
 
