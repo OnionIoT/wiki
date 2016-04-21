@@ -75,6 +75,9 @@ Once the upload completes, the info screen will show something along the lines o
 The ATmega chip is now running your sketch, enjoy!
 
 
+**Note:** An orange message saying `ash: merge-sketch-with-bootloader.lua: not found` may appear in the info screen. You can **safely ignore this message**, it does not affect the sketch upload.
+
+
 [//]: # (Flashing Sketches: Using the Omega)
 
 #### Using the Omega
