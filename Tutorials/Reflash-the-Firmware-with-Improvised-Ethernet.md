@@ -55,7 +55,7 @@ Here are the necessary steps after wiring the network connection:
 10. Open `http://localhost:8080/` in a browser on the Linux PC. The SSH Tunnel redirects this to the httpd of omega-bricked you see the uboot httpd upgrade page in your browser.
 ![uboot Firmware Update page](https://i.imgur.com/hS2fHtL.png)
 
-11. Download the latest version of the Omega firmware from http://repo.onion.io/omega/images. Newest firmware has the highest build number.
+11. Download the latest version of the Omega firmware from **http://repo.onion.io/omega/images**. Newest firmware has the highest build number.
 
 12. Click on the **Choose File** button and select the binary you downloaded in the previous step and click on the **Update!** button to start the flashing process. Once the firmware has been uploaded, you will see the following confirmation page:
 ![uboot Firmware confirmation page](https://i.imgur.com/bJ3HEBZ.png)
