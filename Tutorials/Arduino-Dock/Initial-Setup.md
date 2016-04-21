@@ -107,12 +107,18 @@ On the Omega's terminal and run the following command:
 sh /usr/bin/arduino-dock flash bootloader
 ```
 
-Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and the amber LED next to the DC connector should be flickering.
+Unless there were errors in the programming sequence, the Arduino Dock should now have the Bootloader installed and **the amber LED next to the DC connector should be flickering.**
+
 
 ### Summary
+
 Once this is complete, the extra wires and the Expansion Dock are no longer required! 
 Check out the [[guide on using the Arduino Dock|Using the Arduino Dock]] for what to do next.
 
+
+### Resolving Issues
+
+If the amber LED on the Arduino Dock is not flickering after the bootloader upload or if you experience issues flashing sketches, try the ICSP bootloader flashing method described in the [section below](#arduino-dock-setup_using-the-omega-expansion-dock-with-the-arduino-dock-icsp-header).
 
 
 [//]: # (Omega + Exp Dock -> ICSP Headers)
