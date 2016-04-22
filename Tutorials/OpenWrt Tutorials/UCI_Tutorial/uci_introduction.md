@@ -81,3 +81,8 @@ Give it a few seconds and your Omega should broadcast a secured wifi signal. To 
 
 And voila, you have just used uci to secure your Omega access point. 
 
+
+
+### More Information
+
+For more details on UCI, visit the [OpenWRT UCI Technical Reference article](https://wiki.openwrt.org/doc/uci)

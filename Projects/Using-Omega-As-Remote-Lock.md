@@ -84,12 +84,11 @@ You will need a way to attach your motor to your door and turn the lock. You can
 
 # Step 4: Controlling your servo through ubus
 
-In order to run commands outside of the terminal for an app, you can use [ubus].
+We will use the ubus to run commands from the app. For more information about the ubus, please take a look at our [ubus tutorial series](https://wiki.onion.io/Tutorials/Contents#introduction-to-openwrt)
 
-Navigate to `/usr/libexec/rpcd/`
+To setup a new ubus service: first navigate to `/usr/libexec/rpcd/` and then we can use a [template](https://github.com/OnionIoT/smart-lock/blob/master/tutorial/rpcd/template) to build the ubus service. 
 
-The ‘expled’ file is really small so it makes a good template to write scripts. Copy and edit it.
-If you modified your motor, the sleep integer may have to be adjusted based on how much it is required to turn. Otherwise, you do not need conditional statements. The script we have basically runs the motor on slot 8 for sleep seconds and set the state of the lock. If you are using UCI, you may want to add a function to force the motor to a position in case the lock status is incorrect. This may happen if someone uses a key to unlock a door so the status is still locked.
+If you modified your servomotor, the sleep integer may have to be adjusted based on how much it is required to turn. Otherwise, you do not need conditional statements. The script we have basically runs the motor on channel 8 for 'sleep' seconds and set the state of the lock. If you are using UCI, you may want to add a function to force the motor to a position in case the lock status is incorrect. This may happen if someone uses a key to unlock a door so the status is still locked.
 
 [Here] is our code.
 
@@ -127,20 +126,21 @@ You are now finished. Attach your motor to your door and test it. Don't forget t
 
 [//]: # (Using the Project)
 
-# *Using the Project*
+# Using the Project
 
 Simply press the buttons on your app to tell the servo to lock or unlock your door.
 
-## *Going Further*
+## Going Further
 
-You may want to connect your app to the web so it can be used from outside of your home's wifi signal.
+You may want to connect your app to the web so it can be used even when you're not within range of the WiFi network to which the Omega is connected.
+
 
    [motors]: <http://www.jameco.com/jameco/workshop/howitworks/how-servo-motors-work.html>
    [servo expansion]: <https://wiki.onion.io/Tutorials/Expansions/Using-the-Servo-Expansion>
    [continuous rotation]: <https://www.flickr.com/photos/randomskk/2569969633/in/photostream/>
    [OpenWRT]: <https://wiki.openwrt.org/>
-   [UCI]: <https://wiki.openwrt.org/doc/uci>
-   [ubus]: <https://wiki.openwrt.org/doc/techref/ubus>
+   [UCI]: <https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UCI_Tutorial/uci_introduction>
+   [ubus]: <https://wiki.onion.io/Tutorials/Contents#introduction-to-openwrt>
    [Polymer]: <https://www.polymer-project.org/1.0/docs/start/getting-the-code.html>
    [files]: <https://github.com/OnionIoT/Onion-Console/tree/master/www/apps>
    [Here]: <https://github.com/OnionIoT/smart-lock/blob/master/tutorial/rpcd/onion-lock>
