@@ -1,11 +1,17 @@
-# Using the omega to remotely lock your door
 
-The main goal of this project is to control servo devices with the Omega via wifi.
+# Creating a Wireless, Automatic Door Lock
 
+This guide will show you how to use the Omega to build an internet-enabled automatic lock for any door with a single cylinder deadbolt. 
+
+We will be taking a regular deadbolt like this:
+![old lock](http://i.imgur.com/t8WYeFG.jpg "old")
+
+And making it wirelessly controllable:
 ![alt text](http://i.imgur.com/jUdyXu0.jpg "Setup")
 ![alt text](http://i.imgur.com/8REyJEO.jpg "Setup")
 
-We will be using OpenWRT, shell script, and JavaScript to create an app that will lock and unlock deadbolt locks.
+This guide will show you how to setup the physical mechanism to lock & unlock the deadbolt, and the software required to control the mechanism wirelessly.
+
 
 [[_TOC_]]
 
@@ -13,9 +19,9 @@ We will be using OpenWRT, shell script, and JavaScript to create an app that wil
 
 # Overview
 
-Tutorial Diifficulty:
+Tutorial Difficulty:
 
-**Beginner**
+**Intermediate**
 
 Time Required:
 
@@ -27,25 +33,26 @@ Required Materials:
 * The Servo Expansion
 * A Servo Motor
 * A Motor Casing
-* A Power supply
+* A MicroUSB Power supply
 
 Useful Experience:
 * Using the Servo Expansion
-* Using Shell Script
+* Using Shell Scripts
 * Using JavaScript
-* Familiar with OpenWRT
+* Familiarity with the Omega
 
 
 
 # Background Info
-A servo is a device that will position itself at a specific angular position based on a signal. Our servo expansion has a function that will send this signal. This device can be used to lock and unlock a door.
+A servomotor is a device that will position itself at a specific angular position based on a pulse-width modulated signal. The Onion Servo Expansion was specifically created to control servomotors. Using this combination, we will be able to turn a deadbolt lock at will.
+
 
 
 [//]: # (The Actual Process)
 
 # The Actual Process
 
-We are going to prepare the servo, accessories, and hardware. After that, we will configure the command to activate the servo and then create an app that makes use of the command.
+We are going to prepare the servo, accessories, and hardware. After that, we will configure the commands to activate the servo and then create an app that makes use of the command.
 
 All of the code can be found on this GitHub repo:
 https://github.com/OnionIoT/smart-lock/tree/master/tutorial
