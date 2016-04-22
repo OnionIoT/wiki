@@ -1,7 +1,7 @@
 
-# Creating a Wireless, Automatic Door Lock
+# Creating a WiFi-controlled Automatic Door Lock
 
-This guide will show you how to use the Omega to build an internet-enabled automatic lock for any door with a single cylinder deadbolt. 
+This guide will show you how to use the Omega to build an WiFi-controlled automatic lock for any door with a single cylinder deadbolt. 
 
 We will be taking a regular deadbolt like this:
 
@@ -35,7 +35,7 @@ Required Materials:
 * The Expansion Dock
 * The Servo Expansion
 * A Servo Motor
-* A Motor Casing
+* A Casing to attach the motor to the deadbolt
 * A MicroUSB Power supply
 
 Useful Experience:
