@@ -4,12 +4,12 @@
 This guide will show you how to use the Omega to build an internet-enabled automatic lock for any door with a single cylinder deadbolt. 
 
 We will be taking a regular deadbolt like this:
-![old lock](http://i.imgur.com/t8WYeFG.jpg "old")
+![old lock](http://i.imgur.com/J4NWktK.png "regular lock")
 
 And making it wirelessly controllable using the Omega:
 
-![alt text](http://i.imgur.com/8REyJEO.jpg "Setup")
-![alt text](http://i.imgur.com/jUdyXu0.jpg "Setup")
+![alt text](http://i.imgur.com/8REyJEO.jpg "Physical Mechanism")
+![alt text](http://i.imgur.com/jUdyXu0.jpg "Omega Setup")
 
 
 This guide will show you how to setup the physical mechanism to lock & unlock the deadbolt, and the software required to control the mechanism wirelessly.
