@@ -84,13 +84,13 @@ You will need a way to attach your motor to your door and turn the lock. You can
 
 # Step 4: Controlling your servo through ubus
 
-We will use the ubus to run commands from the app. For more information about the ubus, please take a look at our [ubus tutorial series](https://wiki.onion.io/Tutorials/Contents#introduction-to-openwrt)
+We will use the ubus to run commands from the app. For more information about the ubus, please take a look at our [ubus tutorial series](https://wiki.onion.io/Tutorials/Contents#introduction-to-openwrt).
 
 To setup a new ubus service: first navigate to `/usr/libexec/rpcd/` and then we can use a [template](https://github.com/OnionIoT/smart-lock/blob/master/tutorial/rpcd/template) to build the ubus service. 
 
 If you modified your servomotor, the sleep integer may have to be adjusted based on how much it is required to turn. Otherwise, you do not need conditional statements. The script we have basically runs the motor on channel 8 for 'sleep' seconds and set the state of the lock. If you are using UCI, you may want to add a function to force the motor to a position in case the lock status is incorrect. This may happen if someone uses a key to unlock a door so the status is still locked.
 
-[Here] is our code.
+Our ubus service code can be found in the [GitHub repo].
 
 [//]: # (Adding ubus Permissions)
 
@@ -143,6 +143,6 @@ You may want to connect your app to the web so it can be used even when you're n
    [ubus]: <https://wiki.onion.io/Tutorials/Contents#introduction-to-openwrt>
    [Polymer]: <https://www.polymer-project.org/1.0/docs/start/getting-the-code.html>
    [files]: <https://github.com/OnionIoT/Onion-Console/tree/master/www/apps>
-   [Here]: <https://github.com/OnionIoT/smart-lock/blob/master/tutorial/rpcd/onion-lock>
+   [GitHub Repo]: <https://github.com/OnionIoT/smart-lock/blob/master/tutorial/rpcd/onion-lock>
    [example code]: <https://github.com/OnionIoT/smart-lock/blob/master/tutorial/onion-lock>
    [These]: <https://github.com/OnionIoT/smart-lock/tree/master/tutorial/models>
