@@ -2,6 +2,8 @@
 
 The Omega can read and write to USB storage devices, such as USB keys, and USB external harddrives. This tutorial will show you how to manually mount and unmount storage, and then how to setup automatic mounting.
 
+![Omega + USB Drive](http://i.imgur.com/MpBslLz.jpg)
+
 *This tutorial is on how to use USB drive as separate storage device. If you want to use the USB storage device as Rootfs (i.e. if you want to install `opkg` packages on the USB storage device), then read [[Tutorials/Using-USB-Storage-as-Rootfs]]*.
 
 
@@ -145,6 +147,8 @@ Even when automatically mounting a USB drive, it still has to be unmounted befor
 ```
 block umount
 ```
+
+
 
 
 
