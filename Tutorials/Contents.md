@@ -112,6 +112,12 @@ The BLE Expansion can be used to add Bluetooth connectivity to the Omega:
 The Omega is very versatile when it comes to WiFi networks, the following guides illustrate some of that flexibility:
 
 * [Connecting to a WiFi Hotspot that requires a login](./Connecting-Omega-to-Wifi-Hotspot-that-Requres-Login)
+* [Finding the Omega's IP address](./Find-the-Omegas-IP-address)
+* [Sharing Directories on the Omega using Samba](./Sharing-with-Samba)
+
+
+## The Omega and Networking
+
 * [Using the Omega as a Router](./Using-Omega-As-A-Router)
 * [Using the Omega as a WiFi Range Extender](./Using-Omega-As-Wifi-Range-Extender)
 * [Using the Omega as a WiFi Ethernet Bridge](./Using-Omega-As-Wifi-Ethernet-Bridge)
