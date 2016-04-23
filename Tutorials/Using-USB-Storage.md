@@ -1,6 +1,6 @@
 # Using USB Storage with the Omega
 
-The Omega can read and write to USB storage devices, such as USB keys, and USB external harddrives. This tutorial will show you how to manually mount and unmount storage, and then how to setup automatic mounting.
+The Omega can read and write to USB storage devices, such as USB keys, and USB external hard-drives. This tutorial will show you how to manually mount and unmount storage, and then how to setup automatic mounting.
 
 ![Omega + USB Drive](http://i.imgur.com/MpBslLz.jpg)
 
@@ -149,7 +149,13 @@ block umount
 ```
 
 
+[//]: # (What's Next)
 
+# What's Next?
+
+Now that your USB drive is mounted, you can use it to store all sorts of different data. For instance, you can set it up so the [Omega's root filesystem is run from the USB device](Using-USB-Storage-as-Rootfs). You can also setup a [Samba share](./Sharing-with-Samba) so that users on your local network can access the USB drive wirelessly. It's really up to you!
+
+Happy hacking!
 
 
 

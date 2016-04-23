@@ -2,11 +2,11 @@
 
 *This tutorial is on how to use the USB storage device as the rootfs. If you simply want to use the USB storage device to store files (i.e., you won't be installing anything to it), then read [[Tutorials/Using-USB-Storage]]*.
 
-The Omega comes with 16MB of flash storage. While this is enough for the majority of hardware-related tasks, having extra storage space is always better. Even though you can plug in external USB storage devices to teh Omega, but because application packages are typically designed to be installed in the root filesystem (rootfs), those of you who want to install larger `opkg` packages would still be limited by the 16MB flash size.
+The Omega comes with 16MB of flash storage. While this is enough for the majority of hardware-related tasks, having extra storage space is always better. Even though you can plug in external USB storage devices to the Omega, but because application packages are typically designed to be installed in the root filesystem (rootfs), those of you who want to install larger `opkg` packages would still be limited by the 16MB flash size.
 
 Luckily, with extroot, you can mount your USB storage device to the rootfs. There are two approaches to this:
 * With **pivot-overlay**, you can mount your USB storage device to `/overlay`, which is the writable part of your filesystem that's merged with `/rom` (the read-only part of your filesystem) to generate `/`.
-* With **pivot-root**, you can mount your USB storage device to both `/overlay` and `/rom`, which essentially allows you to replace Omega's on-board flash with yoru USB storage device.
+* With **pivot-root**, you can mount your USB storage device to both `/overlay` and `/rom`, which essentially allows you to replace Omega's on-board flash with your USB storage device.
 
 [[_TOC_]]
 
