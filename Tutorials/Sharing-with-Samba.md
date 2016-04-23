@@ -187,7 +187,7 @@ When you want to disconnect, find the mapped network drive on the sidebar, right
 
 # Summary
 
-Samba allows us to share directories on our Omega with the local network. This comes in handy if your Omega is collecting information or connected to a USB hard-drive that you would like to access from your computer at any time.
+Samba allows us to share directories on our Omega with the local network. This comes in handy if your Omega is [connected to a USB hard-drive](./Using-USB-Storage) or collecting information that you would like to access from your computer at any time.
 
 Happy hacking!
 
