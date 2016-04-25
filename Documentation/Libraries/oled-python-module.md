@@ -1,4 +1,4 @@
-# Onion OLED Expansion Library for Python
+# OLED Expansion Library for Python
 
 As a part of our efforts to extend support for python, we have created a library to control our OLED Expansion. Using the python library, you will be able to control the OLED display from within your python program. 
 
