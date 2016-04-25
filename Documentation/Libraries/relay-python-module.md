@@ -1,4 +1,4 @@
-# Relay Expansion Library
+# Relay Expansion Library for Python
 
 As a part of our efforts to extend support for python, we have created a library to control our Relay Expansion. Using the python library, you will be able to control the Relay Expansion from within your python program.
 [//]: # (LAZAR: Add image of relay-exp here)
