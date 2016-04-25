@@ -54,6 +54,6 @@ Documentation of the use of any Libraries written by the Onion team:
 * Libraries for Omega Expansions
   * [PWM Expansion C Library and Python Module](./Libraries/PWM-Expansion-Library)
   * [Relay Expansion C Library and Python Module](./Libraries/Relay-Expansion-Library)
-  * [OLED Expansion C Library and Python Module](./Libraries/OLED-Expansion-Library)
+  * [OLED Expansion C Library and Python Module](./Libraries/oled-python-module.md)
 * Arduino Dock Libraries
   * [Controlling Neopixels: C Library and Python Module](./Libraries/Arduino-Dock-Neopixel-Library)
