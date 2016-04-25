@@ -1,12 +1,8 @@
 # Relay Expansion Library
 
-The Onion Relay Expansion library, `libonionrelayexp` is a dynamic C library that provides functions to setup and change the state of the relays on the Relay Expansion. 
-
+As a part of our efforts to extend support for python, we have created a library to control our Relay Expansion. Using the python library, you will be able to control the Relay Expansion from within your python program.
 [//]: # (LAZAR: Add image of relay-exp here)
 
-The library can be used in C programs for now, C++ support is coming soon. 
-
-This library is also available as a module for use in Python. The module is called `relayExp` and is part of the `OmegaExpansion` package.
 
 
 [[_TOC_]]

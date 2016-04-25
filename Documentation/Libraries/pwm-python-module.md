@@ -1,6 +1,6 @@
 # PWM Expansion Library for Python
 
-As a part of our efforts to extend support for python, we have created a library to control our Servo Expansion. Using the python library, you will be able to control the PWM display from within your python program.
+As a part of our efforts to extend support for python, we have created a library to control our Servo Expansion. Using the python library, you will be able to control the PWM expansion from within your python program.
 
 ![PWM Expansion Photo](http://i.imgur.com/aNoYCZc.png)
 
