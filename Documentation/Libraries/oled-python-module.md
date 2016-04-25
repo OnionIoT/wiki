@@ -4,7 +4,7 @@ As a part of our efforts to extend support for python, we have created a library
 
 [[_TOC_]]
 
-[//]: # (MAJOR HEADING)
+
 [//]: # (The Python Module)
 
 # The Python Module
