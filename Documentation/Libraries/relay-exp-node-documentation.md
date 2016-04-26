@@ -1,4 +1,4 @@
-# **Relay Expanion Node Addon**
+# **Relay Expansion Node Addon**
 
 The Onion Relay Node Addon, relay-node-addon is a wrapper around the libonionrelayexp dynmic C library that provides functions to setup and control the relay expansion. 
 
