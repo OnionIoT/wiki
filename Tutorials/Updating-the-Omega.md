@@ -66,26 +66,25 @@ This will start the the download of the new firmware from our servers, and will 
 
 Once the Omega has rebooted, the update has completed and your Omega is ready to go!
 
-# Getting back to a factory-like Omega
----
-We all love our Onion Omega's and there are tons of things you can do with them. But because of the versatility you may find your self in a situation where you would like to start-over and get it to it's original out of the box state. To do this it takes an operational Omega. Credits to [ChrisMcCaslin](https://community.onion.io/user/chris-mccaslin) for contributing this.
+# Getting back to a Factory Image Omega
 
-## Step one:
-Download the default firmware to your /tmp/ directory (This has a 16mb capacity) using this command.
+We all love our Omegas and there are tons of things you can do with them. But because of the versatility you may find your self in a situation where you would like to start-over and get it to it's original out of the box state. To do this it takes an operational Omega. 
+
+*Credits to [ChrisMcCaslin](https://community.onion.io/user/chris-mccaslin) for contributing this section*
+
+## Step 1:
+Download the default firmware to your '/tmp/' directory (this is the Omega's RAM) using this command:
 ```
 wget http://repo.onion.io/omega/images/omega-v0.0.1-b156.bin /tmp/openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin
 ```
 ![Me downloading factory firmware on my webcam server](http://i.imgur.com/YHvakiu.png "Me downloading factory firmware on my webcam server")
 
-## Step two:
-Install the factory firmware with the option to overwrite /etc/
+## Step 2:
+Install the factory firmware with the option to overwrite `/etc/`
 ```
 sysupgrade -n /tmp/openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin
 ```
-### Warning after YOU WILL NEED TO UPDATE YOUR FIRMWARE. This will show you how to reset it to factory firmware (0.0.1 b156)
 
-If you would like to skip this updating to newest firmware step than for step one do not use the command
-```
-wget http://repo.onion.io/omega/images/omega-v0.0.1-b156.bin /tmp/openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin
-```
-Replace `http://repo.onion.io/omega/images/omega-v0.0.1-b156.bin` with the newest firmware provided from the [Offical-Repo](http://repo.onion.io/omega/images/)
+## Step 3:
+Now your Omega is on the factory firmware (0.0.1 b156). You will need to update your firmware to get all of the latest features made available by Onion!
+
