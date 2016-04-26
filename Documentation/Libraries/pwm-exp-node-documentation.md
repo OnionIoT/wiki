@@ -9,7 +9,7 @@ The Onion Servo(PWM) Node Addon, pwm-node-addon is a wrapper around the libonion
 [//]: # (Programming Flow)
 
 
-## **Programming Flow **
+## **Programming Flow**
 
 After each power-cycle, the chip that controls the PWM Expansion must be programmed with an initialization sequence to enable the on-board oscillator so that PWM signals can be generated.
 
@@ -17,7 +17,7 @@ After the initialization, the other functions can be used to generate PWM signal
 
 Additionally, it is possible to disable to the oscillator, disabling the generation of all PWM signals at once. Before generating new PWM signals, the initialization sequence must be run again.
 
-## **Channels **
+## **Channels**
 
 The PWM Expansion has 16 channels that can generate distinct PWM signals. Note that they will all be running on the same frequency.
 
@@ -107,7 +107,7 @@ Let's check if the oscillator is initialized.
 pwmAddon.checkInit();
 ```
 [//]: # (Generate PWM Signal Function)
-#### ** Generate a PWM Signal **
+#### **Generate a PWM Signal**
 Here we go! Use this function to generate a PWM signal on a specified channel:
 ```
 pwmAddon.setupDriver(int driverNum, float duty, float delay);
@@ -147,7 +147,7 @@ Set all channels to a 15.65% duty cycle PWM signal:
 pwmAddon.setupDriver(-1, 15.65f, 0.0f);
 ```
 [//]: # (Set Signal Frequency)
-#### ** Set PWM Signal Frequency **
+#### **Set PWM Signal Frequency**
 
 The oscillator can be reprogrammed to generate a variety of different frequencies:
 ```
