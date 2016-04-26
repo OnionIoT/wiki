@@ -1,4 +1,4 @@
- I2C Library
+# I2C Python Library
 
 The Onion I2C Library, `libonioni2c` is a dynamic C library that provides functions to easily read from and write to devices communicating with the Omega via I2C. The library can be used in C and C++ programs.
 
