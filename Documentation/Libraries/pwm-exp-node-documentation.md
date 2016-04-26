@@ -173,7 +173,7 @@ pwmAddon.setFrequency(105.45);
 pwmAddon.setupDriver(13,82,0);
 ```
 [//]: # (Disable Oscillator)
-#### ** Disabling the Oscillator **
+#### **Disabling the Oscillator**
 The oscillator can also be disabled, automatically stopping all PWM signal generation:
 ```
 pwmAddon.diableChip();
