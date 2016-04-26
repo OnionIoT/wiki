@@ -51,9 +51,18 @@ Documentation of the use of any Libraries written by the Onion team:
   * [I2C C Library and Python Module](./Libraries/I2C-Library)
   * [SPI C Library and Python Module](./Libraries/SPI-Library)
   * [GPIO Python Module](./Libraries/GPIO-Library)
-* Libraries for Omega Expansions
-  * [PWM Expansion C Library and Python Module](./Libraries/PWM-Expansion-Library)
-  * [Relay Expansion C Library and Python Module](./Libraries/Relay-Expansion-Library)
-  * [OLED Expansion C Library and Python Module](./Libraries/OLED-Expansion-Library)
+* C Libraries for Omega Expansions
+  * [PWM Expansion](./Libraries/pwm-expansion-library-c-documentation)
+  * [Relay Expansion](./Libraries/relay-expansion-library-c-documentation)
+  * [OLED Expansion](./Libraries/oled-expansion-library-c-documentation)
+* Python Libraries for Omega Expansions
+  * [PWM Expansion](./Libraries/pwm-python-module)
+  * [Relay Expansion](./Libraries/relay-python-module)
+  * [OLED Expansion](./Libraries/oled-python-module)
+* Node Addons for Omega Expansions
+  * [PWM Expansion](./Libraries/pwm-exp-node-documentation)
+  * [Relay Expansion](./Libraries/relay-exp-node-documentation)
+  * [OLED Expansion](./Libraries/oled-node-documentation)
+  
 * Arduino Dock Libraries
   * [Controlling Neopixels: C Library and Python Module](./Libraries/Arduino-Dock-Neopixel-Library)
