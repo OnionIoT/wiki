@@ -1,8 +1,6 @@
 #**OLED Expansion for Node.js**
 
 
-## **Introduction**:
-
 As a part of our efforts to add expansion support to node.js, we have added control of the OLED expansion by way of node.js addon. To use the display within your node.js programs, all you have to do is import the oled addon in the same way as a module and call methods to control the display. The addon is a wrapper around the OLED C library.The library's documentation can be found [here](https://wiki.onion.io/Documentation/Libraries/OLED-Expansion-Library), many of the node functions follow the same input-output structure as the C library.
 
 [[_TOC_]]
@@ -484,7 +482,7 @@ oledAddon.write("Onion Omega\nInventing the Future\n\nToday");
 The OLED can scroll the contents of the screen horizontally or upwards at a 45 degree angle. The displayed content will wrap around when it reaches the edge of the display.
 
 [//]: # (Horizontal scrolling)
-#### **Horizontal Scrolling***
+#### **Horizontal Scrolling**
 Scroll the contents of the screen horizontally or upwards at a 45 degree angle. Contents will wrap around after reaching edge of display
 ```
 oledAddon.scroll(int direction, int scrollSpeed, int startPage, int stopPage);
@@ -519,7 +517,7 @@ Determines the number of frames between each scroll step.
 Thes two arguments define which page to start and stop scrolling at respectively. Both can have values between 0-7, however **_startPage must be less than stopPage_**.
 
 
-#####** Example**
+##### **Example**
 Let's scroll the entire screen to the left
 ```
 oledAddon.scroll(0,0,0,7);
@@ -570,7 +568,7 @@ Defines the number of vertical rows to scroll by each frame.
 
 Thes two arguments define which page to start and stop scrolling at respectively. Both can have values between 0-7, however **_startPage must be less than stopPage_**.
 
-####**Examples**
+#### **Examples**
 Let's scroll the entire screen upwards to the left.
 ```
 oledAddon.scrollDiagonal(0,5,0,127,1,0,7);

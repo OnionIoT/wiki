@@ -4,6 +4,11 @@ The Onion Servo(PWM) Node Addon, pwm-node-addon is a wrapper around the libonion
 
 ![imgur](http://i.imgur.com/aNoYCZc.png)
 
+[[_TOC_]]
+
+[//]: # (Programming Flow)
+
+
 ## **Programming Flow **
 
 After each power-cycle, the chip that controls the PWM Expansion must be programmed with an initialization sequence to enable the on-board oscillator so that PWM signals can be generated.
@@ -16,6 +21,7 @@ Additionally, it is possible to disable to the oscillator, disabling the generat
 
 The PWM Expansion has 16 channels that can generate distinct PWM signals. Note that they will all be running on the same frequency.
 
+[//]: # (PWM Signal Refresher)
 ## **PWM Signal Refresher**
 
 Pulse Width Modulated signals can be described with duty cycle percentages and frequencies/periods:
@@ -28,11 +34,13 @@ The frequency determines the overall period of the pulse.
 
 For a more detailed explanation, see the guide on using the [Servo Expansion](https://wiki.onion.io/Tutorials/Expansions/Using-the-Servo-Expansion#pwm-signals).
 
+[//]: # (MAJOR HEADING)
+[//]: # (The Node Addon)
 ## **The Node Addon**
 
 
 The pwm-exp-addon exposes a series of methods that perform all of the actions specified in the Programming Flow section.
-
+[//]: # (Using the Addon)
 ### **Using the Addon**
 
 Install the addon into your project folder from our repo using opkg install.
@@ -40,6 +48,7 @@ Install the addon into your project folder from our repo using opkg install.
 ```
 opkg install pwm_addon
 ```
+[//]: # (Return Values)
 ### **Return Values**
 
 All of the functions will either return a 0 indicating success or 1 indicating failure.
@@ -51,7 +60,7 @@ To use the addon within your script you have to import it into your node program
 ```
 var oledAddon = require("./pwm-node-addon");
 ```
-
+[//]: # (Calling Methods)
 ### **Calling Methods**
 
 Methods are called in the following format. 
@@ -60,6 +69,7 @@ Methods are called in the following format.
 pwmAddon.method();
 ```
 Replace method with your funcion of interest. 
+[//]: # (Available Methods)
 ### **Available Methods**
 
 Refer to the table below for a list and brief description of available pwm methods. 
@@ -72,7 +82,11 @@ Refer to the table below for a list and brief description of available pwm metho
 |setFrequency(float freq)| 24-1526| Sets the frequency for the oscillator chip|
 |disableChip()|none|Disables the oscillator chip and stops all pwm signals|
 
+[//]: # (MAJOR HEADING)
+[//]: # (Usage)
 ## **Usage**
+
+[//]: # (Init Function)
 
 #### **Initialization Function**
 This function programs the initialization sequence on the Servo Expansion, after this step is completed, the functions to generate PWM signals or change the signal frequency can be used with success:
@@ -82,6 +96,7 @@ Let's initialize the display
 ```
 pwmAddon.driverInit();
 ```
+[//]: # (Check Init Function)
 #### **Check for Initialization**
 
 This function performs several reads to determine if the Servo Expansion has been initialized and the oscillator is running.
@@ -91,6 +106,7 @@ Let's check if the oscillator is initialized.
 ```
 pwmAddon.checkInit();
 ```
+[//]: # (Generate PWM Signal Function)
 #### ** Generate a PWM Signal **
 Here we go! Use this function to generate a PWM signal on a specified channel:
 ```
@@ -130,6 +146,7 @@ Set all channels to a 15.65% duty cycle PWM signal:
 ```
 pwmAddon.setupDriver(-1, 15.65f, 0.0f);
 ```
+[//]: # (Set Signal Frequency)
 #### ** Set PWM Signal Frequency **
 
 The oscillator can be reprogrammed to generate a variety of different frequencies:
@@ -155,6 +172,7 @@ pwmAddon.setupDriver(13,99,0);
 pwmAddon.setFrequency(105.45);
 pwmAddon.setupDriver(13,82,0);
 ```
+[//]: # (Disable Oscillator)
 #### ** Disabling the Oscillator **
 The oscillator can also be disabled, automatically stopping all PWM signal generation:
 ```
