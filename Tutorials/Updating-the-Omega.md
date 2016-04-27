@@ -75,14 +75,15 @@ We all love our Omegas and there are tons of things you can do with them. But be
 ## Step 1:
 Download the default firmware to your '/tmp/' directory (this is the Omega's RAM) using this command:
 ```
-wget http://repo.onion.io/omega/images/omega-v0.0.1-b156.bin /tmp/openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin
+cd /tmp
+wget http://repo.onion.io/omega/images/omega-v0.0.1-b156.bin
 ```
 ![Me downloading factory firmware on my webcam server](http://i.imgur.com/YHvakiu.png "Me downloading factory firmware on my webcam server")
 
 ## Step 2:
 Install the factory firmware with the option to overwrite `/etc/`
 ```
-sysupgrade -n /tmp/openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin
+sysupgrade -n /tmp/omega-v0.0.1-b156.bin
 ```
 
 ## Step 3:
