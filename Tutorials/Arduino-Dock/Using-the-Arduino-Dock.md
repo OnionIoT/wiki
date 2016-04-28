@@ -131,7 +131,7 @@ The sketch has been flashing and is running on the Arduino Dock, enjoy!
 [//]: # (Onion Arduino Library)
 
 ## The Onion Arduino Library
-The library provides some essential functionality for the Arduino Dock. For info on installing the Onion Arduino Library, check out [this section](Initial-Setup#computer-setup_installation-of-onion-arduino-library) of the Arduino Dock Initial Setup page.	
+The library provides some essential functionality for the Arduino Dock. For info on installing the Onion Arduino Library, check out [the installation instructions in the Arduino Dock Initial Setup article](Initial-Setup#computer-setup_installation-of-onion-arduino-library). The Onion Arduino Library has dependencies on other libraries so make sure to follow all of the listed steps.
 
 
 [//]: # (Onion Arduino Library: Basic Setup)
