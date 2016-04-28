@@ -112,4 +112,6 @@ where `<setup code>` is the code that you just copied from the Onion Cloud.
 
 And that's it! Your Omega is now connected to the Onion Cloud!
 
-For more information on how to use the Onion Cloud, please take a look at the tutorial here.
+Currently, we are still working on creating the documentation for the Onion Cloud. For now, you can remote control your Omega with the `Device Explorer` app. More tutorials and documentation will be made available soon.
+
+Happy Hacking!
