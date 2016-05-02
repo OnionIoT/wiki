@@ -47,6 +47,11 @@ The display keeps a cursor pointer in memory that indicates the current page and
 
 The `libonionoledexp` C library is a series of functions that perform all of the actions specified in the [Programming Flow section](#Programming-Flow). 
 
+
+[//]: # (Source Code)
+
+## Source Code
+
 The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
 
 

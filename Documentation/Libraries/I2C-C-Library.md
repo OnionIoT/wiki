@@ -25,6 +25,11 @@ The Onion I2C library uses the `/dev/i2c-0` adapter, and implements read and wri
 
 The `libonioni2c` C library is a series of functions that implement I2C communication through the Linux device interface. 
 
+
+[//]: # (Source Code)
+
+## Source Code
+
 The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
 
 

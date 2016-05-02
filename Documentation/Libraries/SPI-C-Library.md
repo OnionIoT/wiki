@@ -47,6 +47,11 @@ The Omega does not have an SPI bit-banging adapter setup by default, but this ca
 
 The `libonionspi` C library is a series of functions that implement SPI communication through the Linux device interface. 
 
+
+[//]: # (Source Code)
+
+## Source Code
+
 The source code can be found in the [Onion `spi-gpio-driver` GitHub Repo](https://github.com/OnionIoT/spi-gpio-driver).
 
 

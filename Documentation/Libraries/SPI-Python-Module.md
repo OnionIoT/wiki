@@ -45,6 +45,11 @@ The Omega does not have an SPI bit-banging adapter setup by default, but this ca
 
 The `onionSpi` Python module provides a Python object, `OnionSpi`, that serves as a wrapper around the C library functions. The usage is slightly different since the Python module is object oriented and the C library is just a set of functions.
 
+
+[//]: # (Source Code)
+
+## Source Code
+
 The source code can be found in the [Onion `spi-gpio-driver` GitHub Repo](https://github.com/OnionIoT/spi-gpio-driver).
 
 
