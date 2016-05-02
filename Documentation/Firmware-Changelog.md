@@ -26,6 +26,24 @@ The build number will continuously increment over the course of development.
 # Versions
 Definining the differences in each version change
 
+## 0.1.1
+**Brin M1 Release.**
+
+Firmware updates for stable Onion Cloud support!
+
+* Stable device client 
+* Support for GPS Expansion
+* Onion sh library fix: no longer creating blank log files
+
+## 0.1.0
+**Brin A2 Release.**
+
+Firmware includes support for the Onion Cloud!
+
+Console Updates:
+* Settings App now includes Cloud Settings Tab, used to register the device with the Cloud, and then to view the cloud registration info
+* OLED App can now save converted image files to the Omega
+
 ## 0.0.8
 **Ando A1 Release.**
 
@@ -83,7 +101,63 @@ Initial firmware sent to be flashed at the factory
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
-## b298
+## b308
+*April 29, 2016*
+
+**Firmware 0.1.1 Release**
+
+Console Updates
+* Now at Brin M1 codename
+* Settings App will no longer be cached
+
+## b307
+*April 28, 2016*
+
+* device-client version upped to 0.5
+  * Push out updates that fix connection hang in the event of a network outage
+
+## b306
+*April 20, 2016*
+
+* updates to the sh library to fix bug where blank tmp files kept getting created
+* updates to fast-gpio to fix blank tmp files bug
+* added ubus service to launch processes in the background
+
+## b304
+*April 15, 2016*
+
+* device-client version upped to 0.4
+  * Push out the updates that fix the curl and threading memory leaks
+* Updates to firmware database access scripts to decrease verbosity
+
+## b303
+*April 13, 2016*
+
+Build Server related:
+
+Updated firmware database access scripts to match new firmware database web API
+
+## b302
+*April 11, 2016*
+
+Added `ogps` to the onion packages repo. 
+
+## b301
+*April 10, 2016**
+
+Added script to use with buildroot automated compilation: Checks compile exit codes and retries up to 2 additional times, returns last compile exit code
+
+## b300
+*April 8, 2016*
+
+**Version 0.1.0 Firmware**
+
+* Added support for the Onion Cloud
+* Updated to latest version of the Console
+  * Settings App: Added Cloud Settings tab
+  * OLED App can now save converted images to the Omega
+
+## b299
 *April 4, 2016*
 
 * New wdb40 version: fixed issue with connecting to SSIDs with spaces
