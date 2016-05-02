@@ -48,20 +48,20 @@ Engineering drawings outlining the dimensions of the Omega and Expansions:
 Documentation of the use of any Libraries written by the Onion team:
 
 * C Communication Protocol Libraries
-  * [I2C C Library](./Libraries/I2C-Library_C)
-  * [SPI C Library](./Libraries/SPI_Library_C)
+  * [I2C C Library](./Libraries/I2C-C-Library)
+  * [SPI C Library](./Libraries/SPI-C-Library)
 * Python Communication Protocol Libraries
-  * [I2C Python Library](./Libraries/I2C-Library_Python)
-  * [SPI Python Library](./Libraries/SPI_Library_Python)
-  * [GPIO Python Module](./Libraries/GPIO-Library)
+  * [I2C Python Library](./Libraries/I2C-Python-Module)
+  * [SPI Python Library](./Libraries/SPI-Python-Module)
+  * [GPIO Python Module](./Libraries/GPIO-Python-Module)
 * C Libraries for Omega Expansions
-  * [PWM Expansion](./Libraries/pwm-expansion-library-c-documentation)
-  * [Relay Expansion](./Libraries/relay-expansion-library-c-documentation)
-  * [OLED Expansion](./Libraries/oled-expansion-library-c-documentation)
+  * [PWM Expansion](./Libraries/PWM-Expansion-C-Library)
+  * [Relay Expansion](./Libraries/Relay-Expansion-C-Library)
+  * [OLED Expansion](./Libraries/OLED-Expansion-C-Library)
 * Python Libraries for Omega Expansions
-  * [PWM Expansion](./Libraries/pwm-python-module)
-  * [Relay Expansion](./Libraries/relay-python-module)
-  * [OLED Expansion](./Libraries/oled-python-module)
+  * [PWM Expansion](./Libraries/PWM-Expansion-Python-Module)
+  * [Relay Expansion](./Libraries/Relay-Expansion-Python-Module)
+  * [OLED Expansion](./Libraries/OLED-Expansion-Python-Module)
   
 * Arduino Dock Libraries
   * [Controlling Neopixels: C Library and Python Module](./Libraries/Arduino-Dock-Neopixel-Library)

@@ -25,6 +25,8 @@ The Onion I2C library uses the `/dev/i2c-0` adapter, and implements read and wri
 
 The `libonioni2c` C library is a series of functions that implement I2C communication through the Linux device interface. 
 
+The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
+
 
 [//]: # (Programming Flow)
 
@@ -60,7 +62,7 @@ The dynamic libraries are stored in `/usr/lib` on the Omega.
 
 ## Example
 
-An example of how the `libonioni2c` library is used can be found in the implementation of the drivers for the [PWM, Relay, and OLED Expansions](https://github.com/OnionIoT/i2c-exp-driver)
+An example of how the `libonioni2c` library is used can be found in the GitHub Repo for the drivers for the [PWM, Relay, and OLED Expansions](https://github.com/OnionIoT/i2c-exp-driver).
 
 Specifically, a variety of functions are used in the [PWM Expansion source code](https://github.com/OnionIoT/i2c-exp-driver/blob/master/src/pwm-exp.c).
 
@@ -70,6 +72,20 @@ Specifically, a variety of functions are used in the [PWM Expansion source code]
 ## Functions
 
 Each of the main functions implemented in this library are described below.
+
+
+
+[//]: # (Function Flow)
+
+### Function Flow
+
+All of the functions follow the same general pattern:
+* Get a file descriptor to the I2C adapter
+* Inform the adapter which device to communicate with
+* Perform the function's main operation (read, write to the I2C adapter)
+* Release the I2C adapter device handle
+* Return the function status
+
 
 
 [//]: # (Return Values)
@@ -87,6 +103,7 @@ A few reasons why the function might not be successful:
 * The system I2C interface is currently in use elsewhere
 
 An error message will be printed that will give more information on the reason behind the failure.
+
 
 
 [//]: # (Read Functions)
@@ -328,15 +345,4 @@ int		val  	= 0x27f8e460;
 status 		= i2c_writeBytes(0, 0x30, 0x00, val, 4);
 ```
 
-
-[//]: # (Function Flow)
-
-## Function Flow
-
-All of the functions follow the same general pattern:
-* Get a file descriptor to the I2C adapter
-* Inform the adapter which device to communicate with
-* Perform the function's main operation (read, write to the I2C adapter)
-* Release the I2C adapter device handle
-* Return the function status
 

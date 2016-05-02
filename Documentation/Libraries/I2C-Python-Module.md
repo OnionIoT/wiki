@@ -22,6 +22,7 @@ The Onion I2C library uses the `/dev/i2c-0` adapter, and implements read and wri
 
 The `onionI2C` Python module in the `OmegaExpansion` package provides a Python object that serves as a wrapper around the C library functions. The usage is slightly different since the Python module is object oriented and the C library is just a set of functions.
 
+The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
 
 [//]: # (Python: Programming Flow)
 
