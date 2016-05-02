@@ -1,6 +1,6 @@
 # PWM Expansion Python Module
 
-As a part of our efforts to extend support for python, we have created a library to control our Servo Expansion. Using the python library, you will be able to control the PWM expansion from within your python program.
+The Onion PWM Expansion Python module, `pwmExp` is based on the [C PWM Expansion Library](./PWM-Expansion-C-Library). Using this module, you will be able to control the PWM Expansion from within your Python program. 
 
 ![PWM Expansion Photo](http://i.imgur.com/aNoYCZc.png)
 
@@ -45,6 +45,11 @@ For a more detailed explanation, see the guide on [using the Servo Expansion.](.
 # The Python Module
 
 The `pwmExp` Python module in the `OmegaExpansion` package provides a wrapper around the C library functions. The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below. 
+
+
+[//]: # (Source Code)
+
+## Source Code
 
 The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
 
