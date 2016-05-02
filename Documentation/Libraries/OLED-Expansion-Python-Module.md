@@ -1,4 +1,4 @@
-# OLED Expansion Library for Python
+# OLED Expansion Python Module
 
 As a part of our efforts to extend support for python, we have created a library to control our OLED Expansion. Using the python library, you will be able to control the OLED display from within your python program. 
 
@@ -38,6 +38,10 @@ The display keeps a cursor pointer in memory that indicates the current page and
 # The Python Module
 
 The `oledExp` Python module in the `OmegaExpansion` package provides a wrapper around the C library functions. The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below. 
+
+The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
+
+
 [//]: # (Using the Python Module)
 
 ## Using the Python Module

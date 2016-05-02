@@ -2,11 +2,11 @@
 
 The Onion Relay Expansion library, `libonionrelayexp` is a dynamic C library that provides functions to setup and change the state of the relays on the Relay Expansion. 
 
-[//]: # (LAZAR: Add image of relay-exp here)
+![Relay Expansion](http://i.imgur.com/iPswHOC.jpg)
 
-The library can be used in C programs for now, C++ support is coming soon. 
+The library can be used in C and C++ programs.
 
-This library is also available as a module for use in Python. The module is called `relayExp` and is part of the `OmegaExpansion` package.
+This library is also available as a [module for use in Python](./Relay-Expansion-Python-Module). The module is called `relayExp` and is part of the `OmegaExpansion` package.
 
 
 [[_TOC_]]
@@ -55,6 +55,9 @@ The table below defines the relationship:
 # The C Library
 
 The `libonionrelayexp` C library is a series of functions that perform all of the actions specified in the [Programming Flow section](#Programming-Flow). 
+
+The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
+
 
 [//]: # (Using the C Library)
 

@@ -1,8 +1,8 @@
-# Relay Expansion Library for Python
+# Relay Expansion Python Module
 
-As a part of our efforts to extend support for python, we have created a library to control our Relay Expansion. Using the python library, you will be able to control the Relay Expansion from within your python program.
-[//]: # (LAZAR: Add image of relay-exp here)
+As a part of our efforts to extend support for python, we have created a library to control our Relay Expansion. Using the python library, you will be able to control the Relay Expansion from within your Python program.
 
+![Relay Expansion](http://i.imgur.com/iPswHOC.jpg)
 
 
 [[_TOC_]]
@@ -49,6 +49,8 @@ The table below defines the relationship:
 # The Python Module
 
 The `relayExp` Python Module in the `OmegaExpansion` package provides a wrapper around the C library functions. The functions are largely the same as their C counterparts, including the arguments and return values. Any differences from the C library will be explicitly mentioned below. 
+
+The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
 
 
 

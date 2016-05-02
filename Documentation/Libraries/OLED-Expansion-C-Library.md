@@ -4,9 +4,9 @@ The Onion OLED Expansion library, `libonionoledexp` is a dynamic C library that 
 
 ![Omega+OLED Expansion](http://i.imgur.com/tqcRlgG.jpg)
 
-The library can be used in C programs for now, C++ support is coming soon.
+The library can be used in C and C++ programs.
 
-This library is also available as a module for use in Python. The module is called `oledExp` and is part of the `OmegaExpansion` package.
+This library is also available as a [module for use in Python](./OLED-Expansion-Python-Module). The module is called `oledExp` and is part of the `OmegaExpansion` package.
 
 [[_TOC_]]
 
@@ -46,6 +46,9 @@ The display keeps a cursor pointer in memory that indicates the current page and
 # The C Library
 
 The `libonionoledexp` C library is a series of functions that perform all of the actions specified in the [Programming Flow section](#Programming-Flow). 
+
+The source code can be found in the [Onion `i2c-exp-driver` GitHub Repo](https://github.com/OnionIoT/i2c-exp-driver).
+
 
 [//]: # (Using the C Library)
 
