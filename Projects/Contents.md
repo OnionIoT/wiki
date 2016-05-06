@@ -35,4 +35,4 @@ Streaming Music Using Bluetooth
 
 ## Using IFTTT with the Omega and Onion Cloud
 
-* [Triggering Oled Display on Omega from Smartphone](./IFTTT+Omega)
+* [Control the Omega using IFTTT and Onion Cloud](./IFTTT+Omega)
