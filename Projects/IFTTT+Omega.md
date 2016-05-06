@@ -5,7 +5,7 @@
 In this tutorial/mini-project, we will show you how to do some very cool things using IFTTT, the Omega and the Onion Cloud. In particular, we will use the _DO_ App on Andriod by IFTTT to send the date 
 and GPS information from your phone to be printed remotely on your Omega's OLED Expansion. This tutorial will give you a taste of the Onion Cloud and its capabilities. Let's get into it.
 
-![Imgur](http://i.imgur.com/I9kalcg.gifv)
+![Imgur](http://i.imgur.com/I9kalcg.gif)
 
 [[_TOC_]]
 
@@ -39,7 +39,7 @@ Time Required:
 
 [IFTTT](https://en.wikipedia.org/wiki/IFTTT) stands for "if this, then that", which is a web service that allows users to create custom tasks, which are called "recipes", that can set up 
 user's own conditional statement (e.g. if I receive a new email on my gmail account, then forward it to another account). The conditional statement could be as simple as if a button is 
-pressed, or as complex as you want. There is also "DO button" app in APPstore or Google Play store, ,which allows the recipe to be triggered by pressing a button on the app. We will be using te "DO" app in our tutorial.
+pressed, or as complex as you want. There is also "DO button" app in APPstore or Google Play store,which allows the recipe to be triggered by pressing a button on the app. We will be using te "DO" app in our tutorial.
  In the next section, I will explain what will be going on behind the scenes. 
 
 ![IFTTT](http://marketingland.com/wp-content/ml-loads/2012/09/ifttt-logo.jpg)
@@ -48,9 +48,8 @@ pressed, or as complex as you want. There is also "DO button" app in APPstore or
 
 ### Theory && Introduction
 
-The theory of using IFTTT to control our Omega is, when one event is triggered, a request is sent to the Onion Cloud via the Maker Channel. The Onion Cloud then sends a command
-to the device client, which is a program running on our local Omega. The device client then triggers a ubus function, and the ubus function determines what is going to happen on the Omega.
-We have built in ubus functions to control the Omega's expansion which is what we are using in this tutorial. If you would like to learn more about Ubus or would like to create your own 
+The theory of using IFTTT to control our Omega is, when one event is triggered, a request is sent to the Onion Cloud via the Maker Channel. The Onion Cloud then sends a Ubus to our local Omega.
+We have built in Ubus functions to control the Omega's expansion which is what we are using in this tutorial. If you would like to learn more about Ubus or would like to create your own 
 function, click [here](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)!
 
 ![Imgur](http://i.imgur.com/Un7BqbI.png)
@@ -71,9 +70,11 @@ Firstly you will need to create an Onion Account on the Onion Website which can 
  
 ### Get Your API Key
 
-Click on the Key Manager App that you saw when you first logged into the Onion Cloud. Make note of the key. 
-![Imgur](http://i.imgur.com/Vq7jyYI.png)
+Click on the Key Manager App that you saw when you first logged into the Onion Cloud. Make note of the key.
 
+Note: You will need to generate your key.
+![[Imgur](http://i.imgur.com/r7ZjCg3.png)
+![Imgur](http://i.imgur.com/Z9oPC1m.png)
 [//]: # (Step 2)
 
 ## Step 2: Setting Up IFTTT
@@ -86,7 +87,7 @@ Go to the IFTTT [website](https://ifttt.com/) and make an account. In the next s
 
 Download and open the DO Button App by IFTTT on your phone. Navigate to the My Recipes section and click the add button. I have included a series of screen shots to guide you through
 the steps on your phone. Once you have selected the Maker Channel, you will be prompted to connect to the maker channel. Once you have reached the final screen, choose a title for the recipe.
-I have made mine omega test. For the URL field, just put google.com for now and choose the POST for the Method. For Content type select "applications/JSON", scroll to the bottom and click add. We will now continue to modify the recipe
+I have made mine "omega test". For the URL field, just put google.com for now and choose the POST for the Method. For "Content type" select "applications/JSON", scroll to the bottom and click add. We will now continue to modify the recipe
 on the desktop.
 
 ![Imgur](http://i.imgur.com/hl5VhxB.png)
@@ -105,8 +106,8 @@ cloud and that points to your device and tells it to do something. Click on My R
 ### Get URL and Body Info From Cloud
 
 Login into the Onion Cloud. Then click on the "Device Explorer" App on the dashboard. Your Device should have a device ID and be connected to the cloud. 
-![Imgur](http://i.imgur.com/wijbk2m.png)
-![Imgur](http://i.imgur.com/fuSqa0h.png)
+![Imgur](http://i.imgur.com/ngeUQJE.png)
+![Imgur](http://i.imgur.com/r7ZjCg3.png)
 
 
 Click on the device and then the following tabs on the left i2c_exp&gt;&gt;oled-exp. You should reach the following screen.
@@ -149,7 +150,8 @@ following
 ```
 And click on the button beside the field. Select "OccuredAt" from the dropdown menu and click "Add Ingredient". Repeat the process selecting latitude and longtitude. You will also need
 to add a space between the last two curly closed brackets. Once you are done, your screen should look something like this and you can hit Update. 
-![Imgur](http://i.imgur.com/2NgR7i2.png)
+![Imgur](http://i.imgur.com/AYsu5nS.png)
+![Imgur](http://i.imgur.com/FdMqnWy.png)
 
 
 [//]: # (Step 4)
