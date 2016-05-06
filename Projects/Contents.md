@@ -32,3 +32,7 @@ Streaming Music using Airplay:
 Streaming Music Using Bluetooth
 
 * [Bluetooth Audio on Omega](../Tutorials/Bluetooth-Streaming-Audio)
+
+## Using IFTTT with the Omega and Onion Cloud
+
+* [Triggering Oled Display on Omega from Smartphone](./IFTTT+Omega)
