@@ -5,7 +5,7 @@
 In this tutorial/mini-project, we will show you how to do some very cool things using IFTTT, the Omega and the Onion Cloud. In particular, we will use the _DO_ App on Andriod by IFTTT to send the date 
 and GPS information from your phone to be printed remotely on your Omega's OLED Expansion. This tutorial will give you a taste of the Onion Cloud and its capabilities. Let's get into it.
 
-![Imgur](http://i.imgur.com/I9kalcg.gif)
+![Imgur](http://i.imgur.com/0bYYBsz.gif)
 
 [[_TOC_]]
 
