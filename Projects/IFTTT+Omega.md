@@ -112,7 +112,7 @@ Login into the Onion Cloud. Then click on the "Device Explorer" App on the dashb
 
 Click on the device and then the following tabs on the left i2c_exp&gt;&gt;oled-exp. You should reach the following screen.
 
-![Imgur](http://i.imgur.com/hGtCfrl.png)
+![Imgur](http://imgur.com/MQKGocR)
 
 Side Note:We have just selected the ubus command to control the Oled Display via the Onion Cloud. You can select another tab to issue a different command to the Omega. Using the steps below as a baseline, you can easily control any of the expansions using similar steps below.  
 
