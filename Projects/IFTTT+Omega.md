@@ -108,8 +108,7 @@ cloud and that points to your device and tells it to do something. Click on My R
 
 Login into the Onion Cloud. Then click on the **Device Explorer** App on the dashboard. Your Device should have a Device ID and be connected to the cloud. 
 ![Imgur](http://i.imgur.com/ngeUQJE.png)
-![Imgur](http://i.imgur.com/r7ZjCg3.png)
-
+![Imgur](http://i.imgur.com/9A92F9S.png)
 
 Click on the device and then the following tabs on the left `i2c_exp` and then `oled-exp`. You should reach the following screen:
 
