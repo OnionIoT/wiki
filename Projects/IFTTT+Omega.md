@@ -113,11 +113,12 @@ Login into the Onion Cloud. Then click on the **Device Explorer** App on the das
 
 Click on the device and then the following tabs on the left `i2c_exp` and then `oled-exp`. You should reach the following screen:
 
-![Imgur](http://i.imgur.com/hGtCfrl.png)
+![Imgur](http://i.imgur.com/MQKGocR.png)
 
-Side Note:We have just selected the ubus command to control the Oled Display via the Onion Cloud. You can select another tab to issue a different command to the Omega. Using the steps below as a baseline, you can easily control any of the expansions using similar steps below.  
+*Side Note:* We have just selected the ubus command to control the Oled Display via the Onion Cloud. You can select another tab to issue a different command to the Omega. Using the steps below as a baseline, you can easily control any of the expansions or other Omega functionality using steps similar to those below.
 
-Back to the tutorial:
+
+*Back to the tutorial:*
 
 In the command field enter:
 ```
@@ -139,10 +140,10 @@ it is the body.
 
 The URL will have the following form:
 ```
-https://api.onion.io/v1/devices/<device -id>/i2c_exp/oled-exp?key=<API-key>
+https://api.onion.io/v1/devices/<device-id>/i2c_exp/oled-exp?key=<API-key>
 ```
 
-You will need to replace <device -id> and <API-key> with your device ID and API key which you took note of earlier. Enter this into the URL Field. 
+You will need to replace <device-id> and <API-key> with your device ID and API key which you took note of earlier. Enter this into the URL Field. 
 
 Next, simply copy the JSON text inside the single quotes as is into the body field. Now let's add some ingredients, ie date and GPS coordinates. To do this place the cursor in between the empty quotation marks
 following 
