@@ -113,10 +113,12 @@ Your Device should have a Device ID and be connected to the cloud:
 ![Imgur](http://i.imgur.com/9A92F9S.png)
 
 Click on the device and then the following tabs on the left `i2c_exp` and then `oled-exp`. You should reach the following screen:
-
 ![Imgur](http://i.imgur.com/MQKGocR.png)
 
-*Side Note:* We have just selected the ubus command to control the Oled Display via the Onion Cloud. You can select another tab to issue a different command to the Omega. Using the steps below as a baseline, you can easily control any of the expansions or other Omega functionality using steps similar to those below.
+
+*Side Note:* 
+
+We have just selected the ubus command to control the Oled Display via the Onion Cloud. You can select another tab to issue a different command to the Omega. Using the steps below as a baseline, you can easily control any of the expansions or other Omega functionality using steps similar to those below.
 
 
 *Back to the tutorial:*
