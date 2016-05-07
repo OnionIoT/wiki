@@ -19,7 +19,7 @@ and GPS information from your phone to be printed remotely on your Omega's OLED 
 
 Time Required:
 
-**10 minutes**
+**20 minutes**
 
 **Required Materials**:
 * The Omega
@@ -138,6 +138,8 @@ In the params field enter:
 {"write":""}
 ```
 
+Take a look at the [i2c-exp-driver Read Me](https://github.com/OnionIoT/i2c-exp-driver#i2c-exp-driver) for details on controling the Servo, Relay, and OLED Expansions using ubus commands.
+
 The section under the curl command is what you will use to fill in the URL and body fields in the IFTTT recipe. The link at the end will be the URL to the Onion API and the JSON text before
 it is the body.
 
@@ -155,8 +157,8 @@ following
 ```
 And click on the button beside the field. Select "OccuredAt" from the dropdown menu and click "Add Ingredient". Repeat the process selecting latitude and longtitude. You will also need
 to add a space between the last two curly closed brackets. Once you are done, your screen should look something like this and you can hit Update. 
-![Imgur](http://i.imgur.com/AYsu5nS.png)
-![Imgur](http://i.imgur.com/FdMqnWy.png)
+![Imgur](http://i.imgur.com/UFPGoAo.png)
+![Imgur](http://i.imgur.com/CxAq7eb.png)
 
 
 [//]: # (Step 4)
