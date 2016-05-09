@@ -2,6 +2,9 @@
 
 The GPS expansion from Onion features a ublox neo GPS module, which allows seamless integration into your omega projects. The expansion outputs GPS data in the form of NMEA messages, which include all relevant information(latitude, longtitude...etc). For more info on the NMEA standard, refer to this [link](http://www.gpsinformation.org/dale/nmea.htm). We have prepared a package, ogps, to handle the NMEA messages and offer up the relevant information to the user via ubus calls. 
 
+[[_TOC_]]
+
+[//]: # (Hardware Setup)
 ##Hardware 
 
 Simply connect the GPS expansion into the USB port of your Omega's Dock.
@@ -30,7 +33,8 @@ This will print out the raw NMEA output.
 
 ![Imgur](http://i.imgur.com/PjMzWWQ.png)
 
-###Using ogps
+[//]: # (Installation)
+##Installing ogps
 
 You can also use `ogps` to access relevant data offered up by the GPS via ubus calls. To install ogps enter the following commands. 
 
@@ -52,7 +56,9 @@ You should see gps listed.
 
 ![Imgur](http://i.imgur.com/iqhoqut.png)
 
-To access the data simply run the command.
+[//]: # (Usage)
+##Usage
+Make sure your GPS is connected! To access the data simply run the command.
 
 ```
 ubus call gps info
@@ -66,7 +72,8 @@ Otherwise you should have an output that looks like this.
 
 ![Imgur](http://i.imgur.com/OHiEx6F.png)
 
-###Hardware Fix for Stability Issue
+[//]: # (Hardware fix for stability issue)
+##Hardware Fix for Stability Issue
 
 If you have given ample time (>10 min) and tested the module in an open area and it still doesn't work, you may need to make a change to your hardware setup. 
 
