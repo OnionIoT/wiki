@@ -130,10 +130,13 @@ The Omega is very versatile when it comes to WiFi networks, the following guides
 
 The Omega has 16MB of flash memory, this might be a little limiting in some cases. Plugging in a USB drive to the Omega's USB Host can help alleviate this issue:
 * [Using USB Storage](./Using-USB-Storage)
+* [The Omega's RAM can also be extended using USB Storage](./Extending-RAM-with-a-swap-file)
 
 
 It is also possible to run the Omega's OS from USB storage:
 * [Using USB Storage as ROOTFS](./Using-USB-Storage-as-Rootfs)
+
+
 
 
 
