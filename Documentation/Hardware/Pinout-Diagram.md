@@ -4,7 +4,7 @@
 
 ## Omega Pinout Diagram
 
-![Omega Pinout](//i.imgur.com/Oug8I8H.png)
+![Omega Pinout](//i.imgur.com/5wN5KKe.png)
 
 ## Expansion Dock Pinout Diagram
 

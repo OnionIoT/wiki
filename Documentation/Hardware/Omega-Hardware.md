@@ -135,7 +135,7 @@ The Omega has 18 digital GPIOs, running at 3.3V.
 
 The pinout is as follows:
 
-![Omega Pinout](http://i.imgur.com/Oug8I8H.png)
+![Omega Pinout](http://i.imgur.com/5wN5KKe.png)
 
 Two pins are designated for hardware I2C and one for software reset of the Omega.
 

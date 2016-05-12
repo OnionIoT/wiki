@@ -3,7 +3,7 @@
 The Omega has 15 GPIO pins that can be controlled with software. 
 The Expansion Dock allows for easy access to 12 GPIO pins and connects 3 pins to the LED on the Dock
 
-![Omega GPIO](//i.imgur.com/Oug8I8H.png)
+![Omega GPIO](//i.imgur.com/5wN5KKe.png)
 
 ## Using the Command Line
 
