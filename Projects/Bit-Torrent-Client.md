@@ -2,9 +2,9 @@
 
 As you probably already know, BitTorrent is a popular peer-to-peer file sharing protocol, with a variety of content available on the internet ready to be downloaded. Given the Omega's built-in networking capabilities and ability to use USB devices, we thought it would be only proper to show how the Omega can be setup for file-sharing using BitTorrent, specifically, the Transmission BitTorrent client.
 
-![Omega+Transmission](http://i.imgur.com/irhCtKr.png)
+![Omega+Transmission](http://i.imgur.com/j3AvApH.png)
 
-This guide will walk you through the entire process required to setup Transmission on the Omega. First we'll use a USB Drive to expand the Omega's storage and memory, then we'll install the Transmission client as well as a Onion Console App so that you can control your downloads using the Omega's Console. To finish it all off, we'll use Samba to share the Omega's downloads folder on your network.
+This guide will walk you through the entire process required to setup Transmission on the Omega. First we'll use a USB Drive to expand the Omega's storage and memory, then we'll install the Transmission client as well as a Onion Console App so that you can control your downloads using the Omega's Console. To finish it all off, we'll wirelessly share the Omega's downloads folder on your local network.
 
 **Disclaimer:**
 Onion does not condone illegal downloading, only download content that is legally distributable! Onion is not responsible for any reprecussions due to downloading copyrighted or illegal content.
@@ -178,9 +178,11 @@ Restart the Transmission daemon with `/etc/init.d/transmission restart` for the 
 
 In the most common case, your Omega will be connected to an existing WiFi network at your home or office, so we should allow access to any users on that network as well.
 
-First we need to find the Omega's IP Address, follow the steps outlined in [this tutorial](../Tutorials/Find-the-Omegas-IP-address), and make note of the IP Address.
+We will need to find the range of IP Addresses that your router assigns to devices on the network. We can do this by checking the Omega's IP Adrress, follow the steps outlined in [this tutorial](../Tutorials/Find-the-Omegas-IP-address), and make note of the IP Address.
 
-Most routers are setup to assign IP addresses in the `192.168.1.*` range which is whitelisted by default. If that's the case, you can skip the rest of this step! If not, we will need to add to the whitelist, making sure to preserver the previous entries.
+Alternatively, you can check the IP Address of any device on your network to achieve the same effect. The procedure is simple but different depending on the type of device you are using, try googling 'Find IP address on `your device`'.
+
+Most routers are setup to assign IP addresses in the `192.168.1.*` range which is whitelisted by default. If that's the case, you can skip the rest of this step! If not, we will need to add to the whitelist, making sure to preserve the previous entries.
 
 For the purposes of this tutorial, let's say your Omega's IP address is `192.168.23.99` so we will be whitelisting addresses in the `192.168.23.*` range:
 ```
