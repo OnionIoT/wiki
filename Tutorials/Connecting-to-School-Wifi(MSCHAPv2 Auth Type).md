@@ -1,7 +1,6 @@
 # Connecting to School Wifi (MSCHAPv2 Auth Type)
 
 In this tutorial, we are going through how to connect to school wifi (using University of Waterloo as an example, i.e. wpa/wpa2 enterprise).
-Include a relevant image:
 
 ![WP2 Enterprise](http://sw.nohold.net/CiscoSB/Images/id1588_6_wet200securitywpaenterprise.png)
 
@@ -102,7 +101,7 @@ config wifi-iface
 ```
 The order doesn't really matter, as long as you have all options in your interface. Just replace my setting with your own which has the same option type.
 
-![setting](http://i.imgur.com/Hjo5he8s.jpg)
+![setting](https://i.imgur.com/Hjo5he8.png)
 
 [//]: # (Step 4)
 
