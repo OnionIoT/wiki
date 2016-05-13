@@ -47,7 +47,7 @@ Essentially, the BitTorrent Protocol is a scalable way for many users to downloa
 
 [//]: # (The Actual Process)
 
-# Setup the Omega to use BitTorrent
+# Setup the Omega to use the Transmission BitTorrent Client
 
 Let's dive right in! We'll start by setting up a USB storage device to store data as well as extend the amount of memory available to the Omega, then we'll move on to installing and configuring the Transmission BitTorrent Client. We'll also install a Console App to easily access the Transmission web interface, and finally, setup Samba to enable easy access to our downloaded content on the local network.
 
@@ -229,8 +229,7 @@ After everything is installed and configured, you're all set to download using B
 
 Use a browser to navigate to your Omega's Console, you should see your newly installed Transmission App:
 
-[//]: # (LAZAR: Check image size)
-![Onion Console with Transmission App](http://i.imgur.com/0YIIX2h.png)
+![Onion Console with Transmission App](http://i.imgur.com/KKohIfe.png)
 
 The Transmission App will show the web interface for controlling the Transmission client:
 
@@ -264,7 +263,7 @@ We also recommend checking out [this list of legal and free Torrent sources](htt
 
 
 
-## Related Tutorials
+# Related Tutorials
 
 A list of all the tutorials used in this project:
 * [Using USB Storage](../Tutorials/Using-USB-Storage)
