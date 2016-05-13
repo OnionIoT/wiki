@@ -39,7 +39,7 @@ Useful Experience:
 
 # What is BitTorrent?
 
-BitTorrent is peer-to-peer file sharing communication protocol that is very well suited to distribute large amounts of data over the internet. The BitTorrent protocol essentially uses the data downloaded by each user as a source for that data to other users. In effect, users simultaneously upload to & download from other users that are downloading the same data. This distributed form of downloading greatly outperforms the traditional paradigm where each user downloads the data from the same, single source when it comes to transfering large files to many users.
+BitTorrent is a peer-to-peer file sharing communication protocol that is very well suited to distribute large amounts of data over the internet. The BitTorrent protocol essentially uses the data downloaded by each user as a source for that data to other users. In effect, users simultaneously upload to & download from other users that are downloading the same data. This distributed form of downloading greatly outperforms the traditional paradigm where all users download the data from a single source, especially when it comes to transfering large files to many users.
 
 Essentially, the BitTorrent Protocol is a scalable way for many users to download and share files and data. It is because of this scalability that it has become one of the most popular file sharing methods available on the internet, used to share a variety of different content. For more information on the BitTorrent Protocol, take a look at the [BitTorrent Wikipedia article](https://en.wikipedia.org/wiki/BitTorrent).
 
@@ -75,7 +75,7 @@ Downloading torrents is hard work for the Omega. Since we're already using USB s
 
 ## Step 3: Install Transmission 
 
-We'll need a BitTorrent client to download torrents; Transmission works well on OpenWRT so let's install the daemon as well as the web interface packages:
+We'll need a client to download files via BitTorrent; Transmission works well on OpenWRT so let's install the daemon as well as the web interface packages:
 ```
 opkg update
 opkg install transmission-daemon transmission-web
@@ -85,7 +85,9 @@ opkg install transmission-daemon transmission-web
 
 ## Step 4: Configuring Transmission
 
-We'll now configure Transmission to best suit our purposes. Let's make sure that it's enabled and set a logical location for Transmission's own configuration directory:
+We'll now configure Transmission to best suit our purposes. Transmission's configuration file can be found at `/etc/config/transmission`, so we can use UCI to easily change the configuration options. If you're unfamiliar with UCI, check out [the UCI tutorial](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UCI_Tutorial/uci_introduction).
+
+Let's make sure that Transmission is enabled and set a logical location for Transmission's own configuration directory:
 ```
 uci set transmission.@transmission[0].enabled='1'
 uci set transmission.@transmission[0].config_dir='/etc/transmission'
@@ -108,7 +110,7 @@ uci commit transmission
 
 ## Step 5: Enable the Transmission Daemon
 
-Now that Transmission has been configured, let's enable the daemon so that it starts automatically at boottime:
+Now that Transmission has been configured, let's enable the daemon so that it starts automatically when the Omega boots:
 ```
 /etc/init.d/transmission enable
 ```
@@ -128,8 +130,7 @@ The Transmission web interface will be running on port 9091 of your Omega, but w
 
 Luckily, it can be! 
 
-[//]: # (LAZAR: Check image size)
-![Onion Console with Transmission App](http://i.imgur.com/0YIIX2h.png)
+![Onion Console with Transmission App](http://i.imgur.com/KKohIfe.png)
 
 Let's install a Console App that will display the Transmission web interface:
 ```
@@ -177,7 +178,7 @@ Restart the Transmission daemon with `/etc/init.d/transmission restart` for the 
 
 In the most common case, your Omega will be connected to an existing WiFi network at your home or office, so we should allow access to any users on that network as well.
 
-First we need to find the Omega's IP Address, follow the steps outlined in [this tutorial](../Tutorials/Find-the-Omegas-IP-address). 
+First we need to find the Omega's IP Address, follow the steps outlined in [this tutorial](../Tutorials/Find-the-Omegas-IP-address), and make note of the IP Address.
 
 Most routers are setup to assign IP addresses in the `192.168.1.*` range which is whitelisted by default. If that's the case, you can skip the rest of this step! If not, we will need to add to the whitelist, making sure to preserver the previous entries.
 
@@ -211,13 +212,20 @@ Then restart the Transmission daemon with `/etc/init.d/transmission restart` for
 We'll want an easy way to access our downloaded content without having to actively log on to the Omega. Using Samba, we can make our downloads directory available on our local network. Check out the [Samba article](../Tutorials/Sharing-with-Samba) for instructions on how to setup a network share.
 
 
+[//]: # (Torrent Away!)
+
+## Step 9: Torrent Away!
+
+Thanks to the Omega, you're now all setup with an easy way to use BitTorrent, have fun!
+
+
 
 
 [//]: # (Using the Project)
 
 # Using Transmission on the Omega
 
-After everything is installed and configured, you're all set to download using BitTorrent. Remember, Onion recommends using your powers for good, so make sure the content you're downloading is legally distributable!
+After everything is installed and configured, you're all set to download using BitTorrent. Remember, **Onion recommends using your powers for good, so make sure the content you're downloading is legally distributable!**
 
 Use a browser to navigate to your Omega's Console, you should see your newly installed Transmission App:
 
@@ -230,15 +238,14 @@ The Transmission App will show the web interface for controlling the Transmissio
 
 Click the ![Transmission App Open Torrent Button](http://i.imgur.com/eptNYBe.png) button to select a Torrent file. 
 
-You can point to the URL of the Torrent file which you wish to use, or you can upload a Torrent file. We find it easiest to just point to a Torrent URL. Note that the destination folder matches the default destination folder we configured in [Step 4]().
-[//]: # (LAZAR: Fill in link)
+You can point to the URL of the Torrent file which you wish to use, or you can upload a Torrent file. We find it easiest to just point to a Torrent URL. Note that the destination folder matches the default destination folder we configured in [Step 4](#setup-the-omega-to-use-bittorrent_step-4-configuring-transmission).
 
 ![Transmission App Upload Torrent Dialogue](http://i.imgur.com/R4mt0yh.png)
 
 For this example, we will be downloading an image of the [Linux distro Ubuntu](http://www.ubuntu.com/download/alternative-downloads), so we entered the following URL: `http://releases.ubuntu.com/16.04/ubuntu-16.04-desktop-i386.iso.torrent?_ga=1.190678248.214845118.1462917625`
 
 
-Once the download has started we can keep track of the progress:
+Once the download starts, we can keep track of the progress:
 
 ![Transmission App Download Progress](http://i.imgur.com/3asOiBq.png)
 
@@ -252,7 +259,7 @@ And we will be able to see when the download is complete:
 
 At Onion HQ, we often use the Omega to download images of new Linux Distros to test out. 
 
-We also recommend checking out [this list](http://www.techsupportalert.com/content/finding-legal-and-free-torrents.htm) of legal and free Torrent sources since we don't condone illegal downloads :)
+We also recommend checking out [this list of legal and free Torrent sources](http://www.techsupportalert.com/content/finding-legal-and-free-torrents.htm) since we don't condone illegal downloads :)
 
 
 
@@ -262,6 +269,7 @@ We also recommend checking out [this list](http://www.techsupportalert.com/conte
 A list of all the tutorials used in this project:
 * [Using USB Storage](../Tutorials/Using-USB-Storage)
 * [Extending available memory using a Swap File](../Tutorials/Extending-RAM-with-a-swap-file)
+* [Using UCI to change configuration options](https://wiki.onion.io/Tutorials/OpenWRT%20Tutorials/UCI_Tutorial/uci_introduction)
 * [Finding the Omega's IP Address](../Tutorials/Find-the-Omegas-IP-address)
 * [Sharing directories on your local network with Samba article](../Tutorials/Sharing-with-Samba)
 
