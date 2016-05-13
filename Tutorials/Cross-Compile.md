@@ -1,5 +1,7 @@
 # Setting Up Cross-Compile Environment for Omega
 
+This tutorial will walk you through setting up the OpenWRT Cross-Compile environment on a Ubuntu Linux system.
+
 ### Step 1: Setup OpenWRT Buildroot Environment
 
 Install tools and library sources:

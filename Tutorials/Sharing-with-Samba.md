@@ -27,7 +27,7 @@ opkg install samba36-server
 
 **Note:**
 
-This command may not work when the Samba version is updated. If it doesnt work, try the following:
+This command may not work when the Samba version is updated. If it doesn't work, try the following:
 ```
 opkg list | grep samba
 ```
