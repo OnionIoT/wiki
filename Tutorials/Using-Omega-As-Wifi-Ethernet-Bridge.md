@@ -99,7 +99,7 @@ config zone
     option forward      ACCEPT
 ```
 
-Example configuration files are available in their modified and "ready" state [here](https://gist.github.com/gbo-actual/ac79e9345a477b0024b368b292d4492b). See the notes in the comments on how to enable/disable the Ethernet bridge mode.
+Full example configuration files are available in their modified and "ready" state in this Github Gist [here](https://gist.github.com/gbo-actual/ac79e9345a477b0024b368b292d4492b).
 
 Restart the network service by doing the following commands in this order, or simply rebooting the Omega:
 
@@ -127,10 +127,9 @@ If you have a device that only can be connected via Ethernet and you only have W
 
 Or, you can extend Ethernet access to multiple cables using an Ethernet switch.
 
-# Notes When in Ethernet Bridge Mode
+# Notes
 
-* The Omega's WiFi AP (eg. Omega-ABCD) will not work properly. You will not be able to access the Internet nor the Console by connecting to it as it is forwarding all traffic to the Ethernet connection.
-* You can access the Omega's Console as usual through both the Ethernet connection and the (router's) wireless network to which it is connected (eg. http://omega-ABCD.local)
+* This will disable the Omega's WiFi AP.
 
 ## Related Tutorials
 
