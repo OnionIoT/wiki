@@ -82,7 +82,7 @@ The theory is that in the firewall configuration located at `/etc/config/firewal
 Once we understand what is going on, we can modify the file. What we are actually doing is to add a single line of configuration under zone `lan`.
 
 ```
-    list   network      `lan`
+    list   network      'lan'
 ```
 
 `list` means access list, you can get the information through [Openwrt Firewall configuration page](https://wiki.openwrt.org/doc/uci/firewall).
@@ -99,11 +99,20 @@ config zone
     option forward      ACCEPT
 ```
 
-Now we need to restart the service, by doing `/etc/init.d/firewall restart` and `/etc/init.d/network restart` (firewall goes first), or simply reboot Omega.
+Example configuration files are available in their modified and "ready" state [here](https://gist.github.com/gbo-actual/ac79e9345a477b0024b368b292d4492b). See the notes in the comments on how to enable/disable the Ethernet bridge mode.
+
+Restart the network service by doing the following commands in this order, or simply rebooting the Omega:
+
+```
+/etc/init.d/firewall restart
+/etc/init.d/network restart
+```
+
+If using the commands above, wait until the command prompt reappears before it is ready.
 
 ## Step 4: Connect to Lan Switch via Ethernet
 
-Since we configured all the things, and restarted the service, now we should be able to connect with other devices via ehternet. Unfortunately, Onion does not provide an tutorial about how to connect my laptop to Omega.
+Since we configured all the things, and restarted the service, now we should be able to connect with other devices via Ethernet.
 
 Make sure that your conection is set to `Obtain IP address and DNS anddress Automatically`. It should be set so by default.
 
@@ -112,11 +121,16 @@ Make sure that your conection is set to `Obtain IP address and DNS anddress Auto
 
 [//]: # (Using the Project)
 
-# Using this Setup
+# Using This Setup
 
 If you have a device that only can be connected via Ethernet and you only have WiFi avaliable, you could apply this tutorial to make it work!
 
-Or, you can extend 
+Or, you can extend Ethernet access to multiple cables using an Ethernet switch.
+
+# Notes When in Ethernet Bridge Mode
+
+* The Omega's WiFi AP (eg. Omega-ABCD) will not work properly. You will not be able to access the Internet nor the Console by connecting to it as it is forwarding all traffic to the Ethernet connection.
+* You can access the Omega's Console as usual through both the Ethernet connection and the (router's) wireless network to which it is connected (eg. http://omega-ABCD.local)
 
 ## Related Tutorials
 
@@ -129,8 +143,8 @@ Or, you can extend
 
 # Acknowledgements
 
-you can grab more information in the [Onion community](https://community.onion.io/topic/694/wireless-setup), people are willing to answer you questions.
+Some more information can be found in our Onion Community thread [here](https://community.onion.io/topic/694/wireless-setup).
 
-Or you can visit the following website to learn more:
+Or you can visit the following websites to learn more:
 * [Openwrt network configuration page](https://wiki.openwrt.org/doc/uci/network)
 * [Openwrt Firewall configuration page](https://wiki.openwrt.org/doc/uci/firewall)
