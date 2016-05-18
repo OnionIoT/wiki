@@ -18,7 +18,7 @@ Welcome to the Onion Wiki where you can find all the necessary info to learn abo
 
 ### Contribute to the Wiki
 
-You can help make the Wiki better! Submit a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) to the [Onion Wiki GitHub Repo](https://github.com/OnionIoT/wiki) and we'll make sure your content gets included.
+You can help make the Wiki better! Submit a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) to the [Onion Wiki GitHub Repo](https://github.com/OnionIoT/wiki) and we'll review your content for submission.
 
 
 

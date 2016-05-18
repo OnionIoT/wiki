@@ -45,7 +45,7 @@ The Relay Expansion has two modules, so it is possible to control two different 
 
 # The Hardware
 
-The Relay Expansion has two TE Axicom IMO3 relay modules. The table below outlines the specifications:
+The Relay Expansion has two TE Axicom IM03 relay modules. The table below outlines the specifications:
 
 | Parameter                 | Specification             |
 |---------------------------|---------------------------|
@@ -54,7 +54,7 @@ The Relay Expansion has two TE Axicom IMO3 relay modules. The table below outlin
 | Switching Power           | 60W, 62.5VA               |
 | Switching Time            | Typical: 1ms Maximum: 3ms |
 
-
+The full datasheet for the relay can be found [here](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Specification+Or+Standard%7F108-98001%7FV%7Fpdf%7FEnglish%7FENG_SS_108-98001_V_IM_0614_v1.pdf%7F4-1462039-1).
 
 ## The Dip-Switches
 
