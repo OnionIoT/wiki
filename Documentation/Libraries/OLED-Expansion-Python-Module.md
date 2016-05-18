@@ -626,9 +626,54 @@ status = oledExp.write("Python rules!\nEspecially on\n\nthe Omega")
 
 The OLED Screen can also be used to display images.
 
-**More info on this coming soon**
+The OLED Screen can also be used to display images. The Console can be used to convert existing images into a format that is compatible with the OLED Expansion and save the output to an Omega. Functions in the C library can read the image data and display it on the OLED Expansion. Alternatively, a buffer can be created programatically and displayed on the OLED.
 
-[//]: # (LAZAR: Populate this!)
+
+[//]: # (Displaying Images: Creating Image Files)
+
+### Creating Image Files
+
+The Console OLED App can be used to create OLED Expansion compatible image files. Navigate to the Image tab of the OLED App:
+
+![OLED Console App Image Tab](http://i.imgur.com/FPCVp8x.png)
+
+Once an image has been selected, a button and form will appear that allow you to save the OLED image file to your Omega:
+
+![OLED Console App Loaded Image](http://i.imgur.com/xKx5KHa.png)
+
+After the image name and location are selected, click the Save to Omega button.
+
+
+[//]: # (Displaying Images: OLED Image File Details)
+
+### OLED Image File Details
+
+The OLED image files store the image data as 1024 bytes represented in hexadecimal. Each byte represents eight vertical pixels, with the first 128 bytes representing the columns in Page 0, the following 128 bytes representing the columns in Page 1, and so on. 
+
+If this is unclear, see the [Understanding the Display Section](#programming-flow_understanding-the-display) for details on how the display is addressed.
+
+
+[//]: # (Displaying Images: Displaying Images from a File)
+
+### Displaying Images from a File
+
+Read the image data from a file and display on the OLED screen:
+``` python 
+status = oledExp.drawFromFile(file)
+```
+
+**Arguments**
+
+The `file` argument is the path to the OLED image file.
+
+
+**Examples**
+
+Read an image file located at `/root/image.lcd` and draw it on the OLED display:
+``` python
+status = oledExp.drawFromFile("/root/image.lcd")
+```
+
 
 
 

@@ -642,7 +642,7 @@ status =  oledWrite("Onion Omega\nInventing the Future\n\nToday");
 
 ## Drawing Images on the Display
 
-The OLED Screen can also be used to display images. 
+The OLED Screen can also be used to display images. The Console can be used to convert existing images into a format that is compatible with the OLED Expansion and save the output to an Omega. Functions in the C library can read the image data and display it on the OLED Expansion. Alternatively, a buffer can be created programatically and displayed on the OLED.
 
 
 [//]: # (Displaying Images: Creating Image Files)
@@ -651,11 +651,11 @@ The OLED Screen can also be used to display images.
 
 The Console OLED App can be used to create OLED Expansion compatible image files. Navigate to the Image tab of the OLED App:
 
-[OLED Console App Image Tab](http://i.imgur.com/FPCVp8x.png)
+![OLED Console App Image Tab](http://i.imgur.com/FPCVp8x.png)
 
 Once an image has been selected, a button and form will appear that allow you to save the OLED image file to your Omega:
 
-[OLED Console App Loaded Image](http://i.imgur.com/xKx5KHa.png)
+![OLED Console App Loaded Image](http://i.imgur.com/xKx5KHa.png)
 
 After the image name and location are selected, click the Save to Omega button.
 
@@ -673,7 +673,7 @@ If this is unclear, see the [Understanding the Display Section](#programming-flo
 
 ### Displaying Images from a File
 
-**Read Image Data**
+#### Read Image Data
 
 First, the data from the file needs to be loaded into a buffer:
 ``` c
@@ -686,7 +686,7 @@ The `file` argument is the path to the OLED image file.
 
 The `buffer` argument is a pointer to the memory that will hold the image data. It needs to be able to hold 1024 bytes (1 byte for each column in a page).
 
-**Write Image Data to the Display**
+#### Write Image Data to the Display
 
 Then, write the data from the buffer to the display:
 ``` c
@@ -714,6 +714,31 @@ status 	= oledReadLcdFile(param, buffer);
 if (status == EXIT_SUCCESS) {
 	status	= oledDraw(buffer, OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8);
 }
+```
+
+
+It is also possible to programmatically fill a buffer and then draw it on the OLED display:
+``` c
+int i, status;
+uint8_t data;
+uint8_t	*buffer = malloc(OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8 * sizeof *buffer); // allocate memory for the buffer
+
+// programatically fill the buffer
+data = 0;
+for (i = 0; i < OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8; i++) {
+	buffer[i] = data;
+
+	// increment the data for the next column
+	if (data == 0xff) {
+		data = 0;	// reset to 0
+	}
+	else {
+		data++;		// increment by 1
+	}
+}
+
+// draw on display
+status	= oledDraw(buffer, OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8);
 ```
 
 
