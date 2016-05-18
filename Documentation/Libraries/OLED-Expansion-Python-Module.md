@@ -624,9 +624,7 @@ status = oledExp.write("Python rules!\nEspecially on\n\nthe Omega")
 
 ## Drawing Images on the Display
 
-The OLED Screen can also be used to display images.
-
-The OLED Screen can also be used to display images. The Console can be used to convert existing images into a format that is compatible with the OLED Expansion and save the output to an Omega. Functions in the C library can read the image data and display it on the OLED Expansion. Alternatively, a buffer can be created programatically and displayed on the OLED.
+The OLED Screen can also be used to display images. The Console can be used to convert existing images into a format that is compatible with the OLED Expansion and save the output to an Omega. Functions in the Python module can read the image data and display it on the OLED Expansion.
 
 
 [//]: # (Displaying Images: Creating Image Files)
