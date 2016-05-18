@@ -642,11 +642,79 @@ status =  oledWrite("Onion Omega\nInventing the Future\n\nToday");
 
 ## Drawing Images on the Display
 
-The OLED Screen can also be used to display images.
+The OLED Screen can also be used to display images. 
 
-**More info on this coming soon**
 
-[//]: # (LAZAR: Populate this!)
+[//]: # (Displaying Images: Creating Image Files)
+
+### Creating Image Files
+
+The Console OLED App can be used to create OLED Expansion compatible image files. Navigate to the Image tab of the OLED App:
+
+[OLED Console App Image Tab](http://i.imgur.com/FPCVp8x.png)
+
+Once an image has been selected, a button and form will appear that allow you to save the OLED image file to your Omega:
+
+[OLED Console App Loaded Image](http://i.imgur.com/xKx5KHa.png)
+
+After the image name and location are selected, click the Save to Omega button.
+
+
+[//]: # (Displaying Images: OLED Image File Details)
+
+### OLED Image File Details
+
+The OLED image files store the image data as 1024 bytes represented in hexadecimal. Each byte represents eight vertical pixels, with the first 128 bytes representing the columns in Page 0, the following 128 bytes representing the columns in Page 1, and so on. 
+
+If this is unclear, see the [Understanding the Display Section](#programming-flow_understanding-the-display) for details on how the display is addressed.
+
+
+[//]: # (Displaying Images: Displaying Images from a File)
+
+### Displaying Images from a File
+
+**Read Image Data**
+
+First, the data from the file needs to be loaded into a buffer:
+``` c
+int oledReadLcdFile	(char* file, uint8_t *buffer);
+```
+
+**Arguments**
+
+The `file` argument is the path to the OLED image file.
+
+The `buffer` argument is a pointer to the memory that will hold the image data. It needs to be able to hold 1024 bytes (1 byte for each column in a page).
+
+**Write Image Data to the Display**
+
+Then, write the data from the buffer to the display:
+``` c
+int oledDraw (uint8_t *buffer, int bytes);
+```
+
+**Arguments**
+
+The `buffer` argument is the pointer to memory that holds the image data.
+
+The `bytes` is the number of bytes to be written. This will usually be 1024 bytes, this can be represented with macros: `OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8`.
+
+
+**Example**
+
+Read an image file located at `/root/image.lcd` and draw it on the OLED display:
+``` c
+int status;
+uint8_t	*buffer = malloc(OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8 * sizeof *buffer); // allocate memory for the buffer
+
+// read data from file
+status 	= oledReadLcdFile(param, buffer);
+
+// draw on display
+if (status == EXIT_SUCCESS) {
+	status	= oledDraw(buffer, OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8);
+}
+```
 
 
 
