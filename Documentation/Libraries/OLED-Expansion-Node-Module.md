@@ -49,6 +49,11 @@ opkg update
 opkg install oled-exp-node
 ```
 
+NodeJS will need to be installed for Node programs to actually run:
+```
+opkg install nodejs
+```
+
 [//]: # (Importing the Addon)
 ## **Importing the addon into your Node Script**
 
@@ -145,7 +150,9 @@ The screen cab be turned on and off while still preserving the displayed content
 ```
 oledAddon.setDisplayPower(int bPowerON);
 ```
-#####**Arguments**
+
+**Arguments**
+
 The `bPowerOn` argument determines whether to turn the display on or off.
 
 |Value|Meaning             |
@@ -153,7 +160,8 @@ The `bPowerOn` argument determines whether to turn the display on or off.
 |0    |Turn the screen off |
 |1    |Turn the screen on  |
 
-#####**Examples**
+**Examples**
+
 Turn the screen off with:
 
 ```
@@ -174,7 +182,8 @@ The screen driver has the ability to invert the display colors, meaning that bla
 oledAddon.setDisplayMode(int bInvert);
 ```
 
-#####**Arguments**
+**Arguments**
+
 The `bInvert` argument determines whether to inver the colors or not.
 
 |Value|Meaning                 |
@@ -183,7 +192,8 @@ The `bInvert` argument determines whether to inver the colors or not.
 |1    |Inverted color settings |
 
 
-#####**Examples**
+**Examples**
+
 To invert the colors:
 ```
 oledAddon.setDisplayMode(1);
@@ -203,10 +213,11 @@ The brightness of the display can be adjusted in a granularity of 256 steps. The
 oledAddon.setBrightness(int brightness);
 ```
 
-##### **Arguments**
+**Arguments**
+
 The `brightness` argument determines the brightness with a range of 0-255, with 255 being the brightest setting and 0 being the dimmest.
 
-##### **Examples**
+**Examples**
 
 So to set the maximum brightness:
 ```
@@ -235,7 +246,7 @@ oledAddon.setDim(int dim);
 While the brightness adjustment function described just above impleents the same feature, this function 
 simplifies the procedure with two distinct settings.
 
-##### **Arguments**
+**Arguments**
 
 The `dim` argument determines whether to enable the dim setting
 
@@ -245,7 +256,8 @@ The `dim` argument determines whether to enable the dim setting
 |1     |Dimmed Screen:0        |
 
 
-##### **Examples**
+**Examples**
+
 Dim the Display:
 ```
 oledAddon.setDim(1);
@@ -265,19 +277,19 @@ oledAddon.setMemoryMode(int mode);
 ```
 The memory mode affects how the cursor is automatically advanced when the display memory is written with text or images.
 
-##### **Horizontal Addressing Mode**
+**Horizontal Addressing Mode**
 
 ![imgur](http://i.imgur.com/sU0WyZY.png)
 
 After each write, the column cursor advances horizontally to the right along the page, once the end of the page is reached, the page cursor is advanced onto the next page.
 
-##### **Vertical Addressing Mode**
+**Vertical Addressing Mode**
 
 ![imgur](http://i.imgur.com/Dv1smND.png)
 
 After each write, the page cursor advances vertically downward through the pages, once the last page is reached, the column cursor is advanced to the next pixel column. 
 
-##### **Page Addressing Mode**
+**Page Addressing Mode**
 
 ![imgur](http://i.imgur.com/oW4giq6.png)
 
@@ -285,7 +297,7 @@ The column cursor advances horizontally to the right along each page, once the e
 
 By default, **Horizontal Addressing** is used.
 
-##### **Arguments**
+**Arguments**
 
 The `mode` argument determines which memory mode is active. 
 
@@ -295,12 +307,13 @@ The `mode` argument determines which memory mode is active.
 |Vertical Addressing Mode   |1     |
 |Page Addressing Mode       |2     |
 
-##### **Examples**
+**Examples**
 
 Set to the page addressing mode:
 ```
 oledAddon.setMemoryMode(2);
 ```
+
 
 [//]: # (Set Column Addressing)
 #### **Set Column Addressing**
@@ -316,7 +329,7 @@ For example, when writing text, the oledWrite function will set the columns to r
 
 Note: the column cursor is not preserved after a column addressing change.
 
-##### **Arguments**
+**Arguments**
 
 The `startPixel` argument sets the starting column for each page.
 
@@ -324,7 +337,7 @@ The `endPixel` argument sets the end column for each page.
 
 Both arguments must be between the 0-127 and the startPixel must be **less than** endPixel.
 
-##### **Examples**
+**Examples**
 
 Set the column addressing display text:
 ```
@@ -381,13 +394,14 @@ oledAddon.setCursor(int row, int column);
 
 Note: since the column cursor is not preserved after a column addressing change, the column addressing **needs be set to 0-125 using the oledSetTextColumns() function to properly display text before the cursor position is programmed.**
 
-##### **Arguments**
+**Arguments**
 
 The `row` argument sets the page for the cursor, so the range is 0 to 7.
 
 The `column` argument sets the character column position of the cursor, the range is 0 to 20.
 
-##### **Examples**
+**Examples**
+
 Set the cursor to the start of the last page:
 ```
 oledAddon.setCursor(7,0);
@@ -403,16 +417,6 @@ Set the cursor to the starting position at the top-left:
 oledAddon.setCursor(0,0);
 ```
 
-####**Set the Cursor to a Row and Character Column**
-Let's set the cursor to the middle of the 4th row.
-```
-oledAddon.setCursor(3,10);
-```
-
-Let's set the cursor to the top-left beginning position.
-```
-oledAddon.setCursor(0,0);
-```
 
 
 [//]: # (Set Cursor Position: By Pixel)
@@ -426,13 +430,13 @@ oledAddon.setCursorByPixel(int row, int pixel);
 
 It allows for cursor positions that are not aligned with the 21 possible character columns.
 
-##### **Arguments**
+**Arguments**
 
 The `row` argument sets the page for the cursor, so the range is 0-7
 
 The `pixel` argument sets the horizontal pixel position of the cursor, the range is 0 to 127
 
-##### **Examples**
+**Examples**
 
 Set the cursor to the start of the last page:
 ```
@@ -472,7 +476,7 @@ Write a single byte, eight vertical pixels, to the current position of the curso
 oledAddon.oledWriteByte(int byte);
 ```
 
-##### **Arguments**
+**Arguments**
 
 The `byte` argument holds the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the column.
 
@@ -480,7 +484,7 @@ The `byte` argument holds the eight bits that will be written to the screen. The
 
 After the byte is set, the cursor will automatically move to the next page column.
 
-##### **Examples**
+**Examples**
 
 Draw the following pattern:
 
@@ -498,12 +502,13 @@ Write a single character to the current position of the cursor:
 oledAddon.writeChar(character);
 ```
 
-##### **Arguments**
+**Arguments**
+
 The `character` argument is the character that is to be written to the screen.
 
 Make sure to check the asciiTable dynamic array found in oled-exp.h, it defines the bitmap pattern of each allowed character. Any characters not found in the table will be ignored.
 
-##### **Examples**
+**Examples**
 
 Write an 'O'
 ```
@@ -524,11 +529,11 @@ The newline functionality is implemented by using a global variable to keep trac
 
 Note: the column addressing will be set to 0-125 to properly display text during this call, at the end of the function it will be reset back to 0-127.
 
-##### **Arguments**
+**Arguments**
 
 The `msg` argument is the string to be written to the display. Any characters not found in the asciiTable array will be ignored.
 
-##### **Examples**
+**Examples**
 
 Write 'Onion Omega':
 ```
@@ -555,7 +560,7 @@ oledAddon.scroll(int direction, int scrollSpeed, int startPage, int stopPage);
 
 ##### **Arguments**
 
-##### **Direction**
+**Direction**
 
 Indicates whether to scroll left or right.
 
@@ -564,7 +569,8 @@ Indicates whether to scroll left or right.
 | 0                 | Left                |
 | 1                 | Right               |
 
-##### **scrollSpeed**
+**scrollSpeed**
+
 Determines the number of frames between each scroll step.
 
 |Value  |Scroll Speed   |
@@ -578,12 +584,13 @@ Determines the number of frames between each scroll step.
 |6      |25 Frames      |
 |7      |2 Frames       |
 
-##### **startPage and stopPage**
+**startPage and stopPage**
 
 Thes two arguments define which page to start and stop scrolling at respectively. Both can have values between 0-7, however **_startPage must be less than stopPage_**.
 
 
-##### **Example**
+**Example**
+
 Let's scroll the entire screen to the left
 ```
 oledAddon.scroll(0,0,0,7);
@@ -598,7 +605,7 @@ scrollDiagonal(int direction, int scrollSpeed, int fixedRows, int scrollRows, in
 ```
 ##### **Arguments**
 
-##### **Direction**
+**Direction**
 
 Indicates whether to scroll up-left or up-right.
 
@@ -607,7 +614,8 @@ Indicates whether to scroll up-left or up-right.
 | 0                 | Upwards and Left    |
 | 1                 | Upwards and Right   |
 
-##### **scrollSpeed**
+**scrollSpeed**
+
 Determines the number of frames between each scroll step.
 
 | Value | Scroll Speed  |
@@ -621,23 +629,25 @@ Determines the number of frames between each scroll step.
 |6      |25 Frames      |
 |7      |2 Frames       |
 
-##### **fixedRows**
+
+**fixedRows**
 
 Defines the amount of pixel rows, starting from the top, that will not have vertical scrolling. Can take a range from 0-63.
 
-##### **scrollRows**
+**scrollRows**
 
 Defines the amount of pixel rows, starting from the top, that will have vertical scrolling. Can take a range from 0-63.
 
-##### **verticalOffset**
+**verticalOffset**
 
 Defines the number of vertical rows to scroll by each frame.
 
-##### **startPage and stopPage**
+**startPage and stopPage**
 
 Thes two arguments define which page to start and stop scrolling at respectively. Both can have values between 0-7, however **_startPage must be less than stopPage_**.
 
-#### **Examples**
+**Examples**
+
 Let's scroll the entire screen upwards to the left.
 ```
 oledAddon.scrollDiagonal(0,5,0,127,1,0,7);
@@ -648,7 +658,7 @@ oledAddon.scrollDiagonal(0,5,0,127,1,0,7);
 
 Disables all active scrolling.
 
-##### **Examples**
+**Examples**
 ```
 oledAddon.scrollStop();
 ```

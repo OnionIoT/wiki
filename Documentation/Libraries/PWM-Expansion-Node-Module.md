@@ -50,6 +50,11 @@ opkg update
 opkg install pwm-exp-node
 ```
 
+NodeJS will need to be installed for Node programs to actually run:
+```
+opkg install nodejs
+```
+
 [//]: # (Importing the Addon)
 ### **Importing the addon into your Node Script**
 
@@ -108,9 +113,6 @@ Refer to the table below for a list and brief description of available pwm metho
 
 #### **Initialization Function**
 This function programs the initialization sequence on the Servo Expansion, after this step is completed, the functions to generate PWM signals or change the signal frequency can be used with success:
-
-##### **Examples**
-Let's initialize the display
 ```
 pwmAddon.driverInit();
 ```
@@ -125,7 +127,7 @@ pwmAddon.checkInit();
 
 [//]: # (Rajiv: Show return value here)
 
-##### **Examples**
+**Examples**
 Let's check if the oscillator is initialized.
 
 [//]: # (Rajiv: Need real example here)
@@ -138,7 +140,7 @@ Here we go! Use this function to generate a PWM signal on a specified channel:
 pwmAddon.setupDriver(int driverNum, float duty, float delay);
 ```
 
-##### **Arguments**
+**Arguments**
 
 The `driverNum` argument is detemines on which channel to generate the PWM signal. The accepted values are:
 
@@ -151,7 +153,7 @@ The `duty` argument specifies duty cycle percentage for the PWM signal. Accepted
 
 The `delay` argument specifies the percentage delay before the PWM signal goes high. Accepted values are 0 to 100 with decimal values being allowed. In normal use with servos this should be set to 0.
 
-##### **Examples**
+**Examples**
 
 Set channel 0 to a PWM signal with a 50% duty cycle:
 ```
@@ -188,11 +190,12 @@ pwmAddon.setFrequency(float freq);
 
 This will change the frequency of the PWM signals generated on all of the channels. The oscillator can generate frequencies between 24 Hz and 1526 Hz, the default value is 50 Hz.
 
-##### **Arguments**
+**Arguments**
 
 The `freq` argument is a floating point number that specifies the frequency. The function will accept any input but the programmed frequency will be clamped between 24 Hz and 1526 Hz.
 
-##### **Examples**
+**Examples**
+
 Change the frequency to 60 Hz and generate a 40% duty cycle signal on channel 14:
 
 ```

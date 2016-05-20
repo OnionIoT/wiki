@@ -55,7 +55,12 @@ The relay-exp-addon exposes a series of methods that perform all of the actions 
 Install the addon on your Omega:
 ```
 opkg update
-opkg install relay_addon
+opkg install relay-exp-node
+```
+
+NodeJS will need to be installed for Node programs to actually run:
+```
+opkg install nodejs
 ```
 
 [//]: # (Importing the Addon)
@@ -118,11 +123,11 @@ This function programs the initialization sequence on the Relay Expansion, after
 relayAddon.init(int addr);
 ```
 
-#### **Arguments**
+**Arguments**
 
 The `addr` argument is described above in the I2C Device Address section.
 
-#### **Examples**
+**Examples**
 Initialize a Relay Expansion with all switches set to 0, meaning the I2C device address will be 0x27:
 ```
 relayAddon.init(7);
@@ -147,11 +152,11 @@ This function performs several reads to determine if the Relay Expansion require
 relayAddon.checkInit(int addr);
 ```
 
-#### **Arguments**
+**Arguments**
 
 The `addr` argument is described above in the I2C Device Address section.
 
-#### **Example**
+**Example**
 
 Check if a Relay Expansion(with all switches set to On) is initialized:
 ```
@@ -167,7 +172,8 @@ Finally the fun stuff! Use this function to change the sate of the relay:
 ```
 relayAddon.setChannel(int addr, int  channel, int state);
 ```
-#### **Arguments**
+
+**Arguments**
 
 The `addr` argument is described above in the [I2C Device Address](#i2c-device-address) section.
 
@@ -178,7 +184,8 @@ The `state` argument allows the user to select if the relay will be turned on or
  * 1 turn the relay ON
 
 
-#### **Example**
+**Example**
+
 Let's turn Relay0 **on** and Relay1 **off** (all switches Off)
 ```
 relayAddon.setChannel(7,0,1);
@@ -194,14 +201,15 @@ relayAddon.setAllChannels(int addr, int state);
 
 This is performed with a single register write so both relays should react at the same time.
 
-#### **Arguments**
+**Arguments**
+
 The `addr` argument is described above in the [I2C Device Address](#i2c-device-address) section.
 
 The `state` argument allows the user to select if the relays will be turned on or off:
  * 0 turn the relays OFF
  * 1 turn the relays ON
 
-#### **Example**
+**Example**
 
 All switches are in Off position, turn both relays on, then turn Relay 0 off, the send a command to turn both off:
 ```
