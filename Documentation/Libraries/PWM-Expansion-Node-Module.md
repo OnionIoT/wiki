@@ -1,6 +1,6 @@
 # **PWM Expansion Node Addon**
 
-The Onion Servo(PWM) Node Addon, pwm-node-addon is a wrapper around the libonionpwmexp dynamic C library that provides functions to setup the servo Expansion and generate PWM signals.
+The Onion Servo (PWM) Node Addon, pwm-node-addon is a wrapper around the `libonionpwmexp` dynamic C library that provides functions to setup the servo Expansion and generate PWM signals.
 
 ![imgur](http://i.imgur.com/aNoYCZc.png)
 
@@ -40,19 +40,17 @@ For a more detailed explanation, see the guide on using the [Servo Expansion](ht
 
 
 The pwm-exp-addon exposes a series of methods that perform all of the actions specified in the Programming Flow section.
-[//]: # (Using the Addon)
-### **Using the Addon**
 
-Install the addon into your project folder from our repo using opkg install.
+[//]: # (Install the Addon)
+### **Install the Addon**
 
+Install the addon on your Omega:
 ```
-opkg install pwm_addon
+opkg update
+opkg install pwm-exp-node
 ```
-[//]: # (Return Values)
-### **Return Values**
 
-All of the functions will either return a 0 indicating success or 1 indicating failure.
-
+[//]: # (Importing the Addon)
 ### **Importing the addon into your Node Script**
 
 To use the addon within your script you have to import it into your node program as you would a module: 
@@ -60,6 +58,23 @@ To use the addon within your script you have to import it into your node program
 ```
 var oledAddon = require("./pwm-node-addon");
 ```
+
+[//]: # (Rajiv: add instructions on linking/copying the addon to the project?)
+
+
+[//]: # (Example Code)
+### **Example Code**
+
+Example code that uses the `pwm-exp-node` addon can be [found here]() in the `i2c-exp-node-addons` Onion GitHub Repo.
+
+[//]: # (Rajiv: populate the example link)
+
+
+[//]: # (Return Values)
+### **Return Values**
+
+All of the functions will either return a 0 indicating success or 1 indicating failure.
+
 [//]: # (Calling Methods)
 ### **Calling Methods**
 
@@ -68,7 +83,10 @@ Methods are called in the following format.
 ```
 pwmAddon.method();
 ```
+
 Replace method with your funcion of interest. 
+
+
 [//]: # (Available Methods)
 ### **Available Methods**
 
@@ -96,56 +114,70 @@ Let's initialize the display
 ```
 pwmAddon.driverInit();
 ```
+
 [//]: # (Check Init Function)
 #### **Check for Initialization**
 
-This function performs several reads to determine if the Servo Expansion has been initialized and the oscillator is running.
-
-##### **Examples**
-Let's check if the oscillator is initialized.
+This function performs several reads to determine if the Servo Expansion has been initialized and the oscillator is running:
 ```
 pwmAddon.checkInit();
 ```
+
+[//]: # (Rajiv: Show return value here)
+
+##### **Examples**
+Let's check if the oscillator is initialized.
+
+[//]: # (Rajiv: Need real example here)
+
+
 [//]: # (Generate PWM Signal Function)
 #### **Generate a PWM Signal**
 Here we go! Use this function to generate a PWM signal on a specified channel:
 ```
 pwmAddon.setupDriver(int driverNum, float duty, float delay);
 ```
+
 ##### **Arguments**
 
-The driverNum argument is detemines on which channel to generate the PWM signal. The accepted values are:
+The `driverNum` argument is detemines on which channel to generate the PWM signal. The accepted values are:
 
-|Value|Meaning|
-|-|-|
-|0-15|Matches the label on the Servo Expansion|
-|-1|Generates the same signal on all channels|
+| Value | Meaning                                   |
+|-------|-------------------------------------------|
+| 0-15  | Matches the label on the Servo Expansion  |
+| -1    | Generates the same signal on all channels |
 
-The duty argument specifies duty cycle percentage for the PWM signal. Accepted values are 0 to 100. Decimal values are allowed.
+The `duty` argument specifies duty cycle percentage for the PWM signal. Accepted values are 0 to 100. Decimal values are allowed.
 
-The delay argument specifies the percentage delay before the PWM signal goes high. Accepted values are 0 to 100 with decimal values being allowed. In normal use with servos this should be set to 0.
+The `delay` argument specifies the percentage delay before the PWM signal goes high. Accepted values are 0 to 100 with decimal values being allowed. In normal use with servos this should be set to 0.
+
 ##### **Examples**
 
 Set channel 0 to a PWM signal with a 50% duty cycle:
 ```
 pwmAddon.setupDriver(0,50,0);
 ```
+
 Generate a 3.55% duty cycle PWM signal with a 45% delay on channel 7:
 ```
 pwmAddon.setupDriver(7, 3.55f, 45);
 ```
+
 Set channel 0 to a PWM signal with a 50% duty cycle:
 ```
 pwmAddon.setupDriver(15, 100, 0);
 ```
+
 Set channel 8 to always off:
 ```
 pwmAddon.setupDriver(8, 0, 0);
 ```
+
 Set all channels to a 15.65% duty cycle PWM signal:
 ```
 pwmAddon.setupDriver(-1, 15.65f, 0.0f);
 ```
+
 [//]: # (Set Signal Frequency)
 #### **Set PWM Signal Frequency**
 
@@ -153,11 +185,12 @@ The oscillator can be reprogrammed to generate a variety of different frequencie
 ```
 pwmAddon.setFrequency(float freq);
 ```
+
 This will change the frequency of the PWM signals generated on all of the channels. The oscillator can generate frequencies between 24 Hz and 1526 Hz, the default value is 50 Hz.
 
 ##### **Arguments**
 
-The freq argument is a floating point number that specifies the frequency. The function will accept any input but the programmed frequency will be clamped between 24 Hz and 1526 Hz.
+The `freq` argument is a floating point number that specifies the frequency. The function will accept any input but the programmed frequency will be clamped between 24 Hz and 1526 Hz.
 
 ##### **Examples**
 Change the frequency to 60 Hz and generate a 40% duty cycle signal on channel 14:
@@ -166,16 +199,21 @@ Change the frequency to 60 Hz and generate a 40% duty cycle signal on channel 14
 pwmAddon.setFrequency(60);
 pwmAddon.setupDriver(14,40,0);
 ```
+
 Generate a signal on channel 13, change the frequency to 105.45 Hz, and generate a new signal on channel 13:
 ```
 pwmAddon.setupDriver(13,99,0);
 pwmAddon.setFrequency(105.45);
 pwmAddon.setupDriver(13,82,0);
 ```
+
+
 [//]: # (Disable Oscillator)
 #### **Disabling the Oscillator**
 The oscillator can also be disabled, automatically stopping all PWM signal generation:
 ```
 pwmAddon.diableChip();
 ```
+
 This might be useful for disabling PWM signal-driven devices while not powering off the Omega. **The initialization function will have to be run before new PWM signals can be generated.**
+

@@ -39,21 +39,17 @@ The display keeps a cursor pointer in memory that indicates the current page and
 
 The OLED Expansion addon exposes a series of methods that perform all of the actions specified in the Programming Flow section.
 
-[//]: # (Using the Addon)
+[//]: # (Install the Addon)
 
-## **Using the Addon**
+## **Install the Addon**
 
-Install the addon into your project folder from our repo using opkg install.
-
+Install the addon on your Omega:
 ```
+opkg update
 opkg install oled-exp-node
 ```
 
-[//]: # (Return Values)
-## **Return Values**
-
-All of the functions will either return a 0 indicating success or 1 indicating failure.
-
+[//]: # (Importing the Addon)
 ## **Importing the addon into your Node Script**
 
 To use the addon within your script you have to import it into your node program as you would a module. Use the following command in your node script. 
@@ -61,6 +57,24 @@ To use the addon within your script you have to import it into your node program
 ```
 var oledAddon = require("./oled_addon");
 ```
+
+[//]: # (Rajiv: add instructions on linking/copying the addon to the project?)
+
+
+[//]: # (Example Code)
+### **Example Code**
+
+Example code that uses the `oled-exp-node` addon can be [found here]() in the `i2c-exp-node-addons` Onion GitHub Repo.
+
+[//]: # (Rajiv: populate the example link)
+
+
+[//]: # (Return Values)
+## **Return Values**
+
+All of the functions will either return a 0 indicating success or 1 indicating failure.
+
+
 [//]: # (Calling Methods)
 ## **Calling Methods**
 
@@ -132,7 +146,7 @@ The screen cab be turned on and off while still preserving the displayed content
 oledAddon.setDisplayPower(int bPowerON);
 ```
 #####**Arguments**
-The bPowerOn argument determines whether to turn the display on or off.
+The `bPowerOn` argument determines whether to turn the display on or off.
 
 |Value|Meaning             |
 |-----|--------------------|
@@ -161,7 +175,7 @@ oledAddon.setDisplayMode(int bInvert);
 ```
 
 #####**Arguments**
-The bInvert argument determines whether to inver the colors or not.
+The `bInvert` argument determines whether to inver the colors or not.
 
 |Value|Meaning                 |
 |-----|------------------------|
@@ -174,10 +188,12 @@ To invert the colors:
 ```
 oledAddon.setDisplayMode(1);
 ```
+
 To revert back to the normal colors:
 ```
 oledAddon.setDisplayMode(0);
 ```
+
 [//]: # (Set Brightness)
 
 ####**Set the Display Brightness**
@@ -188,7 +204,7 @@ oledAddon.setBrightness(int brightness);
 ```
 
 ##### **Arguments**
-The brightness argument determines the brightness with a range of 0-255, with 255 being the brightest setting and 0 being the dimmest.
+The `brightness` argument determines the brightness with a range of 0-255, with 255 being the brightest setting and 0 being the dimmest.
 
 ##### **Examples**
 
@@ -221,7 +237,7 @@ simplifies the procedure with two distinct settings.
 
 ##### **Arguments**
 
-The dim argument determines whether to enable the dim setting
+The `dim` argument determines whether to enable the dim setting
 
 |Value |Meaning                |
 |------|-----------------------|
@@ -247,7 +263,7 @@ Implements the ability to select the display's memory mode:
 ```
 oledAddon.setMemoryMode(int mode);
 ```
-The memory mde affects how the cursor is automatically advanced when the display memory is written with text or images.
+The memory mode affects how the cursor is automatically advanced when the display memory is written with text or images.
 
 ##### **Horizontal Addressing Mode**
 
@@ -271,7 +287,7 @@ By default, **Horizontal Addressing** is used.
 
 ##### **Arguments**
 
-The mode argument determines which memory mode is active. 
+The `mode` argument determines which memory mode is active. 
 
 |Memory Mode                |Input |
 |---------------------------|------|
@@ -302,9 +318,9 @@ Note: the column cursor is not preserved after a column addressing change.
 
 ##### **Arguments**
 
-The startPixel argument sets the starting column for each page.
+The `startPixel` argument sets the starting column for each page.
 
-The endPixel argument sets the end column for each page.
+The `endPixel` argument sets the end column for each page.
 
 Both arguments must be between the 0-127 and the startPixel must be **less than** endPixel.
 
@@ -367,9 +383,9 @@ Note: since the column cursor is not preserved after a column addressing change,
 
 ##### **Arguments**
 
-The row argument sets the page for the cursor, so the range is 0 to 7.
+The `row` argument sets the page for the cursor, so the range is 0 to 7.
 
-The column argument sets the character column position of the cursor, the range is 0 to 20.
+The `column` argument sets the character column position of the cursor, the range is 0 to 20.
 
 ##### **Examples**
 Set the cursor to the start of the last page:
@@ -412,9 +428,9 @@ It allows for cursor positions that are not aligned with the 21 possible charact
 
 ##### **Arguments**
 
-The row argument sets the page for the cursor, so the range is 0-7
+The `row` argument sets the page for the cursor, so the range is 0-7
 
-The pixel argument sets the horizontal pixel position of the cursor, the range is 0 to 127
+The `pixel` argument sets the horizontal pixel position of the cursor, the range is 0 to 127
 
 ##### **Examples**
 
@@ -458,7 +474,7 @@ oledAddon.oledWriteByte(int byte);
 
 ##### **Arguments**
 
-The byte argument holds the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the column.
+The `byte` argument holds the eight bits that will be written to the screen. The Least Significant Bit (LSB) in the byte corresponds to the top-most pixel in the column, the Most Significant Bit (MSB) corresponds to the bottom-most pixel in the column.
 
 ![imgur](http://i.imgur.com/8DIiN2n.png)
 
@@ -479,11 +495,11 @@ oledAddon.writeByte(0x3f);
 
 Write a single character to the current position of the cursor:
 ```
-oledAddon.writeChar('c');
+oledAddon.writeChar(character);
 ```
 
 ##### **Arguments**
-The c argument is the character that is to be written to the screen.
+The `character` argument is the character that is to be written to the screen.
 
 Make sure to check the asciiTable dynamic array found in oled-exp.h, it defines the bitmap pattern of each allowed character. Any characters not found in the table will be ignored.
 
@@ -510,7 +526,7 @@ Note: the column addressing will be set to 0-125 to properly display text during
 
 ##### **Arguments**
 
-The msg argument is the string to be written to the display. Any characters not found in the asciiTable array will be ignored.
+The `msg` argument is the string to be written to the display. Any characters not found in the asciiTable array will be ignored.
 
 ##### **Examples**
 
@@ -544,7 +560,6 @@ oledAddon.scroll(int direction, int scrollSpeed, int startPage, int stopPage);
 Indicates whether to scroll left or right.
 
 |Value              | Scrolling Direction |
-|-------------------|---------------------|
 |-------------------|---------------------|
 | 0                 | Left                |
 | 1                 | Right               |
