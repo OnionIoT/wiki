@@ -69,7 +69,7 @@ Following the wizard will connect your Omega to a wifi network of your choice, a
 
 ![Check if serial device exists](//i.imgur.com/FLn2p35h.jpg "Check if serial device exists")
 
-**Step 3**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using screen.
+**Step 3**: Run `screen /dev/tty.SLAB_USBtoUART 115200` to connect to the Omega’s serial terminal using the `screen` utility.
 
 ![Log in through serial terminal](//i.imgur.com/cGANJefh.jpg "Log in through serial terminal")
 
@@ -150,18 +150,18 @@ Unzip the archive.
 Compile the driver with `make`.
 
 ```bash
-$ sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial/
-$ sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
-$ sudo insmod cp210x.ko
-$ sudo chmod 666 /dev/ttyUSB0
+sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial/
+sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
+sudo insmod cp210x.ko
+sudo chmod 666 /dev/ttyUSB0
 ```
 
 *For RedHat/CentOS*:
 
 ```bash
-$ sudo yum update kernel* //need to update the kernel first otherwise your header won't match
-$ sudo yum install kernel-devel kernel-headers //get the devel and header packages
-$ sudo reboot //your build link should be fixed after your system come back
+sudo yum update kernel* //need to update the kernel first otherwise your header n't match
+sudo yum install kernel-devel kernel-headers //get the devel and header packages
+sudo reboot //your build link should be fixed after your system come back
 ```
 
 Unzip the archive.
@@ -171,30 +171,50 @@ Unzip the archive.
 Compile the driver with `make`.
 
 ```bash
-$ sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial
-$ sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
-$ sudo insmod cp210x.ko
-$ sudo chmod 666 /dev/ttyUSB0
+sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial
+sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
+sudo insmod cp210x.ko
+sudo chmod 666 /dev/ttyUSB0
 ```
 
 
-**Step 4**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/ttyUSB0`.
+**Step 4**: Let's install `screen`, a command line utility that will allow connecting to the Omega's serial terminal.
+
+*For Ubuntu/Debian*:
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install screen
+```
+
+*For RedHat/CentOS*:
+
+```bash
+sudo yum update
+sudo yum install screen
+```
+
+
+**Step 5**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/ttyUSB0`.
 
 ![Check if serial device exists](//i.imgur.com/p1OwSE6h.png "Check if serial device exists")
 
-**Step 5**: Run `screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen.
+**Step 6**: Run `screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen.
 
 ![Log in through serial terminal](//i.imgur.com/sENEIX8h.png "Log in through serial terminal")
 
-**Step 6**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
+If this not work, try `sudo screen /dev/ttyUSB0 115200`
+
+**Step 7**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
 ![Run wifisetup](//i.imgur.com/qou4iAmh.png "Run wifisetup")
 
-**Step 7**: Run `oupgrade` in the serial terminal, this will update the Omega to the latest firmware.
+**Step 8**: Run `oupgrade` in the serial terminal, this will update the Omega to the latest firmware.
 
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 8**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
+**Step 9**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
 
