@@ -19,6 +19,8 @@ A detailed rundown of changes in each firmware version:
 
 # Hardware Documentation
 
+## Omega
+
 A run-down of the Omega's technical specs and features, as well as an introduction to the Reset Button, the GPIOs, and connectivity interfaces
 * [Omega Hardware](./Hardware/Omega-Hardware)
 
@@ -26,6 +28,17 @@ A run-down of the Omega's technical specs and features, as well as an introducti
 Pin-out Diagrams for the Omega and Expansion Dock:
 * [Pin-Outs](./Hardware/Pinout-Diagram)
 
+## Electrical Schematics
+
+Electrical schematics for the Omega, Docks, and Expansions:
+
+* [Omega](./Hardware/Schematics/Omega.pdf)
+* [Expansion Dock](./Hardware/Schematics/Omega-Expansion-Dock.pdf)
+* [Mini Dock](./Hardware/Schematics/Omega-Mini-Dock.pdf)
+* [Relay Expansion](./Hardware/Schematics/Omega-Relay-Expansion.pdf)
+* [Servo Expansion](./Hardware/Schematics/Omega-Servo-Expansion.pdf)
+* [Ethernet Expansion](./Hardware/Schematics/Omega-Ethernet-Expansion.pdf)
+* [OLED Expansion](./Hardware/Schematics/)
 
 ## Technical Drawings
 
