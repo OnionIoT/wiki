@@ -33,7 +33,7 @@ This will print out the raw NMEA output.
 
 ![Imgur](http://i.imgur.com/PjMzWWQ.png)
 
-[//]: # (Installation)
+
 ###Installing ogps
 
 You can also use `ogps` to access relevant data offered up by the GPS via ubus calls. To install ogps enter the following commands. 
@@ -56,7 +56,7 @@ You should see gps listed.
 
 ![Imgur](http://i.imgur.com/iqhoqut.png)
 
-[//]: # (Usage)
+
 ###Usage
 Make sure your GPS is connected! To access the data simply run the command.
 
