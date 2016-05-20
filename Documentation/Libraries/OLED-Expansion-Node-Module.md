@@ -67,7 +67,7 @@ var oledAddon = require("./oled_addon");
 
 
 [//]: # (Example Code)
-### **Example Code**
+## **Example Code**
 
 Example code that uses the `oled-exp-node` addon can be [found here]() in the `i2c-exp-node-addons` Onion GitHub Repo.
 
@@ -656,9 +656,7 @@ oledAddon.scrollDiagonal(0,5,0,127,1,0,7);
 [//]: # (Stop scrolling)
 #### **Stop Scrolling**
 
-Disables all active scrolling.
-
-**Examples**
+Disables all active scrolling
 ```
 oledAddon.scrollStop();
 ```

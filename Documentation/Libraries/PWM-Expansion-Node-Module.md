@@ -215,7 +215,7 @@ pwmAddon.setupDriver(13,82,0);
 #### **Disabling the Oscillator**
 The oscillator can also be disabled, automatically stopping all PWM signal generation:
 ```
-pwmAddon.diableChip();
+pwmAddon.disableChip();
 ```
 
 This might be useful for disabling PWM signal-driven devices while not powering off the Omega. **The initialization function will have to be run before new PWM signals can be generated.**
