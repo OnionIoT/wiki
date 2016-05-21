@@ -72,15 +72,15 @@ To use the addon within your script you have to import it into your node program
 var relayAddon = require("./relay-node-addon");
 ```
 
-[//]: # (Rajiv: add instructions on linking/copying the addon to the project?)
+
 
 
 [//]: # (Example Code)
 ### **Example Code**
 
-Example code that uses the `relay-exp-node` addon can be [found here]() in the `i2c-exp-node-addons` Onion GitHub Repo.
+Example code that uses the `relay-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/tree/master/Examples) in the `i2c-exp-node-addons` Onion GitHub Repo.
 
-[//]: # (Rajiv: populate the example link)
+
 
 
 [//]: # (Return Values)

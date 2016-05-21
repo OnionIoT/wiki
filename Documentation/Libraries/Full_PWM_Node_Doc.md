@@ -99,6 +99,7 @@ Refer to the table below for a list and brief description of available pwm metho
 |  Method |   Inputs|  Description |
 |---|---|---|
 |driverInit()|none| Initialize the pwm expansion for use|
+|checkInit()|none|Check to see if the expansion is initialized|
 |setupDriver(int driverNum, float duty, float delay )| 0-15 or -1, 0-100, 0-100 |Generates the specified pwm signal on the specified channel|
 |setFrequency(float freq)| 24-1526| Sets the frequency for the oscillator chip|
 |disableChip()|none|Disables the oscillator chip and stops all pwm signals|
@@ -114,6 +115,21 @@ This function programs the initialization sequence on the Servo Expansion, after
 ```
 pwmAddon.driverInit();
 ```
+
+[//]: # (Check Init Function)
+#### **Check for Initialization**
+
+This function performs several reads to determine if the Servo Expansion has been initialized and the oscillator is running:
+```
+pwmAddon.checkInit();
+```
+
+[//]: # (Rajiv: Show return value here)
+
+**Examples**
+Let's check if the oscillator is initialized.
+
+[//]: # (Rajiv: Need real example here)
 
 
 [//]: # (Generate PWM Signal Function)

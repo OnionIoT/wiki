@@ -60,18 +60,18 @@ opkg install nodejs
 To use the addon within your script you have to import it into your node program as you would a module. Use the following command in your node script. 
 
 ```
-var oledAddon = require("./oled_addon");
+var oledAddon = require("/usr/bin/oled-exp-addon");
 ```
 
-[//]: # (Rajiv: add instructions on linking/copying the addon to the project?)
+
 
 
 [//]: # (Example Code)
 ## **Example Code**
 
-Example code that uses the `oled-exp-node` addon can be [found here]() in the `i2c-exp-node-addons` Onion GitHub Repo.
+Example code that uses the `oled-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/tree/master/Examples) in the `i2c-exp-node-addons` Onion GitHub Repo.
 
-[//]: # (Rajiv: populate the example link)
+
 
 
 [//]: # (Return Values)
