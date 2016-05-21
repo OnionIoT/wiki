@@ -153,8 +153,11 @@ Compile the driver with `make`.
 sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial/
 sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 sudo insmod cp210x.ko
-sudo chmod 666 /dev/ttyUSB0
+sudo usermod -a -G dialout $USER
 ```
+
+(You may need to logout and back in for the new group to take effect.)
+
 
 *For RedHat/CentOS*:
 
@@ -174,8 +177,10 @@ Compile the driver with `make`.
 sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial
 sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 sudo insmod cp210x.ko
-sudo chmod 666 /dev/ttyUSB0
+sudo usermod -a -G dialout $USER
 ```
+
+(You may need to logout and back in for the new group to take effect.)
 
 
 **Step 4**: Let's install `screen`, a command line utility that will allow connecting to the Omega's serial terminal.
