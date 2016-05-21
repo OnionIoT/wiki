@@ -65,7 +65,9 @@ Following the wizard will connect your Omega to a wifi network of your choice, a
 
 **Step 1**: Download and install the [Silicon Labs CP2102 driver for OS X](https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip).
 
-**Step 2**: Run `ls /dev/tty.*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/tty.SLAB_USBtoUART`.
+**Step 2**: Run `ls /dev/tty.*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should* be able to see a device with a name similar to `/dev/tty.SLAB_USBtoUART`.
+
+*If you can't see the device, a old or to long USB cable could be the problem to. If you use a deskdop computer, use a USB connection on the back (on mainboard) or just try a other/newer cable.
 
 ![Check if serial device exists](//i.imgur.com/FLn2p35h.jpg "Check if serial device exists")
 
@@ -196,7 +198,9 @@ sudo yum install screen
 ```
 
 
-**Step 5**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/ttyUSB0`.
+**Step 5**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should* be able to see a device with a name similar to `/dev/ttyUSB0`.
+
+*If you can't see the device, a old or to long USB cable could be the problem to. If you use a deskdop computer, use a USB connection on the back (on mainboard) or just try a other/newer cable.
 
 ![Check if serial device exists](//i.imgur.com/p1OwSE6h.png "Check if serial device exists")
 
