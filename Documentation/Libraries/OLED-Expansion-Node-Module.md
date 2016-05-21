@@ -69,7 +69,7 @@ var oledAddon = require("/usr/bin/oled-exp-addon");
 [//]: # (Example Code)
 ## **Example Code**
 
-Example code that uses the `oled-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/tree/master/Examples) in the `i2c-exp-node-addons` Onion GitHub Repo.
+Example code that uses the `oled-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/blob/master/Examples/oled_node_example.js) in the `i2c-exp-node-addons` Onion GitHub Repo.
 
 
 

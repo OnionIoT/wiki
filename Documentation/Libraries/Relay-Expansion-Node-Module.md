@@ -69,7 +69,7 @@ opkg install nodejs
 To use the addon within your script you have to import it into your node program as you would a module: 
 
 ```
-var relayAddon = require("./relay-node-addon");
+var relayAddon = require("/usr/bin/relay-node-addon");
 ```
 
 
@@ -78,7 +78,7 @@ var relayAddon = require("./relay-node-addon");
 [//]: # (Example Code)
 ### **Example Code**
 
-Example code that uses the `relay-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/tree/master/Examples) in the `i2c-exp-node-addons` Onion GitHub Repo.
+Example code that uses the `relay-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/blob/master/Examples/relay_node_example.js) in the `i2c-exp-node-addons` Onion GitHub Repo.
 
 
 

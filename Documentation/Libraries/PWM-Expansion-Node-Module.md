@@ -61,7 +61,7 @@ opkg install nodejs
 To use the addon within your script you have to import it into your node program as you would a module: 
 
 ```
-var oledAddon = require("./pwm-node-addon");
+var oledAddon = require("/usr/bin/pwm-node-addon");
 ```
 
 
@@ -70,7 +70,7 @@ var oledAddon = require("./pwm-node-addon");
 [//]: # (Example Code)
 ### **Example Code**
 
-Example code that uses the `pwm-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/tree/master/Examples) in the `i2c-exp-node-addons` Onion GitHub Repo.
+Example code that uses the `pwm-exp-node` addon can be [found here](https://github.com/OnionIoT/i2c-exp-node-addons/blob/master/Examples/pwm_node_example.js) in the `i2c-exp-node-addons` Onion GitHub Repo.
 
 
 
