@@ -1,0 +1,158 @@
+# Using php PWM wrapper
+---
+## Q: How to use the wrapper?
+## Answer:
+```
+<?php
+ require 'PWM.php';
+ $pwm = new PWM();
+ $pwm->SetChan('all'); //set the channels
+ /* The CHANNEL can be: 0 - 15 to control an individual channel
+    The CHANNEL can be: all to control all channels at once
+    
+   Optional parameters: frequency If not specified, default of 50 Hz is used
+   Frequency range is 24 Hz to 1526 Hz
+   Adds a delay in the PWM signal, can be an integer or floating point number between 0 and 100, 0% delay by default
+ */
+ $data = $pwm->SetDuty(1.25); // sets duty_cycle 1.25 on all channel's
+ echo explode(':',$data[1])[1]; // Parse just the responce
+ 
+ ?>
+
+```
+
+## Q: Where do I get it?
+## Answer: Right here!
+
+[The Gist Link](https://gist.github.com/Immortal-/358501006e03c60ab573bde29dedac06)
+```
+<?php
+/**
+* @ Author: Chris McCaslin
+* @ Date: 5/25/2016
+* @ Disc: Hardware pwm wrapper!
+*/
+  class PWM
+  {
+    private $channel;
+    private $duty_cycle;
+    private $frequency;
+    private $delay;
+    
+    // Need to intilize pwm
+    function __constructor()
+    {
+      $this->consoleCmd("ubus call i2c_exp pwm-exp '{\"command\":\"init\"}'");
+    }
+    // The SetPeriod function https://github.com/OnionIoT/i2c-exp-driver#set-period-command
+    public function SetPeriod($pulse, $period)
+    {
+      return $this->ConsoleCmd("ubus call i2c_exp pwm-exp '{\"command\":\"set-period\", \"params\":{\"channel\":$this->channel, \"pulse\":$pulse, \"periods\":$period}}'");
+    }
+    
+    public function SetChan($chn)
+    {
+      $this->channel = $chn;
+    }
+    // The SetDuty Command https://github.com/OnionIoT/i2c-exp-driver#set-command
+    public function SetDuty($dtyCycl)
+    {
+      if($dtyCycl < 0.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      elseif ($dtyCycl >100.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      else
+      {
+        $this->duty_cycle = (float)$dtyCycl;
+      }
+      return $this->ConsoleCmd("ubus call i2c_exp pwm-exp '{\"command\":\"set\", \"params\":{\"channel\":\"$this->channel\",\"duty\":\"$this->duty_cycle\"} }'");
+    }
+    // The SetFreq Command Optional parameter
+    public function SetFreq($dtyCycl, $freq)
+    {
+      if($dtyCycl < 0.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      elseif ($dtyCycl >100.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      else
+      {
+        $this->duty_cycle = (float)$dtyCycl;
+      }
+      if($freq < 24)
+      {
+        return "Frequency range is 24 Hz to 1526 Hz";
+      }
+      else if($freq > 1526)
+      {
+        return "Frequency range is 24 Hz to 1526 Hz";
+      }
+      else
+      {
+        $this->frequency = $freq;
+      }
+      return $this->ConsoleCmd("ubus call i2c_exp pwm-exp '{\"command\":\"set\", \"params\":{\"channel\":\"$this->channel\", \"duty\":\"$this->duty_cycle\", \"frequency\":\"$this->frequency\"} }'");
+    }
+    // The SetDelay Command Optional parameter
+    public function SetDelay($dtyCycl, $freq, $delay)
+    {
+      if($dtyCycl < 0.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      elseif ($dtyCycl >100.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      else
+      {
+        $this->duty_cycle = (float)$dtyCycl;
+      }
+      if($freq < 24)
+      {
+        return "Frequency range is 24 Hz to 1526 Hz";
+      }
+      else if($freq > 1526)
+      {
+        return "Frequency range is 24 Hz to 1526 Hz";
+      }
+      else
+      {
+        $this->frequency = $freq;
+      }
+      if($delay < 0.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      elseif ($delay >100.0000)
+      {
+        return "The DUTY CYCLE can be an integer or floating point number between 0 and 100";
+      }
+      else
+      {
+        $this->delay = (float)$delay;
+      }
+      return $this->ConsoleCmd("ubus call i2c_exp pwm-exp '{\"command\":\"set\", \"params\":{\"channel\":\"$this->channel\", \"duty\":\"$this->duty_cycle\", \"frequency\":\"$this->frequency,  \"delay\":\"$this->delay\"} }'");
+    }
+    // The Sleep Command https://github.com/OnionIoT/i2c-exp-driver#sleep-command
+    public function Sleep()
+    {
+      return $this->ConsoleCmd("ubus call i2c_exp pwm-exp '{\"command\":\"sleep\"}'");
+    }
+    // A method so we can interface with console easy.
+    private function ConsoleCmd($cmdToSend)
+    {
+      exec("$cmdToSend 2>&1", $output);
+      return $output;
+    }
+  }
+ ?>
+
+```
