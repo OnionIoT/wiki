@@ -1,8 +1,7 @@
 # Homemade Stock Ticker
 
 
-
-This main goal of this project is to demonstrate the Omega's capabilities in a practical webscraping application. We will be making a stock ticker using our Omega to retrieve prices and the OLED Expansion to display them. 
+The main goal of this project is to demonstrate the Omega's capabilities in a practical webscraping application. We will be making a stock ticker using our Omega to retrieve prices and the OLED Expansion to display them. 
 
 
 
