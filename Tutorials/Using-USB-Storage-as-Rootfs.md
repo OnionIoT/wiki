@@ -34,8 +34,9 @@ Install the packages with `opkg`:
 opkg update
 opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras
 ```
+## Step 1.1 (Important to avoid errors)
 
-You also need to have a USB storage device formatted to ext4 (or another filesystem you chose above). You can learn how to format a USB drive following the steps outlined in the [How to format a USB drive to ext4](#addendum-procedures_how-to-format-a-usb-drive-to-ext4) addendum section below.
+You also need to have a **USB storage device formatted to ext4** (important to avoid errors). You can learn how to format a USB drive following the steps outlined in the [How to format a USB drive to ext4](#addendum-procedures_how-to-format-a-usb-drive-to-ext4) addendum section below.
 
 
 [//]: # (extroot with pivot-overlay: step 2)
