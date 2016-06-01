@@ -41,6 +41,8 @@
 
 **Step 2**: Use Chrome or Opera and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. *Some users have experienced issues using Firefox and Safari.*
 
+In some cases it is required to install Apple's Bonjour service (Windows) or the Zeroconf services (Linux) first to access the omega via its URL. OSX usually comes with the Bonjour service already installed.
+
 Alternatively, you can also browse to `http://192.168.3.1`. 
 
 You have now arrived at the Setup Wizard. 
