@@ -203,7 +203,7 @@ If all of the switches are off (000), the switch setting does not need to be spe
 relay-exp <channel> <state>
 ```
 
-Some Examples
+**Some Examples:**
 
 The switches are set to on-off-on, setting RELAY0 to on:
 
@@ -211,7 +211,7 @@ The switches are set to on-off-on, setting RELAY0 to on:
 relay-exp -s 101 0 on
 ```
 
-The switches are set to on-on-on, setting RELAY1 of off:
+The switches are set to on-on-on, setting RELAY1 to off:
 
 ```
 relay-exp -s 111 1 0
@@ -230,22 +230,59 @@ relay-exp all off
 ```
 
 
-[//]: # (I2C Address Mapping)
+[//]: # (Switch Explanation: I2C Address Mapping)
 
 ## I2C Address Mapping
 
 If you're curious about how the dip-switch settings affect the I2C device address of the Relay Expansion, then this table is for you:
 
-| Switch Binary Setting | I2C Device Address |
-|-----------------------|--------------------|
-| 000                   | 0x27               |
-| 001                   | 0x26               |
-| 010                   | 0x25               |
-| 011                   | 0x24               |
-| 100                   | 0x23               |
-| 101                   | 0x22               |
-| 110                   | 0x21               |
-| 111                   | 0x20               |
+| I2C Device Address | Switch Binary Setting |
+|--------------------|-----------------------|
+| 0x27               | 000                   |
+| 0x26               | 100                   |
+| 0x25               | 010                   |
+| 0x24               | 110                   |
+| 0x23               | 001                   |
+| 0x22               | 101                   |
+| 0x21               | 011                   |
+| 0x20               | 111                   |
+
+
+
+
+[//]: # (Switch Explanation: Specifying the Address Directly)
+
+## Using the I2C Address Directly
+
+If you don't like dealing with the switch positions and would rather use the I2C device address directly, this option is for you:
+
+```
+relay-exp -a <addr> <channel> <state>
+```
+
+Where `<addr>` is the I2C device address. It can be entered with or without the leading `0x`, so `0x27` or `27` will both work.
+
+
+**Some Examples:**
+
+For a device address of 0x23, set RELAY0 to on:
+
+```
+relay-exp -a 0x23 0 on
+```
+
+For a device address of 0x26, set RELAY1 to off:
+
+```
+relay-exp -a 26 1 0
+```
+
+For a device address of 0x24, set BOTH relays to on
+
+```
+relay-exp -a 0x24 all 1
+```
+
 
 
 
