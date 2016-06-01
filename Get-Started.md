@@ -35,13 +35,18 @@
 
 ## Setting up using GUI
 
-**Step 1**: Connect to the Omega’s Access Point.
+**Step 1**: 
+
+Your computer may need some additional programs to access the Omega through a browser:
+* If you are using Windows, install Apple's Bonjour Service
+* If you are using OS X, you're all set to go
+* If you are using Linux, the Zeroconf services should already be installed and you will be good to go
+
+**Step 2**: Connect to the Omega’s Access Point.
 
 ![Connect to AP](//i.imgur.com/TIsvi2Bh.jpg "Connect to AP")
 
-**Step 2**: Use Chrome or Opera and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. *Some users have experienced issues using Firefox and Safari.*
-
-In some cases it is required to install Apple's Bonjour service (Windows) or the Zeroconf services (Linux) first to access the omega via its URL. OSX usually comes with the Bonjour service already installed.
+**Step 3**: Use Chrome or Opera and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. *Some users have experienced issues using Firefox and Safari.*
 
 Alternatively, you can also browse to `http://192.168.3.1`. 
 
@@ -57,7 +62,7 @@ Follow the wizard to complete the setup of the Omega.
 
 Following the wizard will connect your Omega to a wifi network of your choice, and will update to the latest firmware.
 
-**Step 3**: Start using your fresh Omega, check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
+**Step 4**: Start using your fresh Omega, check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
 
 

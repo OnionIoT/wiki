@@ -12,17 +12,25 @@ These steps will only need to be carried out once, and then you'll be set to go.
 # Computer setup
 These steps ensure the Omega and Arduino Dock will be detected wirelessly and correctly work with your computer.
 
-## Requirements
-The Omega must be accessible via its URL `http://omega-ABCD.local` as described [here](//wiki.onion.io/Get-Started)
+## Accessing the Omega's URL
+The Omega must be accessible via its URL `http://omega-ABCD.local` where `ABCD` is your Omega's unique code.
+
+The requirements vary depending on your Operating System:
+
+| Operating System | Actions Required                                            |
+|------------------|-------------------------------------------------------------|
+| Windows          | Install Apple's Bonjour Service                             |
+| OS X             | Nothing, good to go                                         |
+| Linux            | Zeroconf services should already be installed, should be ok |
 
 
 ## Arduino IDE 
 
-## Installation
+### Installation
 Install the latest Arduino IDE from the good folks over at [Arduino](//www.arduino.cc/en/Main/Software). We did all of our testing using Version 1.6.6.
 
 
-## Modification of boards.txt
+### Modification of boards.txt
 The regular Arduino Uno has no way of communicating with your computer via WiFi, but the Omega provides the Arduino Dock with a means of wireless communication, so we'll have to let the Arduino software know! 
 This requires a one line addition to the `boards.txt` file in your Arduino IDE installation.
 
