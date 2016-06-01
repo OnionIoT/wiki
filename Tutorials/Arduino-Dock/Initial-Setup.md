@@ -12,6 +12,9 @@ These steps will only need to be carried out once, and then you'll be set to go.
 # Computer setup
 These steps ensure the Omega and Arduino Dock will be detected wirelessly and correctly work with your computer.
 
+## Requirements
+The Omega must be accessible via its URL `http://omega-ABCD.local` as described [here](//wiki.onion.io/Get-Started)
+
 
 ## Arduino IDE 
 
