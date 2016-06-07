@@ -17,7 +17,7 @@
 
 ![Omega plugged into Dock](//i.imgur.com/rek12Zih.jpg "Omega Plugged into Dock")
 
-**Step 3**: Connect the Omega to your computer through USB.
+**Step 3**: Connect the Omega to your computer through USB. For best results, use a cable that is two feet long or less.
 
 ![Omega plugged into USB](//i.imgur.com/0FImt9qh.jpg "Omega plugged into USB")
 
@@ -161,6 +161,7 @@ sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial/
 sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 sudo insmod cp210x.ko
 sudo chmod 666 /dev/ttyUSB0
+sudo usermod -a -G dialout $USER
 ```
 
 *For RedHat/CentOS*:
@@ -182,6 +183,7 @@ sudo cp cp210x.ko /lib/modules/<kernel-version>/kernel/drivers/usb/serial
 sudo insmod /lib/modules/<kernel-version>/kernel/drivers/usb/serial/usbserial.ko
 sudo insmod cp210x.ko
 sudo chmod 666 /dev/ttyUSB0
+sudo usermod -a -G dialout $USER
 ```
 
 

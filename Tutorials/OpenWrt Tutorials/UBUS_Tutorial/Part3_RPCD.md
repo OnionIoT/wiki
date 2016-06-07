@@ -86,21 +86,21 @@ Once your done that make the file executable by changing the permission on the f
 
 <pre><code>chmod +x Math</code></pre>
 
-after that you'll need to reload the rcpd plugin so that it recognizes the new service we have just attached. To do that either enter this into your command line.
+After that you'll need to restart the rcpd plugin so that it recognizes the new service we have just attached. To do that enter this into your command line:
 
 <pre><code>/etc/init.d/rpcd restart</code></pre>
 
 This should attach your service to the ubus.
-(if not, try running `rpcd` first with the option `stop` and then with the option `start`)
-
 
 ![RPCD2](http://i.imgur.com/mcdiKW3.png)
 
-Now lets check to see if our service is listed.  To check if your service is available enter _ubus_ list into your command line. If that does not work check out the other options of rpcd by running `/etc/init.d/rpcd` or try restarting your Omega, the Math service should now be connected to the plugin.
+Now lets check to see if our service is listed. To check if your service is available run `ubus list` on the command line.
 
 ![RPCD3](http://i.imgur.com/Ys2ZbeV.png)
 
-As you can see, we have _Math_ listed in our ubus service. Let's try using, go ahead and enter the following command and see if it works.
+As you can see, we have _Math_ listed in our ubus service. If not, try running `/etc/init.d/rpcd stop` and then `/etc/init.d/rpcd start`, or restarting your Omega.
+
+Let's try using it now, go ahead and enter the following commands and see what happens:
 
 <pre><code>ubus list -v Math</code></pre>
 <pre><code>ubus call Math addition '{"argument1":"4","argument2":"6"}'</code></pre>
