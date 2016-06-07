@@ -114,6 +114,7 @@ The Omega is very versatile when it comes to WiFi networks, the following guides
 * [Connecting to a WiFi Hotspot that requires a login](./Connecting-Omega-to-Wifi-Hotspot-that-Requres-Login)
 * [Finding the Omega's IP address](./Find-the-Omegas-IP-address)
 * [Sharing Directories on the Omega using Samba](./Sharing-with-Samba)
+* [Connect to Wifi with Username](./Connecting-to-School-Wifi(MSCHAPv2 Auth Type).md)
 
 
 ## The Omega and Networking
@@ -121,7 +122,6 @@ The Omega is very versatile when it comes to WiFi networks, the following guides
 * [Using the Omega as a Router](./Using-Omega-As-A-Router)
 * [Using the Omega as a WiFi Range Extender](./Using-Omega-As-Wifi-Range-Extender)
 * [Using the Omega as a WiFi Ethernet Bridge](./Using-Omega-As-Wifi-Ethernet-Bridge)
-
 
 
 [//]: # (Storage Space)
