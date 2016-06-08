@@ -113,8 +113,9 @@ The Omega is very versatile when it comes to WiFi networks, the following guides
 
 * [Connecting to a WiFi Hotspot that requires a login](./Connecting-Omega-to-Wifi-Hotspot-that-Requres-Login)
 * [Finding the Omega's IP address](./Find-the-Omegas-IP-address)
-* [Sharing Directories on the Omega using Samba](./Sharing-with-Samba)
 * [Connect to Enterpise-Secured Wifi that requires a username and password](./Connecting-to-Enterprise-Secured-Wifi)
+* [Sharing Directories on the Omega using Samba](./Sharing-with-Samba)
+* [Using WinSCP for File Transfers](./WinSCP-For-File-Transfers)
 
 
 ## The Omega and Networking
