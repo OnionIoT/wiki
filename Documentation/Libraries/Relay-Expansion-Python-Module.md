@@ -234,3 +234,41 @@ Turn both channels on (all switches are On):
 ``` python
 status 	= relayExp.setAllChannels(0, 1)
 ```
+
+
+
+[//]: # (Python: Read Relay State)
+
+### Read Relay State
+
+Use this function to read the state of a specific relay:
+
+``` python
+state = relayExp.readChannel(addr, channel)
+```
+
+
+**Arguments**
+
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
+
+The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
+
+**Return Value**
+
+The return value indicates the state of the relay channel in question:
+* `0` indicating the relay is OFF
+* `1` indicating the relay is ON
+
+**Example**
+
+Read the state of channel 0 (all switches are Off):
+``` python
+value 	= relayExp.readChannel(0, 0)
+if value == 1:
+	print 'Relay 0 is ON!'
+else:
+	print 'Relay 0 is OFF'
+```
+
+

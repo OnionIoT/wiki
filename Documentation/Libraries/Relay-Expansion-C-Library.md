@@ -276,7 +276,7 @@ status 	|= relaySetAllChannels (7, 0);
 Use this function to read the state of a specific relay:
 
 ``` c
-int relayReadState (int addr, int channel, int *state);
+int relayReadChannel (int addr, int channel, int *state);
 ```
 
 **Arguments**
@@ -299,7 +299,7 @@ Read the state of Relay 0 with all switches in Off position:
 int state, status;
 int channel = 0;
 
-status	= relayReadState(7, channel, &state);
+status	= relayReadChannel(7, channel, &state);
 
 if (status == EXIT_SUCCESS) {
 	if (state == 0) {
