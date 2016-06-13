@@ -93,6 +93,14 @@ The functions are largely the same as their C counterparts, including the argume
 Example code that uses the `relayExp` module can be [found here](https://github.com/OnionIoT/i2c-exp-driver/blob/master/examples/relay-exp.py), in the `i2c-exp-driver` Onion GitHub Repo.
 
 
+[//]: # (Python: The Channels)
+
+## The Channels
+
+The Relay Expansion has two channels, the image below describes how they are enumerated:
+
+![Relay Channel Identification](https://i.imgur.com/Wk6Z9lW.png)
+
 
 [//]: # (Python: Return Values)
 
@@ -188,7 +196,7 @@ relayExp.setChannel(addr, channel, state)
 
 The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
-The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
+The `channel` argument selects the relay in question. See the [diagram above](#the-python-module_the-channels) for info on which channel corresponds to which relay.
 
 The `state` argument allows the user to select if the relay will be turned on or off:
 * 0 turn the relay OFF
@@ -252,7 +260,7 @@ state = relayExp.readChannel(addr, channel)
 
 The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
-The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
+The `channel` argument selects the relay in question. See the [diagram above](#the-python-module_the-channels) for info on which channel corresponds to which relay.
 
 **Return Value**
 

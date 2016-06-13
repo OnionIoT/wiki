@@ -224,7 +224,7 @@ int relaySetChannel	(int addr, int channel, int state);
 
 The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
-The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
+The `channel` argument selects the relay in question. See the [diagram above](#the-c-library_types) for info on which channel corresponds to which relay.
 
 The `state` argument allows the user to select if the relay will be turned on or off:
 * 0 turn the relay OFF
@@ -283,7 +283,7 @@ int relayReadChannel (int addr, int channel, int *state);
 
 The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
 
-The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
+The `channel` argument selects the relay in question. See the [diagram above](#the-c-library_types) for info on which channel corresponds to which relay.
 
 The `bInitialized` argument is to be passed by reference and once the function executes, it will contain a value that corresponds whether or not the Expansion is currently in the initialized state.
 The value follows the table below:
