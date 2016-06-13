@@ -1,6 +1,6 @@
 # Relay Expansion Library
 
-The Onion Relay Expansion library, `libonionrelayexp` is a dynamic C library that provides functions to setup and change the state of the relays on the Relay Expansion. 
+The Onion Relay Expansion library, `libonionrelayexp` is a dynamic C library that provides functions to setup, read, and change the state of the relays on the Relay Expansion. 
 
 ![Relay Expansion](http://i.imgur.com/iPswHOC.jpg)
 
@@ -268,5 +268,51 @@ status 	=  relaySetAllChannels (7, 1);
 status 	|= relaySetChannel (7, 0, 0);
 status 	|= relaySetAllChannels (7, 0);
 ```
+
+[//]: # (Read Relay State)
+
+### Read Relay State
+
+Use this function to read the state of a specific relay:
+
+``` c
+int relayReadState (int addr, int channel, int *state);
+```
+
+**Arguments**
+
+The `addr` argument is described above in the [I2C Device Address section](#i2c-device-address).
+
+The `channel` argument selects the relay in question. See the [diagram above](#functions_types) for info on which channel corresponds to which relay.
+
+The `bInitialized` argument is to be passed by reference and once the function executes, it will contain a value that corresponds whether or not the Expansion is currently in the initialized state.
+The value follows the table below:
+
+The `state` argument is to be passed by reference and once the function executes, it will containt the state of the relay in question:
+* `0` indicating the relay is OFF
+* `1` indicating the relay is ON
+
+**Example**
+
+Read the state of Relay 0 with all switches in Off position:
+``` c
+int state, status;
+int channel = 0;
+
+status	= relayReadState(7, channel, &state);
+
+if (status == EXIT_SUCCESS) {
+	if (state == 0) {
+		printf("Relay%d is OFF!", channel);
+	}
+	else {
+		printf("Relay%d is ON!", channel);
+	}
+}
+```
+
+
+
+
 
 
