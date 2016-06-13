@@ -26,6 +26,14 @@ The build number will continuously increment over the course of development.
 # Versions
 Definining the differences in each version change
 
+## 0.1.2
+**Brin J1 Release.**
+
+Firmware updates for Onion Cloud App Store
+
+* Added onion-helper ubus service
+* Updates to I2C Expansion Drivers
+
 ## 0.1.1
 **Brin M1 Release.**
 
@@ -98,8 +106,82 @@ Post production firmware
 Initial firmware sent to be flashed at the factory
 
 
+
+
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
+
+## b326
+*Jun 13, 2016*
+
+* Updated I2C Exp Driver relay expansion w/ cli usage instructions
+
+## b325
+*Jun 10, 2016*
+
+**Firmware 0.1.2 Release**
+
+Console Updates:
+* Fixed dropdown issue in GPIO and OLED apps
+
+Firmware Updates:
+* Added onion-helper, a c-based ubus service to facilitate better cloud interaction
+* Updated I2C Expansion Drivers, specifically the Relay
+  * Extended to use all GPIOs available on MCP chip
+  * Can now read relay state
+  * Updates to ubus service to allow reading relay state
+* Removed power-dock testing application from firmware
+
+## b324
+*May 31, 2016*
+
+* Added power-dock application to firmware (for testing purposes)
+
+## b323
+*May 31, 2016*
+
+* I2C Expansion Driver version upped to 0.3
+  * relay-exp app can now:
+    * Control all 8 MCP chip GPIOs
+    * Accept full I2C device address from the command line
+
+## b322, b321
+*May 29, 2016*
+
+* Library management script update: changed structure of output
+
+## b320, b317, b316
+*May 24, 2016*
+
+* Added hooks for build server and library management
+
+## b315
+*May 20, 2016*
+
+* Added I2C Expansion Node modules
+
+## b314, b313
+*May 18, 2016*
+
+* Added rpcsys ubus service package to firmware
+* Updated onion-helper ubus service download function
+  * Better error handling
+  * Ability to run download in background
+
+## b312
+*May 17, 2016*
+
+* Updates to onion-helper ubus service
+
+## b311, b310
+*May 12, 2016*
+
+* Adding Transmission Console App to onion repo
+
+## b309
+*May 9, 2016*
+
+* Adding onion-helper c-based ubus service as a package
 
 ## b308
 *April 29, 2016*
