@@ -77,6 +77,8 @@ A tool we've developed called `relay-exp` will make controlling your relay expan
 Also available are a C library and a Python module that allow you to develop your own programs to control the Relay Expansion.
 
 
+[//]: # (Using relay-exp: command usage)
+
 ## Command Usage
 
 For a print out of the command's usage, run it with just a `-h` argument:
@@ -84,6 +86,9 @@ For a print out of the command's usage, run it with just a `-h` argument:
 ```
 relay-exp -h
 ```
+
+
+[//]: # (Using relay-exp: init)
 
 ## Initialization
 
@@ -99,6 +104,9 @@ This can be run on it's own or in conjunction with any commands below.
 
 By default, the relays will be OFF.
 
+
+[//]: # (Using relay-exp: relay channels)
+
 ## Relay Channels
 
 The Expansion has two modules, this guide will refer to the relays as RELAY0 and RELAY1 or as a channel.
@@ -106,6 +114,9 @@ The Expansion has two modules, this guide will refer to the relays as RELAY0 and
 Refer to the following image to identify which channel refers to which relay:
 
 ![Relay Expansion](//i.imgur.com/Wk6Z9lW.png)
+
+
+[//]: # (Using relay-exp: setting a relay's state)
 
 ## Setting a Relay's State
 
@@ -121,7 +132,7 @@ The state argument should be 0 or off for turning the relay OFF, or 1 or on for 
 
 When the relay is OFF, it will act as an open switch, so any circuit connected to it will not be closed and will therefore be powered down. When it is ON, it is essentially a closed switch, so connected circuits will be powered on.
 
-A few examples...
+**A few examples...**
 
 To initialize the chip and enable relay1:
 
@@ -141,6 +152,9 @@ To turn on relay 0:
 relay-exp 0 on
 ```
 
+
+[//]: # (Using relay-exp: controlling both relays simultaneously)
+
 ## Controlling both Relays Simultaneously
 
 You are also able to control both relays in a single command:
@@ -151,7 +165,7 @@ relay-exp all <state>
 
 As above, the state argument should be 0 or off to turn the relay OFF, or 1 or on to turn the relay ON, the only difference is that it will now affect both relays.
 
-Some examples
+**Some Examples:**
 
 Initializing the chip and turning both relays ON:
 
@@ -164,6 +178,36 @@ Turning both relays OFF:
 ```
 relay-exp all off
 ```
+
+
+[//]: # (Using relay-exp: reading a relay's state)
+
+## Reading a Relay's State
+
+The tool also allows you to check the current state of the relay:
+
+```
+relay-exp read <channel>
+```
+
+The channel argument should be either 0 or 1 for RELAY0 and RELAY1 respectively.
+
+The output of the program will indicate if the relay is ON or OFF.
+	
+**A few examples...**
+
+To read the state of relay0:
+```
+root@Omega-1302:~# relay-exp read 0
+> Reading RELAY0 state: ON
+```
+
+To read the state of relay1:
+```
+root@Omega-1302:~# relay-exp read 1
+> Reading RELAY1 state: OFF
+```
+
 
 
 [//]: # (Switch Explanation)
