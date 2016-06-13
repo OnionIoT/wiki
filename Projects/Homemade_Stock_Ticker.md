@@ -149,11 +149,12 @@ Follow the instructions and give the Omega access to your wifi network.
 
 
 
-We will need to install the full version of python so that we have access to some libraries necessary for webscraping. If you have already installed python skip to the next step. To do this simply enter,
+We will need to install the full version of Python so that we have access to some libraries necessary for webscraping. If you have already installed python skip to the next step. To do this simply enter,
 
-
-
-<pre><code>opkg update && opkg install python</code></pre>
+```
+opkg update
+opkg install python
+```
 
 
 
@@ -172,16 +173,16 @@ You may or may not need to clear some space on your Omega for the installation. 
 Navigate to your "/" directory. Create your shell script file by executing the following command.
 
 
-
-<pre><code>cat > stock.sh</code></pre>
-
+```
+cat > stock.sh
+```
 
 
 You will be prompted to enter the contents of the file. Copy the following code into the file. 
 
 
 
-<pre><code>
+```
 
 #!/bin/sh
 
@@ -189,7 +190,7 @@ You will be prompted to enter the contents of the file. Copy the following code 
 
 oled-exp -c
 
-echo $1 > /usr/bin/ticker.txt
+echo $1 > /root/ticker.txt
 
 
 
@@ -200,16 +201,12 @@ VAR=$(python ./stock_script.py)
 oled-exp -i
 
 
-
 oled-exp write $VAR
+```
 
 
 
-</code></pre>
-
-
-
-You can save and exit the command by entering CTRL + D. Firstly, we add the the shell to our path so that we can run the file as an executeable. We then clear the display using _oled-exp -c_. We write the ticker of interest to the following file "/usr/bin/ticker.txt". Next we run our python script and store the output to our string variable, VAR. Then we initialize the display and write the value of VAR, which is our ticker and price. 
+You can save and exit the command by entering CTRL + D. Firstly, we add the the shell to our path so that we can run the file as an executeable. We then clear the display using _oled-exp -c_. We write the ticker of interest to the following file `/root/ticker.txt`. Next we run our python script and store the output to our string variable, VAR. Then we initialize the display and write the value of VAR, which is our ticker and price. 
 
 
 
@@ -217,11 +214,13 @@ Now lets do the same with our python script.
 
 
 
-<pre><code>cat > stock_script.py</code></pre>
+```
+cat > stock_script.py
+```
 
 
 
-<pre><code>
+``` python
 
 #!/usr/bin/env python
 
@@ -229,7 +228,7 @@ import urllib
 
 import json
 
-myfile = open('/usr/bin/ticker.txt', 'r')
+myfile = open('/root/ticker.txt', 'r')
 
 rg=myfile.read()
 
@@ -259,7 +258,7 @@ info=ticker+":"+price
 
 print info
 
-</code></pre>
+```
 
 
 
