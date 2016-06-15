@@ -1,5 +1,9 @@
 # Using php PWM wrapper
 ---
+## Q: What does this wrapper do?
+## A: This wrapper lets you interface with the pwm module using the ubus api via php. Thus allowing you to make webapps that control the pwm module. 
+## Q: Why use this and not the node.js lib?
+## A: For people with php project already that dont want to convert the whole project to node.js
 ## Q: How to use the wrapper?
 ## Answer:
 ```
@@ -15,7 +19,7 @@
    Adds a delay in the PWM signal, can be an integer or floating point number between 0 and 100, 0% delay by default
  */
  $data = $pwm->SetDuty(1.25); // sets duty_cycle 1.25 on all channel's
- echo explode(':',$data[1])[1]; // Parse just the responce
+ echo explode(':',$data[1])[1]; // Parse just the response
  
  ?>
 
