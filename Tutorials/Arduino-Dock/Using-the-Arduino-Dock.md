@@ -148,7 +148,7 @@ Onion* onionSetup;
 
 To initialize and activate the library functions, add the following line to the `setup()` function in the sketch:
 ```
-  onionSetup = new Onion;
+  onionSetup = new Onion();
 ```
 
 Check out our blink2 example to see this in action. The example can be accessed in the Arduino IDE through File -> Examples -> Onion -> blink2
