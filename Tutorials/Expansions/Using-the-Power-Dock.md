@@ -54,13 +54,13 @@ When both the battery and microUSB cable are connected to the Power Dock, the ba
 
 This mode runs when the battery is disconnected and the Power Dock is receiving power just from the microUSB cable. **Note:** The Indicator LEDs will be flashing erattically, this is expected:
 
-[Erratic LED Gif](http://i.imgur.com/bXvgvZu.gif)
+![Erratic LED Gif](http://i.imgur.com/bXvgvZu.gif)
 
 ## Power-Dock Application
 
 The power-dock application allows you to turn on the indicator LEDs on the Power Dock. It can only be used when the Power Dock is being used in battery mode. 
 
-###Install
+### Install
 
 To install the power-dock application, run the following commands:
 
