@@ -26,12 +26,12 @@ On the Power Dock, the power switch controls power to the Omega, regardless of w
 
 The power dock contains 4 LEDs that indicate the current battery level and charging status. The LED closest to the microUSB port indicates the lowest battery level and the LED furthest away from the microUSB port indicates the highest battery level. 
 
-// images at lowest and highest levels
+<!-- images at lowest and highest levels -->
 
 
 ## The Battery
 
-The battery used is a 3.7V LiPo Battery. It has an approximate lifetime of x hours and charging time of y hours. 
+The battery used is a 3.7V LiPo Battery. <!-- It has an approximate lifetime of x hours and charging time of y hours. --> 
 
 
 ## Usage Modes
