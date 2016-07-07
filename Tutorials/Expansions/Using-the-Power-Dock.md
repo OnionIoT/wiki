@@ -1,12 +1,12 @@
 # Using the Power Dock
 
-Power your next project wirelessly, using the Power Dock. Equipped with on-board recharging circuity, the Power Dock allows you to recharge and monitor battery levels. 
+Power your next project wirelessly using the Power Dock. Equipped with on-board recharging circuity, the Power Dock allows you to recharge and monitor battery levels. 
 
 [[_TOC_]]
 
 ## Differences from Expansion Dock
 
-We would like to point out some differences between Expansion Dock and Power Dock
+We would like to point out main differences between Expansion Dock and Power Dock
 
 **Image Highlighting Differences**
 
@@ -22,7 +22,7 @@ On the Power Dock, the power switch controls power to the Omega, regardless of w
 
 ### Indicator LEDs
 
-The power dock contains 4 LEDs that indicate the current battery level and charging status. Explain more
+The power dock contains 4 LEDs that indicate the current battery level and charging status. The LED closest to the microUSB port indicates the lowest battery level and the LED furthest away from the microUSB port indicates the highes battery level. 
 
 ## Hardware Specs
 
@@ -62,6 +62,26 @@ This mode runs when the battery is disconnected and the Omega is receiving power
 
 ###Install
 
-###Usage
+To install the power-dock application, run the following commands:
 
-#### Functions Here
+```
+opkg update
+```
+
+```
+opkg install power-dock
+```
+
+### Usage
+
+The power-dock application allows you check the battery level by turning on the LED Indicators. To do this simply enter the following command:
+
+```
+power-dock
+``` 
+
+For help with the application, enter the following command:
+
+```
+power-dock -h
+```
