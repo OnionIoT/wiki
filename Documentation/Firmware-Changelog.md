@@ -26,6 +26,18 @@ The build number will continuously increment over the course of development.
 # Versions
 Definining the differences in each version change
 
+## 0.1.4
+**Repo Fix Release.**
+
+* Fix for issue where Onion Repo Keys were not being installed by default, Omega users could not install Onion packages
+* Created new release so all users get the fix!
+
+## 0.1.3
+**Brin J2 Release.**
+
+* Updates to Device Client architecture, now supports additional setup modes and compatibility with latest Cloud services
+* Updates to I2C Expansion Drivers: additional control added for Relay Expansion
+
 ## 0.1.2
 **Brin J1 Release.**
 
@@ -111,7 +123,26 @@ Initial firmware sent to be flashed at the factory
 # Build Notes
 Defining the changes in each build. *Note that if a number is missing, that build failed the deployment process.*
 
-## b326
+## b330
+*Jul 8, 2016*
+
+**Firmware 0.1.4 Release**
+
+* Fixed issue where keys for Onion Package Repo were not being installed by default
+
+## b329
+*Jul 6, 2016*
+
+* Finalized power-dock application for Power Dock release
+
+## b328
+*Jun 24, 2016*
+
+**Firmware 0.1.3 Release**
+
+* Updated device-client architecture to support additional setup modes and compatibility with Cloud services
+
+## b327, b326
 *Jun 13, 2016*
 
 * Updated I2C Exp Driver relay expansion w/ cli usage instructions
