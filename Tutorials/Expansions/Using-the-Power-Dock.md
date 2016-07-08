@@ -20,23 +20,21 @@ Your Power Dock has a 30 pin Expansion Header, allowing you to use all of your e
 The Power Dock is flexible: it can run off just a battery or just by drawing power from the Micro USB port. Charging the battery requires having both the battery and the Micro USB plugged in, don't worry, the Omega will still work with no interruptions during charging.
 
 
-<!-- ## The Power Dock at a Glance -->
-<!-- To Do: add image with all parts of Power Dock labeled -->
+## The Power Dock at a Glance -->
 
-
-  
+![Power Dock Labeled](http://i.imgur.com/L98vslO.png)
 
 
 ## The Power Switch
 
-The power switch controls power to the Omega, regardless of whether it is powered from the battery or microUSB cable. The power switch has no effect on the battery charging, so **the battery will charge regardless of the switch position**. 
+The power switch controls power to the Omega, regardless of whether it is powered from the battery or Micro-USB cable. The power switch has no effect on the battery charging, so **the battery will charge regardless of the switch position**. 
 
 The blue Power LED indicates if there is power flowing to the Omega.
 
 
 ## Indicator LEDs
 
-The power dock contains 4 LEDs that indicate the current battery level and charging status. The LED closest to the microUSB port indicates the lowest battery level and the LED furthest away from the microUSB port indicates the highest battery level. 
+The power dock contains 4 LEDs that indicate the current battery level and charging status. The LED closest to the Micro-USB port indicates the lowest battery level and the LED furthest away from the Micro-USB port indicates the highest battery level. 
 
 <!-- images at lowest and highest levels -->
 
@@ -45,14 +43,45 @@ The power dock contains 4 LEDs that indicate the current battery level and charg
 
 The Power Dock is designed for use with a **3.7V LiPo Battery** with a standard 2-pin JST-PH connector (2mm spacing between pins). 
 
-<!-- Expect your battery to last about X hours. It should take Y hours to fully charge it up again. --> 
+Expect a 1500mAh battery to last about 10 hours, in some cases, up to 12 hours. 
+
+<!-- It should take Y hours to fully charge it up again.  -->
 
 **Warning:** Do not attempt to charge your battery with anything other that the Power Dock or a charger designed specifically for LiPo Batteries!
 
 
-## No USB to Serial Chip
+## Reset Button
+
+The Reset Button can be used to reboot the Omega or perform a factor restore of the firmware.
+A Reset Button can be found on the Expansion Dock and Mini Dock:
+
+For reference, the Reset Button is connected to Omega's GPIO11. GPIO11 is the Omega's Active-High Soft Reset input.
+
+### Reboot
+
+Momentarily pressing the reset button and letting go will initiate a reboot of the Omega OS.
+
+### Factory Restore
+
+Pressing and holding the reset button for 10 seconds and releasing will trigger a factory restore.
+
+**Warning:** This will reset your Omega to the default filesystem of the last firmware update, this **will delete ALL of your data!**
+
+
+
+## Micro-USB Port
+
+The Micro-USB Port is used to supply the Power Dock with ... power! Connect it to a computer or a USB wall adapter.
+
+
+### No USB to Serial Chip
 
 There is no USB-to-Serial Chip on the Power Dock. This means that you will **not** be able to connect to the Omega serially over the Micro-USB port.
+
+
+## USB Host Port
+
+The USB Host Port is connected to the Omega and can be used to interface USB peripherals with the Omega. A large variety of devices are supported out of the box, including webcams, keyboards, flash drives, hard drives, etc.
 
 
 ## Differences from the Expansion Dock
@@ -96,13 +125,13 @@ When the battery is approaching depletion the low level Indicator LED will begin
 
 ## Charging Mode
 
-When both the battery and microUSB cable are connected to the Power Dock, the battery will be charging. The Omega can still be powered on while the battery is charging, but it doesn't have to be; the battery will charge in this mode regardless of what the Omega is doing. You can even disconnect your Omega and the battery will still charge!
+When both the battery and Micro-USB cable are connected to the Power Dock, the battery will be charging. The Omega can still be powered on while the battery is charging, but it doesn't have to be; the battery will charge in this mode regardless of what the Omega is doing. You can even disconnect your Omega and the battery will still charge!
 
 The Indicator LEDs will show the current charge level of the battery:
   * A solid LED means the battery has charged up to that level
   * A flashing LED means the battery is currently charging this level
 
-**Note:** For best results use a **short** microUSB cable for charging.
+**Note:** For best results use a **short** Micro-USB cable for charging.
 
 <!-- To Do: Add images of charging -->
 
