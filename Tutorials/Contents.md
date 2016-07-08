@@ -74,6 +74,11 @@ The Expansion Dock provides a breakout for the Omega's GPIOs, allowing you to us
 * [Controlling the RGB LED](./Controlling-RGB-LED)
 
 
+## The Power Dock
+
+The Power Dock also provides a breakout for the Omega's GPIOs, allowing you to use the Expansions or drive the GPIOs. However, the Power Dock can also be powered by just a battery, and has battery management to intelligently charge the connected battery:
+* [How to use the Power Dock](./Expansions/Using-the-Power-Dock)
+
 
 ## The Expansions
 
