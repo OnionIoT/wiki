@@ -20,7 +20,7 @@ Your Power Dock has a 30 pin Expansion Header, allowing you to use all of your e
 The Power Dock is flexible: it can run off just a battery or just by drawing power from the Micro USB port. Charging the battery requires having both the battery and the Micro USB plugged in, don't worry, the Omega will still work with no interruptions during charging.
 
 
-## The Power Dock at a Glance -->
+## The Power Dock at a Glance
 
 ![Power Dock Labeled](http://i.imgur.com/L98vslO.png)
 
