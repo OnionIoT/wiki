@@ -2,7 +2,7 @@
 
 Bring your next project on the go with the Power Dock! Equipped with on-board battery management, the Power Dock allows you to recharge and monitor battery levels, while providing a header to connect Onion Expansions.
 
-![Power Dock](http://i.imgur.com/pwA5CeN.jpg)
+![Power Dock](http://i.imgur.com/pwA5CeNl.jpg)
 
 
 [[_TOC_]]
@@ -37,11 +37,11 @@ The power dock contains 4 LEDs that indicate the current battery level and charg
 
 Lowest Battery Level:
 
-![Lowest Indicator Level](http://i.imgur.com/nSp3ylG.jpg)
+![Lowest Indicator Level](http://i.imgur.com/nSp3ylGl.jpg)
 
 Highest Battery Level:
 
-![Highest Indicator Level](http://i.imgur.com/m9CPAfe.jpg)
+![Highest Indicator Level](http://i.imgur.com/m9CPAfel.jpg)
 
 
 ## The Battery
@@ -93,7 +93,7 @@ The USB Host Port is connected to the Omega and can be used to interface USB per
 
 Note some of the differences between the Expansion Dock and the Power Dock:
 
-![Hardware Differences](http://i.imgur.com/fYUrTNH.jpg)
+![Hardware Differences](http://i.imgur.com/fYUrTNHl.jpg)
 
 The main differences are:
   * Addition of battery management circuits and battery level indicator LEDs
@@ -160,7 +160,7 @@ Battery is **75%** charged, charging up to **100%**:
 
 The Power Dock will still work when the battery is disconnected and the Power Dock is receiving power just from the Micro USB cable. The Battery Level Indicator LEDs will be flashing erattically, this is expected:
 
-![Flickering indicators](http://i.imgur.com/GQz7dvT.gifv)
+![Flickering indicators](http://i.imgur.com/GQz7dvT.gif)
 
 The Power Dock essentially acts like the Expansion Dock in this mode.
 
