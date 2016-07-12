@@ -2,9 +2,8 @@
 
 Bring your next project on the go with the Power Dock! Equipped with on-board battery management, the Power Dock allows you to recharge and monitor battery levels, while providing a header to connect Onion Expansions.
 
-![Power Dock](http://i.imgur.com/TgZUo3c.jpg)
+![Power Dock](http://i.imgur.com/pwA5CeN.jpg)
 
-<!-- To Do: Replace this image with retouched photo -->
 
 [[_TOC_]]
 
@@ -36,7 +35,13 @@ The blue Power LED indicates if there is power flowing to the Omega.
 
 The power dock contains 4 LEDs that indicate the current battery level and charging status. The LED closest to the Micro-USB port indicates the lowest battery level and the LED furthest away from the Micro-USB port indicates the highest battery level. 
 
-<!-- images at lowest and highest levels -->
+Lowest Battery Level:
+
+![Lowest Indicator Level](http://i.imgur.com/nSp3ylG.jpg)
+
+Highest Battery Level:
+
+![Highest Indicator Level](http://i.imgur.com/m9CPAfe.jpg)
 
 
 ## The Battery
@@ -112,13 +117,13 @@ The Power Dock operates in three different modes.
 
 ## Battery Mode
 
-This is the most important mode; when the Omega and Power Dock are running completely off the battery. The LED Indicators will be turned off by default to conserve battery life, however they can be turned on via a command from the Omega.
+This is the most important mode; when the Omega and Power Dock are running completely off the battery. The LED Indicators will be turned off by default to conserve battery life, however they can be turned on for five seconds via a command from the Omega.
 
-![Toggle Indicator LEDs on](http://i.imgur.com/oFgTLmf.gif)
+![Toggle Indicator LEDs on](http://i.imgur.com/DDKiAsP.gif)
 
-When the battery is approaching depletion the low level Indicator LED will begin flashing.
+When the battery is approaching depletion the Indicator LEDs will begin flashing the low battery warning:
 
-<!-- Image: add flashing low level  -->
+![indicator flashing low battery](http://i.imgur.com/W8LPY77.gif)
 
 
 <!-- Usage Modes: Charging Mode -->
@@ -133,7 +138,20 @@ The Indicator LEDs will show the current charge level of the battery:
 
 **Note:** For best results use a **short** Micro-USB cable for charging.
 
-<!-- To Do: Add images of charging -->
+Take a look at the animations below for more details on the battery level indicators:
+
+Battery is **25%** charged, charging up to **50%**:
+
+![charging - 25% full](http://i.imgur.com/MsLDmLB.gif)
+
+
+Battery is **50%** charged, charging up to **75%**:
+
+![charging - 50% full](http://i.imgur.com/UjZR5iz.gif)
+
+Battery is **75%** charged, charging up to **100%**:
+
+![charging - 75% full](http://i.imgur.com/nt65BBB.gif)
 
 
 <!-- Usage Modes: Stationary Mode -->
@@ -142,7 +160,7 @@ The Indicator LEDs will show the current charge level of the battery:
 
 The Power Dock will still work when the battery is disconnected and the Power Dock is receiving power just from the Micro USB cable. The Battery Level Indicator LEDs will be flashing erattically, this is expected:
 
-![Erratic LED Gif](http://i.imgur.com/bXvgvZu.gif)
+![Flickering indicators](http://i.imgur.com/GQz7dvT.gifv)
 
 The Power Dock essentially acts like the Expansion Dock in this mode.
 
@@ -172,5 +190,5 @@ The application will turn on the Battery Level Indicator LEDs, allowing you to v
 power-dock
 ``` 
 
-![Toggle Indicator LEDs on](http://i.imgur.com/oFgTLmf.gif)
+![Toggle Indicator LEDs on](http://i.imgur.com/DDKiAsP.gif)
 
