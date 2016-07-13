@@ -295,7 +295,7 @@ After the image name and location are selected, click the Save to Omega button.
 
 The OLED image files store the image data as 1024 bytes represented in hexadecimal. Each byte represents eight vertical pixels, with the first 128 bytes representing the columns in Page 0, the following 128 bytes representing the columns in Page 1, and so on. 
 
-If this is unclear, see the [Understanding the Display Section](#programming-flow_understanding-the-display) for details on how the display is addressed.
+If this is unclear, see the [Understanding the Display Section in the OLED Expansion Library documentation article](https://wiki.onion.io/Documentation/Libraries/OLED-Expansion-C-Library#programming-flow_understanding-the-display) for details on how the display is addressed.
 
 
 [//]: # (Displaying Images: Displaying Images from a File)
@@ -305,6 +305,18 @@ If this is unclear, see the [Understanding the Display Section](#programming-flo
 To display the OLED image file on the OLED Expansion:
 ```
 oled-exp draw <path to oled image file>
+```
+
+**Example**
+
+Draw an image saved to `/root/image.lcd` on the display:
+```
+oled-exp draw /root/image.lcd
+```
+
+Initialize the display and draw an image saved to `/tmp/onion.lcd`:
+```
+oled-exp -i draw /tmp/onion.lcd
 ```
 
 
@@ -419,6 +431,6 @@ The OLED Display supports the following characters:
 
 The C library and Python module will give you the flexibility to use the OLED Expansion however you want in your own programs.
 
-For more information, see [this guide](../../Documentation/Libraries/OLED-Expansion-Library).
+For more information, see [this guide](../../Documentation/Libraries/OLED-Expansion-C-Library).
 
 

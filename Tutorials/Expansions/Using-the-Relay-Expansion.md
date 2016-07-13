@@ -336,7 +336,7 @@ relay-exp -a 0x24 all 1
 
 The C library and Python module will allow you to control the Relay Expansion with your own programs.
 
-For more information, see [this guide](../../Documentation/Libraries/Relay-Expansion-Library).
+For more information, see [this guide](../../Documentation/Libraries/Relay-Expansion-C-Library).
 
 
 

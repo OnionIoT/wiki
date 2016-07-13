@@ -268,7 +268,7 @@ pwm-exp -p <channel> <pulse width> <total period>
 
 The C library and Python module will allow you to develop your own programs that can control the Servo Expansion.
 
-For more information, see [this guide](../../Documentation/Libraries/PWM-Expansion-Library).
+For more information, see [this guide](../../Documentation/Libraries/PWM-Expansion-C-Library).
 
 
 
