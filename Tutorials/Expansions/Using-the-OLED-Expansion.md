@@ -302,72 +302,9 @@ If this is unclear, see the [Understanding the Display Section](#programming-flo
 
 ### Displaying Images from a File
 
-#### Read Image Data
-
-First, the data from the file needs to be loaded into a buffer:
-``` c
-int oledReadLcdFile	(char* file, uint8_t *buffer);
+To display the OLED image file on the OLED Expansion:
 ```
-
-**Arguments**
-
-The `file` argument is the path to the OLED image file.
-
-The `buffer` argument is a pointer to the memory that will hold the image data. It needs to be able to hold 1024 bytes (1 byte for each column in a page).
-
-#### Write Image Data to the Display
-
-Then, write the data from the buffer to the display:
-``` c
-int oledDraw (uint8_t *buffer, int bytes);
-```
-
-**Arguments**
-
-The `buffer` argument is the pointer to memory that holds the image data.
-
-The `bytes` is the number of bytes to be written. This will usually be 1024 bytes, this can be represented with macros: `OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8`.
-
-
-**Example**
-
-Read an image file located at `/root/image.lcd` and draw it on the OLED display:
-``` c
-int status;
-uint8_t	*buffer = malloc(OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8 * sizeof *buffer); // allocate memory for the buffer
-
-// read data from file
-status 	= oledReadLcdFile(param, buffer);
-
-// draw on display
-if (status == EXIT_SUCCESS) {
-	status	= oledDraw(buffer, OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8);
-}
-```
-
-
-It is also possible to programmatically fill a buffer and then draw it on the OLED display:
-``` c
-int i, status;
-uint8_t data;
-uint8_t	*buffer = malloc(OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8 * sizeof *buffer); // allocate memory for the buffer
-
-// programatically fill the buffer
-data = 0;
-for (i = 0; i < OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8; i++) {
-	buffer[i] = data;
-
-	// increment the data for the next column
-	if (data == 0xff) {
-		data = 0;	// reset to 0
-	}
-	else {
-		data++;		// increment by 1
-	}
-}
-
-// draw on display
-status	= oledDraw(buffer, OLED_EXP_WIDTH*OLED_EXP_HEIGHT/8);
+oled-exp draw <path to oled image file>
 ```
 
 
