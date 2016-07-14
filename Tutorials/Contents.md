@@ -154,20 +154,23 @@ Since the Omega runs a full Linux distribution, it is very flexible in the softw
 
 * [Using Git](./Using-Git)
 
-Python:
+## Python
 * [Installing Python](./Installing-Python)
 * [Sending Emails with Python](./Sending-Emails-With-Python)
 * [A Python GPIO Example](./Python-GPIO-LED-Example)
 * [Controlling an I2C-based LCD Display with Python](./Python-I2C-LCD-Display)
 
-LAMP Stack:
+## LAMP Stack
 * [Instaling the LAMP Stack on the Omega](./How-To-Install-LAMP-Stack-on-the-Omega)
 
-PHP:
+## PHP
 * [Using PHP on the Omega](./PHP-GPIO-Example)
 * [Using PHP with PushBullet](./PHP-PushBullet-Example)
 * [Using PHP with the DHT11/22 Sensors](./PHP-DHT11-DHT22-Sensor-Examples)
 * [Fixing and Using the PHP Date & Time Functions](./PHP-Date-Time-Functions)
+
+## NodeJS
+* [Using NodeJS on the Omega](./Installing-NodeJS)
 
 
 

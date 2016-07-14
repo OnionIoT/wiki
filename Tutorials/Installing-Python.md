@@ -1,10 +1,11 @@
 # Installing Python
 
 The Omega supports Python, we recommend installing the light version to save on space.
+
 [[_TOC_]]
 
 
-# Steps to install
+# Steps to Install
 
 Connect to the Omega's terminal either using SSH or Serial.
 
