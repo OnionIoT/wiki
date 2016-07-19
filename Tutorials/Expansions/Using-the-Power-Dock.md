@@ -136,7 +136,7 @@ The Indicator LEDs will show the current charge level of the battery:
   * A solid LED means the battery has charged up to that level
   * A flashing LED means the battery is currently charging this level
 
-**Note:** For best results use a **short** Micro-USB cable for charging.
+**For best results, use a short Micro-USB cable when charging.**
 
 Take a look at the animations below for more details on the battery level indicators:
 
