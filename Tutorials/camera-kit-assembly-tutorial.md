@@ -31,6 +31,12 @@ Attach part 5 to part 4b using part 6 screws.
 
 ![Imgur](http://i.imgur.com/HAIU0vF.jpg)
 
+**Note**
+
+Your servo horn may not fit perfectly. In that case, you may need to trim/file it down to fit.
+
+![Imgur](http://i.imgur.com/6MhRDB0.jpg)
+
 ##Step 3:
 
 Mount one of the servos(part 1) into the servo horn you attached in step 2. Make sure you position the servo into the horn for your desired rotation. Also refer to the picture below to see correct orientation. 
@@ -60,6 +66,12 @@ Mount the top piece(part 3) onto the top servo using the servo screws(part 2).
 Screw part 10 into part 9. Screw the servo horn part 9 into the base (part 8) using the part 11 screws like so.
 
 ![Imgur](http://i.imgur.com/VUBXRUN.jpg)
+
+**Note**
+
+Your servo horn may not fit perfectly. In that case, you may need to trim/file it down to fit.
+
+![Imgur](http://i.imgur.com/FnQbrwL.jpg)
 
 ##Step 8:
 
