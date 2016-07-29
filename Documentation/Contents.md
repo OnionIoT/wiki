@@ -35,6 +35,7 @@ Electrical schematics for the Omega, Docks, and Expansions:
 * [Omega](https://github.com/OnionIoT/Onion-Hardware/blob/master/Schematics/Omega.pdf)
 * [Expansion Dock](https://github.com/OnionIoT/Onion-Hardware/blob/master/Schematics/Omega-Expansion-Dock.pdf)
 * [Mini Dock](https://github.com/OnionIoT/Onion-Hardware/blob/master/Schematics/Omega-Mini-Dock.pdf)
+* [Arduino Dock](https://github.com/OnionIoT/Onion-Hardware/blob/master/Schematics/Omega-Arduino-Dock.pdf)
 * [Relay Expansion](https://github.com/OnionIoT/Onion-Hardware/blob/master/Schematics/Omega-Relay-Expansion.pdf)
 * [Servo Expansion](https://github.com/OnionIoT/Onion-Hardware/blob/master/Schematics/Omega-Servo-Expansion.pdf)
 * [OLED Expansion](https://github.com/OnionIoT/Onion-Hardware/blob/master/Schematics/Omega-OLED-Expansion.pdf)
