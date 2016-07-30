@@ -172,6 +172,10 @@ Since the Omega runs a full Linux distribution, it is very flexible in the softw
 ## NodeJS
 * [Using NodeJS on the Omega](./Installing-NodeJS)
 
+We've added support for installing a few Node modules via opkg:
+* [OnOff - GPIO control](./onoff-node)
+* [Blynk Library](./blynk-library)
+
 
 
 [//]: # (Reading Sensor Data)

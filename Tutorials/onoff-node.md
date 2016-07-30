@@ -1,6 +1,8 @@
 # Onoff Node Module for Omega
 
-Using the Onoff package, you can control the Omega's gpios using node. 
+Using the OnOff Module, you can control the Omega's GPIOs using NodeJS. 
+
+We've made this package available through opkg since installing npm, the regular Node package manager, on the Omega requires the use of external USB storage.
 
 [[_TOC_]]
 
@@ -12,9 +14,12 @@ To install the onoff package run the following commands:
 opkg update
 opkg install onoff-node
 ```
-## Importing into Script
 
-The module will be installed to the `usr/bin/` directory, so you will need to point to the correct directory for import. Your import code should look like this:
+## Importing into your Node Scripts
+
+The module will be installed to the `/usr/bin/` directory, so you will need to point to the correct directory for import. 
+
+Your import code should look like this:
 
 ```js
 var Gpio = require('usr/bin/onoff-node/onoff.js').Gpio;
@@ -22,9 +27,9 @@ var Gpio = require('usr/bin/onoff-node/onoff.js').Gpio;
 
 ## Testing
 
-The following is a test script that will blink an led every two seconds. 
+The following is a test script that will blink an LED connected to GPIO6 every two seconds. 
 
-Then create a file test.js:
+Let's create a file `test.js`:
 
 ```js
 var Gpio = require('/usr/bin/onoff-node/onoff.js').Gpio;
@@ -45,3 +50,5 @@ Run the script with the following command:
 ```
 node test.js
 ```
+
+And watch that little LED blink!

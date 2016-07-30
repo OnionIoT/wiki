@@ -1,6 +1,6 @@
 # Using Ubidots with the Omega
 
-The Omega is compatible with the Ubidots data service! Use the Omega to push datapoints to Ubidots and then create awesome dashboards and data visualizations!
+The Omega is compatible with the [Ubidots data service](http://ubidots.com/)! Use the Omega to push datapoints to Ubidots and then create awesome dashboards and data visualizations!
 
 ![ubidots logo](http://ubidots.com/img/logocolor.png)
 
@@ -40,3 +40,10 @@ For example:
 ```
 ubidots -t <my-token> -d <my-data-source-label> get variableOne
 ```
+
+
+## What's Next
+
+Try using Ubidots in a project where you track something using the Omega. Let us know how it goes on the [Onion Community](https://community.onion.io/).
+
+Check out [Ubidot's site](http://ubidots.com/) for more info.
