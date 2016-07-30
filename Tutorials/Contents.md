@@ -184,6 +184,10 @@ The Omega can be used with a variety of different communication protocols. I2C i
 * [Using 1Wire to read sensor data](./Reading-1Wire-Sensor-Data)
 
 
+The Omega supports Ubidots, a third-party data visualization service:
+* [The Omega and Ubidots](./Using-Ubidots-with-Omega)
+
+
 
 [//]: # (Cross Compilation)
 
