@@ -36,13 +36,13 @@ opkg install blynk-library-node-lite
 The modules will be installed to the `usr/bin/` directory, so you will need to point to the correct directory for import. Your import code should look like this:
 
 ```js
-var BlynkLib = require('usr/bin/blynk-library-node/blynk.js');
+var BlynkLib = require('/usr/bin/blynk-library-node/blynk.js');
 ```
 
 And if your are using the lite version
 
 ```js
-var BlynkLib = require('usr/bin/blynk-library-node-lite/blynk.js');
+var BlynkLib = require('/usr/bin/blynk-library-node-lite/blynk.js');
 ```
 
 ## Testing
@@ -67,4 +67,4 @@ And you can run the script with the following line.
 node test.js
 ```
 
-Press the button on you app and note the output on the screen.
+Press the button on you app and note the output on the screen. You can take this further by using the onoff [package](https://wiki.onion.io/Tutorials/onoff-node) to control a GPIO. 

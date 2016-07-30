@@ -12,6 +12,8 @@ The onoff package allows control of the direction and state of a pin. For furthe
 
 ## Installation
 
+Make sure you have node installed, if not refer to this [tutorial](https://wiki.onion.io/Tutorials/Installing-NodeJS).
+
 To install the onoff package run the following commands:
 
 ```
@@ -26,7 +28,7 @@ The module will be installed to the `/usr/bin/` directory, so you will need to p
 Your import code should look like this:
 
 ```js
-var Gpio = require('usr/bin/onoff-node/onoff.js').Gpio;
+var Gpio = require('/usr/bin/onoff-node/onoff.js').Gpio;
 ```
 
 ## Testing
