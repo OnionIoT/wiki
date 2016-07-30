@@ -6,6 +6,10 @@ We've made this package available through opkg since installing npm, the regular
 
 [[_TOC_]]
 
+## Overview
+
+The onoff package allows control of the direction and state of a pin. For further reading on the functionality, refer to the [documentation](https://www.npmjs.com/package/tm-onoff).
+
 ## Installation
 
 To install the onoff package run the following commands:

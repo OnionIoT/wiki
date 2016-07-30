@@ -9,7 +9,9 @@ We have officially extended our support to the blynk library. You can now use th
 
 ## Overview
 
-Due to the large size of the blynk library and the limited space on the Omega, we have created two seperate packages: blynk-library and blynk-library-lite. The latter does not come with the dependencies namely node-usb,crc,serialport and noble and will take X Mbs once on the omega. We have created this for people who would like to use blynk without using external usb storage. The regular blynk library comes with all the dependencies and should support of Blynk functionality and will occupy X Mb once installed
+Due to the large size of the blynk library and the limited space on the Omega, we have created two seperate packages: blynk-library and blynk-library-lite. The latter does not come with the dependencies namely node-usb,crc,serialport and noble and will take 380 kB once on the omega. We have created this for people who would like to use blynk without using external usb storage. The regular blynk library comes with all the dependencies and should support of Blynk functionality and will occupy 50.7 Mb once installed.
+
+For further reading on the library's functionality refer to the [documentation](https://www.npmjs.com/package/blynk-library).
 
 [//]: # (Installation)
 
