@@ -19,7 +19,7 @@ For further reading on the library's functionality refer to the [documentation](
 
 ## Installation
 
-To install the regular blynk library run the following commands:
+To install the regular Blynk library run the following commands:
 
 ```
 opkg update
@@ -32,6 +32,28 @@ To install the lite version:
 opkg update
 opkg install blynk-library-node-lite
 ```
+
+
+
+[//]: # (Auth Token Setup)
+
+## Auth Token Setup
+
+You will need to run the Blynk test script to setup your Auth Token.
+
+If you've installed the full Blynk library, run:
+``` js
+node /usr/bin/blynk-library-node/blynk.js <Auth Token>
+```
+
+If you've installed the lite Blynk library, run:
+``` js
+node /usr/bin/blynk-library-node-lite/blynk.js <Auth Token>
+```
+
+
+
+[//]: # (Importing into Script)
 
 ## Importing into Script
 
@@ -46,6 +68,9 @@ And if your are using the lite version
 ```js
 var BlynkLib = require('/usr/bin/blynk-library-node-lite/blynk.js');
 ```
+
+
+[//]: # (Installation)
 
 ## Testing
 
