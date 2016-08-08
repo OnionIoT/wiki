@@ -81,16 +81,10 @@ The Micro-USB Port is used to supply the Power Dock with ... power! Connect it t
 
 ### No USB to Serial Chip
 
-There is no USB-to-Serial Chip on the Power Dock. This means that you can only [connect to the Omega via SSH or the Console. You will **not** be able to connect to the Omega serially over the Micro-USB port. See the guides below:
+There is no USB-to-Serial Chip on the Power Dock. Connect to your Omega via SSH using the guide below:
 
 * [Connecting to the Omega via SSH](https://wiki.onion.io/Tutorials/Connecting-to-Omega-via-SSH)
-* [Connecting to the Omega via Console](https://wiki.onion.io/Get-Started#setting-up-using-gui)
 
-### Connecting Via Serial Anyway
-
-It is possible to connect to the Omega over serial by soldering wires from the [USB to UART adapter](https://onion.io/product/usb-to-uart-adapter/) to the Omega's serial TX/RX pins directly on the Power Dock header. **However, this will require extra work and will void your warranty! PROCEED AT YOUR OWN RISK.** 
-
-Using [the Omega pinout](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/6006472342/original/omega-pinout.png?1443977287) as a reference, connect the UART adapter's TX wire to the Omega's Serial RX pin, and the adapter's RX wire to to the Omega's Serial TX pin (an RX is always connected to a TX and vice versa!). **Please use this only for debugging purposes.**
 
 ## USB Host Port
 
