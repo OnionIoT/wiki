@@ -81,9 +81,9 @@ The Micro-USB Port is used to supply the Power Dock with ... power! Connect it t
 
 ### No USB to Serial Chip
 
-There is no USB-to-Serial Chip on the Power Dock. Connect to your Omega via SSH using the guide below:
+There is no USB-to-Serial Chip on the Power Dock. This means that you will **not** be able to connect to the Omega serially over the Micro-USB port. 
 
-* [Connecting to the Omega via SSH](https://wiki.onion.io/Tutorials/Connecting-to-Omega-via-SSH)
+Instead, connect to your [Omega wirelessly via SSH](https://wiki.onion.io/Tutorials/Connecting-to-Omega-via-SSH).
 
 
 ## USB Host Port
