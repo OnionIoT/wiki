@@ -107,6 +107,12 @@ The BLE Expansion can be used to add Bluetooth connectivity to the Omega:
 
 * [Streaming Bluetooth Audio on the Omega](./Bluetooth-Streaming-Audio)
 
+## The Camera Kit
+
+The Camera Kit includes a 720p webcam and a pan & tilt servo mount. Assembly instructions are below:
+
+* [Camera Kit Assembly Tutorial](./camera-kit-assembly-tutorial.md)
+
 
 
 
