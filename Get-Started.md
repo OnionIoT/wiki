@@ -222,6 +222,12 @@ sudo yum install screen
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 9**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
+**Step 9**: Exit the Screen and going back to terminal >
+Simply press ```Ctrl + a + \``` this will close the tty connetion.
+To minimize the screen application in the terminal, press ```Ctrl + a + d``` this will not close tty and will just detach you.
+With ```screen -r``` you get back to the open connection.
+The message ```[screen is terminating]``` indicates a still open tty connection. With ```screen -r``` you will be back on that connection.
+
+**Step 10**:Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
 
