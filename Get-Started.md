@@ -209,9 +209,11 @@ sudo yum install screen
 
 ![Check if serial device exists](//i.imgur.com/p1OwSE6h.png "Check if serial device exists")
 
-**Step 6**: Run `sudo screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen. If you get a blank screen hit enter again to get to the command prompt.
+**Step 6**: Run `sudo screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen. 
 
 ![Log in through serial terminal](//i.imgur.com/sENEIX8h.png "Log in through serial terminal")
+
+If the screen remains blank, hit enter again to get to the command prompt.
 
 **Step 7**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
