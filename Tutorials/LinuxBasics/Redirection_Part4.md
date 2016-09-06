@@ -20,7 +20,7 @@ When we executed the command:
 
 
 
-<pre><code>cat > filename</code></pre>
+```cat > filename```
 
 
 
@@ -62,7 +62,7 @@ Now lets try some input redirection, which allows us to pass files as input to c
 
 
 
-<pre><code>sort < filename</pre></code>
+```sort < filename```
 
 
 
@@ -70,7 +70,7 @@ In the next example we will create a new file with randomly assorted letters, ca
 
 
 
-<pre><code>sort < alpha.txt </code></pre>
+```sort < alpha.txt```
 
 
 
@@ -88,7 +88,7 @@ Now let's put both types of redirection in a practical example. In the next scre
 
 
 
-<pre><code>sort < alpha.txt > ordered.txt </code></pre>
+```sort < alpha.txt > ordered.txt```
 
 
 
@@ -120,7 +120,7 @@ To demonstrate the power of piping we will create a files called "names.txt" whi
 
 
 
-<pre><code>cat names.txt | grep a</code></pre>
+```cat names.txt | grep a```
 
 
 
