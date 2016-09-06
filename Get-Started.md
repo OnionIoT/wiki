@@ -80,6 +80,8 @@ Following the wizard will connect your Omega to a wifi network of your choice, a
 
 ![Log in through serial terminal](//i.imgur.com/cGANJefh.jpg "Log in through serial terminal")
 
+> We recommend taking a peek at [this tutorial](https://www.linode.com/docs/networking/ssh/using-gnu-screen-to-manage-persistent-terminal-sessions) to get an idea of how the `screen` utility works
+
 **Step 4**: Run `wifisetup` in the serial terminal, and follow the prompt to connect the Omega to your Wi-Fi network.
 
 ![Run wifisetup](//i.imgur.com/h21sjzRh.jpg "Run wifisetup")
@@ -204,6 +206,7 @@ sudo yum update
 sudo yum install screen
 ```
 
+> We recommend taking a peek at [this tutorial](https://www.linode.com/docs/networking/ssh/using-gnu-screen-to-manage-persistent-terminal-sessions) to get an idea of how the `screen` utility works 
 
 **Step 5**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/ttyUSB0`.
 
