@@ -17,6 +17,13 @@ opkg install python-light
 
 This will take about 2MB of space on the Omega
 
+###Python3
+```
+opkg update
+opkg install python3-light
+```
+
+Then you have to run the right executable (python3). You can do a symbolic link to python so you just have to type python in the command line to run the interpreter.
 
 ## Full Installation
 
@@ -27,3 +34,9 @@ To install the full version:
 opkg update
 opkg install python
 ```
+###Python3
+```
+opkg update
+opkg install python3
+```
+Then you have to run the right executable (python3). You can do a symbolic link to python so you just have to type python in the command line to run the interpreter.
