@@ -18,6 +18,8 @@ First, you will need to connect the Ethernet Dock to the Omega.
 
 Then, you should connect the Omega to your computer with an ethernet cable. (I'm connecting the Omega to my computer through an USB-Ethernet adapter because my MacBook Air doesn't come with an ethernet jack).
 
+Keep in mind that OpenWRT is a Router Software and the standard IP-Range ```192.168.1.x``` is used. So to get connected, you have to change the IP on your Computer to static and use the same Range to connect to the omegas recovery server!
+
 ![Connect Omega to Computer](//i.imgur.com/ueI9q7d.jpg)
 
 ## Step 4. Connect The Omega to the Serial Terminal
