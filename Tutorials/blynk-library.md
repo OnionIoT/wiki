@@ -9,9 +9,7 @@ The Omega now officially supports Blynk and the Blynk Library. You can now use t
 
 ## Overview
 
-Using the Blynk Library and Node.js, you can control your Omega through the Blynk mobile app. We have added node.js v4.3.1 as a dependency and will also be installed if you do not have it.
-
-For further reading on the library's functionality refer to the [documentation](https://www.npmjs.com/package/blynk-library) or check out [blynk.cc](blynk.cc).
+Using the Blynk Library and Node.js, you can control your Omega through the Blynk mobile app. For further reading on the library's functionality refer to the [documentation](https://www.npmjs.com/package/blynk-library) or check out [blynk.cc](blynk.cc).
 
 
 [//]: # (Installation)
