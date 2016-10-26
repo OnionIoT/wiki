@@ -9,9 +9,20 @@ We have officially extended our support to the blynk library. You can now use th
 
 ## Overview
 
-Using the blynk library and node.js, you can control your omega through the blynk app, as such you will need node.js installed. 
+Using the blynk library and node.js, you can control your omega through the blynk app. We have added node.js v4.3.1 as a dependency and will also be installed if you do not have it.
 
 For further reading on the library's functionality refer to the [documentation](https://www.npmjs.com/package/blynk-library).
+
+You may also install the onoff package to facilitate the use of GPIOs.
+
+The sizes of the packages mentioned are:
+
+|Package|Size|
+|-------|----|
+|nodejs|8.5Mb|
+|blynk-library|260kB|
+|onoff|880kB|
+
 
 [//]: # (Installation)
 
@@ -21,7 +32,7 @@ To install the Blynk library run the following commands:
 
 ```
 opkg update
-opkg install blynk-library-node
+opkg install blynk-library
 ```
 
 
@@ -45,7 +56,7 @@ node /usr/bin/blynk-library-node/bin/blynk-client.js <Auth Token>
 The modules will be installed to the `/usr/bin/` directory, so you will need to point to the correct directory for import. Your import code should look like this:
 
 ```js
-var BlynkLib = require('/usr/bin/blynk-library-node/blynk-client.js');
+var BlynkLib = require('/usr/bin/blynk-library');
 ```
 
 
@@ -58,7 +69,7 @@ The following is a test script to illustrate communication via the Blynk App. On
 Then create a file test.js:
 
 ```js
-var BlynkLib = require('/usr/bin/blynk-library-node');
+var BlynkLib = require('/usr/bin/blynk-library');
 
 var blynk = new BlynkLib.Blynk('728e8d997ade4cd1b8c50b6e8a63b1d7'); // Replace this with your Auth Key
 var v1 = new blynk.VirtualPin(1);
