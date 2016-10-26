@@ -45,7 +45,7 @@ You will need to run the Blynk test script to setup your Auth Token.
 
 If you've installed the full Blynk library, run:
 ``` js
-node /usr/bin/blynk-library-node/bin/blynk-client.js <Auth Token>
+node /usr/bin/blynk-library/bin/blynk-client.js <Auth Token>
 ```
 
 
