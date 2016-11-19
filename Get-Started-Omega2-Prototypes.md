@@ -37,11 +37,13 @@ Turn on the Omega using the switch.
 
 ![Turn on the Omega](http://i.imgur.com/sAyIEANl.jpg "Turn on the Omega")
 
-**Step 5**: When the amber LED has been on for about a minute, your Omega will have booted.
+**Step 5**:
+
+When the amber LED has been on for about a minute, your Omega will have booted.
 
 ![Omega is on](http://i.imgur.com/kpT4L2bl.jpg "Omega is on")
 
-*We're working on making the LED more expressive, stay tuned*
+*We're working on making this step more intuitive, stay tuned!*
 
 
 [//]: # (GUI SETUP)
@@ -71,11 +73,13 @@ Connect to the Omega’s Access Point, it's named the same as your Omega.
 The default password is `12345678`
 
 
-**Step 3**: Open your favourite browser and navigate to `http://omega-ABCD.local/` where `ABCD` are the same characters from the network name above.
+**Step 3**:
 
-Alternatively, you can also browse to `http://192.168.3.1`.
+Open your favourite browser and navigate to `http://omega-ABCD.local/` where `ABCD` are the same characters from the network name above.
 
-You have now arrived at the Setup Wizard.
+Alternatively, you can also browse to `http://192.168.3.1`
+
+You have now arrived at the Setup Wizard:
 
 ![Browse to Setup Wizard](http://i.imgur.com/DaHshUL.png "Browse to Setup Wizard")
 
@@ -89,9 +93,13 @@ password: onioneer
 
 Follow the wizard to complete the setup of the Omega, by the end of it, your Omega will be connected to a WiFi network of your choosing and updated with the latest firmware.
 
-**Step 3.5**: When you've reached the last page of the wizard, and the Omega's LED turns off, toggle the switch to off, chill for a few seconds, and then toggle it back to on.
+**Step 3.5**:
 
-**Step 4**: Start using your fresh Omega, check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
+When you've reached the last page of the wizard, and the Omega's LED turns off, toggle the switch to off, chill for a few seconds, and then toggle it back to on.
+
+**Step 4**:
+
+Start using your fresh Omega, check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
 
 
