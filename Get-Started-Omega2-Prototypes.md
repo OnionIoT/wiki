@@ -91,7 +91,7 @@ password: onioneer
 
 ![Browse to Setup Wizard](http://i.imgur.com/y5aX5oG.png "Browse to Setup Wizard")
 
-Follow the wizard to complete the setup of the Omega, by the end of it, your Omega will be connected to a WiFi network of your choosing and updated with the latest firmware.
+Follow the wizard to complete the setup of the Omega, by the end of it, your Omega will be updated with the latest firmware and connected to a WiFi network of your choosing.
 
 **Step 3.5**:
 
