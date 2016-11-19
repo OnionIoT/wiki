@@ -65,18 +65,19 @@ Alternatively, you can also browse to `http://192.168.3.1`.
 
 You have now arrived at the Setup Wizard.
 
-![Browse to Setup Wizard](http://i.imgur.com/DaHshULl.png "Browse to Setup Wizard")
+![Browse to Setup Wizard](http://i.imgur.com/DaHshUL.png "Browse to Setup Wizard")
 
 Login with the following information:
 ```
 username: root
 password: onioneer
 ```
-Follow the wizard to complete the setup of the Omega.
 
-![Browse to Setup Wizard](http://i.imgur.com/y5aX5oGl.png "Browse to Setup Wizard")
+![Browse to Setup Wizard](http://i.imgur.com/y5aX5oG.png "Browse to Setup Wizard")
 
-By the end of the wizard, your Omega will be connected to a WiFi network of your choosing and will be updated with the latest firmware.
+Follow the wizard to complete the setup of the Omega, by the end of it, your Omega will be connected to a WiFi network of your choosing and updated with the latest firmware.
+
+**Step 3.5**: When you've reached the last page of the wizard, and the Omega's LED turns off, toggle the switch to off, chill for a few seconds, and then toggle it back to on.
 
 **Step 4**: Start using your fresh Omega, check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
