@@ -29,10 +29,11 @@ Ensure the Omega's pins are fully plugged into the socket on the Dock
 
 ![Turn on the Omega](http://i.imgur.com/sAyIEANl.jpg "Turn on the Omega")
 
-**Step 5**: Wait for the amber LED to stop blinking, indicating that the Omega has booted up.
+**Step 5**: When the amber LED has been on for about a minute, your Omega will have booted.
 
 ![Omega is on](http://i.imgur.com/kpT4L2bl.jpg "Omega is on")
 
+*We're working on making the LED more expressive, stay tuned*
 
 
 [//]: # (GUI SETUP)
@@ -48,10 +49,10 @@ Your computer may need some additional programs to access the Omega through a br
 
 **Step 1.5**:
 
-Your Omega2 Prototype will have a note of some sort indicating the Omega's name. It is in the following format: `Omega-ABCD` where `ABCD` are four hexadecimal characters.
+Your Omega2 Prototype will have a note of some sort indicating the Omega's name. The Omega names look like `Omega-ABCD` where `ABCD` are four hexadecimal characters.
 
 
-**Step 2**: Connect to the Omega’s Access Point, it's named after your Omega's hostname.
+**Step 2**: Connect to the Omega’s Access Point, it's the same as your Omega's name.
 
 ![Connect to AP](http://i.imgur.com/KumCH9Al.png "Connect to AP")
 
@@ -75,7 +76,7 @@ Follow the wizard to complete the setup of the Omega.
 
 ![Browse to Setup Wizard](http://i.imgur.com/y5aX5oGl.png "Browse to Setup Wizard")
 
-Following the wizard will connect your Omega to a wifi network of your choice, and will update to the latest firmware.
+By the end of the wizard, your Omega will be connected to a WiFi network of your choosing and will be updated with the latest firmware.
 
 **Step 4**: Start using your fresh Omega, check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
 
