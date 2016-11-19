@@ -9,11 +9,15 @@
 
 ## Preparing the Hardware
 
-**Step 1**: Unpack the Omega and Dock from the boxes.
+**Step 1**:
+
+Unpack the Omega and Dock from the boxes.
 
 ![Omega + Dock](http://i.imgur.com/fKZfABhl.jpg "Omega + Dock")
 
-**Step 2**: Connect the Omega to the Dock.
+**Step 2**:
+
+Connect the Omega to the Dock.
 
 ![Omega plugged into Dock](http://i.imgur.com/1HNTUgKl.jpg "Omega Plugged into Dock")
 
@@ -21,11 +25,15 @@ Ensure the Omega's pins are fully plugged into the socket on the Dock
 
 ![Omega plugged into Dock Side View](http://i.imgur.com/0f1Prmul.jpg)
 
-**Step 3**: Connect the Omega to your computer through USB. For best results, use a cable that is two feet long or less.
+**Step 3**:
+
+Connect the Omega to your computer through USB. For best results, use a cable that is two feet long or less.
 
 ![Omega plugged into USB](http://i.imgur.com/OgKnUXdl.jpg "Omega plugged into USB")
 
-**Step 4**: Turn on the Omega using the switch.
+**Step 4**:
+
+Turn on the Omega using the switch.
 
 ![Turn on the Omega](http://i.imgur.com/sAyIEANl.jpg "Turn on the Omega")
 
@@ -49,17 +57,21 @@ Your computer may need some additional programs to access the Omega through a br
 
 **Step 1.5**:
 
-Your Omega2 Prototype will have a note of some sort indicating the Omega's name. The Omega names look like `Omega-ABCD` where `ABCD` are four hexadecimal characters.
+Your Omega2 Prototype will have a note of some sort indicating the Omega's name. The Omega name will be `Omega-ABCD` where `ABCD` are four hexadecimal characters.
+
+For reference, the one from the photos is named `Omega-296A`.
 
 
-**Step 2**: Connect to the Omega’s Access Point, it's the same as your Omega's name.
+**Step 2**:
+
+Connect to the Omega’s Access Point, it's named the same as your Omega.
 
 ![Connect to AP](http://i.imgur.com/KumCH9Al.png "Connect to AP")
 
 The default password is `12345678`
 
 
-**Step 3**: Open your favourite browser and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above.
+**Step 3**: Open your favourite browser and navigate to `http://omega-ABCD.local/` where `ABCD` are the same characters from the network name above.
 
 Alternatively, you can also browse to `http://192.168.3.1`.
 
@@ -83,7 +95,7 @@ Follow the wizard to complete the setup of the Omega, by the end of it, your Ome
 
 
 
-[//]: # (OSX SETUP)
+<!-- [//]: # (OSX SETUP)
 
 ## Setting up using Command Line – OSX
 
@@ -239,4 +251,4 @@ sudo yum install screen
 The firmware update will take a few minutes, the process will be complete when the Omega reboots.
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
-**Step 9**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
+**Step 9**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next! -->
