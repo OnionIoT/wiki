@@ -11,27 +11,27 @@
 
 **Step 1**: Unpack the Omega and Dock from the boxes.
 
-![Omega + Dock](http://i.imgur.com/fKZfABhm.jpg "Omega + Dock")
+![Omega + Dock](http://i.imgur.com/fKZfABhl.jpg "Omega + Dock")
 
 **Step 2**: Connect the Omega to the Dock.
 
-![Omega plugged into Dock](http://i.imgur.com/1HNTUgKm.jpg "Omega Plugged into Dock")
+![Omega plugged into Dock](http://i.imgur.com/1HNTUgKl.jpg "Omega Plugged into Dock")
 
 Ensure the Omega's pins are fully plugged into the socket on the Dock
 
-![Omega plugged into Dock Side View](http://i.imgur.com/0f1Prmum.jpg)
+![Omega plugged into Dock Side View](http://i.imgur.com/0f1Prmul.jpg)
 
 **Step 3**: Connect the Omega to your computer through USB. For best results, use a cable that is two feet long or less.
 
-![Omega plugged into USB](http://i.imgur.com/OgKnUXdm.jpg "Omega plugged into USB")
+![Omega plugged into USB](http://i.imgur.com/OgKnUXdl.jpg "Omega plugged into USB")
 
 **Step 4**: Turn on the Omega using the switch.
 
-![Turn on the Omega](http://i.imgur.com/sAyIEANm.jpg "Turn on the Omega")
+![Turn on the Omega](http://i.imgur.com/sAyIEANl.jpg "Turn on the Omega")
 
 **Step 5**: Wait for the amber LED to stop blinking, indicating that the Omega has booted up.
 
-![Omega is on](http://i.imgur.com/kpT4L2bm.jpg "Omega is on")
+![Omega is on](http://i.imgur.com/kpT4L2bl.jpg "Omega is on")
 
 
 
@@ -46,15 +46,26 @@ Your computer may need some additional programs to access the Omega through a br
 * If you are using OS X, you're all set to go
 * If you are using Linux, the Zeroconf services should already be installed and you will be good to go
 
-**Step 2**: Connect to the Omega’s Access Point, the default password is `12345678`
+**Step 1.5**:
 
-![Connect to AP](//i.imgur.com/TIsvi2Bh.jpg "Connect to AP")
+Your Omega2 Prototype will have a note of some sort indicating the Omega's name. It is in the following format: `Omega-ABCD` where `ABCD` are four hexadecimal characters.
 
-**Step 3**: Use Chrome or Opera and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. *Some users have experienced issues using Firefox and Safari.*
+
+**Step 2**: Connect to the Omega’s Access Point, it's named after your Omega's hostname.
+
+![Connect to AP](http://i.imgur.com/KumCH9Al.png "Connect to AP")
+
+The default password is `12345678`
+
+
+**Step 3**: Open your favourite browser and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above.
 
 Alternatively, you can also browse to `http://192.168.3.1`.
 
 You have now arrived at the Setup Wizard.
+
+![Browse to Setup Wizard](http://i.imgur.com/DaHshULl.png "Browse to Setup Wizard")
+
 Login with the following information:
 ```
 username: root
@@ -62,7 +73,7 @@ password: onioneer
 ```
 Follow the wizard to complete the setup of the Omega.
 
-![Browse to Setup Wizard](//i.imgur.com/fJsQ77zh.jpg "Browse to Setup Wizard")
+![Browse to Setup Wizard](http://i.imgur.com/y5aX5oGl.png "Browse to Setup Wizard")
 
 Following the wizard will connect your Omega to a wifi network of your choice, and will update to the latest firmware.
 
