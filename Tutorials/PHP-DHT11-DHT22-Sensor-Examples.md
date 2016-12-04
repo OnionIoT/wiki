@@ -75,36 +75,38 @@ In the open window, paste in this code:
 
 ```
 <?php 
-$result 	= get_dht_values(20, "DHT11");	// change the pin number and DHT type accordingly
-$message 	= $result[0];
-$temp 		= $result[1];
-$humidity 	= $result[2];
+$result         = get_dht_values(20, "DHT11");  // change the pin number and DHT type accordingly
+$message        = $result[0];
+$temp           = $result[2];
+$humidity       = $result[1];
+
+print_r($result);
 
 if( $message == "success" ) {
-	// if successful, happy days let's spill the data out
-	echo "<p>The current temperature is <b>" . $temp . "&deg;C</b> and the humidity is . <b>" . $humidity . "%</b>" ;
+        // if successful, happy days let's spill the data out
+        echo "<p>The current temperature is <b>" . $temp . "&deg;C</b> and the humidity is . <b>" . $humidity . "%</b>" ;
 } else {
-	echo "Error: " .  $message;
+        echo "Error: " .  $message;
 }
 
 function get_dht_values($pin, $dht_type) {
 
-	if( ( $dht_type != "DHT11" ) && ( $dht_type != "DHT11" )  ) {
-		return array("Invalid DHT Type", 0, 0);
-	}
+        if( ( $dht_type != "DHT22" ) && ( $dht_type != "DHT11" )  ) {
+                return array("Invalid DHT Type", 0, 0);
+        }
 
-	// Run the command using the exec() function, delivers the output in $output
-	exec("/root/checkHumidity/bin/checkHumidity $pin $dht_type  2>&1", $output, $return);
+        // Run the command using the exec() function, delivers the output in $output
+        exec("/root/checkHumidity/bin/checkHumidity $pin $dht_type  2>&1", $output, $return);
 
-	// -255 = bad
-	if( $output[0] == "-255.000000" ) {
-		return array("Unable to read sensor, check the wiring, pin number!", 0, 0);
-	}
+        // -255 = bad
+        if( $output[0] == "-255.000000" ) {
+                return array("Unable to read sensor, check the wiring, pin number!", 0, 0);
+        }
 
-	// must be all good, lets return the data
-	$output[0]	 =  number_format( (float)$output[0], 2, '.', '' );	// temp
-	$output[1]	 =  number_format( (float)$output[1], 2, '.', '' );	// hum
-	return array( "success", $output[0], $output[1] );
+        // must be all good, lets return the data
+        $output[0]       =  number_format( (float)$output[0], 2, '.', '' );     // temp
+        $output[1]       =  number_format( (float)$output[1], 2, '.', '' );     // hum
+        return array( "success", $output[0], $output[1] );
 }
 ```
 
@@ -118,7 +120,7 @@ http://omega-ABCD.local/php/dht.php
 
 All going well you'll see a message similar to this:
 
-The current temperature is **66.00°C** and the humidity is . **23.00%**
+The current temperature is **26.00°C** and the humidity is **32.00%**
 
 Happy days.
 
@@ -127,3 +129,5 @@ Happy days.
 Well thats up to you :)
 
 Turn your Omega into a mini weather station, hey why not post the data to [https://thingspeak.com/](https://thingspeak.com/) and keep track of your Omega over time?
+
+Corrected by davidstein.cz 2016_12_04
