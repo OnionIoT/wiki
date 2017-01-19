@@ -10,7 +10,7 @@ The Tutorials Wiki contains guides on a variety of Omega topics, from the basics
 
 # Connecting to the Omega
 
->The wiki is moving! These articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/omega-and-connectivity.html) already, and will be updated there.
+>The wiki is moving! These articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/the-command-line.html) already, and will be updated there.
 
 Taking the first step, connecting to the Omega's command line:
 * [Connecting to Omega via Serial Terminal](./Connecting-to-Omega-via-Serial-Terminal)
@@ -36,7 +36,7 @@ This series of tutorials is meant to get you comfortable with using a Linux envi
 
 # Introduction to OpenWRT
 
-This mini-series is meant to introduce users to OpenWRT. 
+This mini-series is meant to introduce users to OpenWRT.
 
 * [OPKG Basics](./OpenWRT Tutorials/OPKG_Tutorial/opkg-tutorial)
 * [UBUS Basics Part 1](./OpenWRT Tutorials/UBUS_Tutorial/Part1_Ubus_Intro)
@@ -65,6 +65,8 @@ In case your Omega's firmware gets corrupted during installation, it is possible
 [//]: # (Using the Expansions and Docks)
 
 # Using the Docks and Expansions
+
+>The wiki is moving! These articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/hardware-overview.html) already, and will be updated there. (\* - denotes articles that do not yet exist in the Onion Docs as of time of writing)
 
 The Omega's functionality can be greatly extended with the different available Docks and Expansions.
 
@@ -107,13 +109,13 @@ The Arduino Dock has an ATmega microcontroller and can be used just like an Ardu
   * [Controlling Neopixels](./Arduino-Dock/Controlling-Neopixels)
 
 
-## The Bluetooth Low Energy Expansion
+## The Bluetooth Low Energy Expansion \*
 
 The BLE Expansion can be used to add Bluetooth connectivity to the Omega:
 
 * [Streaming Bluetooth Audio on the Omega](./Bluetooth-Streaming-Audio)
 
-## The Camera Kit
+## The Camera Kit \*
 
 The Camera Kit includes a 720p webcam and a pan & tilt servo mount. Assembly instructions are below:
 
@@ -125,6 +127,8 @@ The Camera Kit includes a 720p webcam and a pan & tilt servo mount. Assembly ins
 [//]: # (The Omega and Connectivity)
 
 # The Omega and Connectivity
+
+>The wiki is moving! These articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/omega-and-connectivity.html) already, and will be updated there.
 
 The Omega is very versatile when it comes to WiFi networks, the following guides illustrate some of that flexibility:
 
@@ -147,8 +151,11 @@ The Omega is very versatile when it comes to WiFi networks, the following guides
 # Storage Space
 
 The Omega has 16MB of flash memory, this might be a little limiting in some cases. Plugging in a USB drive to the Omega's USB Host can help alleviate this issue:
+
+>The wiki is moving! These articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/usb-storage.html) already, and will be updated there.
+
 * [Using USB Storage](./Using-USB-Storage)
-* [The Omega's RAM can also be extended using USB Storage](./Extending-RAM-with-a-swap-file)
+* [The Omega's RAM can also be extended using USB Storage](./Extending-RAM-with-a-swap-file) (This article can be found [here.](https://docs.onion.io/omega2-docs/extending-omega-memory.html))
 
 
 It is also possible to run the Omega's OS from USB storage:
@@ -167,6 +174,10 @@ Since the Omega runs a full Linux distribution, it is very flexible in the softw
 * [Using Git](./Using-Git)
 
 ## Python
+
+
+>The wiki is moving! The Python articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/software-installing-and-using-python.html) already, and will be updated there.
+
 * [Installing Python](./Installing-Python)
 * [Sending Emails with Python](./Sending-Emails-With-Python)
 * [A Python GPIO Example](./Python-GPIO-LED-Example)
@@ -211,15 +222,3 @@ The Omega supports Ubidots, a third-party data visualization service:
 
 The Omega can run C and C++ programs, however, it does not host a C compiler, so these programs will have to be cross-compiled on another machine and then installed on your Omega:
 * [Cross Compilation](./Cross-Compile)
-
-
-
-
-
-
-
-
-
-
-
-
