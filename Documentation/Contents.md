@@ -10,6 +10,8 @@ The Documentation portion of the Onion Wiki contains information released by Oni
 
 # Firmware Change-log
 
+>The wiki is moving! These articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/omega-firmware-changelog.html) already, and will be updated there.
+
 A detailed rundown of changes in each firmware version:
 * [Firmware Change-log](./Firmware-Changelog)
 
@@ -59,6 +61,8 @@ Engineering drawings outlining the dimensions of the Omega and Expansions:
 
 # Onion Library Documentation
 
+>The wiki is moving! The following articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/software-reference.html) already, and will be updated there. (\* - denotes articles we still need to move as of the time this was updated)
+
 Documentation of the use of any Libraries written by the Onion team:
 
 * C Communication Protocol Libraries
@@ -76,10 +80,10 @@ Documentation of the use of any Libraries written by the Onion team:
   * [PWM Expansion](./Libraries/PWM-Expansion-Python-Module)
   * [Relay Expansion](./Libraries/Relay-Expansion-Python-Module)
   * [OLED Expansion](./Libraries/OLED-Expansion-Python-Module)
-* Node.JS Modules for Omega Expansions
+* Node.JS Modules for Omega Expansions \*
   * [PWM Expansion](./Libraries/PWM-Expansion-Node-Module)
   * [Relay Expansion](./Libraries/Relay-Expansion-Node-Module)
   * [OLED Expansion](./Libraries/OLED-Expansion-Node-Module)
 
-* Arduino Dock Libraries
+* Arduino Dock Libraries \*
   * [Controlling Neopixels: C Library and Python Module](./Libraries/Arduino-Dock-Neopixel-Library)

@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 
-
+>The wiki is moving! This article can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/first-time-setup.html#first-time-setup) now and in the future.
 
 [//]: # (Prepare the Hardware)
 

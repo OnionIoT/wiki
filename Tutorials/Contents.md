@@ -10,6 +10,8 @@ The Tutorials Wiki contains guides on a variety of Omega topics, from the basics
 
 # Connecting to the Omega
 
+>The wiki is moving! These articles can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/omega-and-connectivity.html) already, and will be updated there.
+
 Taking the first step, connecting to the Omega's command line:
 * [Connecting to Omega via Serial Terminal](./Connecting-to-Omega-via-Serial-Terminal)
 * [Connecting to Omega via SSH](./Connecting-to-Omega-via-SSH)
@@ -46,7 +48,11 @@ This mini-series is meant to introduce users to OpenWRT.
 
 # Updating the Omega
 
+
 Follow this guide to update the Omega's firmware:
+
+>The wiki is moving! This article can be found [in the](https://docs.onion.io/omega2-docs/updating-the-omega-using-console.html) [Onion Docs](https://docs.onion.io/omega2-docs/updating-the-omega.html) already, and will be updated there.
+
 * [Omega Firmware Updates](./Updating-the-Omega)
 
 In case your Omega's firmware gets corrupted during installation, it is possible to reflash a fresh firmware:
