@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 
->The wiki is moving! This article can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/first-time-setup.html#first-time-setup) now and in the future.
+>The wiki is moving! This article can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/first-time-setup.html#first-time-setup) already, and will be updated there.
 
 [//]: # (Prepare the Hardware)
 
@@ -35,7 +35,7 @@
 
 ## Setting up using GUI
 
-**Step 1**: 
+**Step 1**:
 
 Your computer may need some additional programs to access the Omega through a browser:
 * If you are using Windows, install Apple's Bonjour Service
@@ -48,13 +48,13 @@ Your computer may need some additional programs to access the Omega through a br
 
 **Step 3**: Use Chrome or Opera and navigate to `http://omega-ABCD.local` where ABCD are the same characters from the network name above. *Some users have experienced issues using Firefox and Safari.*
 
-Alternatively, you can also browse to `http://192.168.3.1`. 
+Alternatively, you can also browse to `http://192.168.3.1`.
 
-You have now arrived at the Setup Wizard. 
-Login with the following information: 
+You have now arrived at the Setup Wizard.
+Login with the following information:
 ```
 username: root
-password: onioneer 
+password: onioneer
 ```
 Follow the wizard to complete the setup of the Omega.
 
@@ -134,9 +134,9 @@ The firmware update will take a few minutes, the process will be complete when t
 
 **Step 1**: Check if the serial drivers are already installed.
 
-Some modern Linux Distros already have the required serial drivers installed. Run `modinfo cp210x` on the command line, if it outputs several lines of information, the driver is already installed and you can skip ahead to **Step 4**. 
+Some modern Linux Distros already have the required serial drivers installed. Run `modinfo cp210x` on the command line, if it outputs several lines of information, the driver is already installed and you can skip ahead to **Step 4**.
 
-If the output is something along the lines of 
+If the output is something along the lines of
 ```
 modinfo: ERROR: Module cp210x not found.
 ```
@@ -147,7 +147,7 @@ the driver will need to be installed. Continue to **Step 2**.
 
 For Linux kernel **3.x.x and higher**: [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
 
-For Linux kernel **2.6.x**: 
+For Linux kernel **2.6.x**:
 [[https://www.silabs.com/Support%20Documents/Software/Linux_3.x.x_VCP_Driver_Source.zip]].
 
 **Step 3**: Build and install the driver.
@@ -208,13 +208,13 @@ sudo yum update
 sudo yum install screen
 ```
 
-> We recommend taking a peek at [this tutorial](https://www.linode.com/docs/networking/ssh/using-gnu-screen-to-manage-persistent-terminal-sessions) to get an idea of how the `screen` utility works 
+> We recommend taking a peek at [this tutorial](https://www.linode.com/docs/networking/ssh/using-gnu-screen-to-manage-persistent-terminal-sessions) to get an idea of how the `screen` utility works
 
 **Step 5**: Run `ls /dev/ttyUSB*` to see if the USB-to-Serial device can be detected. If the driver is successfully installed, you should be able to see a device with a name similar to `/dev/ttyUSB0`.
 
 ![Check if serial device exists](//i.imgur.com/p1OwSE6h.png "Check if serial device exists")
 
-**Step 6**: Run `sudo screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen. 
+**Step 6**: Run `sudo screen /dev/ttyUSB0 115200` to connect to the Omega’s serial terminal using screen.
 
 ![Log in through serial terminal](//i.imgur.com/sENEIX8h.png "Log in through serial terminal")
 
@@ -230,5 +230,3 @@ The firmware update will take a few minutes, the process will be complete when t
 **Warning: Do not disconnect the Omega from wifi or power during this process!**
 
 **Step 9**: Enjoy! Check out the [Tutorials section](./Tutorials/Contents) or the [Project guides](./Projects/Contents) for ideas on what to do next!
-
-

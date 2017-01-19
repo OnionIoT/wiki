@@ -4,6 +4,7 @@
 
 
 
+>The wiki is moving! This article can be found [in the Onion Docs](https://docs.onion.io/omega2-docs/first-time-setup.html#first-time-setup) already, and will be updated there.
 
 [//]: # (Prepare the Hardware)
 
