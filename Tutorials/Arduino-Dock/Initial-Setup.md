@@ -1,5 +1,8 @@
 # Arduino Dock Initial Setup
-Before you can get started with the Arduino Dock, there are a few thigns that need to be done on your computer and then on the Arduino Dock.
+
+## This procedure is meant to be carried out on the original Arduino Dock. Do **not** perform this on the Arduino Dock 2, it is **not needed**! For information on flashing sketches on the Arduino Dock 2, see the [Onion Docs for the Arduino Dock 2](https://docs.onion.io/omega2-docs/flash-arduino-dock-wirelessly.html)
+
+Before you can get started with the Arduino Dock, there are a few things that need to be done on your computer and then on the Arduino Dock.
 
 These steps will only need to be carried out once, and then you'll be set to go.
 
