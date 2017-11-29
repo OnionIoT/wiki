@@ -1,5 +1,7 @@
 # Using the Arduino Dock
 
+## This procedure is meant to be carried out on the original Arduino Dock. Do **not** perform this on the Arduino Dock 2, for information on flashing sketches on the Arduino Dock 2, see the [Onion Docs for the Arduino Dock 2](https://docs.onion.io/omega2-docs/flash-arduino-dock-wirelessly.html)
+
 The Onion Arduino Dock is meant to be an interface between the Omega and the popular ATmega microcontroller, allowing you to bring the flexibility of the Omega into the world of microcontrollers.
 
 ![Onion Arduino Dock](http://i.imgur.com/ykPHEiJ.png)
