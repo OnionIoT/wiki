@@ -86,3 +86,5 @@ And voila, you have just used uci to secure your Omega access point.
 ### More Information
 
 For more details on UCI, visit the [OpenWRT UCI Technical Reference article](https://wiki.openwrt.org/doc/uci)
+
+Or (faster server) lede-protect | [LEDE Configuration](https://lede-project.org/docs/user-guide/introduction_to_lede_configuration)
