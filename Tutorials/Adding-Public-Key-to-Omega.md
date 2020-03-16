@@ -18,6 +18,15 @@ If you have a key already generated on a Unix based system, it should be in
 ~/.ssh/id_pub.rsa
 ```
 
+**on debian based linux distributions it is in:**
+```
+~/.ssh/id_rsa.pub
+```
+change to the ```~/.ssh/``` directory and copy the key direct to the omega,```if the file (authorized_keys) not exists jet```, with:
+```
+scp id_rsa.pub root@192.168.3.1:/etc/dropbear/authorized_keys
+```
+
 **Optionally Generate a Key**
 
 If not, follow these guides for [OS X](https://help.github.com/articles/generating-an-ssh-key/#platform-mac), [Windows](https://help.github.com/articles/generating-an-ssh-key/#platform-windows), and [Linux](https://help.github.com/articles/generating-an-ssh-key/#platform-linux).
